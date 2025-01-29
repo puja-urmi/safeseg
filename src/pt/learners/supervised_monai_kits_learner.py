@@ -56,28 +56,24 @@ from nvflare.app_opt.pt.fedproxloss import PTFedProxLoss
 
 
 
-class ConvertToMultiChannelBasedOnBrats24Classes(Transform):
+class ConvertToMultiChannelBasedOnKits23Classes(Transform):
     """
     Convert labels to multi channels based on BraTS24 segmentation classes:
-    - Label 1: Necrotic and non-enhancing tumor core (NETC)
-    - Label 2: Surrounding non-enhancing FLAIR hyperintensity (SNFH)
-    - Label 3: Enhancing tissue (ET)
-    - Label 4: Resection cavity (RC)
+    - Label 1: Kidney
+    - Label 2: Tumor
+    - Label 3: Cyst
 
     Output channels:
-    - C1: ET (Enhancing Tissue) -> (label == 3)
-    - C2: NETC (Necrotic and Non-Enhancing Tumor Core) -> (label == 1)
-    - C3: SNFH (Surrounding Non-Enhancing FLAIR Hyperintensity) -> (label == 2)
-    - C4: RC (Resection Cavity) -> (label == 4)
-    - C5: Combined ET + NETC -> (label == 3) OR (label == 1)
-    - C6: Combined ET + SNFH + NETC -> (label == 3) OR (label == 2) OR (label == 1)
+    - C1: Kidney + Tumor + Cyst -> (label == 1) OR (label == 2) OR (label == 3)
+    - C2: Tumor + Cyst -> (label == 2) OR (label == 3)
+    - C3: Tumor -> (label == 2)
     """
 
     backend = [TransformBackends.TORCH, TransformBackends.NUMPY]
 
     def __call__(self, img: NdarrayOrTensor) -> NdarrayOrTensor:
         """
-        Convert input segmentation labels into multi-channel format based on BraTS24 classes.
+        Convert input segmentation labels into multi-channel format based on kits23 classes.
 
         Args:
             img (NdarrayOrTensor): Input segmentation map. Expected shape:
@@ -93,27 +89,24 @@ class ConvertToMultiChannelBasedOnBrats24Classes(Transform):
 
         # Define the channels based on label values (BraTS24 logic)
         result = [
-            (img == 3),                            # C1: ET
-            (img == 1),                            # C2: NETC
-            (img == 2),                            # C3: SNFH
-            (img == 4),                            # C4: RC
-            (img == 3) | (img == 1),               # C5: ET + NETC
-            (img == 3) | (img == 2) | (img == 1),  # C6: ET + SNFH + NETC
+            (img == 1) | (img == 2) | (img == 3),  # C1: Kidney + Tumor + Cyst
+            (img == 2) | (img == 3),               # C2: Tumor + Cyst
+            (img == 2)                             # C3: Tumor
         ]
 
         return torch.stack(result, dim=0) if isinstance(img, torch.Tensor) else np.stack(result, axis=0)
 
 
-class ConvertToMultiChannelBasedOnBratsClassesd(MapTransform):
+class ConvertToMultiChannelBasedOnKitsClassesd(MapTransform):
     """
-    Dictionary-based wrapper of :py:class:`monai.transforms.ConvertToMultiChannelBasedOnBrats24Classes`.
+    Dictionary-based wrapper of :py:class:`monai.transforms.ConvertToMultiChannelBasedOnKits23Classes`.
     """
 
-    backend = ConvertToMultiChannelBasedOnBrats24Classes.backend
+    backend = ConvertToMultiChannelBasedOnKits23Classes.backend
 
     def __init__(self, keys: KeysCollection, allow_missing_keys: bool = False):
         super().__init__(keys, allow_missing_keys)
-        self.converter = ConvertToMultiChannelBasedOnBrats24Classes()
+        self.converter = ConvertToMultiChannelBasedOnKits23Classes()
 
     def __call__(self, data: Mapping[Hashable, NdarrayOrTensor]) -> dict[Hashable, NdarrayOrTensor]:
         d = dict(data)
@@ -122,14 +115,14 @@ class ConvertToMultiChannelBasedOnBratsClassesd(MapTransform):
         return d
 
 
-class SupervisedMonaiBratsLearner(SupervisedLearner):
+class SupervisedMonaiKitsLearner(SupervisedLearner):
     def __init__(
         self,
         train_config_filename,
         aggregation_epochs: int = 1,
         train_task_name: str = AppConstants.TASK_TRAIN,
     ):
-        """MONAI Learner for BraTS24 segmentation task.
+        """MONAI Learner for Kits23 segmentation task.
         It inherits from SupervisedLearner.
 
         Args:
@@ -171,8 +164,8 @@ class SupervisedMonaiBratsLearner(SupervisedLearner):
         cache_rate = self.config_info["cache_dataset"]
         dataset_base_dir = self.config_info["dataset_base_dir"]
         datalist_json_path = self.config_info["datalist_json_path"]
-        self.roi_size = self.config_info.get("roi_size", (168, 192, 168))
-        self.infer_roi_size = self.config_info.get("infer_roi_size", (168, 192, 168))
+        self.roi_size = self.config_info.get("roi_size", (None, 384, 384))
+        self.infer_roi_size = self.config_info.get("infer_roi_size", (None, 384, 384))
 
         # Get datalist json
         datalist_json_path = custom_client_datalist_json_path(datalist_json_path, self.client_id)
@@ -201,8 +194,8 @@ class SupervisedMonaiBratsLearner(SupervisedLearner):
             blocks_down=[1, 2, 2, 4],
             blocks_up=[1, 1, 1],
             init_filters=16,
-            in_channels=4,
-            out_channels=6,
+            in_channels=1,
+            out_channels=3,
             dropout_prob=0.2,
         ).to(self.device)
         self.optimizer = optim.Adam(self.model.parameters(), lr=self.lr, weight_decay=1e-5)
@@ -224,12 +217,13 @@ class SupervisedMonaiBratsLearner(SupervisedLearner):
                 # load Nifti image
                 LoadImaged(keys=["image", "label"]),
                 EnsureChannelFirstd(keys="image"),
-                ConvertToMultiChannelBasedOnBratsClassesd(keys="label"),
+                ConvertToMultiChannelBasedOnKitsClassesd(keys="label"),
                 Spacingd(
                     keys=["image", "label"],
                     pixdim=(1.0, 1.0, 1.0),
                     mode=("bilinear", "nearest"),
                 ),
+                DivisiblePadd(keys=["image", "label"], k=12),
                 Orientationd(keys=["image", "label"], axcodes="RAS"),
                 RandSpatialCropd(keys=["image", "label"], roi_size=self.roi_size, random_size=False),
                 RandFlipd(keys=["image", "label"], prob=0.5, spatial_axis=0),
@@ -244,13 +238,13 @@ class SupervisedMonaiBratsLearner(SupervisedLearner):
             [
                 LoadImaged(keys=["image", "label"]),
                 EnsureChannelFirstd(keys="image"),
-                ConvertToMultiChannelBasedOnBratsClassesd(keys="label"),
+                ConvertToMultiChannelBasedOnKitsClassesd(keys="label"),
                 Spacingd(
                     keys=["image", "label"],
                     pixdim=(1.0, 1.0, 1.0),
                     mode=("bilinear", "nearest"),
                 ),
-                DivisiblePadd(keys=["image", "label"], k=32),
+                DivisiblePadd(keys=["image", "label"], k=12),
                 Orientationd(keys=["image", "label"], axcodes="RAS"),
                 NormalizeIntensityd(keys="image", nonzero=True, channel_wise=True),
             ]
@@ -298,7 +292,7 @@ class SupervisedMonaiBratsLearner(SupervisedLearner):
         self.inferer = SlidingWindowInferer(roi_size=self.infer_roi_size, sw_batch_size=1, overlap=0.5)
         self.valid_metric = DiceMetric(include_background=True, reduction="mean")
 
-    # Brats24 segmentation evaluation will be on 6 regions hence 6 channels, (4 indiviudal region, tumor core and whole tumor),  so the metric computation needs some change
+    # KiTS23 segmentation evaluation will be on 3 regions hence 3 channels,  so the metric computation needs some change
     def local_valid(
         self,
         model,
@@ -328,7 +322,7 @@ class SupervisedMonaiBratsLearner(SupervisedLearner):
                 val_outputs = self.transform_post(val_outputs)
                 # Compute metric
                 metric_score = self.valid_metric(y_pred=val_outputs, y=val_labels)
-                for sub_region in range(6):
+                for sub_region in range(3):
                     metric_score_single = metric_score[0][sub_region].item()
                     if not np.isnan(metric_score_single):
                         metric += metric_score_single

@@ -9,13 +9,13 @@
 
 # Load the required modules
 module load python/3.11
-python3 -m venv /home/psaha03/scratch/FSBAKT/env
-source /home/psaha03/scratch/FSBAKT/env/bin/activate
+python3 -m venv /home/psaha03/scratch/safeseg/env
+source /home/psaha03/scratch/safeseg/env/bin/activate
 
 # Display GPU information
 nvidia-smi
 
 # Execute the Python script
 pip install -r requirements.txt
-mkdir ./workspace_brats
-python3 -u -m nvflare.private.fed.app.simulator.simulator './configs/brats_central' -w './workspace_brats/brats_central' -n 1 -t 1 -gpu 0
+mkdir /home/psaha03/scratch/workspace_kits
+python3 -u -m nvflare.private.fed.app.simulator.simulator './configs/kits_central' -w '/home/psaha03/scratch/workspace_kits/kits_central' -n 1 -t 1 -gpu 0
