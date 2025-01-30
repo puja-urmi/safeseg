@@ -4,7 +4,7 @@
 #SBATCH --cpus-per-task=16
 #SBATCH --ntasks-per-node=1
 #SBATCH --mem=32000M
-#SBATCH --time=2880:00
+#SBATCH --time=720:00
 #SBATCH --output=training_%J.log   
 
 # Load the required modules
