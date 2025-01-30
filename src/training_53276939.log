@@ -1,4 +1,4 @@
-Wed Jan 29 20:15:59 2025       
+Thu Jan 30 09:09:50 2025       
 +-----------------------------------------------------------------------------------------+
 | NVIDIA-SMI 550.54.15              Driver Version: 550.54.15      CUDA Version: 12.4     |
 |-----------------------------------------+------------------------+----------------------+
@@ -71,75 +71,69 @@ Requirement already satisfied: idna<4,>=2.5 in /home/psaha03/scratch/safeseg/env
 Requirement already satisfied: certifi>=2017.4.17 in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from requests>=2.28.0->nvflare~=2.5.0rc->-r requirements.txt (line 1)) (2024.12.14+computecanada)
 Requirement already satisfied: pyparsing<4,>=2 in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from pyhocon->nvflare~=2.5.0rc->-r requirements.txt (line 1)) (3.2.1)
 Requirement already satisfied: pycparser in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from cffi>=1.12->cryptography>=36.0.0->nvflare~=2.5.0rc->-r requirements.txt (line 1)) (2.22+computecanada)
-mkdir: cannot create directory ‘/home/psaha03/scratch/workspace_brats’: File exists
-2025-01-29 20:16:13,377 - SimulatorRunner - INFO - Create the Simulator Server.
-2025-01-29 20:16:13,385 - CoreCell - INFO - server: creating listener on tcp://0:41221
-2025-01-29 20:16:13,671 - CoreCell - INFO - server: created backbone external listener for tcp://0:41221
-2025-01-29 20:16:13,673 - ConnectorManager - INFO - 841109: Try start_listener Listener resources: {'secure': False, 'host': 'localhost'}
-2025-01-29 20:16:13,684 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connector [CH00002 PASSIVE tcp://0:53990] is starting
-2025-01-29 20:16:14,187 - CoreCell - INFO - server: created backbone internal listener for tcp://localhost:53990
-2025-01-29 20:16:14,190 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connector [CH00001 PASSIVE tcp://0:41221] is starting
-2025-01-29 20:16:14,194 - SimulatorServer - INFO - max_reg_duration=60.0
-2025-01-29 20:16:14,330 - nvflare.fuel.hci.server.hci - INFO - Starting Admin Server localhost on Port 46149
-2025-01-29 20:16:14,330 - SimulatorRunner - INFO - Deploy the Apps.
-2025-01-29 20:16:14,413 - SimulatorRunner - INFO - Create the simulate clients.
-2025-01-29 20:16:14,433 - Communicator - INFO - Trying to register with server ...
-2025-01-29 20:16:14,435 - ClientManager - INFO - authenticated client site-1
-2025-01-29 20:16:14,435 - ClientManager - INFO - Client: New client site-1@172.16.136.255 joined. Sent token: ff971964-fdf2-4f8e-8765-195153df277c.  Total clients: 1
-2025-01-29 20:16:14,437 - Communicator - INFO - register RC: ok
-2025-01-29 20:16:14,439 - FederatedClient - INFO - Successfully registered client:site-1 for project simulator_server. Token:ff971964-fdf2-4f8e-8765-195153df277c SSID:
-2025-01-29 20:16:14,439 - SimulatorRunner - INFO - Set the client status ready.
-2025-01-29 20:16:14,442 - SimulatorRunner - INFO - Deploy and start the Server App.
-2025-01-29 20:16:14,449 - Cell - INFO - Register blob CB for channel='server_command', topic='*'
-2025-01-29 20:16:14,450 - Cell - INFO - Register blob CB for channel='aux_communication', topic='*'
-2025-01-29 20:16:14,452 - ServerCommandAgent - INFO - ServerCommandAgent cell register_request_cb: server.simulate_job
-2025-01-29 20:17:10,723 - IntimeModelSelector - INFO - model selection weights control: None
-2025-01-29 20:17:10,738 - AuxRunner - INFO - registered aux handler for topic __sync_runner__
-2025-01-29 20:17:10,739 - AuxRunner - INFO - registered aux handler for topic __job_heartbeat__
-2025-01-29 20:17:10,740 - AuxRunner - INFO - registered aux handler for topic __task_check__
-2025-01-29 20:17:10,741 - AuxRunner - INFO - registered aux handler for topic RM.RELIABLE_REQUEST
-2025-01-29 20:17:10,743 - AuxRunner - INFO - registered aux handler for topic RM.RELIABLE_REPLY
-2025-01-29 20:17:10,743 - ReliableMessage - INFO - enabled reliable message: max_request_workers=20 query_interval=2.0
-2025-01-29 20:17:10,744 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job]: Server runner starting ...
-2025-01-29 20:17:10,746 - AuxRunner - INFO - registered aux handler for topic fed.event
-2025-01-29 20:17:10,747 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job]: starting workflow scatter_and_gather (<class 'nvflare.app_common.workflows.scatter_and_gather.ScatterAndGather'>) ...
-2025-01-29 20:17:10,748 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Initializing ScatterAndGather workflow.
-2025-01-29 20:17:10,748 - PTFileModelPersistor - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Both source_ckpt_file_full_name and ckpt_preload_path are not provided. Using the default model weights initialized on the persistor side.
-2025-01-29 20:17:10,762 - SimulatorClientRunner - INFO - Start the clients run simulation.
-2025-01-29 20:17:10,839 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Workflow scatter_and_gather (<class 'nvflare.app_common.workflows.scatter_and_gather.ScatterAndGather'>) started
-2025-01-29 20:17:10,841 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Beginning ScatterAndGather training phase.
-2025-01-29 20:17:10,842 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Round 0 started.
-2025-01-29 20:17:10,842 - WFCommServer - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: scheduled task train
-2025-01-29 20:17:11,763 - SimulatorClientRunner - INFO - Simulate Run client: site-1 on GPU group: 0
-2025-01-29 20:17:15,797 - ClientTaskWorker - INFO - ClientTaskWorker started to run
-2025-01-29 20:17:16,183 - CoreCell - INFO - site-1.simulate_job: created backbone external connector to tcp://localhost:41221
-2025-01-29 20:17:16,185 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connector [CH00001 ACTIVE tcp://localhost:41221] is starting
-2025-01-29 20:17:16,187 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00002 127.0.0.1:34868 => 127.0.0.1:41221] is created: PID: 841146
-2025-01-29 20:17:16,188 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00004 127.0.0.1:41221 <= 127.0.0.1:34868] is created: PID: 841109
-2025-01-29 20:18:21,456 - AuxRunner - INFO - registered aux handler for topic __end_run__
-2025-01-29 20:18:21,457 - AuxRunner - INFO - registered aux handler for topic __do_task__
-2025-01-29 20:18:21,458 - Cell - INFO - Register blob CB for channel='aux_communication', topic='*'
-2025-01-29 20:18:22,198 - Cell - INFO - broadcast: channel='aux_communication', topic='__sync_runner__', targets=['server.simulate_job'], timeout=2.0
-2025-01-29 20:18:22,248 - ClientRunner - INFO - [identity=site-1, run=simulate_job]: synced to Server Runner in 0.5511791706085205 seconds
-2025-01-29 20:18:22,263 - AuxRunner - INFO - registered aux handler for topic RM.RELIABLE_REQUEST
-2025-01-29 20:18:22,266 - AuxRunner - INFO - registered aux handler for topic RM.RELIABLE_REPLY
-2025-01-29 20:18:22,311 - ReliableMessage - INFO - enabled reliable message: max_request_workers=20 query_interval=2.0
-2025-01-29 20:18:22,377 - AuxRunner - INFO - registered aux handler for topic fed.event
-2025-01-29 20:18:22,397 - ClientRunner - INFO - [identity=site-1, run=simulate_job]: client runner started
-2025-01-29 20:18:22,400 - ClientTaskWorker - INFO - Initialize ClientRunner for client: site-1
-2025-01-29 20:18:22,417 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, task_name=train, task_id=7b46bf89-46eb-4191-aeb8-14fb094fba41]: assigned task to client site-1: name=train, id=7b46bf89-46eb-4191-aeb8-14fb094fba41
-2025-01-29 20:18:22,425 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, task_name=train, task_id=7b46bf89-46eb-4191-aeb8-14fb094fba41]: sent task assignment to client. client_name:site-1 task_id:7b46bf89-46eb-4191-aeb8-14fb094fba41
-2025-01-29 20:18:22,427 - GetTaskCommand - INFO - return task to client.  client_name: site-1  task_name: train   task_id: 7b46bf89-46eb-4191-aeb8-14fb094fba41  sharable_header_task_id: 7b46bf89-46eb-4191-aeb8-14fb094fba41
-2025-01-29 20:18:22,535 - Communicator - INFO - Received from simulator_server server. getTask: train size: 18.8MB (18833681 Bytes) time: 0.120404 seconds
-2025-01-29 20:18:22,541 - FederatedClient - INFO - pull_task completed. Task name:train Status:True 
-2025-01-29 20:18:22,544 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job]: got task assignment: name=train, id=7b46bf89-46eb-4191-aeb8-14fb094fba41
-2025-01-29 20:18:22,546 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=7b46bf89-46eb-4191-aeb8-14fb094fba41]: invoking task executor LearnerExecutor
-2025-01-29 20:18:22,549 - LearnerExecutor - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=7b46bf89-46eb-4191-aeb8-14fb094fba41]: Client trainer got task: train
-2025-01-29 20:18:22,551 - SupervisedMonaiBratsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=7b46bf89-46eb-4191-aeb8-14fb094fba41]: Client site-1 initialized with args: 
- Namespace(job_folder='/scratch/psaha03/safeseg/src/./configs/brats_central', workspace='/home/psaha03/scratch/workspace_brats/brats_central/site-1', clients=None, n_clients=1, threads=1, gpu='0', max_clients=100, set=['secure_train=False'], log_config=None, config_folder='config', job_id='simulate_job', client_config='config/config_fed_client.json', env='config/environment.json', end_run_for_all=False, sp_target='0:41221', sp_scheme='tcp', client_name='site-1', token='ff971964-fdf2-4f8e-8765-195153df277c')
-2025-01-29 20:18:22,728 - SupervisedMonaiBratsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=7b46bf89-46eb-4191-aeb8-14fb094fba41]: Training Size: 957, Validation Size: 393
-2025-01-29 20:36:51,310 - SupervisedMonaiBratsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=7b46bf89-46eb-4191-aeb8-14fb094fba41]: val_metric_global_model (global_model): 0.0078
-2025-01-29 20:36:51,379 - SupervisedMonaiBratsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=7b46bf89-46eb-4191-aeb8-14fb094fba41]: Current/Total Round: 1/600
-2025-01-29 20:36:51,410 - SupervisedMonaiBratsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=7b46bf89-46eb-4191-aeb8-14fb094fba41]: Client identity: site-1
-2025-01-29 20:36:51,434 - SupervisedMonaiBratsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=7b46bf89-46eb-4191-aeb8-14fb094fba41]: Local steps per epoch: 957
-2025-01-29 20:36:51,438 - SupervisedMonaiBratsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=7b46bf89-46eb-4191-aeb8-14fb094fba41]: Local epoch site-1: 1/1 (lr=0.0001)
+2025-01-30 09:09:58,353 - SimulatorRunner - INFO - Create the Simulator Server.
+2025-01-30 09:09:58,358 - CoreCell - INFO - server: creating listener on tcp://0:41971
+2025-01-30 09:09:58,554 - CoreCell - INFO - server: created backbone external listener for tcp://0:41971
+2025-01-30 09:09:58,555 - ConnectorManager - INFO - 181062: Try start_listener Listener resources: {'secure': False, 'host': 'localhost'}
+2025-01-30 09:09:58,558 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connector [CH00002 PASSIVE tcp://0:18617] is starting
+2025-01-30 09:09:59,059 - CoreCell - INFO - server: created backbone internal listener for tcp://localhost:18617
+2025-01-30 09:09:59,060 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connector [CH00001 PASSIVE tcp://0:41971] is starting
+2025-01-30 09:09:59,062 - SimulatorServer - INFO - max_reg_duration=60.0
+2025-01-30 09:09:59,196 - nvflare.fuel.hci.server.hci - INFO - Starting Admin Server localhost on Port 60313
+2025-01-30 09:09:59,196 - SimulatorRunner - INFO - Deploy the Apps.
+2025-01-30 09:09:59,268 - SimulatorRunner - INFO - Create the simulate clients.
+2025-01-30 09:09:59,283 - Communicator - INFO - Trying to register with server ...
+2025-01-30 09:09:59,285 - ClientManager - INFO - authenticated client site-1
+2025-01-30 09:09:59,285 - ClientManager - INFO - Client: New client site-1@172.16.136.37 joined. Sent token: dd7736cc-fe44-4e2e-a342-ff4bbfcc4418.  Total clients: 1
+2025-01-30 09:09:59,286 - Communicator - INFO - register RC: ok
+2025-01-30 09:09:59,287 - FederatedClient - INFO - Successfully registered client:site-1 for project simulator_server. Token:dd7736cc-fe44-4e2e-a342-ff4bbfcc4418 SSID:
+2025-01-30 09:09:59,288 - SimulatorRunner - INFO - Set the client status ready.
+2025-01-30 09:09:59,289 - SimulatorRunner - INFO - Deploy and start the Server App.
+2025-01-30 09:09:59,295 - Cell - INFO - Register blob CB for channel='server_command', topic='*'
+2025-01-30 09:09:59,296 - Cell - INFO - Register blob CB for channel='aux_communication', topic='*'
+2025-01-30 09:09:59,297 - ServerCommandAgent - INFO - ServerCommandAgent cell register_request_cb: server.simulate_job
+2025-01-30 09:10:39,139 - IntimeModelSelector - INFO - model selection weights control: None
+2025-01-30 09:10:39,150 - AuxRunner - INFO - registered aux handler for topic __sync_runner__
+2025-01-30 09:10:39,150 - AuxRunner - INFO - registered aux handler for topic __job_heartbeat__
+2025-01-30 09:10:39,151 - AuxRunner - INFO - registered aux handler for topic __task_check__
+2025-01-30 09:10:39,152 - AuxRunner - INFO - registered aux handler for topic RM.RELIABLE_REQUEST
+2025-01-30 09:10:39,153 - AuxRunner - INFO - registered aux handler for topic RM.RELIABLE_REPLY
+2025-01-30 09:10:39,153 - ReliableMessage - INFO - enabled reliable message: max_request_workers=20 query_interval=2.0
+2025-01-30 09:10:39,154 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job]: Server runner starting ...
+2025-01-30 09:10:39,155 - AuxRunner - INFO - registered aux handler for topic fed.event
+2025-01-30 09:10:39,156 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job]: starting workflow scatter_and_gather (<class 'nvflare.app_common.workflows.scatter_and_gather.ScatterAndGather'>) ...
+2025-01-30 09:10:39,157 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Initializing ScatterAndGather workflow.
+2025-01-30 09:10:39,157 - PTFileModelPersistor - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Both source_ckpt_file_full_name and ckpt_preload_path are not provided. Using the default model weights initialized on the persistor side.
+2025-01-30 09:10:39,232 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Workflow scatter_and_gather (<class 'nvflare.app_common.workflows.scatter_and_gather.ScatterAndGather'>) started
+2025-01-30 09:10:39,233 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Beginning ScatterAndGather training phase.
+2025-01-30 09:10:39,233 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Round 0 started.
+2025-01-30 09:10:39,234 - WFCommServer - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: scheduled task train
+2025-01-30 09:10:39,389 - SimulatorClientRunner - INFO - Start the clients run simulation.
+2025-01-30 09:10:40,390 - SimulatorClientRunner - INFO - Simulate Run client: site-1 on GPU group: 0
+2025-01-30 09:10:42,420 - ClientTaskWorker - INFO - ClientTaskWorker started to run
+2025-01-30 09:10:42,590 - CoreCell - INFO - site-1.simulate_job: created backbone external connector to tcp://localhost:41971
+2025-01-30 09:10:42,591 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connector [CH00001 ACTIVE tcp://localhost:41971] is starting
+2025-01-30 09:10:42,593 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00002 127.0.0.1:35560 => 127.0.0.1:41971] is created: PID: 181092
+2025-01-30 09:10:42,594 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00004 127.0.0.1:41971 <= 127.0.0.1:35560] is created: PID: 181062
+2025-01-30 09:10:56,066 - AuxRunner - INFO - registered aux handler for topic __end_run__
+2025-01-30 09:10:56,067 - AuxRunner - INFO - registered aux handler for topic __do_task__
+2025-01-30 09:10:56,068 - Cell - INFO - Register blob CB for channel='aux_communication', topic='*'
+2025-01-30 09:10:56,580 - Cell - INFO - broadcast: channel='aux_communication', topic='__sync_runner__', targets=['server.simulate_job'], timeout=2.0
+2025-01-30 09:10:56,588 - ClientRunner - INFO - [identity=site-1, run=simulate_job]: synced to Server Runner in 0.5080299377441406 seconds
+2025-01-30 09:10:56,588 - AuxRunner - INFO - registered aux handler for topic RM.RELIABLE_REQUEST
+2025-01-30 09:10:56,589 - AuxRunner - INFO - registered aux handler for topic RM.RELIABLE_REPLY
+2025-01-30 09:10:56,590 - ReliableMessage - INFO - enabled reliable message: max_request_workers=20 query_interval=2.0
+2025-01-30 09:10:56,590 - AuxRunner - INFO - registered aux handler for topic fed.event
+2025-01-30 09:10:56,591 - ClientRunner - INFO - [identity=site-1, run=simulate_job]: client runner started
+2025-01-30 09:10:56,592 - ClientTaskWorker - INFO - Initialize ClientRunner for client: site-1
+2025-01-30 09:10:56,595 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, task_name=train, task_id=7972db44-7eca-4f37-bfe6-c4f108d3a7c9]: assigned task to client site-1: name=train, id=7972db44-7eca-4f37-bfe6-c4f108d3a7c9
+2025-01-30 09:10:56,596 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, task_name=train, task_id=7972db44-7eca-4f37-bfe6-c4f108d3a7c9]: sent task assignment to client. client_name:site-1 task_id:7972db44-7eca-4f37-bfe6-c4f108d3a7c9
+2025-01-30 09:10:56,597 - GetTaskCommand - INFO - return task to client.  client_name: site-1  task_name: train   task_id: 7972db44-7eca-4f37-bfe6-c4f108d3a7c9  sharable_header_task_id: 7972db44-7eca-4f37-bfe6-c4f108d3a7c9
+2025-01-30 09:10:56,712 - Communicator - INFO - Received from simulator_server server. getTask: train size: 18.8MB (18833681 Bytes) time: 0.119709 seconds
+2025-01-30 09:10:56,713 - FederatedClient - INFO - pull_task completed. Task name:train Status:True 
+2025-01-30 09:10:56,714 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job]: got task assignment: name=train, id=7972db44-7eca-4f37-bfe6-c4f108d3a7c9
+2025-01-30 09:10:56,714 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=7972db44-7eca-4f37-bfe6-c4f108d3a7c9]: invoking task executor LearnerExecutor
+2025-01-30 09:10:56,715 - LearnerExecutor - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=7972db44-7eca-4f37-bfe6-c4f108d3a7c9]: Client trainer got task: train
+2025-01-30 09:10:56,716 - SupervisedMonaiBratsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=7972db44-7eca-4f37-bfe6-c4f108d3a7c9]: Client site-1 initialized with args: 
+ Namespace(job_folder='/scratch/psaha03/safeseg/src/./configs/brats_central', workspace='/home/psaha03/scratch/workspace_brats/brats_central/site-1', clients=None, n_clients=1, threads=1, gpu='0', max_clients=100, set=['secure_train=False'], log_config=None, config_folder='config', job_id='simulate_job', client_config='config/config_fed_client.json', env='config/environment.json', end_run_for_all=False, sp_target='0:41971', sp_scheme='tcp', client_name='site-1', token='dd7736cc-fe44-4e2e-a342-ff4bbfcc4418')
+2025-01-30 09:10:56,746 - SupervisedMonaiBratsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=7972db44-7eca-4f37-bfe6-c4f108d3a7c9]: Training Size: 957, Validation Size: 393
