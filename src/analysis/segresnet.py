@@ -15,7 +15,7 @@ model = SegResNet(
 model.eval()
 
 # Example input tensor (Batch Size, Channels, Depth, Height, Width)
-input_tensor = torch.randn(1, 36, 384, 384)  
+input_tensor = torch.randn(1, 1, 168, 192, 192)  
 
 # Perform a forward pass
 with torch.no_grad():  # Disable gradient computation
