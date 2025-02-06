@@ -26,7 +26,7 @@ def resample_image(image, target_voxel_size, interpolation_order):
 
 
 target_voxel_size = np.array([0.5, 0.5, 1.5])  # Adjust if needed
-input_folder = "/home/psaha03/scratch/oversampled_data"
+input_folder = "/home/psaha03/scratch/oversampled"
 output_folder = "/home/psaha03/scratch/resampled"
 
 os.makedirs(output_folder, exist_ok=True)

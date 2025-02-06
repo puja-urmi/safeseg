@@ -3,7 +3,7 @@ import nibabel as nib
 import numpy as np
 import json
 
-dataset_path = "/home/psaha03/scratch/kits_small"
+dataset_path = "/home/psaha03/scratch/training_data_k23"
 all_cases = sorted(os.listdir(dataset_path))
 
 # Define the target voxel size (example)

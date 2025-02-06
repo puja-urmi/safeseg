@@ -2,7 +2,7 @@ import os
 import nibabel as nib
 import json
 
-dataset_path = "/home/psaha03/scratch/training"
+dataset_path = "/home/psaha03/scratch/dataset_kits23/dataset/training"
 all_cases = sorted(os.listdir(dataset_path))
 
 # Prepare a dictionary to store results

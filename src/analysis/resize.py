@@ -4,7 +4,7 @@ import numpy as np
 import scipy.ndimage
 
 # Define the target shape (adjust based on your model's input size)
-TARGET_SHAPE = (168, 192, 192)  
+TARGET_SHAPE = (170, 195, 195)  
 
 def resize_image(image, target_shape, interpolation_order):
     """Resize a NIfTI image to the target shape."""
@@ -22,8 +22,8 @@ def resize_image(image, target_shape, interpolation_order):
     return nib.Nifti1Image(resized_data, new_affine, image.header)
 
 # Input and output directories
-input_folder = "/home/psaha03/scratch/kits_small"
-output_folder = "/home/psaha03/scratch/kits_small_resized"
+input_folder = "/home/psaha03/scratch/training_k23_sampled+cropped"
+output_folder = "/home/psaha03/scratch/training_k23_s+c+resized"
 
 os.makedirs(output_folder, exist_ok=True)
 

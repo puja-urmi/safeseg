@@ -58,7 +58,7 @@ from nvflare.app_opt.pt.fedproxloss import PTFedProxLoss
 
 class ConvertToMultiChannelBasedOnKits23Classes(Transform):
     """
-    Convert labels to multi channels based on BraTS24 segmentation classes:
+    Convert labels to multi channels based on KiTS23 segmentation classes:
     - Label 1: Kidney
     - Label 2: Tumor
     - Label 3: Cyst
@@ -81,7 +81,7 @@ class ConvertToMultiChannelBasedOnKits23Classes(Transform):
                 - 4D with channel: (C, H, W, D), where C=1 (will be squeezed).
 
         Returns:
-            NdarrayOrTensor: Multi-channel segmentation map with shape (6, H, W, D).
+            NdarrayOrTensor: Multi-channel segmentation map with shape (3, H, W, D).
         """
         # If the input has a channel dimension (C=1), remove it
         if img.ndim == 4 and img.shape[0] == 1:
@@ -122,7 +122,7 @@ class SupervisedMonaiKitsLearner(SupervisedLearner):
         aggregation_epochs: int = 1,
         train_task_name: str = AppConstants.TASK_TRAIN,
     ):
-        """MONAI Learner for Kits23 segmentation task.
+        """MONAI Learner for KiTS23 segmentation task.
         It inherits from SupervisedLearner.
 
         Args:
@@ -164,8 +164,8 @@ class SupervisedMonaiKitsLearner(SupervisedLearner):
         cache_rate = self.config_info["cache_dataset"]
         dataset_base_dir = self.config_info["dataset_base_dir"]
         datalist_json_path = self.config_info["datalist_json_path"]
-        self.roi_size = self.config_info.get("roi_size", (168, 192, 192))
-        self.infer_roi_size = self.config_info.get("infer_roi_size", (168, 192, 192))
+        self.roi_size = self.config_info.get("roi_size", (168, 192, 168))
+        self.infer_roi_size = self.config_info.get("infer_roi_size", (168, 192, 168))
 
         # Get datalist json
         datalist_json_path = custom_client_datalist_json_path(datalist_json_path, self.client_id)
@@ -291,7 +291,7 @@ class SupervisedMonaiKitsLearner(SupervisedLearner):
         self.inferer = SlidingWindowInferer(roi_size=self.infer_roi_size, sw_batch_size=1, overlap=0.5)
         self.valid_metric = DiceMetric(include_background=True, reduction="mean")
 
-    # KiTS23 segmentation evaluation will be on 3 regions hence 3 channels,  so the metric computation needs some change
+    # Kits23 has 3 classes, so the metric computation needs some change
     def local_valid(
         self,
         model,
