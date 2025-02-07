@@ -10,4 +10,4 @@
 module load scipy-stack
 source /home/psaha03/scratch/safeseg/env/bin/activate
 
-python resize.py
+python segresnet.py

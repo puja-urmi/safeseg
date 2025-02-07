@@ -4,7 +4,7 @@ import numpy as np
 import scipy.ndimage
 
 # Define the target shape (adjust based on your model's input size)
-TARGET_SHAPE = (170, 195, 195)  
+TARGET_SHAPE = (200, 200, 200)  
 
 def resize_image(image, target_shape, interpolation_order):
     """Resize a NIfTI image to the target shape."""

@@ -13,7 +13,7 @@ def crop_to_label(image_data, seg_data):
         raise ValueError("Segmentation mask is empty!")
     # Determine bounding box
     min_coords = coords.min(axis=0)
-    max_coords = coords.max(axis=0) + 10  # add 10 for flexible use
+    max_coords = coords.max(axis=0) + 2  # add 10 for flexible use
     # Crop both image and seg using the bounding box
     slicer = tuple(slice(min_c, max_c) for min_c, max_c in zip(min_coords, max_coords))
     return image_data[slicer], seg_data[slicer]

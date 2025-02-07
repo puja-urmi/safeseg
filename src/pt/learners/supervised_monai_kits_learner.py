@@ -164,8 +164,8 @@ class SupervisedMonaiKitsLearner(SupervisedLearner):
         cache_rate = self.config_info["cache_dataset"]
         dataset_base_dir = self.config_info["dataset_base_dir"]
         datalist_json_path = self.config_info["datalist_json_path"]
-        self.roi_size = self.config_info.get("roi_size", (168, 192, 168))
-        self.infer_roi_size = self.config_info.get("infer_roi_size", (168, 192, 168))
+        self.roi_size = self.config_info.get("roi_size", (160, 192, 192))
+        self.infer_roi_size = self.config_info.get("infer_roi_size", (160, 192, 192))
 
         # Get datalist json
         datalist_json_path = custom_client_datalist_json_path(datalist_json_path, self.client_id)
