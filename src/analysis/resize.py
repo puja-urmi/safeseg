@@ -1,29 +1,23 @@
 import os
 import nibabel as nib
 import numpy as np
-import scipy.ndimage
+from monai.transforms import Resize
 
-# Define the target shape (adjust based on your model's input size)
-TARGET_SHAPE = (200, 200, 200)  
+# Define the target shape
+TARGET_SHAPE = (200, 250, 250)
 
-def resize_image(image, target_shape, interpolation_order):
-    """Resize a NIfTI image to the target shape."""
-    current_shape = image.shape
-    scale_factors = np.array(target_shape) / np.array(current_shape)
+# Define MONAI resize transforms
+resize_image_transform = Resize(spatial_size=TARGET_SHAPE, mode='bilinear')
+resize_seg_transform = Resize(spatial_size=TARGET_SHAPE, mode='nearest')
 
-    # Resize image data
-    resized_data = scipy.ndimage.zoom(image.get_fdata(), scale_factors, order=interpolation_order)
-
-    # Update affine to reflect new voxel size
-    new_affine = image.affine.copy()
-    for i in range(3):
-        new_affine[i, i] *= (current_shape[i] / target_shape[i])
-
-    return nib.Nifti1Image(resized_data, new_affine, image.header)
+def resize_image_monai(image, transform):
+    """Resize a NIfTI image using MONAI."""
+    resized_data = transform(image.get_fdata()[None, None, ...])  # Add batch & channel dims
+    return nib.Nifti1Image(resized_data[0, 0].numpy(), image.affine, image.header)
 
 # Input and output directories
-input_folder = "/home/psaha03/scratch/training_k23_sampled+cropped"
-output_folder = "/home/psaha03/scratch/training_k23_s+c+resized"
+input_folder = "/home/psaha03/scratch/dataset_kits23/dataset/training"
+output_folder = "/home/psaha03/scratch/training_k23_c+resized"
 
 os.makedirs(output_folder, exist_ok=True)
 
@@ -40,10 +34,10 @@ for case in sorted(os.listdir(input_folder)):
         seg_nifti = nib.load(seg_path)
 
         # Resize image (trilinear interpolation)
-        resized_img = resize_image(img_nifti, TARGET_SHAPE, interpolation_order=1)
+        resized_img = resize_image_monai(img_nifti, resize_image_transform)
 
         # Resize segmentation (nearest-neighbor interpolation)
-        resized_seg = resize_image(seg_nifti, TARGET_SHAPE, interpolation_order=0)
+        resized_seg = resize_image_monai(seg_nifti, resize_seg_transform)
 
         # Save resized images
         case_output_folder = os.path.join(output_folder, case)

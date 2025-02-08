@@ -2,7 +2,7 @@ import os
 import nibabel as nib
 import json
 
-dataset_path = "/home/psaha03/scratch/dataset_kits23/dataset/training"
+dataset_path = "/home/psaha03/scratch/resampled"
 all_cases = sorted(os.listdir(dataset_path))
 
 # Prepare a dictionary to store results
@@ -52,7 +52,7 @@ output["max_shape"] = {
 }
 
 # Save the output to a JSON file
-output_file = "/home/psaha03/scratch/safeseg/src/analysis/kits23_new_shapes.json"
+output_file = "/home/psaha03/scratch/safeseg/src/analysis/kits23_resampled_shapes.json"
 with open(output_file, 'w') as json_file:
     json.dump(output, json_file, indent=4)
 

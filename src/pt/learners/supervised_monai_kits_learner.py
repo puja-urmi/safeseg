@@ -164,8 +164,8 @@ class SupervisedMonaiKitsLearner(SupervisedLearner):
         cache_rate = self.config_info["cache_dataset"]
         dataset_base_dir = self.config_info["dataset_base_dir"]
         datalist_json_path = self.config_info["datalist_json_path"]
-        self.roi_size = self.config_info.get("roi_size", (160, 192, 192))
-        self.infer_roi_size = self.config_info.get("infer_roi_size", (160, 192, 192))
+        self.roi_size = self.config_info.get("roi_size", (208, 128, 168))
+        self.infer_roi_size = self.config_info.get("infer_roi_size", (208, 128, 168))
 
         # Get datalist json
         datalist_json_path = custom_client_datalist_json_path(datalist_json_path, self.client_id)
@@ -220,7 +220,7 @@ class SupervisedMonaiKitsLearner(SupervisedLearner):
                 ConvertToMultiChannelBasedOnKitsClassesd(keys="label"),
                 Spacingd(
                     keys=["image", "label"],
-                    pixdim=(1.0, 1.0, 1.0),
+                    pixdim=(0.5, 0.5, 0.5),
                     mode=("bilinear", "nearest"),
                 ),
                 Orientationd(keys=["image", "label"], axcodes="RAS"),
@@ -240,7 +240,7 @@ class SupervisedMonaiKitsLearner(SupervisedLearner):
                 ConvertToMultiChannelBasedOnKitsClassesd(keys="label"),
                 Spacingd(
                     keys=["image", "label"],
-                    pixdim=(1.0, 1.0, 1.0),
+                    pixdim=(0.5, 0.5, 0.5),
                     mode=("bilinear", "nearest"),
                 ),
                 DivisiblePadd(keys=["image", "label"], k=32),

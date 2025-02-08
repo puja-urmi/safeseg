@@ -3,18 +3,24 @@ import nibabel as nib
 import numpy as np
 
 # Define source and destination root directories
-src_root = '/home/psaha03/scratch/training_k23_sampled'
-dst_root = '/home/psaha03/scratch/training_k23_sampled+cropped'
+src_root = '/home/psaha03/scratch/dataset_kits23/dataset/training'
+dst_root = '/home/psaha03/scratch/training_k23_cropped'
 
-def crop_to_label(image_data, seg_data):
+def crop_to_label(image_data, seg_data, extra=10):
     # Find indices where segmentation is non-zero
     coords = np.argwhere(seg_data)
     if coords.size == 0:
         raise ValueError("Segmentation mask is empty!")
+
     # Determine bounding box
-    min_coords = coords.min(axis=0)
-    max_coords = coords.max(axis=0) + 2  # add 10 for flexible use
-    # Crop both image and seg using the bounding box
+    min_coords = coords.min(axis=0) - extra  # Extend minimum bounds
+    max_coords = coords.max(axis=0) + extra + 1  # Extend maximum bounds (+1 for inclusive slicing)
+
+    # Ensure the extended crop does not exceed image dimensions
+    min_coords = np.maximum(min_coords, 0)  # Keep within image bounds
+    max_coords = np.minimum(max_coords, image_data.shape)  # Keep within image bounds
+
+    # Crop both image and seg using the adjusted bounding box
     slicer = tuple(slice(min_c, max_c) for min_c, max_c in zip(min_coords, max_coords))
     return image_data[slicer], seg_data[slicer]
 
