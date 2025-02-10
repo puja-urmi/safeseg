@@ -10,7 +10,7 @@
         "id": "Executor",
         "path": "nvflare.app_common.executors.learner_executor.LearnerExecutor",
         "args": {
-          "learner_id": "brats-learner"
+          "learner_id": "kits-learner"
         }
       }
     }
@@ -23,8 +23,8 @@
 
   "components": [
     {
-      "id": "brats-learner",
-      "path": "pt.learners.supervised_monai_brats_learner.SupervisedMonaiBratsLearner",
+      "id": "kits-learner",
+      "path": "pt.learners.supervised_monai_kits_learner.SupervisedMonaiKitsLearner",
       "args": {
         "train_config_filename": "config_train.json",
         "aggregation_epochs": 1

@@ -1,10 +1,10 @@
 #!/bin/bash
 #SBATCH --nodes=1
-#SBATCH --gpus-per-node=p100:1
+#SBATCH --gpus-per-node=p100:2
 #SBATCH --cpus-per-task=16
 #SBATCH --ntasks-per-node=1
 #SBATCH --mem=32000M
-#SBATCH --time=60:00
+#SBATCH --time=100:00
 #SBATCH --output=training_%J.log   
 
 # Load the required modules
@@ -17,5 +17,5 @@ nvidia-smi
 
 # Execute the Python script
 pip install -r requirements.txt
-mkdir /home/psaha03/scratch/workspace_kits
-python3 -u -m nvflare.private.fed.app.simulator.simulator './configs/kits_central' -w '/home/psaha03/scratch/workspace_kits/kits_central' -n 1 -t 1 -gpu 0
+mkdir /home/psaha03/scratch/workspace_kits_fedavg
+python3 -u -m nvflare.private.fed.app.simulator.simulator './configs/kits_fedavg' -w '/home/psaha03/scratch/workspace_kits_fedavg/kits_fedavg' -n 4 -t 4 -gpu 0,1

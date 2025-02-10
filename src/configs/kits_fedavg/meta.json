@@ -1,5 +1,5 @@
 {
-  "name": "brats_fedavg",
+  "name": "kits_fedavg",
   "resource_spec": {},
   "deploy_map": {
     "app": [
