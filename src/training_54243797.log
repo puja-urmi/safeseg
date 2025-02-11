@@ -1,0 +1,916 @@
+Mon Feb 10 09:39:26 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.54.15              Driver Version: 550.54.15      CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  Tesla P100-PCIE-12GB           On  |   00000000:03:00.0 Off |                    0 |
+| N/A   27C    P0             24W /  250W |       0MiB /  12288MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Looking in links: /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/gentoo2023/x86-64-v3, /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/gentoo2023/generic, /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic
+Requirement already satisfied: nvflare~=2.5.0rc in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from -r requirements.txt (line 1)) (2.5.2)
+Requirement already satisfied: torch==2.5.1 in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from -r requirements.txt (line 2)) (2.5.1+computecanada)
+Requirement already satisfied: torchvision==0.20.1 in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from -r requirements.txt (line 3)) (0.20.1+computecanada)
+Requirement already satisfied: tensorboard==2.17.1 in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from -r requirements.txt (line 4)) (2.17.1+computecanada)
+Requirement already satisfied: monai==1.4.0 in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from -r requirements.txt (line 5)) (1.4.0+computecanada)
+Requirement already satisfied: tqdm==4.67.1 in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from -r requirements.txt (line 6)) (4.67.1+computecanada)
+Requirement already satisfied: nibabel==5.3.2 in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from -r requirements.txt (line 7)) (5.3.2)
+Requirement already satisfied: filelock in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from torch==2.5.1->-r requirements.txt (line 2)) (3.17.0+computecanada)
+Requirement already satisfied: typing-extensions>=4.8.0 in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from torch==2.5.1->-r requirements.txt (line 2)) (4.12.2+computecanada)
+Requirement already satisfied: networkx in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from torch==2.5.1->-r requirements.txt (line 2)) (3.4.2+computecanada)
+Requirement already satisfied: jinja2 in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from torch==2.5.1->-r requirements.txt (line 2)) (3.1.5+computecanada)
+Requirement already satisfied: fsspec in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from torch==2.5.1->-r requirements.txt (line 2)) (2025.2.0+computecanada)
+Requirement already satisfied: sympy==1.13.1 in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from torch==2.5.1->-r requirements.txt (line 2)) (1.13.1+computecanada)
+Requirement already satisfied: numpy in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from torchvision==0.20.1->-r requirements.txt (line 3)) (1.26.4+computecanada)
+Requirement already satisfied: pillow-simd!=8.3.*,>=5.3.0 in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from torchvision==0.20.1->-r requirements.txt (line 3)) (9.5.0.post2+computecanada)
+Requirement already satisfied: absl-py>=0.4 in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from tensorboard==2.17.1->-r requirements.txt (line 4)) (2.1.0+computecanada)
+Requirement already satisfied: grpcio>=1.48.2 in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from tensorboard==2.17.1->-r requirements.txt (line 4)) (1.67.0+computecanada)
+Requirement already satisfied: markdown>=2.6.8 in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from tensorboard==2.17.1->-r requirements.txt (line 4)) (3.7+computecanada)
+Requirement already satisfied: packaging in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from tensorboard==2.17.1->-r requirements.txt (line 4)) (24.2+computecanada)
+Requirement already satisfied: protobuf!=4.24.0,>=3.19.6 in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from tensorboard==2.17.1->-r requirements.txt (line 4)) (5.29.3+computecanada)
+Requirement already satisfied: setuptools>=41.0.0 in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from tensorboard==2.17.1->-r requirements.txt (line 4)) (65.5.0)
+Requirement already satisfied: six>1.9 in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from tensorboard==2.17.1->-r requirements.txt (line 4)) (1.17.0+computecanada)
+Requirement already satisfied: tensorboard-data-server<0.8.0,>=0.7.0 in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from tensorboard==2.17.1->-r requirements.txt (line 4)) (0.7.2+computecanada)
+Requirement already satisfied: werkzeug>=1.0.1 in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from tensorboard==2.17.1->-r requirements.txt (line 4)) (3.0.3+computecanada)
+Requirement already satisfied: importlib-resources>=5.12 in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from nibabel==5.3.2->-r requirements.txt (line 7)) (6.5.2+computecanada)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from sympy==1.13.1->torch==2.5.1->-r requirements.txt (line 2)) (1.3.0+computecanada)
+Requirement already satisfied: cryptography>=36.0.0 in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from nvflare~=2.5.0rc->-r requirements.txt (line 1)) (44.0.0+computecanada)
+Requirement already satisfied: Flask==3.0.2 in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from nvflare~=2.5.0rc->-r requirements.txt (line 1)) (3.0.2+computecanada)
+Requirement already satisfied: Flask-JWT-Extended==4.6.0 in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from nvflare~=2.5.0rc->-r requirements.txt (line 1)) (4.6.0)
+Requirement already satisfied: Flask-SQLAlchemy==3.1.1 in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from nvflare~=2.5.0rc->-r requirements.txt (line 1)) (3.1.1)
+Requirement already satisfied: SQLAlchemy==2.0.16 in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from nvflare~=2.5.0rc->-r requirements.txt (line 1)) (2.0.16+computecanada)
+Requirement already satisfied: gunicorn>=22.0.0 in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from nvflare~=2.5.0rc->-r requirements.txt (line 1)) (23.0.0+computecanada)
+Requirement already satisfied: psutil>=5.9.1 in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from nvflare~=2.5.0rc->-r requirements.txt (line 1)) (6.1.1+computecanada)
+Requirement already satisfied: PyYAML>=6.0 in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from nvflare~=2.5.0rc->-r requirements.txt (line 1)) (6.0.2+computecanada)
+Requirement already satisfied: requests>=2.28.0 in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from nvflare~=2.5.0rc->-r requirements.txt (line 1)) (2.32.3+computecanada)
+Requirement already satisfied: msgpack>=1.0.3 in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from nvflare~=2.5.0rc->-r requirements.txt (line 1)) (1.1.0+computecanada)
+Requirement already satisfied: docker>=6.0 in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from nvflare~=2.5.0rc->-r requirements.txt (line 1)) (7.1.0)
+Requirement already satisfied: websockets>=10.4 in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from nvflare~=2.5.0rc->-r requirements.txt (line 1)) (14.2)
+Requirement already satisfied: pyhocon in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from nvflare~=2.5.0rc->-r requirements.txt (line 1)) (0.3.61)
+Requirement already satisfied: itsdangerous>=2.1.2 in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from Flask==3.0.2->nvflare~=2.5.0rc->-r requirements.txt (line 1)) (2.2.0+computecanada)
+Requirement already satisfied: click>=8.1.3 in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from Flask==3.0.2->nvflare~=2.5.0rc->-r requirements.txt (line 1)) (8.1.8+computecanada)
+Requirement already satisfied: blinker>=1.6.2 in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from Flask==3.0.2->nvflare~=2.5.0rc->-r requirements.txt (line 1)) (1.9.0+computecanada)
+Requirement already satisfied: PyJWT<3.0,>=2.0 in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from Flask-JWT-Extended==4.6.0->nvflare~=2.5.0rc->-r requirements.txt (line 1)) (2.10.1+computecanada)
+Requirement already satisfied: greenlet!=0.4.17 in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from SQLAlchemy==2.0.16->nvflare~=2.5.0rc->-r requirements.txt (line 1)) (3.1.1+computecanada)
+Requirement already satisfied: MarkupSafe>=2.1.1 in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from werkzeug>=1.0.1->tensorboard==2.17.1->-r requirements.txt (line 4)) (2.1.5+computecanada)
+Requirement already satisfied: cffi>=1.12 in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from cryptography>=36.0.0->nvflare~=2.5.0rc->-r requirements.txt (line 1)) (1.17.1+computecanada)
+Requirement already satisfied: urllib3>=1.26.0 in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from docker>=6.0->nvflare~=2.5.0rc->-r requirements.txt (line 1)) (2.3.0+computecanada)
+Requirement already satisfied: charset-normalizer<4,>=2 in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from requests>=2.28.0->nvflare~=2.5.0rc->-r requirements.txt (line 1)) (3.4.1+computecanada)
+Requirement already satisfied: idna<4,>=2.5 in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from requests>=2.28.0->nvflare~=2.5.0rc->-r requirements.txt (line 1)) (3.10+computecanada)
+Requirement already satisfied: certifi>=2017.4.17 in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from requests>=2.28.0->nvflare~=2.5.0rc->-r requirements.txt (line 1)) (2025.1.31+computecanada)
+Requirement already satisfied: pyparsing<4,>=2 in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from pyhocon->nvflare~=2.5.0rc->-r requirements.txt (line 1)) (3.2.1+computecanada)
+Requirement already satisfied: pycparser in /home/psaha03/scratch/safeseg/env/lib/python3.11/site-packages (from cffi>=1.12->cryptography>=36.0.0->nvflare~=2.5.0rc->-r requirements.txt (line 1)) (2.22+computecanada)
+2025-02-10 09:39:40,942 - SimulatorRunner - INFO - Create the Simulator Server.
+2025-02-10 09:39:41,028 - CoreCell - INFO - server: creating listener on tcp://0:51911
+2025-02-10 09:39:41,328 - CoreCell - INFO - server: created backbone external listener for tcp://0:51911
+2025-02-10 09:39:41,329 - ConnectorManager - INFO - 1658505: Try start_listener Listener resources: {'secure': False, 'host': 'localhost'}
+2025-02-10 09:39:41,333 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connector [CH00002 PASSIVE tcp://0:24397] is starting
+2025-02-10 09:39:41,834 - CoreCell - INFO - server: created backbone internal listener for tcp://localhost:24397
+2025-02-10 09:39:41,835 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connector [CH00001 PASSIVE tcp://0:51911] is starting
+2025-02-10 09:39:41,836 - SimulatorServer - INFO - max_reg_duration=60.0
+2025-02-10 09:39:41,954 - nvflare.fuel.hci.server.hci - INFO - Starting Admin Server localhost on Port 56643
+2025-02-10 09:39:41,954 - SimulatorRunner - INFO - Deploy the Apps.
+2025-02-10 09:39:43,005 - SimulatorRunner - INFO - Create the simulate clients.
+2025-02-10 09:39:43,203 - Communicator - INFO - Trying to register with server ...
+2025-02-10 09:39:43,211 - ClientManager - INFO - authenticated client site-1
+2025-02-10 09:39:43,212 - ClientManager - INFO - Client: New client site-1@172.16.137.129 joined. Sent token: 5265bb51-0319-46a6-b2a6-994807af9fe0.  Total clients: 1
+2025-02-10 09:39:43,219 - Communicator - INFO - register RC: ok
+2025-02-10 09:39:43,247 - FederatedClient - INFO - Successfully registered client:site-1 for project simulator_server. Token:5265bb51-0319-46a6-b2a6-994807af9fe0 SSID:
+2025-02-10 09:39:43,248 - SimulatorRunner - INFO - Set the client status ready.
+2025-02-10 09:39:43,251 - SimulatorRunner - INFO - Deploy and start the Server App.
+2025-02-10 09:39:43,347 - Cell - INFO - Register blob CB for channel='server_command', topic='*'
+2025-02-10 09:39:43,348 - Cell - INFO - Register blob CB for channel='aux_communication', topic='*'
+2025-02-10 09:39:43,366 - ServerCommandAgent - INFO - ServerCommandAgent cell register_request_cb: server.simulate_job
+2025-02-10 09:40:16,894 - IntimeModelSelector - INFO - model selection weights control: None
+2025-02-10 09:40:16,909 - AuxRunner - INFO - registered aux handler for topic __sync_runner__
+2025-02-10 09:40:16,909 - AuxRunner - INFO - registered aux handler for topic __job_heartbeat__
+2025-02-10 09:40:16,910 - AuxRunner - INFO - registered aux handler for topic __task_check__
+2025-02-10 09:40:16,911 - AuxRunner - INFO - registered aux handler for topic RM.RELIABLE_REQUEST
+2025-02-10 09:40:16,912 - AuxRunner - INFO - registered aux handler for topic RM.RELIABLE_REPLY
+2025-02-10 09:40:16,913 - ReliableMessage - INFO - enabled reliable message: max_request_workers=20 query_interval=2.0
+2025-02-10 09:40:16,913 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job]: Server runner starting ...
+2025-02-10 09:40:16,915 - AuxRunner - INFO - registered aux handler for topic fed.event
+2025-02-10 09:40:16,915 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job]: starting workflow scatter_and_gather (<class 'nvflare.app_common.workflows.scatter_and_gather.ScatterAndGather'>) ...
+2025-02-10 09:40:16,916 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Initializing ScatterAndGather workflow.
+2025-02-10 09:40:16,918 - PTFileModelPersistor - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Both source_ckpt_file_full_name and ckpt_preload_path are not provided. Using the default model weights initialized on the persistor side.
+2025-02-10 09:40:16,923 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Workflow scatter_and_gather (<class 'nvflare.app_common.workflows.scatter_and_gather.ScatterAndGather'>) started
+2025-02-10 09:40:16,924 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Beginning ScatterAndGather training phase.
+2025-02-10 09:40:16,924 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Round 0 started.
+2025-02-10 09:40:16,925 - WFCommServer - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: scheduled task train
+2025-02-10 09:40:17,324 - SimulatorClientRunner - INFO - Start the clients run simulation.
+2025-02-10 09:40:18,325 - SimulatorClientRunner - INFO - Simulate Run client: site-1 on GPU group: 0
+2025-02-10 09:40:22,358 - ClientTaskWorker - INFO - ClientTaskWorker started to run
+2025-02-10 09:40:24,203 - CoreCell - INFO - site-1.simulate_job: created backbone external connector to tcp://localhost:51911
+2025-02-10 09:40:24,205 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connector [CH00001 ACTIVE tcp://localhost:51911] is starting
+2025-02-10 09:40:24,207 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00002 127.0.0.1:53242 => 127.0.0.1:51911] is created: PID: 1658787
+2025-02-10 09:40:24,208 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00004 127.0.0.1:51911 <= 127.0.0.1:53242] is created: PID: 1658505
+2025-02-10 09:40:49,378 - AuxRunner - INFO - registered aux handler for topic __end_run__
+2025-02-10 09:40:49,379 - AuxRunner - INFO - registered aux handler for topic __do_task__
+2025-02-10 09:40:49,380 - Cell - INFO - Register blob CB for channel='aux_communication', topic='*'
+2025-02-10 09:40:49,894 - Cell - INFO - broadcast: channel='aux_communication', topic='__sync_runner__', targets=['server.simulate_job'], timeout=2.0
+2025-02-10 09:40:49,901 - ClientRunner - INFO - [identity=site-1, run=simulate_job]: synced to Server Runner in 0.507291316986084 seconds
+2025-02-10 09:40:49,902 - AuxRunner - INFO - registered aux handler for topic RM.RELIABLE_REQUEST
+2025-02-10 09:40:49,902 - AuxRunner - INFO - registered aux handler for topic RM.RELIABLE_REPLY
+2025-02-10 09:40:49,903 - ReliableMessage - INFO - enabled reliable message: max_request_workers=20 query_interval=2.0
+2025-02-10 09:40:49,904 - AuxRunner - INFO - registered aux handler for topic fed.event
+2025-02-10 09:40:49,904 - ClientRunner - INFO - [identity=site-1, run=simulate_job]: client runner started
+2025-02-10 09:40:49,905 - ClientTaskWorker - INFO - Initialize ClientRunner for client: site-1
+2025-02-10 09:40:49,907 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, task_name=train, task_id=1807a4cc-0c2c-4725-a6a0-7b2d8db8c2ae]: assigned task to client site-1: name=train, id=1807a4cc-0c2c-4725-a6a0-7b2d8db8c2ae
+2025-02-10 09:40:49,908 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, task_name=train, task_id=1807a4cc-0c2c-4725-a6a0-7b2d8db8c2ae]: sent task assignment to client. client_name:site-1 task_id:1807a4cc-0c2c-4725-a6a0-7b2d8db8c2ae
+2025-02-10 09:40:49,909 - GetTaskCommand - INFO - return task to client.  client_name: site-1  task_name: train   task_id: 1807a4cc-0c2c-4725-a6a0-7b2d8db8c2ae  sharable_header_task_id: 1807a4cc-0c2c-4725-a6a0-7b2d8db8c2ae
+2025-02-10 09:40:50,010 - Communicator - INFO - Received from simulator_server server. getTask: train size: 18.8MB (18828291 Bytes) time: 0.104098 seconds
+2025-02-10 09:40:50,020 - FederatedClient - INFO - pull_task completed. Task name:train Status:True 
+2025-02-10 09:40:50,020 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job]: got task assignment: name=train, id=1807a4cc-0c2c-4725-a6a0-7b2d8db8c2ae
+2025-02-10 09:40:50,021 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=1807a4cc-0c2c-4725-a6a0-7b2d8db8c2ae]: invoking task executor LearnerExecutor
+2025-02-10 09:40:50,022 - LearnerExecutor - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=1807a4cc-0c2c-4725-a6a0-7b2d8db8c2ae]: Client trainer got task: train
+2025-02-10 09:40:50,022 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=1807a4cc-0c2c-4725-a6a0-7b2d8db8c2ae]: Client site-1 initialized with args: 
+ Namespace(job_folder='/scratch/psaha03/safeseg/src/./configs/kits_central', workspace='/home/psaha03/scratch/workspace_kits_central/kits_central/site-1', clients=None, n_clients=1, threads=1, gpu='0', max_clients=100, set=['secure_train=False'], log_config=None, config_folder='config', job_id='simulate_job', client_config='config/config_fed_client.json', env='config/environment.json', end_run_for_all=False, sp_target='0:51911', sp_scheme='tcp', client_name='site-1', token='5265bb51-0319-46a6-b2a6-994807af9fe0')
+2025-02-10 09:40:50,035 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=1807a4cc-0c2c-4725-a6a0-7b2d8db8c2ae]: Training Size: 70, Validation Size: 30
+2025-02-10 09:48:36,977 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=1807a4cc-0c2c-4725-a6a0-7b2d8db8c2ae]: val_metric_global_model (global_model): 0.0249
+2025-02-10 09:48:36,981 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=1807a4cc-0c2c-4725-a6a0-7b2d8db8c2ae]: Current/Total Round: 1/20
+2025-02-10 09:48:36,982 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=1807a4cc-0c2c-4725-a6a0-7b2d8db8c2ae]: Client identity: site-1
+2025-02-10 09:48:36,992 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=1807a4cc-0c2c-4725-a6a0-7b2d8db8c2ae]: Local steps per epoch: 70
+2025-02-10 09:48:36,994 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=1807a4cc-0c2c-4725-a6a0-7b2d8db8c2ae]: Local epoch site-1: 1/1 (lr=0.0001)
+2025-02-10 09:57:36,443 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=1807a4cc-0c2c-4725-a6a0-7b2d8db8c2ae]: Local epochs finished. Returning shareable
+2025-02-10 09:57:36,455 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=1807a4cc-0c2c-4725-a6a0-7b2d8db8c2ae]: finished processing task
+2025-02-10 09:57:36,463 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=1807a4cc-0c2c-4725-a6a0-7b2d8db8c2ae]: try #1: sending task result to server
+2025-02-10 09:57:36,471 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=1807a4cc-0c2c-4725-a6a0-7b2d8db8c2ae]: checking task ...
+2025-02-10 09:57:36,472 - Cell - INFO - broadcast: channel='aux_communication', topic='__task_check__', targets=['server.simulate_job'], timeout=5.0
+2025-02-10 09:57:36,480 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=1807a4cc-0c2c-4725-a6a0-7b2d8db8c2ae]: start to send task result to server
+2025-02-10 09:57:36,482 - FederatedClient - INFO - Starting to push execute result.
+2025-02-10 09:57:36,572 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job]: got result from client site-1 for task: name=train, id=1807a4cc-0c2c-4725-a6a0-7b2d8db8c2ae
+2025-02-10 09:57:36,584 - DXOAggregator - WARNING - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=1807a4cc-0c2c-4725-a6a0-7b2d8db8c2ae]: Aggregation_weight missing for site-1 and set to default value, 1.0 This kind of message will show 10 times at most.
+2025-02-10 09:57:36,589 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=1807a4cc-0c2c-4725-a6a0-7b2d8db8c2ae]: Contribution from site-1 ACCEPTED by the aggregator at round 0.
+2025-02-10 09:57:36,720 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=1807a4cc-0c2c-4725-a6a0-7b2d8db8c2ae]: finished processing client result by scatter_and_gather
+2025-02-10 09:57:36,720 - WFCommServer - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: task train exit with status TaskCompletionStatus.OK
+2025-02-10 09:57:36,721 - SubmitUpdateCommand - INFO - submit_update process. client_name:site-1   task_id:1807a4cc-0c2c-4725-a6a0-7b2d8db8c2ae
+2025-02-10 09:57:36,728 - Communicator - INFO -  SubmitUpdate size: 18.8MB (18828232 Bytes). time: 0.244955 seconds
+2025-02-10 09:57:36,729 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=1807a4cc-0c2c-4725-a6a0-7b2d8db8c2ae]: task result sent to server
+2025-02-10 09:57:36,730 - ClientTaskWorker - INFO - Finished one task run for client: site-1 interval: 2 task_processed: True
+2025-02-10 09:57:36,920 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Start aggregation.
+2025-02-10 09:57:36,929 - DXOAggregator - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: aggregating 1 update(s) at round 0
+2025-02-10 09:57:36,942 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: End aggregation.
+2025-02-10 09:57:36,957 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Start persist model on server.
+2025-02-10 09:57:37,127 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: End persist model on server.
+2025-02-10 09:57:37,128 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Round 0 finished.
+2025-02-10 09:57:37,224 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Round 1 started.
+2025-02-10 09:57:37,225 - WFCommServer - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: scheduled task train
+2025-02-10 09:57:38,733 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, task_name=train, task_id=3130ee58-b5da-4b82-a637-fe5c0e100d90]: assigned task to client site-1: name=train, id=3130ee58-b5da-4b82-a637-fe5c0e100d90
+2025-02-10 09:57:38,734 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, task_name=train, task_id=3130ee58-b5da-4b82-a637-fe5c0e100d90]: sent task assignment to client. client_name:site-1 task_id:3130ee58-b5da-4b82-a637-fe5c0e100d90
+2025-02-10 09:57:38,734 - GetTaskCommand - INFO - return task to client.  client_name: site-1  task_name: train   task_id: 3130ee58-b5da-4b82-a637-fe5c0e100d90  sharable_header_task_id: 3130ee58-b5da-4b82-a637-fe5c0e100d90
+2025-02-10 09:57:38,820 - Communicator - INFO - Received from simulator_server server. getTask: train size: 18.8MB (18828291 Bytes) time: 0.089237 seconds
+2025-02-10 09:57:38,822 - FederatedClient - INFO - pull_task completed. Task name:train Status:True 
+2025-02-10 09:57:38,823 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job]: got task assignment: name=train, id=3130ee58-b5da-4b82-a637-fe5c0e100d90
+2025-02-10 09:57:38,827 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=3130ee58-b5da-4b82-a637-fe5c0e100d90]: invoking task executor LearnerExecutor
+2025-02-10 09:57:38,830 - LearnerExecutor - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=3130ee58-b5da-4b82-a637-fe5c0e100d90]: Client trainer got task: train
+2025-02-10 10:05:29,497 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=3130ee58-b5da-4b82-a637-fe5c0e100d90]: val_metric_global_model (global_model): 0.0707
+2025-02-10 10:05:29,500 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=3130ee58-b5da-4b82-a637-fe5c0e100d90]: Current/Total Round: 2/20
+2025-02-10 10:05:29,501 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=3130ee58-b5da-4b82-a637-fe5c0e100d90]: Client identity: site-1
+2025-02-10 10:05:29,512 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=3130ee58-b5da-4b82-a637-fe5c0e100d90]: Local steps per epoch: 70
+2025-02-10 10:05:29,513 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=3130ee58-b5da-4b82-a637-fe5c0e100d90]: Local epoch site-1: 1/1 (lr=0.0001)
+2025-02-10 10:14:34,844 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=3130ee58-b5da-4b82-a637-fe5c0e100d90]: Local epochs finished. Returning shareable
+2025-02-10 10:14:34,933 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=3130ee58-b5da-4b82-a637-fe5c0e100d90]: finished processing task
+2025-02-10 10:14:34,945 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=3130ee58-b5da-4b82-a637-fe5c0e100d90]: try #1: sending task result to server
+2025-02-10 10:14:34,947 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=3130ee58-b5da-4b82-a637-fe5c0e100d90]: checking task ...
+2025-02-10 10:14:34,948 - Cell - INFO - broadcast: channel='aux_communication', topic='__task_check__', targets=['server.simulate_job'], timeout=5.0
+2025-02-10 10:14:34,956 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=3130ee58-b5da-4b82-a637-fe5c0e100d90]: start to send task result to server
+2025-02-10 10:14:34,975 - FederatedClient - INFO - Starting to push execute result.
+2025-02-10 10:14:35,045 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job]: got result from client site-1 for task: name=train, id=3130ee58-b5da-4b82-a637-fe5c0e100d90
+2025-02-10 10:14:35,094 - IntimeModelSelector - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=3130ee58-b5da-4b82-a637-fe5c0e100d90]: validation metric 0.07068601750417858 from client site-1
+2025-02-10 10:14:35,095 - DXOAggregator - WARNING - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=3130ee58-b5da-4b82-a637-fe5c0e100d90]: Aggregation_weight missing for site-1 and set to default value, 1.0 This kind of message will show 10 times at most.
+2025-02-10 10:14:35,110 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=3130ee58-b5da-4b82-a637-fe5c0e100d90]: Contribution from site-1 ACCEPTED by the aggregator at round 1.
+2025-02-10 10:14:35,245 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=3130ee58-b5da-4b82-a637-fe5c0e100d90]: finished processing client result by scatter_and_gather
+2025-02-10 10:14:35,245 - WFCommServer - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: task train exit with status TaskCompletionStatus.OK
+2025-02-10 10:14:35,246 - SubmitUpdateCommand - INFO - submit_update process. client_name:site-1   task_id:3130ee58-b5da-4b82-a637-fe5c0e100d90
+2025-02-10 10:14:35,290 - Communicator - INFO -  SubmitUpdate size: 18.8MB (18828232 Bytes). time: 0.313759 seconds
+2025-02-10 10:14:35,292 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=3130ee58-b5da-4b82-a637-fe5c0e100d90]: task result sent to server
+2025-02-10 10:14:35,308 - ClientTaskWorker - INFO - Finished one task run for client: site-1 interval: 2 task_processed: True
+2025-02-10 10:14:35,445 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Start aggregation.
+2025-02-10 10:14:35,446 - IntimeModelSelector - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: new best validation metric at round 1: 0.07068601750417858
+2025-02-10 10:14:35,664 - DXOAggregator - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: aggregating 1 update(s) at round 1
+2025-02-10 10:14:35,678 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: End aggregation.
+2025-02-10 10:14:35,685 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Start persist model on server.
+2025-02-10 10:14:35,718 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: End persist model on server.
+2025-02-10 10:14:35,719 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Round 1 finished.
+2025-02-10 10:14:35,814 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Round 2 started.
+2025-02-10 10:14:35,815 - WFCommServer - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: scheduled task train
+2025-02-10 10:14:37,314 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, task_name=train, task_id=1aade729-c18c-4d3d-8bae-c74134aa7bfe]: assigned task to client site-1: name=train, id=1aade729-c18c-4d3d-8bae-c74134aa7bfe
+2025-02-10 10:14:37,315 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, task_name=train, task_id=1aade729-c18c-4d3d-8bae-c74134aa7bfe]: sent task assignment to client. client_name:site-1 task_id:1aade729-c18c-4d3d-8bae-c74134aa7bfe
+2025-02-10 10:14:37,315 - GetTaskCommand - INFO - return task to client.  client_name: site-1  task_name: train   task_id: 1aade729-c18c-4d3d-8bae-c74134aa7bfe  sharable_header_task_id: 1aade729-c18c-4d3d-8bae-c74134aa7bfe
+2025-02-10 10:14:37,377 - Communicator - INFO - Received from simulator_server server. getTask: train size: 18.8MB (18828291 Bytes) time: 0.065539 seconds
+2025-02-10 10:14:37,378 - FederatedClient - INFO - pull_task completed. Task name:train Status:True 
+2025-02-10 10:14:37,379 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job]: got task assignment: name=train, id=1aade729-c18c-4d3d-8bae-c74134aa7bfe
+2025-02-10 10:14:37,380 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=1aade729-c18c-4d3d-8bae-c74134aa7bfe]: invoking task executor LearnerExecutor
+2025-02-10 10:14:37,381 - LearnerExecutor - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=1aade729-c18c-4d3d-8bae-c74134aa7bfe]: Client trainer got task: train
+2025-02-10 10:22:24,698 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=1aade729-c18c-4d3d-8bae-c74134aa7bfe]: val_metric_global_model (global_model): 0.0567
+2025-02-10 10:22:24,700 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=1aade729-c18c-4d3d-8bae-c74134aa7bfe]: Current/Total Round: 3/20
+2025-02-10 10:22:24,701 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=1aade729-c18c-4d3d-8bae-c74134aa7bfe]: Client identity: site-1
+2025-02-10 10:22:24,710 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=1aade729-c18c-4d3d-8bae-c74134aa7bfe]: Local steps per epoch: 70
+2025-02-10 10:22:24,711 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=1aade729-c18c-4d3d-8bae-c74134aa7bfe]: Local epoch site-1: 1/1 (lr=0.0001)
+2025-02-10 10:31:21,211 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=1aade729-c18c-4d3d-8bae-c74134aa7bfe]: Local epochs finished. Returning shareable
+2025-02-10 10:31:21,213 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=1aade729-c18c-4d3d-8bae-c74134aa7bfe]: finished processing task
+2025-02-10 10:31:21,216 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=1aade729-c18c-4d3d-8bae-c74134aa7bfe]: try #1: sending task result to server
+2025-02-10 10:31:21,217 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=1aade729-c18c-4d3d-8bae-c74134aa7bfe]: checking task ...
+2025-02-10 10:31:21,218 - Cell - INFO - broadcast: channel='aux_communication', topic='__task_check__', targets=['server.simulate_job'], timeout=5.0
+2025-02-10 10:31:21,224 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=1aade729-c18c-4d3d-8bae-c74134aa7bfe]: start to send task result to server
+2025-02-10 10:31:21,224 - FederatedClient - INFO - Starting to push execute result.
+2025-02-10 10:31:21,286 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job]: got result from client site-1 for task: name=train, id=1aade729-c18c-4d3d-8bae-c74134aa7bfe
+2025-02-10 10:31:21,300 - IntimeModelSelector - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=1aade729-c18c-4d3d-8bae-c74134aa7bfe]: validation metric 0.05674930249663374 from client site-1
+2025-02-10 10:31:21,300 - DXOAggregator - WARNING - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=1aade729-c18c-4d3d-8bae-c74134aa7bfe]: Aggregation_weight missing for site-1 and set to default value, 1.0 This kind of message will show 10 times at most.
+2025-02-10 10:31:21,305 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=1aade729-c18c-4d3d-8bae-c74134aa7bfe]: Contribution from site-1 ACCEPTED by the aggregator at round 2.
+2025-02-10 10:31:21,404 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=1aade729-c18c-4d3d-8bae-c74134aa7bfe]: finished processing client result by scatter_and_gather
+2025-02-10 10:31:21,404 - WFCommServer - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: task train exit with status TaskCompletionStatus.OK
+2025-02-10 10:31:21,406 - SubmitUpdateCommand - INFO - submit_update process. client_name:site-1   task_id:1aade729-c18c-4d3d-8bae-c74134aa7bfe
+2025-02-10 10:31:21,409 - Communicator - INFO -  SubmitUpdate size: 18.8MB (18828232 Bytes). time: 0.183992 seconds
+2025-02-10 10:31:21,409 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=1aade729-c18c-4d3d-8bae-c74134aa7bfe]: task result sent to server
+2025-02-10 10:31:21,415 - ClientTaskWorker - INFO - Finished one task run for client: site-1 interval: 2 task_processed: True
+2025-02-10 10:31:21,604 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Start aggregation.
+2025-02-10 10:31:21,605 - DXOAggregator - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: aggregating 1 update(s) at round 2
+2025-02-10 10:31:21,610 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: End aggregation.
+2025-02-10 10:31:21,623 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Start persist model on server.
+2025-02-10 10:31:21,732 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: End persist model on server.
+2025-02-10 10:31:21,733 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Round 2 finished.
+2025-02-10 10:31:21,830 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Round 3 started.
+2025-02-10 10:31:21,831 - WFCommServer - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: scheduled task train
+2025-02-10 10:31:23,424 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, task_name=train, task_id=77dbbfad-fe21-487d-877d-41c46ee982f7]: assigned task to client site-1: name=train, id=77dbbfad-fe21-487d-877d-41c46ee982f7
+2025-02-10 10:31:23,425 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, task_name=train, task_id=77dbbfad-fe21-487d-877d-41c46ee982f7]: sent task assignment to client. client_name:site-1 task_id:77dbbfad-fe21-487d-877d-41c46ee982f7
+2025-02-10 10:31:23,426 - GetTaskCommand - INFO - return task to client.  client_name: site-1  task_name: train   task_id: 77dbbfad-fe21-487d-877d-41c46ee982f7  sharable_header_task_id: 77dbbfad-fe21-487d-877d-41c46ee982f7
+2025-02-10 10:31:23,486 - Communicator - INFO - Received from simulator_server server. getTask: train size: 18.8MB (18828291 Bytes) time: 0.064315 seconds
+2025-02-10 10:31:23,487 - FederatedClient - INFO - pull_task completed. Task name:train Status:True 
+2025-02-10 10:31:23,488 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job]: got task assignment: name=train, id=77dbbfad-fe21-487d-877d-41c46ee982f7
+2025-02-10 10:31:23,489 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=77dbbfad-fe21-487d-877d-41c46ee982f7]: invoking task executor LearnerExecutor
+2025-02-10 10:31:23,489 - LearnerExecutor - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=77dbbfad-fe21-487d-877d-41c46ee982f7]: Client trainer got task: train
+2025-02-10 10:39:06,530 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=77dbbfad-fe21-487d-877d-41c46ee982f7]: val_metric_global_model (global_model): 0.0682
+2025-02-10 10:39:06,578 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=77dbbfad-fe21-487d-877d-41c46ee982f7]: Current/Total Round: 4/20
+2025-02-10 10:39:06,578 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=77dbbfad-fe21-487d-877d-41c46ee982f7]: Client identity: site-1
+2025-02-10 10:39:06,588 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=77dbbfad-fe21-487d-877d-41c46ee982f7]: Local steps per epoch: 70
+2025-02-10 10:39:06,589 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=77dbbfad-fe21-487d-877d-41c46ee982f7]: Local epoch site-1: 1/1 (lr=0.0001)
+2025-02-10 10:48:06,815 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=77dbbfad-fe21-487d-877d-41c46ee982f7]: Local epochs finished. Returning shareable
+2025-02-10 10:48:06,832 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=77dbbfad-fe21-487d-877d-41c46ee982f7]: finished processing task
+2025-02-10 10:48:06,833 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=77dbbfad-fe21-487d-877d-41c46ee982f7]: try #1: sending task result to server
+2025-02-10 10:48:06,833 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=77dbbfad-fe21-487d-877d-41c46ee982f7]: checking task ...
+2025-02-10 10:48:06,834 - Cell - INFO - broadcast: channel='aux_communication', topic='__task_check__', targets=['server.simulate_job'], timeout=5.0
+2025-02-10 10:48:06,839 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=77dbbfad-fe21-487d-877d-41c46ee982f7]: start to send task result to server
+2025-02-10 10:48:06,840 - FederatedClient - INFO - Starting to push execute result.
+2025-02-10 10:48:06,903 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job]: got result from client site-1 for task: name=train, id=77dbbfad-fe21-487d-877d-41c46ee982f7
+2025-02-10 10:48:06,960 - IntimeModelSelector - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=77dbbfad-fe21-487d-877d-41c46ee982f7]: validation metric 0.06816386864746972 from client site-1
+2025-02-10 10:48:06,961 - DXOAggregator - WARNING - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=77dbbfad-fe21-487d-877d-41c46ee982f7]: Aggregation_weight missing for site-1 and set to default value, 1.0 This kind of message will show 10 times at most.
+2025-02-10 10:48:06,966 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=77dbbfad-fe21-487d-877d-41c46ee982f7]: Contribution from site-1 ACCEPTED by the aggregator at round 3.
+2025-02-10 10:48:07,065 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=77dbbfad-fe21-487d-877d-41c46ee982f7]: finished processing client result by scatter_and_gather
+2025-02-10 10:48:07,066 - SubmitUpdateCommand - INFO - submit_update process. client_name:site-1   task_id:77dbbfad-fe21-487d-877d-41c46ee982f7
+2025-02-10 10:48:07,067 - Communicator - INFO -  SubmitUpdate size: 18.8MB (18828232 Bytes). time: 0.227346 seconds
+2025-02-10 10:48:07,068 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=77dbbfad-fe21-487d-877d-41c46ee982f7]: task result sent to server
+2025-02-10 10:48:07,069 - ClientTaskWorker - INFO - Finished one task run for client: site-1 interval: 2 task_processed: True
+2025-02-10 10:48:07,136 - WFCommServer - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: task train exit with status TaskCompletionStatus.OK
+2025-02-10 10:48:07,265 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Start aggregation.
+2025-02-10 10:48:07,265 - DXOAggregator - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: aggregating 1 update(s) at round 3
+2025-02-10 10:48:07,270 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: End aggregation.
+2025-02-10 10:48:07,278 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Start persist model on server.
+2025-02-10 10:48:07,382 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: End persist model on server.
+2025-02-10 10:48:07,383 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Round 3 finished.
+2025-02-10 10:48:07,479 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Round 4 started.
+2025-02-10 10:48:07,480 - WFCommServer - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: scheduled task train
+2025-02-10 10:48:09,075 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, task_name=train, task_id=554d0578-4df3-4807-8272-2a28c3d5f42e]: assigned task to client site-1: name=train, id=554d0578-4df3-4807-8272-2a28c3d5f42e
+2025-02-10 10:48:09,076 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, task_name=train, task_id=554d0578-4df3-4807-8272-2a28c3d5f42e]: sent task assignment to client. client_name:site-1 task_id:554d0578-4df3-4807-8272-2a28c3d5f42e
+2025-02-10 10:48:09,079 - GetTaskCommand - INFO - return task to client.  client_name: site-1  task_name: train   task_id: 554d0578-4df3-4807-8272-2a28c3d5f42e  sharable_header_task_id: 554d0578-4df3-4807-8272-2a28c3d5f42e
+2025-02-10 10:48:09,140 - Communicator - INFO - Received from simulator_server server. getTask: train size: 18.8MB (18828291 Bytes) time: 0.066883 seconds
+2025-02-10 10:48:09,141 - FederatedClient - INFO - pull_task completed. Task name:train Status:True 
+2025-02-10 10:48:09,141 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job]: got task assignment: name=train, id=554d0578-4df3-4807-8272-2a28c3d5f42e
+2025-02-10 10:48:09,142 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=554d0578-4df3-4807-8272-2a28c3d5f42e]: invoking task executor LearnerExecutor
+2025-02-10 10:48:09,143 - LearnerExecutor - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=554d0578-4df3-4807-8272-2a28c3d5f42e]: Client trainer got task: train
+2025-02-10 10:55:52,664 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=554d0578-4df3-4807-8272-2a28c3d5f42e]: val_metric_global_model (global_model): 0.0672
+2025-02-10 10:55:52,667 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=554d0578-4df3-4807-8272-2a28c3d5f42e]: Current/Total Round: 5/20
+2025-02-10 10:55:52,667 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=554d0578-4df3-4807-8272-2a28c3d5f42e]: Client identity: site-1
+2025-02-10 10:55:52,678 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=554d0578-4df3-4807-8272-2a28c3d5f42e]: Local steps per epoch: 70
+2025-02-10 10:55:52,681 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=554d0578-4df3-4807-8272-2a28c3d5f42e]: Local epoch site-1: 1/1 (lr=0.0001)
+2025-02-10 11:04:47,392 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=554d0578-4df3-4807-8272-2a28c3d5f42e]: Local epochs finished. Returning shareable
+2025-02-10 11:04:47,418 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=554d0578-4df3-4807-8272-2a28c3d5f42e]: finished processing task
+2025-02-10 11:04:47,418 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=554d0578-4df3-4807-8272-2a28c3d5f42e]: try #1: sending task result to server
+2025-02-10 11:04:47,419 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=554d0578-4df3-4807-8272-2a28c3d5f42e]: checking task ...
+2025-02-10 11:04:47,420 - Cell - INFO - broadcast: channel='aux_communication', topic='__task_check__', targets=['server.simulate_job'], timeout=5.0
+2025-02-10 11:04:47,425 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=554d0578-4df3-4807-8272-2a28c3d5f42e]: start to send task result to server
+2025-02-10 11:04:47,426 - FederatedClient - INFO - Starting to push execute result.
+2025-02-10 11:04:47,484 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job]: got result from client site-1 for task: name=train, id=554d0578-4df3-4807-8272-2a28c3d5f42e
+2025-02-10 11:04:47,538 - IntimeModelSelector - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=554d0578-4df3-4807-8272-2a28c3d5f42e]: validation metric 0.067245537117641 from client site-1
+2025-02-10 11:04:47,545 - DXOAggregator - WARNING - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=554d0578-4df3-4807-8272-2a28c3d5f42e]: Aggregation_weight missing for site-1 and set to default value, 1.0 This kind of message will show 10 times at most.
+2025-02-10 11:04:47,550 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=554d0578-4df3-4807-8272-2a28c3d5f42e]: Contribution from site-1 ACCEPTED by the aggregator at round 4.
+2025-02-10 11:04:47,679 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=554d0578-4df3-4807-8272-2a28c3d5f42e]: finished processing client result by scatter_and_gather
+2025-02-10 11:04:47,679 - WFCommServer - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: task train exit with status TaskCompletionStatus.OK
+2025-02-10 11:04:47,680 - SubmitUpdateCommand - INFO - submit_update process. client_name:site-1   task_id:554d0578-4df3-4807-8272-2a28c3d5f42e
+2025-02-10 11:04:47,683 - Communicator - INFO -  SubmitUpdate size: 18.8MB (18828232 Bytes). time: 0.255888 seconds
+2025-02-10 11:04:47,683 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=554d0578-4df3-4807-8272-2a28c3d5f42e]: task result sent to server
+2025-02-10 11:04:47,684 - ClientTaskWorker - INFO - Finished one task run for client: site-1 interval: 2 task_processed: True
+2025-02-10 11:04:47,879 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Start aggregation.
+2025-02-10 11:04:47,880 - DXOAggregator - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: aggregating 1 update(s) at round 4
+2025-02-10 11:04:47,891 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: End aggregation.
+2025-02-10 11:04:47,898 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Start persist model on server.
+2025-02-10 11:04:48,063 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: End persist model on server.
+2025-02-10 11:04:48,064 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Round 4 finished.
+2025-02-10 11:04:48,160 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Round 5 started.
+2025-02-10 11:04:48,161 - WFCommServer - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: scheduled task train
+2025-02-10 11:04:49,689 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, task_name=train, task_id=2723aeda-974a-4831-bae1-b09981b9d858]: assigned task to client site-1: name=train, id=2723aeda-974a-4831-bae1-b09981b9d858
+2025-02-10 11:04:49,690 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, task_name=train, task_id=2723aeda-974a-4831-bae1-b09981b9d858]: sent task assignment to client. client_name:site-1 task_id:2723aeda-974a-4831-bae1-b09981b9d858
+2025-02-10 11:04:49,690 - GetTaskCommand - INFO - return task to client.  client_name: site-1  task_name: train   task_id: 2723aeda-974a-4831-bae1-b09981b9d858  sharable_header_task_id: 2723aeda-974a-4831-bae1-b09981b9d858
+2025-02-10 11:04:49,753 - Communicator - INFO - Received from simulator_server server. getTask: train size: 18.8MB (18828291 Bytes) time: 0.065514 seconds
+2025-02-10 11:04:49,755 - FederatedClient - INFO - pull_task completed. Task name:train Status:True 
+2025-02-10 11:04:49,766 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job]: got task assignment: name=train, id=2723aeda-974a-4831-bae1-b09981b9d858
+2025-02-10 11:04:49,767 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=2723aeda-974a-4831-bae1-b09981b9d858]: invoking task executor LearnerExecutor
+2025-02-10 11:04:49,767 - LearnerExecutor - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=2723aeda-974a-4831-bae1-b09981b9d858]: Client trainer got task: train
+2025-02-10 11:12:33,790 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=2723aeda-974a-4831-bae1-b09981b9d858]: val_metric_global_model (global_model): 0.0566
+2025-02-10 11:12:33,887 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=2723aeda-974a-4831-bae1-b09981b9d858]: Current/Total Round: 6/20
+2025-02-10 11:12:33,890 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=2723aeda-974a-4831-bae1-b09981b9d858]: Client identity: site-1
+2025-02-10 11:12:33,900 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=2723aeda-974a-4831-bae1-b09981b9d858]: Local steps per epoch: 70
+2025-02-10 11:12:33,903 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=2723aeda-974a-4831-bae1-b09981b9d858]: Local epoch site-1: 1/1 (lr=0.0001)
+2025-02-10 11:24:13,595 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=2723aeda-974a-4831-bae1-b09981b9d858]: Local epochs finished. Returning shareable
+2025-02-10 11:24:13,597 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=2723aeda-974a-4831-bae1-b09981b9d858]: finished processing task
+2025-02-10 11:24:13,598 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=2723aeda-974a-4831-bae1-b09981b9d858]: try #1: sending task result to server
+2025-02-10 11:24:13,599 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=2723aeda-974a-4831-bae1-b09981b9d858]: checking task ...
+2025-02-10 11:24:13,600 - Cell - INFO - broadcast: channel='aux_communication', topic='__task_check__', targets=['server.simulate_job'], timeout=5.0
+2025-02-10 11:24:13,606 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=2723aeda-974a-4831-bae1-b09981b9d858]: start to send task result to server
+2025-02-10 11:24:13,607 - FederatedClient - INFO - Starting to push execute result.
+2025-02-10 11:24:13,674 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job]: got result from client site-1 for task: name=train, id=2723aeda-974a-4831-bae1-b09981b9d858
+2025-02-10 11:24:13,692 - IntimeModelSelector - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=2723aeda-974a-4831-bae1-b09981b9d858]: validation metric 0.05657487265196848 from client site-1
+2025-02-10 11:24:13,693 - DXOAggregator - WARNING - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=2723aeda-974a-4831-bae1-b09981b9d858]: Aggregation_weight missing for site-1 and set to default value, 1.0 This kind of message will show 10 times at most.
+2025-02-10 11:24:13,698 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=2723aeda-974a-4831-bae1-b09981b9d858]: Contribution from site-1 ACCEPTED by the aggregator at round 5.
+2025-02-10 11:24:13,828 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=2723aeda-974a-4831-bae1-b09981b9d858]: finished processing client result by scatter_and_gather
+2025-02-10 11:24:13,828 - WFCommServer - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: task train exit with status TaskCompletionStatus.OK
+2025-02-10 11:24:13,829 - SubmitUpdateCommand - INFO - submit_update process. client_name:site-1   task_id:2723aeda-974a-4831-bae1-b09981b9d858
+2025-02-10 11:24:13,832 - Communicator - INFO -  SubmitUpdate size: 18.8MB (18828232 Bytes). time: 0.223240 seconds
+2025-02-10 11:24:13,833 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=2723aeda-974a-4831-bae1-b09981b9d858]: task result sent to server
+2025-02-10 11:24:13,833 - ClientTaskWorker - INFO - Finished one task run for client: site-1 interval: 2 task_processed: True
+2025-02-10 11:24:13,872 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Start aggregation.
+2025-02-10 11:24:13,873 - DXOAggregator - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: aggregating 1 update(s) at round 5
+2025-02-10 11:24:13,877 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: End aggregation.
+2025-02-10 11:24:13,887 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Start persist model on server.
+2025-02-10 11:24:13,937 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: End persist model on server.
+2025-02-10 11:24:13,938 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Round 5 finished.
+2025-02-10 11:24:14,034 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Round 6 started.
+2025-02-10 11:24:14,035 - WFCommServer - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: scheduled task train
+2025-02-10 11:24:15,841 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, task_name=train, task_id=1dd33b30-5e06-4d1c-acf6-bcf19e503b3b]: assigned task to client site-1: name=train, id=1dd33b30-5e06-4d1c-acf6-bcf19e503b3b
+2025-02-10 11:24:15,842 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, task_name=train, task_id=1dd33b30-5e06-4d1c-acf6-bcf19e503b3b]: sent task assignment to client. client_name:site-1 task_id:1dd33b30-5e06-4d1c-acf6-bcf19e503b3b
+2025-02-10 11:24:15,844 - GetTaskCommand - INFO - return task to client.  client_name: site-1  task_name: train   task_id: 1dd33b30-5e06-4d1c-acf6-bcf19e503b3b  sharable_header_task_id: 1dd33b30-5e06-4d1c-acf6-bcf19e503b3b
+2025-02-10 11:24:15,907 - Communicator - INFO - Received from simulator_server server. getTask: train size: 18.8MB (18828291 Bytes) time: 0.070929 seconds
+2025-02-10 11:24:15,909 - FederatedClient - INFO - pull_task completed. Task name:train Status:True 
+2025-02-10 11:24:15,910 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job]: got task assignment: name=train, id=1dd33b30-5e06-4d1c-acf6-bcf19e503b3b
+2025-02-10 11:24:15,911 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=1dd33b30-5e06-4d1c-acf6-bcf19e503b3b]: invoking task executor LearnerExecutor
+2025-02-10 11:24:15,911 - LearnerExecutor - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=1dd33b30-5e06-4d1c-acf6-bcf19e503b3b]: Client trainer got task: train
+2025-02-10 11:32:04,018 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=1dd33b30-5e06-4d1c-acf6-bcf19e503b3b]: val_metric_global_model (global_model): 0.0803
+2025-02-10 11:32:04,019 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=1dd33b30-5e06-4d1c-acf6-bcf19e503b3b]: Current/Total Round: 7/20
+2025-02-10 11:32:04,020 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=1dd33b30-5e06-4d1c-acf6-bcf19e503b3b]: Client identity: site-1
+2025-02-10 11:32:04,030 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=1dd33b30-5e06-4d1c-acf6-bcf19e503b3b]: Local steps per epoch: 70
+2025-02-10 11:32:04,031 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=1dd33b30-5e06-4d1c-acf6-bcf19e503b3b]: Local epoch site-1: 1/1 (lr=0.0001)
+2025-02-10 11:41:09,121 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=1dd33b30-5e06-4d1c-acf6-bcf19e503b3b]: Local epochs finished. Returning shareable
+2025-02-10 11:41:09,127 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=1dd33b30-5e06-4d1c-acf6-bcf19e503b3b]: finished processing task
+2025-02-10 11:41:09,134 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=1dd33b30-5e06-4d1c-acf6-bcf19e503b3b]: try #1: sending task result to server
+2025-02-10 11:41:09,136 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=1dd33b30-5e06-4d1c-acf6-bcf19e503b3b]: checking task ...
+2025-02-10 11:41:09,169 - Cell - INFO - broadcast: channel='aux_communication', topic='__task_check__', targets=['server.simulate_job'], timeout=5.0
+2025-02-10 11:41:09,217 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=1dd33b30-5e06-4d1c-acf6-bcf19e503b3b]: start to send task result to server
+2025-02-10 11:41:09,218 - FederatedClient - INFO - Starting to push execute result.
+2025-02-10 11:41:09,281 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job]: got result from client site-1 for task: name=train, id=1dd33b30-5e06-4d1c-acf6-bcf19e503b3b
+2025-02-10 11:41:09,289 - IntimeModelSelector - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=1dd33b30-5e06-4d1c-acf6-bcf19e503b3b]: validation metric 0.08033284997078832 from client site-1
+2025-02-10 11:41:09,302 - DXOAggregator - WARNING - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=1dd33b30-5e06-4d1c-acf6-bcf19e503b3b]: Aggregation_weight missing for site-1 and set to default value, 1.0 This kind of message will show 10 times at most.
+2025-02-10 11:41:09,308 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=1dd33b30-5e06-4d1c-acf6-bcf19e503b3b]: Contribution from site-1 ACCEPTED by the aggregator at round 6.
+2025-02-10 11:41:09,470 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=1dd33b30-5e06-4d1c-acf6-bcf19e503b3b]: finished processing client result by scatter_and_gather
+2025-02-10 11:41:09,470 - WFCommServer - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: task train exit with status TaskCompletionStatus.OK
+2025-02-10 11:41:09,492 - SubmitUpdateCommand - INFO - submit_update process. client_name:site-1   task_id:1dd33b30-5e06-4d1c-acf6-bcf19e503b3b
+2025-02-10 11:41:09,500 - Communicator - INFO -  SubmitUpdate size: 18.8MB (18828232 Bytes). time: 0.279347 seconds
+2025-02-10 11:41:09,501 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=1dd33b30-5e06-4d1c-acf6-bcf19e503b3b]: task result sent to server
+2025-02-10 11:41:09,505 - ClientTaskWorker - INFO - Finished one task run for client: site-1 interval: 2 task_processed: True
+2025-02-10 11:41:09,670 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Start aggregation.
+2025-02-10 11:41:09,675 - IntimeModelSelector - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: new best validation metric at round 6: 0.08033284997078832
+2025-02-10 11:41:10,172 - DXOAggregator - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: aggregating 1 update(s) at round 6
+2025-02-10 11:41:10,179 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: End aggregation.
+2025-02-10 11:41:10,198 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Start persist model on server.
+2025-02-10 11:41:10,243 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: End persist model on server.
+2025-02-10 11:41:10,246 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Round 6 finished.
+2025-02-10 11:41:10,342 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Round 7 started.
+2025-02-10 11:41:10,346 - WFCommServer - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: scheduled task train
+2025-02-10 11:41:11,519 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, task_name=train, task_id=6fb092dd-4ae8-4fe2-acfd-0c1bb489d724]: assigned task to client site-1: name=train, id=6fb092dd-4ae8-4fe2-acfd-0c1bb489d724
+2025-02-10 11:41:11,520 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, task_name=train, task_id=6fb092dd-4ae8-4fe2-acfd-0c1bb489d724]: sent task assignment to client. client_name:site-1 task_id:6fb092dd-4ae8-4fe2-acfd-0c1bb489d724
+2025-02-10 11:41:11,522 - GetTaskCommand - INFO - return task to client.  client_name: site-1  task_name: train   task_id: 6fb092dd-4ae8-4fe2-acfd-0c1bb489d724  sharable_header_task_id: 6fb092dd-4ae8-4fe2-acfd-0c1bb489d724
+2025-02-10 11:41:11,580 - Communicator - INFO - Received from simulator_server server. getTask: train size: 18.8MB (18828291 Bytes) time: 0.063000 seconds
+2025-02-10 11:41:11,581 - FederatedClient - INFO - pull_task completed. Task name:train Status:True 
+2025-02-10 11:41:11,582 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job]: got task assignment: name=train, id=6fb092dd-4ae8-4fe2-acfd-0c1bb489d724
+2025-02-10 11:41:11,583 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=6fb092dd-4ae8-4fe2-acfd-0c1bb489d724]: invoking task executor LearnerExecutor
+2025-02-10 11:41:11,584 - LearnerExecutor - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=6fb092dd-4ae8-4fe2-acfd-0c1bb489d724]: Client trainer got task: train
+2025-02-10 11:48:53,793 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=6fb092dd-4ae8-4fe2-acfd-0c1bb489d724]: val_metric_global_model (global_model): 0.0499
+2025-02-10 11:48:53,795 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=6fb092dd-4ae8-4fe2-acfd-0c1bb489d724]: Current/Total Round: 8/20
+2025-02-10 11:48:53,800 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=6fb092dd-4ae8-4fe2-acfd-0c1bb489d724]: Client identity: site-1
+2025-02-10 11:48:53,813 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=6fb092dd-4ae8-4fe2-acfd-0c1bb489d724]: Local steps per epoch: 70
+2025-02-10 11:48:53,815 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=6fb092dd-4ae8-4fe2-acfd-0c1bb489d724]: Local epoch site-1: 1/1 (lr=0.0001)
+2025-02-10 11:57:54,251 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=6fb092dd-4ae8-4fe2-acfd-0c1bb489d724]: Local epochs finished. Returning shareable
+2025-02-10 11:57:54,252 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=6fb092dd-4ae8-4fe2-acfd-0c1bb489d724]: finished processing task
+2025-02-10 11:57:54,259 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=6fb092dd-4ae8-4fe2-acfd-0c1bb489d724]: try #1: sending task result to server
+2025-02-10 11:57:54,262 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=6fb092dd-4ae8-4fe2-acfd-0c1bb489d724]: checking task ...
+2025-02-10 11:57:54,263 - Cell - INFO - broadcast: channel='aux_communication', topic='__task_check__', targets=['server.simulate_job'], timeout=5.0
+2025-02-10 11:57:54,271 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=6fb092dd-4ae8-4fe2-acfd-0c1bb489d724]: start to send task result to server
+2025-02-10 11:57:54,272 - FederatedClient - INFO - Starting to push execute result.
+2025-02-10 11:57:54,358 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job]: got result from client site-1 for task: name=train, id=6fb092dd-4ae8-4fe2-acfd-0c1bb489d724
+2025-02-10 11:57:54,372 - IntimeModelSelector - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=6fb092dd-4ae8-4fe2-acfd-0c1bb489d724]: validation metric 0.04993368919729038 from client site-1
+2025-02-10 11:57:54,373 - DXOAggregator - WARNING - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=6fb092dd-4ae8-4fe2-acfd-0c1bb489d724]: Aggregation_weight missing for site-1 and set to default value, 1.0 This kind of message will show 10 times at most.
+2025-02-10 11:57:54,382 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=6fb092dd-4ae8-4fe2-acfd-0c1bb489d724]: Contribution from site-1 ACCEPTED by the aggregator at round 7.
+2025-02-10 11:57:54,516 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=6fb092dd-4ae8-4fe2-acfd-0c1bb489d724]: finished processing client result by scatter_and_gather
+2025-02-10 11:57:54,526 - SubmitUpdateCommand - INFO - submit_update process. client_name:site-1   task_id:6fb092dd-4ae8-4fe2-acfd-0c1bb489d724
+2025-02-10 11:57:54,531 - Communicator - INFO -  SubmitUpdate size: 18.8MB (18828232 Bytes). time: 0.255562 seconds
+2025-02-10 11:57:54,532 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=6fb092dd-4ae8-4fe2-acfd-0c1bb489d724]: task result sent to server
+2025-02-10 11:57:54,533 - ClientTaskWorker - INFO - Finished one task run for client: site-1 interval: 2 task_processed: True
+2025-02-10 11:57:54,569 - WFCommServer - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: task train exit with status TaskCompletionStatus.OK
+2025-02-10 11:57:54,717 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Start aggregation.
+2025-02-10 11:57:54,718 - DXOAggregator - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: aggregating 1 update(s) at round 7
+2025-02-10 11:57:54,724 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: End aggregation.
+2025-02-10 11:57:54,773 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Start persist model on server.
+2025-02-10 11:57:54,844 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: End persist model on server.
+2025-02-10 11:57:54,845 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Round 7 finished.
+2025-02-10 11:57:55,000 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Round 8 started.
+2025-02-10 11:57:55,006 - WFCommServer - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: scheduled task train
+2025-02-10 11:57:56,538 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, task_name=train, task_id=f0f4d4b5-c1d5-401c-8a9a-5231999e479e]: assigned task to client site-1: name=train, id=f0f4d4b5-c1d5-401c-8a9a-5231999e479e
+2025-02-10 11:57:56,540 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, task_name=train, task_id=f0f4d4b5-c1d5-401c-8a9a-5231999e479e]: sent task assignment to client. client_name:site-1 task_id:f0f4d4b5-c1d5-401c-8a9a-5231999e479e
+2025-02-10 11:57:56,542 - GetTaskCommand - INFO - return task to client.  client_name: site-1  task_name: train   task_id: f0f4d4b5-c1d5-401c-8a9a-5231999e479e  sharable_header_task_id: f0f4d4b5-c1d5-401c-8a9a-5231999e479e
+2025-02-10 11:57:56,606 - Communicator - INFO - Received from simulator_server server. getTask: train size: 18.8MB (18828291 Bytes) time: 0.069594 seconds
+2025-02-10 11:57:56,615 - FederatedClient - INFO - pull_task completed. Task name:train Status:True 
+2025-02-10 11:57:56,617 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job]: got task assignment: name=train, id=f0f4d4b5-c1d5-401c-8a9a-5231999e479e
+2025-02-10 11:57:56,618 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=f0f4d4b5-c1d5-401c-8a9a-5231999e479e]: invoking task executor LearnerExecutor
+2025-02-10 11:57:56,624 - LearnerExecutor - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=f0f4d4b5-c1d5-401c-8a9a-5231999e479e]: Client trainer got task: train
+2025-02-10 12:05:42,613 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=f0f4d4b5-c1d5-401c-8a9a-5231999e479e]: val_metric_global_model (global_model): 0.0342
+2025-02-10 12:05:42,615 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=f0f4d4b5-c1d5-401c-8a9a-5231999e479e]: Current/Total Round: 9/20
+2025-02-10 12:05:42,616 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=f0f4d4b5-c1d5-401c-8a9a-5231999e479e]: Client identity: site-1
+2025-02-10 12:05:42,626 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=f0f4d4b5-c1d5-401c-8a9a-5231999e479e]: Local steps per epoch: 70
+2025-02-10 12:05:42,628 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=f0f4d4b5-c1d5-401c-8a9a-5231999e479e]: Local epoch site-1: 1/1 (lr=0.0001)
+2025-02-10 12:14:44,907 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=f0f4d4b5-c1d5-401c-8a9a-5231999e479e]: Local epochs finished. Returning shareable
+2025-02-10 12:14:44,910 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=f0f4d4b5-c1d5-401c-8a9a-5231999e479e]: finished processing task
+2025-02-10 12:14:44,911 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=f0f4d4b5-c1d5-401c-8a9a-5231999e479e]: try #1: sending task result to server
+2025-02-10 12:14:44,913 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=f0f4d4b5-c1d5-401c-8a9a-5231999e479e]: checking task ...
+2025-02-10 12:14:44,914 - Cell - INFO - broadcast: channel='aux_communication', topic='__task_check__', targets=['server.simulate_job'], timeout=5.0
+2025-02-10 12:14:44,921 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=f0f4d4b5-c1d5-401c-8a9a-5231999e479e]: start to send task result to server
+2025-02-10 12:14:44,937 - FederatedClient - INFO - Starting to push execute result.
+2025-02-10 12:14:44,999 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job]: got result from client site-1 for task: name=train, id=f0f4d4b5-c1d5-401c-8a9a-5231999e479e
+2025-02-10 12:14:45,066 - IntimeModelSelector - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=f0f4d4b5-c1d5-401c-8a9a-5231999e479e]: validation metric 0.03422478720240684 from client site-1
+2025-02-10 12:14:45,068 - DXOAggregator - WARNING - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=f0f4d4b5-c1d5-401c-8a9a-5231999e479e]: Aggregation_weight missing for site-1 and set to default value, 1.0 This kind of message will show 10 times at most.
+2025-02-10 12:14:45,074 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=f0f4d4b5-c1d5-401c-8a9a-5231999e479e]: Contribution from site-1 ACCEPTED by the aggregator at round 8.
+2025-02-10 12:14:45,229 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=f0f4d4b5-c1d5-401c-8a9a-5231999e479e]: finished processing client result by scatter_and_gather
+2025-02-10 12:14:45,229 - WFCommServer - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: task train exit with status TaskCompletionStatus.OK
+2025-02-10 12:14:45,231 - SubmitUpdateCommand - INFO - submit_update process. client_name:site-1   task_id:f0f4d4b5-c1d5-401c-8a9a-5231999e479e
+2025-02-10 12:14:45,237 - Communicator - INFO -  SubmitUpdate size: 18.8MB (18828232 Bytes). time: 0.298534 seconds
+2025-02-10 12:14:45,238 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=f0f4d4b5-c1d5-401c-8a9a-5231999e479e]: task result sent to server
+2025-02-10 12:14:45,242 - ClientTaskWorker - INFO - Finished one task run for client: site-1 interval: 2 task_processed: True
+2025-02-10 12:14:45,429 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Start aggregation.
+2025-02-10 12:14:45,430 - DXOAggregator - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: aggregating 1 update(s) at round 8
+2025-02-10 12:14:45,444 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: End aggregation.
+2025-02-10 12:14:45,455 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Start persist model on server.
+2025-02-10 12:14:45,711 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: End persist model on server.
+2025-02-10 12:14:45,713 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Round 8 finished.
+2025-02-10 12:14:45,856 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Round 9 started.
+2025-02-10 12:14:45,857 - WFCommServer - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: scheduled task train
+2025-02-10 12:14:47,247 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, task_name=train, task_id=3ae23498-55db-41de-a420-44cfe174862e]: assigned task to client site-1: name=train, id=3ae23498-55db-41de-a420-44cfe174862e
+2025-02-10 12:14:47,250 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, task_name=train, task_id=3ae23498-55db-41de-a420-44cfe174862e]: sent task assignment to client. client_name:site-1 task_id:3ae23498-55db-41de-a420-44cfe174862e
+2025-02-10 12:14:47,253 - GetTaskCommand - INFO - return task to client.  client_name: site-1  task_name: train   task_id: 3ae23498-55db-41de-a420-44cfe174862e  sharable_header_task_id: 3ae23498-55db-41de-a420-44cfe174862e
+2025-02-10 12:14:47,319 - Communicator - INFO - Received from simulator_server server. getTask: train size: 18.8MB (18828291 Bytes) time: 0.074654 seconds
+2025-02-10 12:14:47,321 - FederatedClient - INFO - pull_task completed. Task name:train Status:True 
+2025-02-10 12:14:47,322 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job]: got task assignment: name=train, id=3ae23498-55db-41de-a420-44cfe174862e
+2025-02-10 12:14:47,324 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=3ae23498-55db-41de-a420-44cfe174862e]: invoking task executor LearnerExecutor
+2025-02-10 12:14:47,324 - LearnerExecutor - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=3ae23498-55db-41de-a420-44cfe174862e]: Client trainer got task: train
+2025-02-10 12:22:30,831 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=3ae23498-55db-41de-a420-44cfe174862e]: val_metric_global_model (global_model): 0.0534
+2025-02-10 12:22:30,848 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=3ae23498-55db-41de-a420-44cfe174862e]: Current/Total Round: 10/20
+2025-02-10 12:22:30,851 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=3ae23498-55db-41de-a420-44cfe174862e]: Client identity: site-1
+2025-02-10 12:22:30,862 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=3ae23498-55db-41de-a420-44cfe174862e]: Local steps per epoch: 70
+2025-02-10 12:22:30,865 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=3ae23498-55db-41de-a420-44cfe174862e]: Local epoch site-1: 1/1 (lr=0.0001)
+2025-02-10 12:31:39,792 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=3ae23498-55db-41de-a420-44cfe174862e]: Local epochs finished. Returning shareable
+2025-02-10 12:31:39,794 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=3ae23498-55db-41de-a420-44cfe174862e]: finished processing task
+2025-02-10 12:31:39,797 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=3ae23498-55db-41de-a420-44cfe174862e]: try #1: sending task result to server
+2025-02-10 12:31:39,800 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=3ae23498-55db-41de-a420-44cfe174862e]: checking task ...
+2025-02-10 12:31:39,801 - Cell - INFO - broadcast: channel='aux_communication', topic='__task_check__', targets=['server.simulate_job'], timeout=5.0
+2025-02-10 12:31:39,808 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=3ae23498-55db-41de-a420-44cfe174862e]: start to send task result to server
+2025-02-10 12:31:39,810 - FederatedClient - INFO - Starting to push execute result.
+2025-02-10 12:31:39,869 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job]: got result from client site-1 for task: name=train, id=3ae23498-55db-41de-a420-44cfe174862e
+2025-02-10 12:31:39,916 - IntimeModelSelector - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=3ae23498-55db-41de-a420-44cfe174862e]: validation metric 0.05336333491056469 from client site-1
+2025-02-10 12:31:39,916 - DXOAggregator - WARNING - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=3ae23498-55db-41de-a420-44cfe174862e]: Aggregation_weight missing for site-1 and set to default value, 1.0 This kind of message will show 10 times at most.
+2025-02-10 12:31:39,921 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=3ae23498-55db-41de-a420-44cfe174862e]: Contribution from site-1 ACCEPTED by the aggregator at round 9.
+2025-02-10 12:31:40,037 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=3ae23498-55db-41de-a420-44cfe174862e]: finished processing client result by scatter_and_gather
+2025-02-10 12:31:40,037 - WFCommServer - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: task train exit with status TaskCompletionStatus.OK
+2025-02-10 12:31:40,039 - SubmitUpdateCommand - INFO - submit_update process. client_name:site-1   task_id:3ae23498-55db-41de-a420-44cfe174862e
+2025-02-10 12:31:40,050 - Communicator - INFO -  SubmitUpdate size: 18.8MB (18828232 Bytes). time: 0.238362 seconds
+2025-02-10 12:31:40,051 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=3ae23498-55db-41de-a420-44cfe174862e]: task result sent to server
+2025-02-10 12:31:40,053 - ClientTaskWorker - INFO - Finished one task run for client: site-1 interval: 2 task_processed: True
+2025-02-10 12:31:40,068 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Start aggregation.
+2025-02-10 12:31:40,074 - DXOAggregator - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: aggregating 1 update(s) at round 9
+2025-02-10 12:31:40,082 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: End aggregation.
+2025-02-10 12:31:40,100 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Start persist model on server.
+2025-02-10 12:31:40,311 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: End persist model on server.
+2025-02-10 12:31:40,315 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Round 9 finished.
+2025-02-10 12:31:40,453 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Round 10 started.
+2025-02-10 12:31:40,454 - WFCommServer - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: scheduled task train
+2025-02-10 12:31:42,058 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, task_name=train, task_id=62896f3f-8d17-4089-b33c-e5713b655481]: assigned task to client site-1: name=train, id=62896f3f-8d17-4089-b33c-e5713b655481
+2025-02-10 12:31:42,059 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, task_name=train, task_id=62896f3f-8d17-4089-b33c-e5713b655481]: sent task assignment to client. client_name:site-1 task_id:62896f3f-8d17-4089-b33c-e5713b655481
+2025-02-10 12:31:42,060 - GetTaskCommand - INFO - return task to client.  client_name: site-1  task_name: train   task_id: 62896f3f-8d17-4089-b33c-e5713b655481  sharable_header_task_id: 62896f3f-8d17-4089-b33c-e5713b655481
+2025-02-10 12:31:42,120 - Communicator - INFO - Received from simulator_server server. getTask: train size: 18.8MB (18828291 Bytes) time: 0.063894 seconds
+2025-02-10 12:31:42,121 - FederatedClient - INFO - pull_task completed. Task name:train Status:True 
+2025-02-10 12:31:42,123 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job]: got task assignment: name=train, id=62896f3f-8d17-4089-b33c-e5713b655481
+2025-02-10 12:31:42,123 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=62896f3f-8d17-4089-b33c-e5713b655481]: invoking task executor LearnerExecutor
+2025-02-10 12:31:42,124 - LearnerExecutor - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=62896f3f-8d17-4089-b33c-e5713b655481]: Client trainer got task: train
+2025-02-10 12:39:30,404 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=62896f3f-8d17-4089-b33c-e5713b655481]: val_metric_global_model (global_model): 0.0241
+2025-02-10 12:39:30,405 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=62896f3f-8d17-4089-b33c-e5713b655481]: Current/Total Round: 11/20
+2025-02-10 12:39:30,406 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=62896f3f-8d17-4089-b33c-e5713b655481]: Client identity: site-1
+2025-02-10 12:39:30,415 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=62896f3f-8d17-4089-b33c-e5713b655481]: Local steps per epoch: 70
+2025-02-10 12:39:30,417 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=62896f3f-8d17-4089-b33c-e5713b655481]: Local epoch site-1: 1/1 (lr=0.0001)
+2025-02-10 12:48:34,754 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=62896f3f-8d17-4089-b33c-e5713b655481]: Local epochs finished. Returning shareable
+2025-02-10 12:48:34,827 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=62896f3f-8d17-4089-b33c-e5713b655481]: finished processing task
+2025-02-10 12:48:34,829 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=62896f3f-8d17-4089-b33c-e5713b655481]: try #1: sending task result to server
+2025-02-10 12:48:34,837 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=62896f3f-8d17-4089-b33c-e5713b655481]: checking task ...
+2025-02-10 12:48:34,838 - Cell - INFO - broadcast: channel='aux_communication', topic='__task_check__', targets=['server.simulate_job'], timeout=5.0
+2025-02-10 12:48:34,845 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=62896f3f-8d17-4089-b33c-e5713b655481]: start to send task result to server
+2025-02-10 12:48:34,846 - FederatedClient - INFO - Starting to push execute result.
+2025-02-10 12:48:34,910 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job]: got result from client site-1 for task: name=train, id=62896f3f-8d17-4089-b33c-e5713b655481
+2025-02-10 12:48:35,031 - IntimeModelSelector - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=62896f3f-8d17-4089-b33c-e5713b655481]: validation metric 0.02409493414536933 from client site-1
+2025-02-10 12:48:35,034 - DXOAggregator - WARNING - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=62896f3f-8d17-4089-b33c-e5713b655481]: Aggregation_weight missing for site-1 and set to default value, 1.0 This kind of message will show 10 times at most.
+2025-02-10 12:48:35,043 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=62896f3f-8d17-4089-b33c-e5713b655481]: Contribution from site-1 ACCEPTED by the aggregator at round 10.
+2025-02-10 12:48:35,234 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=62896f3f-8d17-4089-b33c-e5713b655481]: finished processing client result by scatter_and_gather
+2025-02-10 12:48:35,234 - WFCommServer - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: task train exit with status TaskCompletionStatus.OK
+2025-02-10 12:48:35,261 - SubmitUpdateCommand - INFO - submit_update process. client_name:site-1   task_id:62896f3f-8d17-4089-b33c-e5713b655481
+2025-02-10 12:48:35,332 - Communicator - INFO -  SubmitUpdate size: 18.8MB (18828232 Bytes). time: 0.484684 seconds
+2025-02-10 12:48:35,336 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=62896f3f-8d17-4089-b33c-e5713b655481]: task result sent to server
+2025-02-10 12:48:35,338 - ClientTaskWorker - INFO - Finished one task run for client: site-1 interval: 2 task_processed: True
+2025-02-10 12:48:35,434 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Start aggregation.
+2025-02-10 12:48:35,435 - DXOAggregator - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: aggregating 1 update(s) at round 10
+2025-02-10 12:48:35,446 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: End aggregation.
+2025-02-10 12:48:35,455 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Start persist model on server.
+2025-02-10 12:48:35,540 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: End persist model on server.
+2025-02-10 12:48:35,540 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Round 10 finished.
+2025-02-10 12:48:35,687 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Round 11 started.
+2025-02-10 12:48:35,693 - WFCommServer - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: scheduled task train
+2025-02-10 12:48:37,344 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, task_name=train, task_id=08e59e56-42d0-4c2d-a369-3b13474db6dc]: assigned task to client site-1: name=train, id=08e59e56-42d0-4c2d-a369-3b13474db6dc
+2025-02-10 12:48:37,345 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, task_name=train, task_id=08e59e56-42d0-4c2d-a369-3b13474db6dc]: sent task assignment to client. client_name:site-1 task_id:08e59e56-42d0-4c2d-a369-3b13474db6dc
+2025-02-10 12:48:37,347 - GetTaskCommand - INFO - return task to client.  client_name: site-1  task_name: train   task_id: 08e59e56-42d0-4c2d-a369-3b13474db6dc  sharable_header_task_id: 08e59e56-42d0-4c2d-a369-3b13474db6dc
+2025-02-10 12:48:37,411 - Communicator - INFO - Received from simulator_server server. getTask: train size: 18.8MB (18828291 Bytes) time: 0.069103 seconds
+2025-02-10 12:48:37,413 - FederatedClient - INFO - pull_task completed. Task name:train Status:True 
+2025-02-10 12:48:37,441 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job]: got task assignment: name=train, id=08e59e56-42d0-4c2d-a369-3b13474db6dc
+2025-02-10 12:48:37,443 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=08e59e56-42d0-4c2d-a369-3b13474db6dc]: invoking task executor LearnerExecutor
+2025-02-10 12:48:37,453 - LearnerExecutor - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=08e59e56-42d0-4c2d-a369-3b13474db6dc]: Client trainer got task: train
+2025-02-10 12:56:22,952 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=08e59e56-42d0-4c2d-a369-3b13474db6dc]: val_metric_global_model (global_model): 0.0585
+2025-02-10 12:56:22,955 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=08e59e56-42d0-4c2d-a369-3b13474db6dc]: Current/Total Round: 12/20
+2025-02-10 12:56:22,956 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=08e59e56-42d0-4c2d-a369-3b13474db6dc]: Client identity: site-1
+2025-02-10 12:56:22,965 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=08e59e56-42d0-4c2d-a369-3b13474db6dc]: Local steps per epoch: 70
+2025-02-10 12:56:22,967 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=08e59e56-42d0-4c2d-a369-3b13474db6dc]: Local epoch site-1: 1/1 (lr=0.0001)
+2025-02-10 13:05:23,564 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=08e59e56-42d0-4c2d-a369-3b13474db6dc]: Local epochs finished. Returning shareable
+2025-02-10 13:05:23,632 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=08e59e56-42d0-4c2d-a369-3b13474db6dc]: finished processing task
+2025-02-10 13:05:23,634 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=08e59e56-42d0-4c2d-a369-3b13474db6dc]: try #1: sending task result to server
+2025-02-10 13:05:23,635 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=08e59e56-42d0-4c2d-a369-3b13474db6dc]: checking task ...
+2025-02-10 13:05:23,637 - Cell - INFO - broadcast: channel='aux_communication', topic='__task_check__', targets=['server.simulate_job'], timeout=5.0
+2025-02-10 13:05:23,644 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=08e59e56-42d0-4c2d-a369-3b13474db6dc]: start to send task result to server
+2025-02-10 13:05:23,645 - FederatedClient - INFO - Starting to push execute result.
+2025-02-10 13:05:23,706 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job]: got result from client site-1 for task: name=train, id=08e59e56-42d0-4c2d-a369-3b13474db6dc
+2025-02-10 13:05:23,721 - IntimeModelSelector - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=08e59e56-42d0-4c2d-a369-3b13474db6dc]: validation metric 0.05846136295502018 from client site-1
+2025-02-10 13:05:23,722 - DXOAggregator - WARNING - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=08e59e56-42d0-4c2d-a369-3b13474db6dc]: Aggregation_weight missing for site-1 and set to default value, 1.0 This kind of message will show 10 times at most.
+2025-02-10 13:05:23,727 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=08e59e56-42d0-4c2d-a369-3b13474db6dc]: Contribution from site-1 ACCEPTED by the aggregator at round 11.
+2025-02-10 13:05:23,866 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=08e59e56-42d0-4c2d-a369-3b13474db6dc]: finished processing client result by scatter_and_gather
+2025-02-10 13:05:23,880 - SubmitUpdateCommand - INFO - submit_update process. client_name:site-1   task_id:08e59e56-42d0-4c2d-a369-3b13474db6dc
+2025-02-10 13:05:23,882 - Communicator - INFO -  SubmitUpdate size: 18.8MB (18828232 Bytes). time: 0.232993 seconds
+2025-02-10 13:05:23,883 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=08e59e56-42d0-4c2d-a369-3b13474db6dc]: task result sent to server
+2025-02-10 13:05:23,884 - ClientTaskWorker - INFO - Finished one task run for client: site-1 interval: 2 task_processed: True
+2025-02-10 13:05:23,892 - WFCommServer - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: task train exit with status TaskCompletionStatus.OK
+2025-02-10 13:05:23,895 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Start aggregation.
+2025-02-10 13:05:23,897 - DXOAggregator - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: aggregating 1 update(s) at round 11
+2025-02-10 13:05:23,904 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: End aggregation.
+2025-02-10 13:05:23,912 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Start persist model on server.
+2025-02-10 13:05:24,084 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: End persist model on server.
+2025-02-10 13:05:24,086 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Round 11 finished.
+2025-02-10 13:05:24,189 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Round 12 started.
+2025-02-10 13:05:24,193 - WFCommServer - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: scheduled task train
+2025-02-10 13:05:25,890 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, task_name=train, task_id=2d5352fc-5547-4254-b5bd-379e8de3e30f]: assigned task to client site-1: name=train, id=2d5352fc-5547-4254-b5bd-379e8de3e30f
+2025-02-10 13:05:25,891 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, task_name=train, task_id=2d5352fc-5547-4254-b5bd-379e8de3e30f]: sent task assignment to client. client_name:site-1 task_id:2d5352fc-5547-4254-b5bd-379e8de3e30f
+2025-02-10 13:05:25,892 - GetTaskCommand - INFO - return task to client.  client_name: site-1  task_name: train   task_id: 2d5352fc-5547-4254-b5bd-379e8de3e30f  sharable_header_task_id: 2d5352fc-5547-4254-b5bd-379e8de3e30f
+2025-02-10 13:05:25,954 - Communicator - INFO - Received from simulator_server server. getTask: train size: 18.8MB (18828291 Bytes) time: 0.065753 seconds
+2025-02-10 13:05:25,957 - FederatedClient - INFO - pull_task completed. Task name:train Status:True 
+2025-02-10 13:05:25,961 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job]: got task assignment: name=train, id=2d5352fc-5547-4254-b5bd-379e8de3e30f
+2025-02-10 13:05:25,967 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=2d5352fc-5547-4254-b5bd-379e8de3e30f]: invoking task executor LearnerExecutor
+2025-02-10 13:05:25,969 - LearnerExecutor - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=2d5352fc-5547-4254-b5bd-379e8de3e30f]: Client trainer got task: train
+2025-02-10 13:13:13,731 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=2d5352fc-5547-4254-b5bd-379e8de3e30f]: val_metric_global_model (global_model): 0.0459
+2025-02-10 13:13:13,734 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=2d5352fc-5547-4254-b5bd-379e8de3e30f]: Current/Total Round: 13/20
+2025-02-10 13:13:13,735 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=2d5352fc-5547-4254-b5bd-379e8de3e30f]: Client identity: site-1
+2025-02-10 13:13:13,745 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=2d5352fc-5547-4254-b5bd-379e8de3e30f]: Local steps per epoch: 70
+2025-02-10 13:13:13,747 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=2d5352fc-5547-4254-b5bd-379e8de3e30f]: Local epoch site-1: 1/1 (lr=0.0001)
+2025-02-10 13:22:11,122 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=2d5352fc-5547-4254-b5bd-379e8de3e30f]: Local epochs finished. Returning shareable
+2025-02-10 13:22:11,145 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=2d5352fc-5547-4254-b5bd-379e8de3e30f]: finished processing task
+2025-02-10 13:22:11,161 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=2d5352fc-5547-4254-b5bd-379e8de3e30f]: try #1: sending task result to server
+2025-02-10 13:22:11,192 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=2d5352fc-5547-4254-b5bd-379e8de3e30f]: checking task ...
+2025-02-10 13:22:11,195 - Cell - INFO - broadcast: channel='aux_communication', topic='__task_check__', targets=['server.simulate_job'], timeout=5.0
+2025-02-10 13:22:11,202 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=2d5352fc-5547-4254-b5bd-379e8de3e30f]: start to send task result to server
+2025-02-10 13:22:11,206 - FederatedClient - INFO - Starting to push execute result.
+2025-02-10 13:22:11,279 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job]: got result from client site-1 for task: name=train, id=2d5352fc-5547-4254-b5bd-379e8de3e30f
+2025-02-10 13:22:11,314 - IntimeModelSelector - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=2d5352fc-5547-4254-b5bd-379e8de3e30f]: validation metric 0.04585052590702313 from client site-1
+2025-02-10 13:22:11,322 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=2d5352fc-5547-4254-b5bd-379e8de3e30f]: Contribution from site-1 ACCEPTED by the aggregator at round 12.
+2025-02-10 13:22:11,485 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=2d5352fc-5547-4254-b5bd-379e8de3e30f]: finished processing client result by scatter_and_gather
+2025-02-10 13:22:11,486 - SubmitUpdateCommand - INFO - submit_update process. client_name:site-1   task_id:2d5352fc-5547-4254-b5bd-379e8de3e30f
+2025-02-10 13:22:11,486 - WFCommServer - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: task train exit with status TaskCompletionStatus.OK
+2025-02-10 13:22:11,489 - Communicator - INFO -  SubmitUpdate size: 18.8MB (18828232 Bytes). time: 0.272210 seconds
+2025-02-10 13:22:11,490 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=2d5352fc-5547-4254-b5bd-379e8de3e30f]: task result sent to server
+2025-02-10 13:22:11,494 - ClientTaskWorker - INFO - Finished one task run for client: site-1 interval: 2 task_processed: True
+2025-02-10 13:22:11,685 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Start aggregation.
+2025-02-10 13:22:11,687 - DXOAggregator - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: aggregating 1 update(s) at round 12
+2025-02-10 13:22:11,713 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: End aggregation.
+2025-02-10 13:22:11,729 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Start persist model on server.
+2025-02-10 13:22:11,863 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: End persist model on server.
+2025-02-10 13:22:11,885 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Round 12 finished.
+2025-02-10 13:22:11,998 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Round 13 started.
+2025-02-10 13:22:12,016 - WFCommServer - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: scheduled task train
+2025-02-10 13:22:13,500 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, task_name=train, task_id=d7ae7481-ac25-4f98-9b98-2f770dd1015a]: assigned task to client site-1: name=train, id=d7ae7481-ac25-4f98-9b98-2f770dd1015a
+2025-02-10 13:22:13,501 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, task_name=train, task_id=d7ae7481-ac25-4f98-9b98-2f770dd1015a]: sent task assignment to client. client_name:site-1 task_id:d7ae7481-ac25-4f98-9b98-2f770dd1015a
+2025-02-10 13:22:13,503 - GetTaskCommand - INFO - return task to client.  client_name: site-1  task_name: train   task_id: d7ae7481-ac25-4f98-9b98-2f770dd1015a  sharable_header_task_id: d7ae7481-ac25-4f98-9b98-2f770dd1015a
+2025-02-10 13:22:13,569 - Communicator - INFO - Received from simulator_server server. getTask: train size: 18.8MB (18828291 Bytes) time: 0.071380 seconds
+2025-02-10 13:22:13,570 - FederatedClient - INFO - pull_task completed. Task name:train Status:True 
+2025-02-10 13:22:13,571 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job]: got task assignment: name=train, id=d7ae7481-ac25-4f98-9b98-2f770dd1015a
+2025-02-10 13:22:13,572 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=d7ae7481-ac25-4f98-9b98-2f770dd1015a]: invoking task executor LearnerExecutor
+2025-02-10 13:22:13,574 - LearnerExecutor - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=d7ae7481-ac25-4f98-9b98-2f770dd1015a]: Client trainer got task: train
+2025-02-10 13:30:04,046 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=d7ae7481-ac25-4f98-9b98-2f770dd1015a]: val_metric_global_model (global_model): 0.0501
+2025-02-10 13:30:04,048 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=d7ae7481-ac25-4f98-9b98-2f770dd1015a]: Current/Total Round: 14/20
+2025-02-10 13:30:04,049 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=d7ae7481-ac25-4f98-9b98-2f770dd1015a]: Client identity: site-1
+2025-02-10 13:30:04,060 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=d7ae7481-ac25-4f98-9b98-2f770dd1015a]: Local steps per epoch: 70
+2025-02-10 13:30:04,061 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=d7ae7481-ac25-4f98-9b98-2f770dd1015a]: Local epoch site-1: 1/1 (lr=0.0001)
+2025-02-10 13:39:03,776 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=d7ae7481-ac25-4f98-9b98-2f770dd1015a]: Local epochs finished. Returning shareable
+2025-02-10 13:39:03,777 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=d7ae7481-ac25-4f98-9b98-2f770dd1015a]: finished processing task
+2025-02-10 13:39:03,778 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=d7ae7481-ac25-4f98-9b98-2f770dd1015a]: try #1: sending task result to server
+2025-02-10 13:39:03,779 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=d7ae7481-ac25-4f98-9b98-2f770dd1015a]: checking task ...
+2025-02-10 13:39:03,780 - Cell - INFO - broadcast: channel='aux_communication', topic='__task_check__', targets=['server.simulate_job'], timeout=5.0
+2025-02-10 13:39:03,785 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=d7ae7481-ac25-4f98-9b98-2f770dd1015a]: start to send task result to server
+2025-02-10 13:39:03,788 - FederatedClient - INFO - Starting to push execute result.
+2025-02-10 13:39:03,848 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job]: got result from client site-1 for task: name=train, id=d7ae7481-ac25-4f98-9b98-2f770dd1015a
+2025-02-10 13:39:03,888 - IntimeModelSelector - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=d7ae7481-ac25-4f98-9b98-2f770dd1015a]: validation metric 0.050075882665477266 from client site-1
+2025-02-10 13:39:03,893 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=d7ae7481-ac25-4f98-9b98-2f770dd1015a]: Contribution from site-1 ACCEPTED by the aggregator at round 13.
+2025-02-10 13:39:04,047 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=d7ae7481-ac25-4f98-9b98-2f770dd1015a]: finished processing client result by scatter_and_gather
+2025-02-10 13:39:04,048 - WFCommServer - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: task train exit with status TaskCompletionStatus.OK
+2025-02-10 13:39:04,049 - SubmitUpdateCommand - INFO - submit_update process. client_name:site-1   task_id:d7ae7481-ac25-4f98-9b98-2f770dd1015a
+2025-02-10 13:39:04,051 - Communicator - INFO -  SubmitUpdate size: 18.8MB (18828232 Bytes). time: 0.261898 seconds
+2025-02-10 13:39:04,052 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=d7ae7481-ac25-4f98-9b98-2f770dd1015a]: task result sent to server
+2025-02-10 13:39:04,052 - ClientTaskWorker - INFO - Finished one task run for client: site-1 interval: 2 task_processed: True
+2025-02-10 13:39:04,247 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Start aggregation.
+2025-02-10 13:39:04,248 - DXOAggregator - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: aggregating 1 update(s) at round 13
+2025-02-10 13:39:04,254 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: End aggregation.
+2025-02-10 13:39:04,302 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Start persist model on server.
+2025-02-10 13:39:04,562 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: End persist model on server.
+2025-02-10 13:39:04,564 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Round 13 finished.
+2025-02-10 13:39:04,664 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Round 14 started.
+2025-02-10 13:39:04,665 - WFCommServer - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: scheduled task train
+2025-02-10 13:39:06,057 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, task_name=train, task_id=b00e7a29-ae3c-4738-a93c-ec2ff011722d]: assigned task to client site-1: name=train, id=b00e7a29-ae3c-4738-a93c-ec2ff011722d
+2025-02-10 13:39:06,058 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, task_name=train, task_id=b00e7a29-ae3c-4738-a93c-ec2ff011722d]: sent task assignment to client. client_name:site-1 task_id:b00e7a29-ae3c-4738-a93c-ec2ff011722d
+2025-02-10 13:39:06,059 - GetTaskCommand - INFO - return task to client.  client_name: site-1  task_name: train   task_id: b00e7a29-ae3c-4738-a93c-ec2ff011722d  sharable_header_task_id: b00e7a29-ae3c-4738-a93c-ec2ff011722d
+2025-02-10 13:39:06,128 - Communicator - INFO - Received from simulator_server server. getTask: train size: 18.8MB (18828291 Bytes) time: 0.072889 seconds
+2025-02-10 13:39:06,129 - FederatedClient - INFO - pull_task completed. Task name:train Status:True 
+2025-02-10 13:39:06,130 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job]: got task assignment: name=train, id=b00e7a29-ae3c-4738-a93c-ec2ff011722d
+2025-02-10 13:39:06,131 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=b00e7a29-ae3c-4738-a93c-ec2ff011722d]: invoking task executor LearnerExecutor
+2025-02-10 13:39:06,132 - LearnerExecutor - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=b00e7a29-ae3c-4738-a93c-ec2ff011722d]: Client trainer got task: train
+2025-02-10 13:46:49,721 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=b00e7a29-ae3c-4738-a93c-ec2ff011722d]: val_metric_global_model (global_model): 0.0529
+2025-02-10 13:46:49,730 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=b00e7a29-ae3c-4738-a93c-ec2ff011722d]: Current/Total Round: 15/20
+2025-02-10 13:46:49,731 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=b00e7a29-ae3c-4738-a93c-ec2ff011722d]: Client identity: site-1
+2025-02-10 13:46:49,740 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=b00e7a29-ae3c-4738-a93c-ec2ff011722d]: Local steps per epoch: 70
+2025-02-10 13:46:49,741 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=b00e7a29-ae3c-4738-a93c-ec2ff011722d]: Local epoch site-1: 1/1 (lr=0.0001)
+2025-02-10 13:55:47,817 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=b00e7a29-ae3c-4738-a93c-ec2ff011722d]: Local epochs finished. Returning shareable
+2025-02-10 13:55:47,818 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=b00e7a29-ae3c-4738-a93c-ec2ff011722d]: finished processing task
+2025-02-10 13:55:47,819 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=b00e7a29-ae3c-4738-a93c-ec2ff011722d]: try #1: sending task result to server
+2025-02-10 13:55:47,820 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=b00e7a29-ae3c-4738-a93c-ec2ff011722d]: checking task ...
+2025-02-10 13:55:47,821 - Cell - INFO - broadcast: channel='aux_communication', topic='__task_check__', targets=['server.simulate_job'], timeout=5.0
+2025-02-10 13:55:47,826 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=b00e7a29-ae3c-4738-a93c-ec2ff011722d]: start to send task result to server
+2025-02-10 13:55:47,827 - FederatedClient - INFO - Starting to push execute result.
+2025-02-10 13:55:47,886 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job]: got result from client site-1 for task: name=train, id=b00e7a29-ae3c-4738-a93c-ec2ff011722d
+2025-02-10 13:55:47,919 - IntimeModelSelector - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=b00e7a29-ae3c-4738-a93c-ec2ff011722d]: validation metric 0.052934852452078 from client site-1
+2025-02-10 13:55:47,924 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=b00e7a29-ae3c-4738-a93c-ec2ff011722d]: Contribution from site-1 ACCEPTED by the aggregator at round 14.
+2025-02-10 13:55:48,048 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=b00e7a29-ae3c-4738-a93c-ec2ff011722d]: finished processing client result by scatter_and_gather
+2025-02-10 13:55:48,048 - WFCommServer - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: task train exit with status TaskCompletionStatus.OK
+2025-02-10 13:55:48,049 - SubmitUpdateCommand - INFO - submit_update process. client_name:site-1   task_id:b00e7a29-ae3c-4738-a93c-ec2ff011722d
+2025-02-10 13:55:48,053 - Communicator - INFO -  SubmitUpdate size: 18.8MB (18828232 Bytes). time: 0.224614 seconds
+2025-02-10 13:55:48,053 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=b00e7a29-ae3c-4738-a93c-ec2ff011722d]: task result sent to server
+2025-02-10 13:55:48,054 - ClientTaskWorker - INFO - Finished one task run for client: site-1 interval: 2 task_processed: True
+2025-02-10 13:55:48,248 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Start aggregation.
+2025-02-10 13:55:48,249 - DXOAggregator - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: aggregating 1 update(s) at round 14
+2025-02-10 13:55:48,262 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: End aggregation.
+2025-02-10 13:55:48,271 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Start persist model on server.
+2025-02-10 13:55:48,527 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: End persist model on server.
+2025-02-10 13:55:48,528 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Round 14 finished.
+2025-02-10 13:55:48,629 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Round 15 started.
+2025-02-10 13:55:48,630 - WFCommServer - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: scheduled task train
+2025-02-10 13:55:50,059 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, task_name=train, task_id=fe8b55f9-d166-4490-b6cb-7104ecc24151]: assigned task to client site-1: name=train, id=fe8b55f9-d166-4490-b6cb-7104ecc24151
+2025-02-10 13:55:50,061 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, task_name=train, task_id=fe8b55f9-d166-4490-b6cb-7104ecc24151]: sent task assignment to client. client_name:site-1 task_id:fe8b55f9-d166-4490-b6cb-7104ecc24151
+2025-02-10 13:55:50,062 - GetTaskCommand - INFO - return task to client.  client_name: site-1  task_name: train   task_id: fe8b55f9-d166-4490-b6cb-7104ecc24151  sharable_header_task_id: fe8b55f9-d166-4490-b6cb-7104ecc24151
+2025-02-10 13:55:50,124 - Communicator - INFO - Received from simulator_server server. getTask: train size: 18.8MB (18828291 Bytes) time: 0.066900 seconds
+2025-02-10 13:55:50,127 - FederatedClient - INFO - pull_task completed. Task name:train Status:True 
+2025-02-10 13:55:50,128 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job]: got task assignment: name=train, id=fe8b55f9-d166-4490-b6cb-7104ecc24151
+2025-02-10 13:55:50,131 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=fe8b55f9-d166-4490-b6cb-7104ecc24151]: invoking task executor LearnerExecutor
+2025-02-10 13:55:50,131 - LearnerExecutor - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=fe8b55f9-d166-4490-b6cb-7104ecc24151]: Client trainer got task: train
+2025-02-10 14:03:32,604 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=fe8b55f9-d166-4490-b6cb-7104ecc24151]: val_metric_global_model (global_model): 0.0830
+2025-02-10 14:03:32,611 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=fe8b55f9-d166-4490-b6cb-7104ecc24151]: Current/Total Round: 16/20
+2025-02-10 14:03:32,612 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=fe8b55f9-d166-4490-b6cb-7104ecc24151]: Client identity: site-1
+2025-02-10 14:03:32,622 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=fe8b55f9-d166-4490-b6cb-7104ecc24151]: Local steps per epoch: 70
+2025-02-10 14:03:32,624 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=fe8b55f9-d166-4490-b6cb-7104ecc24151]: Local epoch site-1: 1/1 (lr=0.0001)
+2025-02-10 14:12:36,271 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=fe8b55f9-d166-4490-b6cb-7104ecc24151]: Local epochs finished. Returning shareable
+2025-02-10 14:12:36,273 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=fe8b55f9-d166-4490-b6cb-7104ecc24151]: finished processing task
+2025-02-10 14:12:36,274 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=fe8b55f9-d166-4490-b6cb-7104ecc24151]: try #1: sending task result to server
+2025-02-10 14:12:36,275 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=fe8b55f9-d166-4490-b6cb-7104ecc24151]: checking task ...
+2025-02-10 14:12:36,276 - Cell - INFO - broadcast: channel='aux_communication', topic='__task_check__', targets=['server.simulate_job'], timeout=5.0
+2025-02-10 14:12:36,282 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=fe8b55f9-d166-4490-b6cb-7104ecc24151]: start to send task result to server
+2025-02-10 14:12:36,284 - FederatedClient - INFO - Starting to push execute result.
+2025-02-10 14:12:36,354 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job]: got result from client site-1 for task: name=train, id=fe8b55f9-d166-4490-b6cb-7104ecc24151
+2025-02-10 14:12:36,356 - IntimeModelSelector - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=fe8b55f9-d166-4490-b6cb-7104ecc24151]: validation metric 0.08299249507234568 from client site-1
+2025-02-10 14:12:36,361 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=fe8b55f9-d166-4490-b6cb-7104ecc24151]: Contribution from site-1 ACCEPTED by the aggregator at round 15.
+2025-02-10 14:12:36,499 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=fe8b55f9-d166-4490-b6cb-7104ecc24151]: finished processing client result by scatter_and_gather
+2025-02-10 14:12:36,499 - WFCommServer - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: task train exit with status TaskCompletionStatus.OK
+2025-02-10 14:12:36,500 - SubmitUpdateCommand - INFO - submit_update process. client_name:site-1   task_id:fe8b55f9-d166-4490-b6cb-7104ecc24151
+2025-02-10 14:12:36,503 - Communicator - INFO -  SubmitUpdate size: 18.8MB (18828232 Bytes). time: 0.216617 seconds
+2025-02-10 14:12:36,503 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=fe8b55f9-d166-4490-b6cb-7104ecc24151]: task result sent to server
+2025-02-10 14:12:36,504 - ClientTaskWorker - INFO - Finished one task run for client: site-1 interval: 2 task_processed: True
+2025-02-10 14:12:36,699 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Start aggregation.
+2025-02-10 14:12:36,700 - IntimeModelSelector - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: new best validation metric at round 15: 0.08299249507234568
+2025-02-10 14:12:36,782 - DXOAggregator - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: aggregating 1 update(s) at round 15
+2025-02-10 14:12:36,788 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: End aggregation.
+2025-02-10 14:12:36,865 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Start persist model on server.
+2025-02-10 14:12:36,941 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: End persist model on server.
+2025-02-10 14:12:36,941 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Round 15 finished.
+2025-02-10 14:12:37,068 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Round 16 started.
+2025-02-10 14:12:37,070 - WFCommServer - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: scheduled task train
+2025-02-10 14:12:38,509 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, task_name=train, task_id=7744b1e2-081d-4c7d-ae52-6d5e2389b689]: assigned task to client site-1: name=train, id=7744b1e2-081d-4c7d-ae52-6d5e2389b689
+2025-02-10 14:12:38,511 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, task_name=train, task_id=7744b1e2-081d-4c7d-ae52-6d5e2389b689]: sent task assignment to client. client_name:site-1 task_id:7744b1e2-081d-4c7d-ae52-6d5e2389b689
+2025-02-10 14:12:38,512 - GetTaskCommand - INFO - return task to client.  client_name: site-1  task_name: train   task_id: 7744b1e2-081d-4c7d-ae52-6d5e2389b689  sharable_header_task_id: 7744b1e2-081d-4c7d-ae52-6d5e2389b689
+2025-02-10 14:12:38,579 - Communicator - INFO - Received from simulator_server server. getTask: train size: 18.8MB (18828291 Bytes) time: 0.072104 seconds
+2025-02-10 14:12:38,580 - FederatedClient - INFO - pull_task completed. Task name:train Status:True 
+2025-02-10 14:12:38,581 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job]: got task assignment: name=train, id=7744b1e2-081d-4c7d-ae52-6d5e2389b689
+2025-02-10 14:12:38,582 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=7744b1e2-081d-4c7d-ae52-6d5e2389b689]: invoking task executor LearnerExecutor
+2025-02-10 14:12:38,582 - LearnerExecutor - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=7744b1e2-081d-4c7d-ae52-6d5e2389b689]: Client trainer got task: train
+2025-02-10 14:21:45,476 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=7744b1e2-081d-4c7d-ae52-6d5e2389b689]: val_metric_global_model (global_model): 0.0940
+2025-02-10 14:21:45,478 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=7744b1e2-081d-4c7d-ae52-6d5e2389b689]: Current/Total Round: 17/20
+2025-02-10 14:21:45,478 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=7744b1e2-081d-4c7d-ae52-6d5e2389b689]: Client identity: site-1
+2025-02-10 14:21:45,491 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=7744b1e2-081d-4c7d-ae52-6d5e2389b689]: Local steps per epoch: 70
+2025-02-10 14:21:45,494 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=7744b1e2-081d-4c7d-ae52-6d5e2389b689]: Local epoch site-1: 1/1 (lr=0.0001)
+2025-02-10 14:30:48,780 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=7744b1e2-081d-4c7d-ae52-6d5e2389b689]: Local epochs finished. Returning shareable
+2025-02-10 14:30:48,782 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=7744b1e2-081d-4c7d-ae52-6d5e2389b689]: finished processing task
+2025-02-10 14:30:48,783 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=7744b1e2-081d-4c7d-ae52-6d5e2389b689]: try #1: sending task result to server
+2025-02-10 14:30:48,784 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=7744b1e2-081d-4c7d-ae52-6d5e2389b689]: checking task ...
+2025-02-10 14:30:48,784 - Cell - INFO - broadcast: channel='aux_communication', topic='__task_check__', targets=['server.simulate_job'], timeout=5.0
+2025-02-10 14:30:48,789 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=7744b1e2-081d-4c7d-ae52-6d5e2389b689]: start to send task result to server
+2025-02-10 14:30:48,789 - FederatedClient - INFO - Starting to push execute result.
+2025-02-10 14:30:48,848 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job]: got result from client site-1 for task: name=train, id=7744b1e2-081d-4c7d-ae52-6d5e2389b689
+2025-02-10 14:30:48,849 - IntimeModelSelector - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=7744b1e2-081d-4c7d-ae52-6d5e2389b689]: validation metric 0.09399790259186476 from client site-1
+2025-02-10 14:30:48,853 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=7744b1e2-081d-4c7d-ae52-6d5e2389b689]: Contribution from site-1 ACCEPTED by the aggregator at round 16.
+2025-02-10 14:30:48,954 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=7744b1e2-081d-4c7d-ae52-6d5e2389b689]: finished processing client result by scatter_and_gather
+2025-02-10 14:30:48,955 - SubmitUpdateCommand - INFO - submit_update process. client_name:site-1   task_id:7744b1e2-081d-4c7d-ae52-6d5e2389b689
+2025-02-10 14:30:48,957 - Communicator - INFO -  SubmitUpdate size: 18.8MB (18828232 Bytes). time: 0.167150 seconds
+2025-02-10 14:30:48,958 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=7744b1e2-081d-4c7d-ae52-6d5e2389b689]: task result sent to server
+2025-02-10 14:30:48,958 - ClientTaskWorker - INFO - Finished one task run for client: site-1 interval: 2 task_processed: True
+2025-02-10 14:30:48,977 - WFCommServer - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: task train exit with status TaskCompletionStatus.OK
+2025-02-10 14:30:49,154 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Start aggregation.
+2025-02-10 14:30:49,155 - IntimeModelSelector - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: new best validation metric at round 16: 0.09399790259186476
+2025-02-10 14:30:49,231 - DXOAggregator - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: aggregating 1 update(s) at round 16
+2025-02-10 14:30:49,236 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: End aggregation.
+2025-02-10 14:30:49,243 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Start persist model on server.
+2025-02-10 14:30:49,338 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: End persist model on server.
+2025-02-10 14:30:49,339 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Round 16 finished.
+2025-02-10 14:30:49,439 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Round 17 started.
+2025-02-10 14:30:49,440 - WFCommServer - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: scheduled task train
+2025-02-10 14:30:50,963 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, task_name=train, task_id=3c261704-c576-46c9-b35c-a232fadda4cb]: assigned task to client site-1: name=train, id=3c261704-c576-46c9-b35c-a232fadda4cb
+2025-02-10 14:30:50,964 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, task_name=train, task_id=3c261704-c576-46c9-b35c-a232fadda4cb]: sent task assignment to client. client_name:site-1 task_id:3c261704-c576-46c9-b35c-a232fadda4cb
+2025-02-10 14:30:50,965 - GetTaskCommand - INFO - return task to client.  client_name: site-1  task_name: train   task_id: 3c261704-c576-46c9-b35c-a232fadda4cb  sharable_header_task_id: 3c261704-c576-46c9-b35c-a232fadda4cb
+2025-02-10 14:30:51,026 - Communicator - INFO - Received from simulator_server server. getTask: train size: 18.8MB (18828291 Bytes) time: 0.064799 seconds
+2025-02-10 14:30:51,027 - FederatedClient - INFO - pull_task completed. Task name:train Status:True 
+2025-02-10 14:30:51,028 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job]: got task assignment: name=train, id=3c261704-c576-46c9-b35c-a232fadda4cb
+2025-02-10 14:30:51,029 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=3c261704-c576-46c9-b35c-a232fadda4cb]: invoking task executor LearnerExecutor
+2025-02-10 14:30:51,029 - LearnerExecutor - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=3c261704-c576-46c9-b35c-a232fadda4cb]: Client trainer got task: train
+2025-02-10 14:38:51,931 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=3c261704-c576-46c9-b35c-a232fadda4cb]: val_metric_global_model (global_model): 0.0975
+2025-02-10 14:38:51,933 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=3c261704-c576-46c9-b35c-a232fadda4cb]: Current/Total Round: 18/20
+2025-02-10 14:38:51,934 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=3c261704-c576-46c9-b35c-a232fadda4cb]: Client identity: site-1
+2025-02-10 14:38:51,944 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=3c261704-c576-46c9-b35c-a232fadda4cb]: Local steps per epoch: 70
+2025-02-10 14:38:51,946 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=3c261704-c576-46c9-b35c-a232fadda4cb]: Local epoch site-1: 1/1 (lr=0.0001)
+2025-02-10 14:47:55,560 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=3c261704-c576-46c9-b35c-a232fadda4cb]: Local epochs finished. Returning shareable
+2025-02-10 14:47:55,579 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=3c261704-c576-46c9-b35c-a232fadda4cb]: finished processing task
+2025-02-10 14:47:55,580 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=3c261704-c576-46c9-b35c-a232fadda4cb]: try #1: sending task result to server
+2025-02-10 14:47:55,582 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=3c261704-c576-46c9-b35c-a232fadda4cb]: checking task ...
+2025-02-10 14:47:55,584 - Cell - INFO - broadcast: channel='aux_communication', topic='__task_check__', targets=['server.simulate_job'], timeout=5.0
+2025-02-10 14:47:55,592 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=3c261704-c576-46c9-b35c-a232fadda4cb]: start to send task result to server
+2025-02-10 14:47:55,593 - FederatedClient - INFO - Starting to push execute result.
+2025-02-10 14:47:55,661 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job]: got result from client site-1 for task: name=train, id=3c261704-c576-46c9-b35c-a232fadda4cb
+2025-02-10 14:47:55,662 - IntimeModelSelector - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=3c261704-c576-46c9-b35c-a232fadda4cb]: validation metric 0.09746960452156499 from client site-1
+2025-02-10 14:47:55,667 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=3c261704-c576-46c9-b35c-a232fadda4cb]: Contribution from site-1 ACCEPTED by the aggregator at round 17.
+2025-02-10 14:47:55,770 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=3c261704-c576-46c9-b35c-a232fadda4cb]: finished processing client result by scatter_and_gather
+2025-02-10 14:47:55,771 - SubmitUpdateCommand - INFO - submit_update process. client_name:site-1   task_id:3c261704-c576-46c9-b35c-a232fadda4cb
+2025-02-10 14:47:55,773 - Communicator - INFO -  SubmitUpdate size: 18.8MB (18828232 Bytes). time: 0.177011 seconds
+2025-02-10 14:47:55,774 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=3c261704-c576-46c9-b35c-a232fadda4cb]: task result sent to server
+2025-02-10 14:47:55,774 - ClientTaskWorker - INFO - Finished one task run for client: site-1 interval: 2 task_processed: True
+2025-02-10 14:47:55,833 - WFCommServer - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: task train exit with status TaskCompletionStatus.OK
+2025-02-10 14:47:55,834 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Start aggregation.
+2025-02-10 14:47:55,837 - IntimeModelSelector - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: new best validation metric at round 17: 0.09746960452156499
+2025-02-10 14:47:55,875 - DXOAggregator - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: aggregating 1 update(s) at round 17
+2025-02-10 14:47:55,881 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: End aggregation.
+2025-02-10 14:47:55,889 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Start persist model on server.
+2025-02-10 14:47:55,970 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: End persist model on server.
+2025-02-10 14:47:55,970 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Round 17 finished.
+2025-02-10 14:47:56,070 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Round 18 started.
+2025-02-10 14:47:56,071 - WFCommServer - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: scheduled task train
+2025-02-10 14:47:57,780 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, task_name=train, task_id=ae681f67-9af2-4f18-ac51-fa76d31b177d]: assigned task to client site-1: name=train, id=ae681f67-9af2-4f18-ac51-fa76d31b177d
+2025-02-10 14:47:57,780 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, task_name=train, task_id=ae681f67-9af2-4f18-ac51-fa76d31b177d]: sent task assignment to client. client_name:site-1 task_id:ae681f67-9af2-4f18-ac51-fa76d31b177d
+2025-02-10 14:47:57,781 - GetTaskCommand - INFO - return task to client.  client_name: site-1  task_name: train   task_id: ae681f67-9af2-4f18-ac51-fa76d31b177d  sharable_header_task_id: ae681f67-9af2-4f18-ac51-fa76d31b177d
+2025-02-10 14:47:57,847 - Communicator - INFO - Received from simulator_server server. getTask: train size: 18.8MB (18828291 Bytes) time: 0.069989 seconds
+2025-02-10 14:47:57,848 - FederatedClient - INFO - pull_task completed. Task name:train Status:True 
+2025-02-10 14:47:57,849 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job]: got task assignment: name=train, id=ae681f67-9af2-4f18-ac51-fa76d31b177d
+2025-02-10 14:47:57,853 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=ae681f67-9af2-4f18-ac51-fa76d31b177d]: invoking task executor LearnerExecutor
+2025-02-10 14:47:57,854 - LearnerExecutor - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=ae681f67-9af2-4f18-ac51-fa76d31b177d]: Client trainer got task: train
+2025-02-10 14:56:06,716 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=ae681f67-9af2-4f18-ac51-fa76d31b177d]: val_metric_global_model (global_model): 0.0395
+2025-02-10 14:56:06,718 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=ae681f67-9af2-4f18-ac51-fa76d31b177d]: Current/Total Round: 19/20
+2025-02-10 14:56:06,719 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=ae681f67-9af2-4f18-ac51-fa76d31b177d]: Client identity: site-1
+2025-02-10 14:56:06,729 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=ae681f67-9af2-4f18-ac51-fa76d31b177d]: Local steps per epoch: 70
+2025-02-10 14:56:06,731 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=ae681f67-9af2-4f18-ac51-fa76d31b177d]: Local epoch site-1: 1/1 (lr=0.0001)
+2025-02-10 15:05:05,609 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=ae681f67-9af2-4f18-ac51-fa76d31b177d]: Local epochs finished. Returning shareable
+2025-02-10 15:05:05,611 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=ae681f67-9af2-4f18-ac51-fa76d31b177d]: finished processing task
+2025-02-10 15:05:05,612 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=ae681f67-9af2-4f18-ac51-fa76d31b177d]: try #1: sending task result to server
+2025-02-10 15:05:05,612 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=ae681f67-9af2-4f18-ac51-fa76d31b177d]: checking task ...
+2025-02-10 15:05:05,615 - Cell - INFO - broadcast: channel='aux_communication', topic='__task_check__', targets=['server.simulate_job'], timeout=5.0
+2025-02-10 15:05:05,620 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=ae681f67-9af2-4f18-ac51-fa76d31b177d]: start to send task result to server
+2025-02-10 15:05:05,620 - FederatedClient - INFO - Starting to push execute result.
+2025-02-10 15:05:05,680 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job]: got result from client site-1 for task: name=train, id=ae681f67-9af2-4f18-ac51-fa76d31b177d
+2025-02-10 15:05:05,681 - IntimeModelSelector - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=ae681f67-9af2-4f18-ac51-fa76d31b177d]: validation metric 0.03953763951941704 from client site-1
+2025-02-10 15:05:05,686 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=ae681f67-9af2-4f18-ac51-fa76d31b177d]: Contribution from site-1 ACCEPTED by the aggregator at round 18.
+2025-02-10 15:05:05,804 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=ae681f67-9af2-4f18-ac51-fa76d31b177d]: finished processing client result by scatter_and_gather
+2025-02-10 15:05:05,805 - SubmitUpdateCommand - INFO - submit_update process. client_name:site-1   task_id:ae681f67-9af2-4f18-ac51-fa76d31b177d
+2025-02-10 15:05:05,807 - Communicator - INFO -  SubmitUpdate size: 18.8MB (18828232 Bytes). time: 0.186240 seconds
+2025-02-10 15:05:05,808 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=ae681f67-9af2-4f18-ac51-fa76d31b177d]: task result sent to server
+2025-02-10 15:05:05,808 - ClientTaskWorker - INFO - Finished one task run for client: site-1 interval: 2 task_processed: True
+2025-02-10 15:05:05,841 - WFCommServer - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: task train exit with status TaskCompletionStatus.OK
+2025-02-10 15:05:06,031 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Start aggregation.
+2025-02-10 15:05:06,032 - DXOAggregator - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: aggregating 1 update(s) at round 18
+2025-02-10 15:05:06,037 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: End aggregation.
+2025-02-10 15:05:06,044 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Start persist model on server.
+2025-02-10 15:05:06,208 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: End persist model on server.
+2025-02-10 15:05:06,209 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Round 18 finished.
+2025-02-10 15:05:06,311 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Round 19 started.
+2025-02-10 15:05:06,312 - WFCommServer - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: scheduled task train
+2025-02-10 15:05:07,814 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, task_name=train, task_id=06bf5f29-eef8-4e64-8796-fa69c7ced0b7]: assigned task to client site-1: name=train, id=06bf5f29-eef8-4e64-8796-fa69c7ced0b7
+2025-02-10 15:05:07,815 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, task_name=train, task_id=06bf5f29-eef8-4e64-8796-fa69c7ced0b7]: sent task assignment to client. client_name:site-1 task_id:06bf5f29-eef8-4e64-8796-fa69c7ced0b7
+2025-02-10 15:05:07,815 - GetTaskCommand - INFO - return task to client.  client_name: site-1  task_name: train   task_id: 06bf5f29-eef8-4e64-8796-fa69c7ced0b7  sharable_header_task_id: 06bf5f29-eef8-4e64-8796-fa69c7ced0b7
+2025-02-10 15:05:07,877 - Communicator - INFO - Received from simulator_server server. getTask: train size: 18.8MB (18828291 Bytes) time: 0.065272 seconds
+2025-02-10 15:05:07,879 - FederatedClient - INFO - pull_task completed. Task name:train Status:True 
+2025-02-10 15:05:07,879 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job]: got task assignment: name=train, id=06bf5f29-eef8-4e64-8796-fa69c7ced0b7
+2025-02-10 15:05:07,880 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=06bf5f29-eef8-4e64-8796-fa69c7ced0b7]: invoking task executor LearnerExecutor
+2025-02-10 15:05:07,881 - LearnerExecutor - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=06bf5f29-eef8-4e64-8796-fa69c7ced0b7]: Client trainer got task: train
+2025-02-10 15:13:26,662 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=06bf5f29-eef8-4e64-8796-fa69c7ced0b7]: val_metric_global_model (global_model): 0.0492
+2025-02-10 15:13:26,664 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=06bf5f29-eef8-4e64-8796-fa69c7ced0b7]: Current/Total Round: 20/20
+2025-02-10 15:13:26,664 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=06bf5f29-eef8-4e64-8796-fa69c7ced0b7]: Client identity: site-1
+2025-02-10 15:13:26,674 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=06bf5f29-eef8-4e64-8796-fa69c7ced0b7]: Local steps per epoch: 70
+2025-02-10 15:13:26,675 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=06bf5f29-eef8-4e64-8796-fa69c7ced0b7]: Local epoch site-1: 1/1 (lr=0.0001)
+2025-02-10 15:22:25,374 - SupervisedMonaiKitsLearner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=06bf5f29-eef8-4e64-8796-fa69c7ced0b7]: Local epochs finished. Returning shareable
+2025-02-10 15:22:25,376 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=06bf5f29-eef8-4e64-8796-fa69c7ced0b7]: finished processing task
+2025-02-10 15:22:25,376 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=06bf5f29-eef8-4e64-8796-fa69c7ced0b7]: try #1: sending task result to server
+2025-02-10 15:22:25,377 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=06bf5f29-eef8-4e64-8796-fa69c7ced0b7]: checking task ...
+2025-02-10 15:22:25,378 - Cell - INFO - broadcast: channel='aux_communication', topic='__task_check__', targets=['server.simulate_job'], timeout=5.0
+2025-02-10 15:22:25,383 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=06bf5f29-eef8-4e64-8796-fa69c7ced0b7]: start to send task result to server
+2025-02-10 15:22:25,384 - FederatedClient - INFO - Starting to push execute result.
+2025-02-10 15:22:25,447 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job]: got result from client site-1 for task: name=train, id=06bf5f29-eef8-4e64-8796-fa69c7ced0b7
+2025-02-10 15:22:25,449 - IntimeModelSelector - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=06bf5f29-eef8-4e64-8796-fa69c7ced0b7]: validation metric 0.04916611823779628 from client site-1
+2025-02-10 15:22:25,453 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=06bf5f29-eef8-4e64-8796-fa69c7ced0b7]: Contribution from site-1 ACCEPTED by the aggregator at round 19.
+2025-02-10 15:22:25,574 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job, peer_rc=OK, task_name=train, task_id=06bf5f29-eef8-4e64-8796-fa69c7ced0b7]: finished processing client result by scatter_and_gather
+2025-02-10 15:22:25,574 - WFCommServer - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: task train exit with status TaskCompletionStatus.OK
+2025-02-10 15:22:25,575 - SubmitUpdateCommand - INFO - submit_update process. client_name:site-1   task_id:06bf5f29-eef8-4e64-8796-fa69c7ced0b7
+2025-02-10 15:22:25,578 - Communicator - INFO -  SubmitUpdate size: 18.8MB (18828232 Bytes). time: 0.193202 seconds
+2025-02-10 15:22:25,578 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job, task_name=train, task_id=06bf5f29-eef8-4e64-8796-fa69c7ced0b7]: task result sent to server
+2025-02-10 15:22:25,579 - ClientTaskWorker - INFO - Finished one task run for client: site-1 interval: 2 task_processed: True
+2025-02-10 15:22:25,774 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Start aggregation.
+2025-02-10 15:22:25,775 - DXOAggregator - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: aggregating 1 update(s) at round 19
+2025-02-10 15:22:25,780 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: End aggregation.
+2025-02-10 15:22:25,819 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Start persist model on server.
+2025-02-10 15:22:25,900 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: End persist model on server.
+2025-02-10 15:22:25,902 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Round 19 finished.
+2025-02-10 15:22:26,032 - ScatterAndGather - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Finished ScatterAndGather Training.
+2025-02-10 15:22:26,033 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Workflow: scatter_and_gather finalizing ...
+2025-02-10 15:22:26,034 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: ABOUT_TO_END_RUN fired
+2025-02-10 15:22:26,035 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Firing CHECK_END_RUN_READINESS ...
+2025-02-10 15:22:26,036 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: END_RUN fired
+2025-02-10 15:22:26,036 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job]: received request from Server to end current RUN
+2025-02-10 15:22:26,036 - ReliableMessage - INFO - ReliableMessage is shutdown
+2025-02-10 15:22:26,037 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: Server runner finished.
+2025-02-10 15:22:27,552 - SimulatorServer - INFO - Server app stopped.
+
+
+2025-02-10 15:22:27,584 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather, peer=site-1, peer_run=simulate_job]: server runner is finalizing - asked client to end the run
+2025-02-10 15:22:27,585 - GetTaskCommand - INFO - return task to client.  client_name: site-1  task_name: __end_run__   task_id:   sharable_header_task_id: 
+2025-02-10 15:22:27,587 - FederatedClient - INFO - pull_task completed. Task name:__end_run__ Status:True 
+2025-02-10 15:22:27,587 - ClientRunner - INFO - [identity=site-1, run=simulate_job, peer=simulator_server, peer_run=simulate_job]: server asked to end the run
+2025-02-10 15:22:27,588 - ClientRunner - INFO - [identity=site-1, run=simulate_job]: started end-run events sequence
+2025-02-10 15:22:27,588 - ClientRunner - INFO - [identity=site-1, run=simulate_job]: ABOUT_TO_END_RUN fired
+2025-02-10 15:22:27,589 - ClientRunner - INFO - [identity=site-1, run=simulate_job]: Firing CHECK_END_RUN_READINESS ...
+2025-02-10 15:22:27,590 - ClientRunner - INFO - [identity=site-1, run=simulate_job]: END_RUN fired
+2025-02-10 15:22:27,590 - ClientTaskWorker - INFO - End the Simulator run.
+2025-02-10 15:22:27,632 - ClientTaskWorker - INFO - Clean up ClientRunner for : site-1 
+2025-02-10 15:22:27,632 - FederatedClient - INFO - Shutting down client run: site-1
+2025-02-10 15:22:27,632 - ServerRunner - INFO - [identity=simulator_server, run=simulate_job, wf=scatter_and_gather]: asked to abort - triggered abort_signal to stop the RUN
+2025-02-10 15:22:27,637 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00004 Not Connected] is closed PID: 1658505
+2025-02-10 15:22:27,637 - nvflare.fuel.f3.sfm.conn_manager - INFO - Connection [CN00002 Not Connected] is closed PID: 1658787
+2025-02-10 15:22:27,681 - nvflare.fuel.hci.server.hci - INFO - Admin Server localhost on Port 56643 shutdown!
+2025-02-10 15:22:27,682 - SimulatorServer - INFO - shutting down server
+2025-02-10 15:22:27,683 - SimulatorServer - INFO - canceling sync locks
+2025-02-10 15:22:27,683 - SimulatorServer - INFO - server off
+2025-02-10 15:22:27,870 - ReliableMessage - INFO - shutdown reliable message monitor
+2025-02-10 15:22:31,220 - MPM - INFO - MPM: Good Bye!
