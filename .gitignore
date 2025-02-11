@@ -1,4 +1,5 @@
 env/*
 src/training_*.log
-src/pt/learners/__pycache__/supervised_learner.cpython-311.pyc
-src/pt/learners/__pycache__/supervised_monai_kits_learner.cpython-311.pyc
+src/pt/learners/__pycache__/
+src/pt/learners/__pycache__/
+src/pt/utils/__pycache__/
