@@ -5,7 +5,7 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --mem=32000M
 #SBATCH --time=1300:00
-#SBATCH --output=training_%J.log   
+#SBATCH --output=brats_central_%J.log   
 
 # Load the required modules
 module load python/3.11
