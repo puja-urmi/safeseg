@@ -28,7 +28,7 @@
             ],
             "init_filters": 16,
             "in_channels": 4,
-            "out_channels": 3,
+            "out_channels": 6,
             "dropout_prob": 0.2
           }
         }
