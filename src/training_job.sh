@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --nodes=1
-#SBATCH --gpus-per-node=p100:2
+#SBATCH --gpus-per-node=p100:4
 #SBATCH --cpus-per-task=16
 #SBATCH --ntasks-per-node=1
 #SBATCH --mem=32000M
@@ -18,4 +18,4 @@ nvidia-smi
 # Execute the Python script
 pip install -r requirements.txt
 mkdir /home/psaha03/scratch/workspace_kits_fedavg
-python3 -u -m nvflare.private.fed.app.simulator.simulator './configs/kits_fedavg' -w '/home/psaha03/scratch/workspace_kits_fedavg/kits_fedavg' -n 4 -t 4 -gpu 0,1
+nvflare simulator './configs/brats_fedavg' -w './workspace_brats/brats_fedavg' -n 4 -t 4 -gpu 0,1,2,3
