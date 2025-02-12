@@ -4,8 +4,8 @@
 #SBATCH --cpus-per-task=16
 #SBATCH --ntasks-per-node=1
 #SBATCH --mem=32000M
-#SBATCH --time=120:00
-#SBATCH --output=brats_fedavg_%J.log   
+#SBATCH --time=27500:00
+#SBATCH --output=brats_fedavg_4_%J.log   
 
 # Load the required modules
 module load python/3.11
@@ -17,5 +17,5 @@ nvidia-smi
 
 # Execute the Python script
 pip install -r requirements.txt
-mkdir /home/psaha03/scratch/workspace_brats_fedavg
-nvflare simulator './configs/brats_fedavg' -w '/home/psaha03/scratch/workspace_brats_fedavg/brats_fedavg' -n 4 -t 4 -gpu 0,1,2,3
+mkdir /home/psaha03/scratch/workspace_brats_fedavg_4
+nvflare simulator './configs/brats_fedavg' -w '/home/psaha03/scratch/workspace_brats_fedavg_4/brats_fedavg' -n 4 -t 4 -gpu 0,1,2,3
