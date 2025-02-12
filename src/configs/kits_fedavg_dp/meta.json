@@ -1,9 +1,0 @@
-{
-  "name": "kits_fedavg_dp",
-  "resource_spec": {},
-  "deploy_map": {
-    "app": [
-      "@ALL"
-    ]
-  }
-}
