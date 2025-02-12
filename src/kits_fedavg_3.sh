@@ -4,7 +4,7 @@
 #SBATCH --cpus-per-task=16
 #SBATCH --ntasks-per-node=1
 #SBATCH --mem=32000M
-#SBATCH --time=7000:00
+#SBATCH --time=4-00:00:00
 #SBATCH --output=kits_fedavg_3_%J.log   
 
 # Load the required modules
@@ -18,4 +18,4 @@ nvidia-smi
 # Execute the Python script
 pip install -r requirements.txt
 mkdir /home/psaha03/scratch/workspace_kits_fedavg_3
-nvflare simulator './configs/kits_fedavg' -w './workspace_kits_fedavg_3/kits_fedavg' -n 3 -t 3 -gpu 0,1,2
+nvflare simulator './configs' -w '/home/psaha03/scratch/workspace_kits_fedavg_3' -n 2 -t 2 -gpu 0,1
