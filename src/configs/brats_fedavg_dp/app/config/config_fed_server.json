@@ -1,7 +1,7 @@
 {
   "format_version": 2,
-  "min_clients": 4,
-  "num_rounds": 600,
+  "min_clients": 2,
+  "num_rounds": 500,
   "server": {
     "heart_beat_timeout": 600
   },
@@ -28,7 +28,7 @@
             ],
             "init_filters": 16,
             "in_channels": 4,
-            "out_channels": 3,
+            "out_channels": 6,
             "dropout_prob": 0.2
           }
         }
