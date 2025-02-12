@@ -9,5 +9,7 @@
 # Load the required modules
 module load scipy-stack
 source /home/psaha03/scratch/safeseg/env/bin/activate
+pip install tensorflow
 
-python generate_shape_json.py
+
+python event_continuation_check.py
