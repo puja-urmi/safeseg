@@ -17,4 +17,5 @@ nvidia-smi
 
 # Execute the Python script
 pip install -r requirements.txt
+mkdir /home/psaha03/scratch/workspace_kits_central
 python3 -u -m nvflare.private.fed.app.simulator.simulator './configs/kits_central' -w '/home/psaha03/scratch/workspace_kits_central/kits_central' -n 1 -t 1 -gpu 0
