@@ -3,3 +3,4 @@ src/brats_central_*.log
 src/pt/learners/__pycache__/
 src/pt/learners/__pycache__/
 src/pt/utils/__pycache__/
+src/kits_central_*.log
