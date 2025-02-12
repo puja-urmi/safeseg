@@ -4,8 +4,8 @@
 #SBATCH --cpus-per-task=16
 #SBATCH --ntasks-per-node=1
 #SBATCH --mem=32000M
-#SBATCH --time=100:00
-#SBATCH --output=training_%J.log   
+#SBATCH --time=120:00
+#SBATCH --output=kits_fedavg_%J.log   
 
 # Load the required modules
 module load python/3.11
