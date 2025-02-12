@@ -5,7 +5,7 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --mem=32000M
 #SBATCH --time=120:00
-#SBATCH --output=brats_fedavg%_J.log   
+#SBATCH --output=brats_fedavg_%J.log   
 
 # Load the required modules
 module load python/3.11
