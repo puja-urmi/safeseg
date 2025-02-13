@@ -18,4 +18,4 @@ nvidia-smi
 # Execute the Python script
 pip install -r requirements.txt
 mkdir /home/psaha03/scratch/workspace_brats_fedavg_dp_4
-nvflare simulator './configs/brats_fedavg_dp' -w '/home/psaha03/scratch/workspace_brats_fedavg_dp_4/brats_fedavg_dp' -n 4 -t 4 -gpu 0,1,2,3
+nvflare simulator './configs' -w '/home/psaha03/scratch/workspace_brats_fedavg_dp_4' -n 4 -t 4 -gpu 0,1,2,3
