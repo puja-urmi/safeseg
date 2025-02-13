@@ -4,7 +4,7 @@
 #SBATCH --cpus-per-task=16
 #SBATCH --ntasks-per-node=1
 #SBATCH --mem=32000M
-#SBATCH --time=1300:00
+#SBATCH --time=15-00:00:00
 #SBATCH --output=brats_central_%J.log   
 
 # Load the required modules
@@ -18,4 +18,4 @@ nvidia-smi
 # Execute the Python script
 pip install -r requirements.txt
 mkdir /home/psaha03/scratch/workspace_brats_central
-python3 -u -m nvflare.private.fed.app.simulator.simulator './configs/brats_central' -w '/home/psaha03/scratch/workspace_brats_central/brats_central' -n 1 -t 1 -gpu 0
+python3 -u -m nvflare.private.fed.app.simulator.simulator './configs' -w '/home/psaha03/scratch/workspace_brats_central' -n 1 -t 1 -gpu 0
