@@ -3,8 +3,8 @@ import nibabel as nib
 import numpy as np
 
 # Define source and destination root directories
-src_root = '/home/psaha03/scratch/dataset_kits23/dataset/training'
-dst_root = '/home/psaha03/scratch/training_k23_cropped'
+src_root = '/home/psaha03/scratch/validation_data_k23'
+dst_root = '/home/psaha03/scratch/val_cropped'
 
 def crop_to_label(image_data, seg_data, extra=10):
     # Find indices where segmentation is non-zero

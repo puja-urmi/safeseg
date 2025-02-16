@@ -19,12 +19,17 @@ import torch
 from monai.data import DataLoader, Dataset, load_decathlon_datalist
 from monai.inferers import SlidingWindowInferer
 from monai.metrics import DiceMetric
+from collections.abc import Hashable, Mapping
+from monai.transforms import Transform
+from monai.config import KeysCollection
 from monai.networks.nets.segresnet import SegResNet
+from monai.transforms.transform import MapTransform
+from monai.utils.enums import TransformBackends
+from monai.data.utils import NdarrayOrTensor
 from monai.transforms import (
     Activations,
     AsDiscrete,
     Compose,
-    ConvertToMultiChannelBasedOnBratsClassesd,
     DivisiblePadd,
     EnsureChannelFirstd,
     LoadImaged,
@@ -34,18 +39,79 @@ from monai.transforms import (
 )
 
 
+
+
+class ConvertToMultiChannelBasedOnKits23Classes(Transform):
+    """
+    Convert labels to multi channels based on KiTS23 segmentation classes:
+    - Label 1: Kidney
+    - Label 2: Tumor
+    - Label 3: Cyst
+
+    Output channels:
+    - C1: Kidney + Tumor + Cyst -> (label == 1) OR (label == 2) OR (label == 3)
+    - C2: Tumor + Cyst -> (label == 2) OR (label == 3)
+    - C3: Tumor -> (label == 2)
+    """
+
+    backend = [TransformBackends.TORCH, TransformBackends.NUMPY]
+
+    def __call__(self, img: NdarrayOrTensor) -> NdarrayOrTensor:
+        """
+        Convert input segmentation labels into multi-channel format based on kits23 classes.
+
+        Args:
+            img (NdarrayOrTensor): Input segmentation map. Expected shape:
+                - 3D: (H, W, D)
+                - 4D with channel: (C, H, W, D), where C=1 (will be squeezed).
+
+        Returns:
+            NdarrayOrTensor: Multi-channel segmentation map with shape (3, H, W, D).
+        """
+        # If the input has a channel dimension (C=1), remove it
+        if img.ndim == 4 and img.shape[0] == 1:
+            img = img.squeeze(0)
+
+        # Define the channels based on label values (BraTS24 logic)
+        result = [
+            (img == 1) | (img == 2) | (img == 3),  # C1: Kidney + Tumor + Cyst
+            (img == 2) | (img == 3),               # C2: Tumor + Cyst
+            (img == 2)                             # C3: Tumor
+        ]
+
+        return torch.stack(result, dim=0) if isinstance(img, torch.Tensor) else np.stack(result, axis=0)
+
+
+class ConvertToMultiChannelBasedOnKitsClassesd(MapTransform):
+    """
+    Dictionary-based wrapper of :py:class:`monai.transforms.ConvertToMultiChannelBasedOnKits23Classes`.
+    """
+
+    backend = ConvertToMultiChannelBasedOnKits23Classes.backend
+
+    def __init__(self, keys: KeysCollection, allow_missing_keys: bool = False):
+        super().__init__(keys, allow_missing_keys)
+        self.converter = ConvertToMultiChannelBasedOnKits23Classes()
+
+    def __call__(self, data: Mapping[Hashable, NdarrayOrTensor]) -> dict[Hashable, NdarrayOrTensor]:
+        d = dict(data)
+        for key in self.key_iterator(d):
+            d[key] = self.converter(d[key])
+        return d
+
+
 def main():
     parser = argparse.ArgumentParser(description="Model Testing")
     parser.add_argument("--model_path", type=str)
-    parser.add_argument("--dataset_base_dir", default="../dataset_brats18/dataset", type=str)
-    parser.add_argument("--datalist_json_path", default="../dataset_brats18/datalist/site-All.json", type=str)
+    parser.add_argument("--dataset_base_dir", default="/home/psaha03/scratch/dataset_kits23/dataset", type=str)
+    parser.add_argument("--datalist_json_path", default="/home/psaha03/scratch/dataset_kits23/datalist/site-test.json", type=str)
     args = parser.parse_args()
 
     # Set basic settings and paths
     dataset_base_dir = args.dataset_base_dir
     datalist_json_path = args.datalist_json_path
     model_path = args.model_path
-    infer_roi_size = (240, 240, 160)
+    infer_roi_size = (208, 128, 168)
 
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
@@ -63,7 +129,7 @@ def main():
         blocks_down=[1, 2, 2, 4],
         blocks_up=[1, 1, 1],
         init_filters=16,
-        in_channels=4,
+        in_channels=1,
         out_channels=3,
         dropout_prob=0.2,
     ).to(device)
@@ -79,10 +145,10 @@ def main():
         [
             LoadImaged(keys=["image", "label"]),
             EnsureChannelFirstd(keys="image"),
-            ConvertToMultiChannelBasedOnBratsClassesd(keys="label"),
+            ConvertToMultiChannelBasedOnKitsClassesd(keys="label"),
             Spacingd(
                 keys=["image", "label"],
-                pixdim=(1.0, 1.0, 1.0),
+                pixdim=(0.5, 0.5, 0.5),
                 mode=("bilinear", "nearest"),
             ),
             DivisiblePadd(keys=["image", "label"], k=32),
@@ -108,6 +174,7 @@ def main():
         metric_tc = 0
         metric_wt = 0
         metric_et = 0
+        smooth = 1e-6
         ct = 0
         ct_tc = 0
         ct_wt = 0
@@ -136,14 +203,14 @@ def main():
                 metric_et += metric_score[0][2].item()
                 ct_et += 1
         # compute mean dice over whole validation set
-        metric_tc /= ct_tc
-        metric_wt /= ct_wt
-        metric_et /= ct_et
+        metric_tc /= ct_tc + smooth
+        metric_wt /= ct_wt + smooth
+        metric_et /= ct_et + smooth
         metric /= ct
         print(f"Test Dice: {metric:.4f}, Valid count: {ct}")
-        print(f"Test Dice TC: {metric_tc:.4f}, Valid count: {ct_tc}")
-        print(f"Test Dice WT: {metric_wt:.4f}, Valid count: {ct_wt}")
-        print(f"Test Dice ET: {metric_et:.4f}, Valid count: {ct_et}")
+        print(f"Test Dice KTC: {metric_tc:.4f}, Valid count: {ct_tc}")
+        print(f"Test Dice TC: {metric_wt:.4f}, Valid count: {ct_wt}")
+        print(f"Test Dice T: {metric_et:.4f}, Valid count: {ct_et}")
 
 
 if __name__ == "__main__":

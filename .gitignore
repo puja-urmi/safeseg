@@ -1,6 +1,9 @@
 env/*
 src/brats_central_*.log
+src/result_stat/kits_central_test_*.log
+
 src/kits_central_*.log
+src/result_stat/kits_central_test_*.log
 
 src/kits_fedavg_2_*.log
 src/kits_fedavg_3_*.log

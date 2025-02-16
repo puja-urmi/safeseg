@@ -7,9 +7,9 @@
 #SBATCH --time=60:00
 
 # Load the required modules
-module load scipy-stack
+# module load scipy-stack
 source /home/psaha03/scratch/safeseg/env/bin/activate
-pip install tensorflow
+# pip install tensorflow
 
 
-python event_continuation_check.py
+python crop_kits.py
