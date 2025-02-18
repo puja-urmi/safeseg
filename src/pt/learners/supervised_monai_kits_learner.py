@@ -42,7 +42,6 @@ from monai.transforms import (
     RandScaleIntensityd,
     RandShiftIntensityd,
     RandSpatialCropd,
-    Spacingd,
 )
 from pt.learners.supervised_learner import SupervisedLearner
 from pt.utils.custom_client_datalist_json_path import custom_client_datalist_json_path
@@ -218,11 +217,6 @@ class SupervisedMonaiKitsLearner(SupervisedLearner):
                 LoadImaged(keys=["image", "label"]),
                 EnsureChannelFirstd(keys="image"),
                 ConvertToMultiChannelBasedOnKitsClassesd(keys="label"),
-                Spacingd(
-                    keys=["image", "label"],
-                    pixdim=(1.0, 1.0, 1.0),
-                    mode=("bilinear", "nearest"),
-                ),
                 Orientationd(keys=["image", "label"], axcodes="RAS"),
                 RandSpatialCropd(keys=["image", "label"], roi_size=self.roi_size, random_size=False),
                 RandFlipd(keys=["image", "label"], prob=0.5, spatial_axis=0),
@@ -238,11 +232,6 @@ class SupervisedMonaiKitsLearner(SupervisedLearner):
                 LoadImaged(keys=["image", "label"]),
                 EnsureChannelFirstd(keys="image"),
                 ConvertToMultiChannelBasedOnKitsClassesd(keys="label"),
-                Spacingd(
-                    keys=["image", "label"],
-                    pixdim=(1.0, 1.0, 1.0),
-                    mode=("bilinear", "nearest"),
-                ),
                 DivisiblePadd(keys=["image", "label"], k=16),
                 Orientationd(keys=["image", "label"], axcodes="RAS"),
                 NormalizeIntensityd(keys="image", nonzero=True, channel_wise=True),
