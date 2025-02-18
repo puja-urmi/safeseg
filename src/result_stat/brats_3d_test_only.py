@@ -62,8 +62,8 @@ def main():
     model = SegResNet(
         blocks_down=[1, 2, 2, 4],
         blocks_up=[1, 1, 1],
-        init_filters=16,
-        in_channels=4,
+        init_filters=32,
+        in_channels=1,
         out_channels=3,
         dropout_prob=0.2,
     ).to(device)
@@ -80,11 +80,6 @@ def main():
             LoadImaged(keys=["image", "label"]),
             EnsureChannelFirstd(keys="image"),
             ConvertToMultiChannelBasedOnBratsClassesd(keys="label"),
-            Spacingd(
-                keys=["image", "label"],
-                pixdim=(1.0, 1.0, 1.0),
-                mode=("bilinear", "nearest"),
-            ),
             DivisiblePadd(keys=["image", "label"], k=32),
             Orientationd(keys=["image", "label"], axcodes="RAS"),
             NormalizeIntensityd(keys="image", nonzero=True, channel_wise=True),
