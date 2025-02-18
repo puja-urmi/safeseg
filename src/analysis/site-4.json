@@ -1,0 +1,607 @@
+{
+    "testing": [],
+    "training": [
+        {
+            "image": [
+                "training/case_00073/imaging.nii.gz"
+            ],
+            "label": "training/case_00073/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00087/imaging.nii.gz"
+            ],
+            "label": "training/case_00087/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00090/imaging.nii.gz"
+            ],
+            "label": "training/case_00090/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00049/imaging.nii.gz"
+            ],
+            "label": "training/case_00049/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00021/imaging.nii.gz"
+            ],
+            "label": "training/case_00021/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00102/imaging.nii.gz"
+            ],
+            "label": "training/case_00102/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00484/imaging.nii.gz"
+            ],
+            "label": "training/case_00484/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00447/imaging.nii.gz"
+            ],
+            "label": "training/case_00447/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00140/imaging.nii.gz"
+            ],
+            "label": "training/case_00140/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00194/imaging.nii.gz"
+            ],
+            "label": "training/case_00194/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00253/imaging.nii.gz"
+            ],
+            "label": "training/case_00253/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00120/imaging.nii.gz"
+            ],
+            "label": "training/case_00120/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00112/imaging.nii.gz"
+            ],
+            "label": "training/case_00112/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00256/imaging.nii.gz"
+            ],
+            "label": "training/case_00256/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00055/imaging.nii.gz"
+            ],
+            "label": "training/case_00055/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00490/imaging.nii.gz"
+            ],
+            "label": "training/case_00490/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00468/imaging.nii.gz"
+            ],
+            "label": "training/case_00468/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00430/imaging.nii.gz"
+            ],
+            "label": "training/case_00430/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00266/imaging.nii.gz"
+            ],
+            "label": "training/case_00266/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00138/imaging.nii.gz"
+            ],
+            "label": "training/case_00138/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00439/imaging.nii.gz"
+            ],
+            "label": "training/case_00439/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00009/imaging.nii.gz"
+            ],
+            "label": "training/case_00009/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00114/imaging.nii.gz"
+            ],
+            "label": "training/case_00114/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00444/imaging.nii.gz"
+            ],
+            "label": "training/case_00444/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00416/imaging.nii.gz"
+            ],
+            "label": "training/case_00416/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00113/imaging.nii.gz"
+            ],
+            "label": "training/case_00113/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00273/imaging.nii.gz"
+            ],
+            "label": "training/case_00273/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00082/imaging.nii.gz"
+            ],
+            "label": "training/case_00082/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00074/imaging.nii.gz"
+            ],
+            "label": "training/case_00074/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00499/imaging.nii.gz"
+            ],
+            "label": "training/case_00499/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00174/imaging.nii.gz"
+            ],
+            "label": "training/case_00174/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00408/imaging.nii.gz"
+            ],
+            "label": "training/case_00408/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00186/imaging.nii.gz"
+            ],
+            "label": "training/case_00186/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00441/imaging.nii.gz"
+            ],
+            "label": "training/case_00441/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00267/imaging.nii.gz"
+            ],
+            "label": "training/case_00267/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00272/imaging.nii.gz"
+            ],
+            "label": "training/case_00272/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00458/imaging.nii.gz"
+            ],
+            "label": "training/case_00458/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00215/imaging.nii.gz"
+            ],
+            "label": "training/case_00215/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00422/imaging.nii.gz"
+            ],
+            "label": "training/case_00422/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00105/imaging.nii.gz"
+            ],
+            "label": "training/case_00105/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00064/imaging.nii.gz"
+            ],
+            "label": "training/case_00064/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00259/imaging.nii.gz"
+            ],
+            "label": "training/case_00259/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00403/imaging.nii.gz"
+            ],
+            "label": "training/case_00403/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00289/imaging.nii.gz"
+            ],
+            "label": "training/case_00289/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00480/imaging.nii.gz"
+            ],
+            "label": "training/case_00480/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00284/imaging.nii.gz"
+            ],
+            "label": "training/case_00284/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00495/imaging.nii.gz"
+            ],
+            "label": "training/case_00495/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00061/imaging.nii.gz"
+            ],
+            "label": "training/case_00061/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00467/imaging.nii.gz"
+            ],
+            "label": "training/case_00467/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00434/imaging.nii.gz"
+            ],
+            "label": "training/case_00434/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00402/imaging.nii.gz"
+            ],
+            "label": "training/case_00402/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00453/imaging.nii.gz"
+            ],
+            "label": "training/case_00453/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00482/imaging.nii.gz"
+            ],
+            "label": "training/case_00482/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00035/imaging.nii.gz"
+            ],
+            "label": "training/case_00035/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00429/imaging.nii.gz"
+            ],
+            "label": "training/case_00429/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00181/imaging.nii.gz"
+            ],
+            "label": "training/case_00181/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00030/imaging.nii.gz"
+            ],
+            "label": "training/case_00030/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00196/imaging.nii.gz"
+            ],
+            "label": "training/case_00196/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00169/imaging.nii.gz"
+            ],
+            "label": "training/case_00169/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/kits23.json/imaging.nii.gz"
+            ],
+            "label": "training/kits23.json/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00460/imaging.nii.gz"
+            ],
+            "label": "training/case_00460/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00227/imaging.nii.gz"
+            ],
+            "label": "training/case_00227/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00179/imaging.nii.gz"
+            ],
+            "label": "training/case_00179/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00236/imaging.nii.gz"
+            ],
+            "label": "training/case_00236/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00496/imaging.nii.gz"
+            ],
+            "label": "training/case_00496/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00211/imaging.nii.gz"
+            ],
+            "label": "training/case_00211/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00412/imaging.nii.gz"
+            ],
+            "label": "training/case_00412/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00028/imaging.nii.gz"
+            ],
+            "label": "training/case_00028/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00162/imaging.nii.gz"
+            ],
+            "label": "training/case_00162/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00166/imaging.nii.gz"
+            ],
+            "label": "training/case_00166/segmentation.nii.gz"
+        }
+    ],
+    "validation": [
+        {
+            "image": [
+                "training/case_00251/imaging.nii.gz"
+            ],
+            "label": "training/case_00251/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00142/imaging.nii.gz"
+            ],
+            "label": "training/case_00142/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00264/imaging.nii.gz"
+            ],
+            "label": "training/case_00264/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00094/imaging.nii.gz"
+            ],
+            "label": "training/case_00094/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00420/imaging.nii.gz"
+            ],
+            "label": "training/case_00420/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00152/imaging.nii.gz"
+            ],
+            "label": "training/case_00152/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00436/imaging.nii.gz"
+            ],
+            "label": "training/case_00436/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00058/imaging.nii.gz"
+            ],
+            "label": "training/case_00058/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00054/imaging.nii.gz"
+            ],
+            "label": "training/case_00054/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00141/imaging.nii.gz"
+            ],
+            "label": "training/case_00141/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00155/imaging.nii.gz"
+            ],
+            "label": "training/case_00155/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00202/imaging.nii.gz"
+            ],
+            "label": "training/case_00202/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00149/imaging.nii.gz"
+            ],
+            "label": "training/case_00149/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00281/imaging.nii.gz"
+            ],
+            "label": "training/case_00281/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00086/imaging.nii.gz"
+            ],
+            "label": "training/case_00086/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00407/imaging.nii.gz"
+            ],
+            "label": "training/case_00407/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00153/imaging.nii.gz"
+            ],
+            "label": "training/case_00153/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00275/imaging.nii.gz"
+            ],
+            "label": "training/case_00275/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00409/imaging.nii.gz"
+            ],
+            "label": "training/case_00409/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00204/imaging.nii.gz"
+            ],
+            "label": "training/case_00204/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00213/imaging.nii.gz"
+            ],
+            "label": "training/case_00213/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00221/imaging.nii.gz"
+            ],
+            "label": "training/case_00221/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00192/imaging.nii.gz"
+            ],
+            "label": "training/case_00192/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00228/imaging.nii.gz"
+            ],
+            "label": "training/case_00228/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00047/imaging.nii.gz"
+            ],
+            "label": "training/case_00047/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00023/imaging.nii.gz"
+            ],
+            "label": "training/case_00023/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00188/imaging.nii.gz"
+            ],
+            "label": "training/case_00188/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00198/imaging.nii.gz"
+            ],
+            "label": "training/case_00198/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00238/imaging.nii.gz"
+            ],
+            "label": "training/case_00238/segmentation.nii.gz"
+        },
+        {
+            "image": [
+                "training/case_00474/imaging.nii.gz"
+            ],
+            "label": "training/case_00474/segmentation.nii.gz"
+        }
+    ]
+}
