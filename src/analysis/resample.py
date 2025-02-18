@@ -25,8 +25,8 @@ def resample_image(image, target_voxel_size, interpolation_order):
     return nib.Nifti1Image(resampled_data, new_affine, image.header)
 
 
-target_voxel_size = np.array([0.5, 0.5, 0.5])  # Adjust if needed
-input_folder = "/home/psaha03/scratch/dataset_kits23/dataset/training"
+target_voxel_size = np.array([1, 1, 1])  # Adjust if needed
+input_folder = "/home/psaha03/scratch/cropped"
 output_folder = "/home/psaha03/scratch/resampled"
 
 os.makedirs(output_folder, exist_ok=True)

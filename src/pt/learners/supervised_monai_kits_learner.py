@@ -164,8 +164,8 @@ class SupervisedMonaiKitsLearner(SupervisedLearner):
         cache_rate = self.config_info["cache_dataset"]
         dataset_base_dir = self.config_info["dataset_base_dir"]
         datalist_json_path = self.config_info["datalist_json_path"]
-        self.roi_size = self.config_info.get("roi_size", (208, 128, 168))
-        self.infer_roi_size = self.config_info.get("infer_roi_size", (208, 128, 168))
+        self.roi_size = self.config_info.get("roi_size", (144, 144, 144))
+        self.infer_roi_size = self.config_info.get("infer_roi_size", (144, 144, 144))
 
         # Get datalist json
         datalist_json_path = custom_client_datalist_json_path(datalist_json_path, self.client_id)
@@ -193,7 +193,7 @@ class SupervisedMonaiKitsLearner(SupervisedLearner):
         self.model = SegResNet(
             blocks_down=[1, 2, 2, 4],
             blocks_up=[1, 1, 1],
-            init_filters=16,
+            init_filters=32,
             in_channels=1,
             out_channels=3,
             dropout_prob=0.2,
@@ -220,7 +220,7 @@ class SupervisedMonaiKitsLearner(SupervisedLearner):
                 ConvertToMultiChannelBasedOnKitsClassesd(keys="label"),
                 Spacingd(
                     keys=["image", "label"],
-                    pixdim=(0.5, 0.5, 0.5),
+                    pixdim=(1.0, 1.0, 1.0),
                     mode=("bilinear", "nearest"),
                 ),
                 Orientationd(keys=["image", "label"], axcodes="RAS"),
@@ -240,10 +240,10 @@ class SupervisedMonaiKitsLearner(SupervisedLearner):
                 ConvertToMultiChannelBasedOnKitsClassesd(keys="label"),
                 Spacingd(
                     keys=["image", "label"],
-                    pixdim=(0.5, 0.5, 0.5),
+                    pixdim=(1.0, 1.0, 1.0),
                     mode=("bilinear", "nearest"),
                 ),
-                DivisiblePadd(keys=["image", "label"], k=32),
+                DivisiblePadd(keys=["image", "label"], k=16),
                 Orientationd(keys=["image", "label"], axcodes="RAS"),
                 NormalizeIntensityd(keys="image", nonzero=True, channel_wise=True),
             ]

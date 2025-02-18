@@ -8,9 +8,8 @@
 
 # Load the required modules
 module load scipy-stack
-# module load opencv
 source /home/psaha03/scratch/safeseg/env/bin/activate
 # pip install tensorflow
 
 
-python sigmoid.py
+python visualize_axial.py

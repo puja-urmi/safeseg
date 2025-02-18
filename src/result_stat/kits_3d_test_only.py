@@ -174,7 +174,6 @@ def main():
         metric_tc = 0
         metric_wt = 0
         metric_et = 0
-        smooth = 1e-6
         ct = 0
         ct_tc = 0
         ct_wt = 0
@@ -203,9 +202,9 @@ def main():
                 metric_et += metric_score[0][2].item()
                 ct_et += 1
         # compute mean dice over whole validation set
-        metric_tc /= ct_tc + smooth
-        metric_wt /= ct_wt + smooth
-        metric_et /= ct_et + smooth
+        metric_tc /= ct_tc
+        metric_wt /= ct_wt
+        metric_et /= ct_et
         metric /= ct
         print(f"Test Dice: {metric:.4f}, Valid count: {ct}")
         print(f"Test Dice KTC: {metric_tc:.4f}, Valid count: {ct_tc}")

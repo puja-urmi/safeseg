@@ -2,3229 +2,3229 @@
     "case_00000": {
         "status": "Shapes match",
         "image_shape": [
-            192,
-            353,
-            218
+            384,
+            384,
+            237
         ]
     },
     "case_00001": {
         "status": "Shapes match",
         "image_shape": [
-            192,
-            307,
-            261
+            384,
+            384,
+            327
         ]
     },
     "case_00002": {
         "status": "Shapes match",
         "image_shape": [
             261,
-            361,
-            232
+            384,
+            247
         ]
     },
     "case_00003": {
         "status": "Shapes match",
         "image_shape": [
             270,
-            328,
-            216
+            384,
+            252
         ]
     },
     "case_00004": {
         "status": "Shapes match",
         "image_shape": [
-            256,
-            375,
-            260
+            64,
+            384,
+            266
         ]
     },
     "case_00005": {
         "status": "Shapes match",
         "image_shape": [
-            192,
-            375,
-            181
+            384,
+            384,
+            185
         ]
     },
     "case_00006": {
         "status": "Shapes match",
         "image_shape": [
-            471,
-            285,
-            235
+            157,
+            384,
+            316
         ]
     },
     "case_00007": {
         "status": "Shapes match",
         "image_shape": [
-            183,
-            361,
-            272
+            61,
+            384,
+            289
         ]
     },
     "case_00008": {
         "status": "Shapes match",
         "image_shape": [
-            681,
-            314,
-            262
+            227,
+            384,
+            321
         ]
     },
     "case_00009": {
         "status": "Shapes match",
         "image_shape": [
-            231,
-            310,
-            201
+            77,
+            384,
+            248
         ]
     },
     "case_00010": {
         "status": "Shapes match",
         "image_shape": [
-            150,
-            291,
-            195
+            50,
+            384,
+            257
         ]
     },
     "case_00011": {
         "status": "Shapes match",
         "image_shape": [
-            400,
-            270,
-            215
+            80,
+            384,
+            306
         ]
     },
     "case_00012": {
         "status": "Shapes match",
         "image_shape": [
-            445,
-            289,
-            213
+            89,
+            384,
+            283
         ]
     },
     "case_00013": {
         "status": "Shapes match",
         "image_shape": [
-            276,
-            262,
-            181
+            92,
+            384,
+            265
         ]
     },
     "case_00014": {
         "status": "Shapes match",
         "image_shape": [
             384,
-            326,
-            194
+            384,
+            228
         ]
     },
     "case_00015": {
         "status": "Shapes match",
         "image_shape": [
-            225,
-            271,
-            225
+            75,
+            384,
+            319
         ]
     },
     "case_00016": {
         "status": "Shapes match",
         "image_shape": [
-            445,
-            250,
-            204
+            178,
+            384,
+            313
         ]
     },
     "case_00017": {
         "status": "Shapes match",
         "image_shape": [
-            485,
-            255,
-            205
+            97,
+            384,
+            309
         ]
     },
     "case_00018": {
         "status": "Shapes match",
         "image_shape": [
-            302,
-            331,
-            228
+            121,
+            384,
+            265
         ]
     },
     "case_00019": {
         "status": "Shapes match",
         "image_shape": [
-            484,
-            360,
-            268
+            129,
+            384,
+            286
         ]
     },
     "case_00020": {
         "status": "Shapes match",
         "image_shape": [
-            480,
-            322,
-            244
+            96,
+            384,
+            290
         ]
     },
     "case_00021": {
         "status": "Shapes match",
         "image_shape": [
-            190,
-            316,
-            215
+            38,
+            384,
+            261
         ]
     },
     "case_00022": {
         "status": "Shapes match",
         "image_shape": [
-            192,
-            320,
-            226
+            384,
+            384,
+            271
         ]
     },
     "case_00023": {
         "status": "Shapes match",
         "image_shape": [
-            321,
-            300,
-            224
+            107,
+            384,
+            287
         ]
     },
     "case_00024": {
         "status": "Shapes match",
         "image_shape": [
-            425,
-            255,
-            201
+            85,
+            384,
+            302
         ]
     },
     "case_00025": {
         "status": "Shapes match",
         "image_shape": [
-            258,
-            283,
-            245
+            103,
+            384,
+            333
         ]
     },
     "case_00026": {
         "status": "Shapes match",
         "image_shape": [
-            755,
-            336,
-            284
+            302,
+            384,
+            325
         ]
     },
     "case_00027": {
         "status": "Shapes match",
         "image_shape": [
-            192,
-            344,
-            238
+            384,
+            384,
+            266
         ]
     },
     "case_00028": {
         "status": "Shapes match",
         "image_shape": [
-            490,
-            322,
-            286
+            98,
+            384,
+            340
         ]
     },
     "case_00029": {
         "status": "Shapes match",
         "image_shape": [
-            655,
-            290,
-            210
+            131,
+            384,
+            278
         ]
     },
     "case_00030": {
         "status": "Shapes match",
         "image_shape": [
-            190,
-            280,
-            257
+            38,
+            384,
+            352
         ]
     },
     "case_00031": {
         "status": "Shapes match",
         "image_shape": [
-            351,
-            199,
-            178
+            117,
+            384,
+            344
         ]
     },
     "case_00032": {
         "status": "Shapes match",
         "image_shape": [
-            472,
-            299,
-            182
+            189,
+            384,
+            233
         ]
     },
     "case_00033": {
         "status": "Shapes match",
         "image_shape": [
             384,
-            310,
-            238
+            384,
+            294
         ]
     },
     "case_00034": {
         "status": "Shapes match",
         "image_shape": [
-            550,
-            321,
-            251
+            110,
+            384,
+            300
         ]
     },
     "case_00035": {
         "status": "Shapes match",
         "image_shape": [
-            490,
-            370,
-            274
+            98,
+            384,
+            284
         ]
     },
     "case_00036": {
         "status": "Shapes match",
         "image_shape": [
-            489,
-            307,
-            249
+            163,
+            384,
+            312
         ]
     },
     "case_00037": {
         "status": "Shapes match",
         "image_shape": [
-            485,
-            360,
-            292
+            97,
+            384,
+            311
         ]
     },
     "case_00038": {
         "status": "Shapes match",
         "image_shape": [
-            160,
-            299,
-            251
+            32,
+            384,
+            322
         ]
     },
     "case_00039": {
         "status": "Shapes match",
         "image_shape": [
-            450,
-            270,
-            207
+            90,
+            384,
+            295
         ]
     },
     "case_00040": {
         "status": "Shapes match",
         "image_shape": [
-            414,
-            285,
-            147
+            207,
+            384,
+            198
         ]
     },
     "case_00041": {
         "status": "Shapes match",
         "image_shape": [
-            156,
-            260,
-            197
+            52,
+            384,
+            291
         ]
     },
     "case_00042": {
         "status": "Shapes match",
         "image_shape": [
             301,
-            330,
-            282
+            384,
+            328
         ]
     },
     "case_00043": {
         "status": "Shapes match",
         "image_shape": [
-            516,
-            283,
-            215
+            172,
+            384,
+            291
         ]
     },
     "case_00044": {
         "status": "Shapes match",
         "image_shape": [
-            505,
-            371,
-            281
+            101,
+            384,
+            291
         ]
     },
     "case_00045": {
         "status": "Shapes match",
         "image_shape": [
-            186,
-            285,
-            199
+            62,
+            384,
+            268
         ]
     },
     "case_00046": {
         "status": "Shapes match",
         "image_shape": [
-            477,
-            375,
-            250
+            159,
+            384,
+            256
         ]
     },
     "case_00047": {
         "status": "Shapes match",
         "image_shape": [
-            710,
-            328,
-            245
+            142,
+            384,
+            286
         ]
     },
     "case_00048": {
         "status": "Shapes match",
         "image_shape": [
-            425,
-            400,
-            221
+            85,
+            384,
+            212
         ]
     },
     "case_00049": {
         "status": "Shapes match",
         "image_shape": [
-            192,
-            331,
-            262
+            384,
+            384,
+            304
         ]
     },
     "case_00050": {
         "status": "Shapes match",
         "image_shape": [
-            240,
-            265,
-            210
+            96,
+            384,
+            305
         ]
     },
     "case_00051": {
         "status": "Shapes match",
         "image_shape": [
-            170,
-            369,
-            258
+            68,
+            384,
+            268
         ]
     },
     "case_00052": {
         "status": "Shapes match",
         "image_shape": [
-            192,
-            368,
-            250
+            384,
+            384,
+            261
         ]
     },
     "case_00053": {
         "status": "Shapes match",
         "image_shape": [
-            192,
-            297,
-            232
+            384,
+            384,
+            300
         ]
     },
     "case_00054": {
         "status": "Shapes match",
         "image_shape": [
-            520,
-            375,
-            273
+            104,
+            384,
+            280
         ]
     },
     "case_00055": {
         "status": "Shapes match",
         "image_shape": [
-            505,
-            338,
-            264
+            101,
+            384,
+            300
         ]
     },
     "case_00056": {
         "status": "Shapes match",
         "image_shape": [
-            450,
-            300,
-            260
+            90,
+            384,
+            333
         ]
     },
     "case_00057": {
         "status": "Shapes match",
         "image_shape": [
-            240,
-            316,
-            253
+            80,
+            384,
+            308
         ]
     },
     "case_00058": {
         "status": "Shapes match",
         "image_shape": [
-            515,
-            365,
-            273
+            103,
+            384,
+            287
         ]
     },
     "case_00059": {
         "status": "Shapes match",
         "image_shape": [
-            192,
-            303,
-            191
+            384,
+            384,
+            242
         ]
     },
     "case_00060": {
         "status": "Shapes match",
         "image_shape": [
-            435,
-            320,
-            210
+            145,
+            384,
+            252
         ]
     },
     "case_00061": {
         "status": "Shapes match",
         "image_shape": [
-            145,
-            375,
-            279
+            29,
+            384,
+            286
         ]
     },
     "case_00062": {
         "status": "Shapes match",
         "image_shape": [
-            430,
-            375,
-            232
+            86,
+            384,
+            238
         ]
     },
     "case_00063": {
         "status": "Shapes match",
         "image_shape": [
-            192,
-            330,
-            242
+            384,
+            384,
+            282
         ]
     },
     "case_00064": {
         "status": "Shapes match",
         "image_shape": [
-            265,
-            270,
-            198
+            53,
+            384,
+            281
         ]
     },
     "case_00065": {
         "status": "Shapes match",
         "image_shape": [
-            258,
-            315,
-            273
+            103,
+            384,
+            333
         ]
     },
     "case_00066": {
         "status": "Shapes match",
         "image_shape": [
-            480,
-            331,
-            244
+            384,
+            384,
+            283
         ]
     },
     "case_00067": {
         "status": "Shapes match",
         "image_shape": [
             285,
-            292,
-            242
+            384,
+            318
         ]
     },
     "case_00068": {
         "status": "Shapes match",
         "image_shape": [
-            192,
-            270,
-            226
+            384,
+            384,
+            322
         ]
     },
     "case_00069": {
         "status": "Shapes match",
         "image_shape": [
-            450,
-            262,
-            219
+            90,
+            384,
+            321
         ]
     },
     "case_00070": {
         "status": "Shapes match",
         "image_shape": [
-            285,
-            281,
-            274
+            57,
+            384,
+            374
         ]
     },
     "case_00071": {
         "status": "Shapes match",
         "image_shape": [
-            192,
-            270,
-            191
+            384,
+            384,
+            271
         ]
     },
     "case_00072": {
         "status": "Shapes match",
         "image_shape": [
-            410,
-            255,
-            199
+            164,
+            384,
+            300
         ]
     },
     "case_00073": {
         "status": "Shapes match",
         "image_shape": [
-            725,
-            330,
-            243
+            145,
+            384,
+            283
         ]
     },
     "case_00074": {
         "status": "Shapes match",
         "image_shape": [
-            400,
-            249,
-            234
+            80,
+            384,
+            361
         ]
     },
     "case_00075": {
         "status": "Shapes match",
         "image_shape": [
-            450,
-            272,
-            192
+            90,
+            384,
+            272
         ]
     },
     "case_00076": {
         "status": "Shapes match",
         "image_shape": [
-            330,
-            260,
-            214
+            66,
+            384,
+            316
         ]
     },
     "case_00077": {
         "status": "Shapes match",
         "image_shape": [
-            440,
-            271,
-            205
+            88,
+            384,
+            291
         ]
     },
     "case_00078": {
         "status": "Shapes match",
         "image_shape": [
             326,
-            370,
-            299
+            384,
+            311
         ]
     },
     "case_00079": {
         "status": "Shapes match",
         "image_shape": [
-            620,
-            248,
-            223
+            124,
+            384,
+            346
         ]
     },
     "case_00080": {
         "status": "Shapes match",
         "image_shape": [
-            440,
-            278,
-            202
+            88,
+            384,
+            280
         ]
     },
     "case_00081": {
         "status": "Shapes match",
         "image_shape": [
-            453,
-            378,
-            260
+            151,
+            384,
+            264
         ]
     },
     "case_00082": {
         "status": "Shapes match",
         "image_shape": [
-            387,
-            299,
-            203
+            129,
+            384,
+            261
         ]
     },
     "case_00083": {
         "status": "Shapes match",
         "image_shape": [
-            282,
-            375,
-            277
+            94,
+            384,
+            284
         ]
     },
     "case_00084": {
         "status": "Shapes match",
         "image_shape": [
-            548,
-            375,
-            271
+            274,
+            384,
+            277
         ]
     },
     "case_00085": {
         "status": "Shapes match",
         "image_shape": [
-            435,
-            312,
-            231
+            87,
+            384,
+            284
         ]
     },
     "case_00086": {
         "status": "Shapes match",
         "image_shape": [
-            498,
-            303,
-            265
+            199,
+            384,
+            336
         ]
     },
     "case_00087": {
         "status": "Shapes match",
         "image_shape": [
-            245,
-            266,
-            227
+            49,
+            384,
+            328
         ]
     },
     "case_00088": {
         "status": "Shapes match",
         "image_shape": [
-            297,
-            168,
-            143
+            99,
+            384,
+            326
         ]
     },
     "case_00089": {
         "status": "Shapes match",
         "image_shape": [
-            275,
-            349,
-            234
+            55,
+            384,
+            258
         ]
     },
     "case_00090": {
         "status": "Shapes match",
         "image_shape": [
-            228,
-            295,
-            226
+            76,
+            384,
+            295
         ]
     },
     "case_00091": {
         "status": "Shapes match",
         "image_shape": [
-            192,
-            303,
-            237
+            384,
+            384,
+            300
         ]
     },
     "case_00092": {
         "status": "Shapes match",
         "image_shape": [
-            490,
-            270,
-            250
+            98,
+            384,
+            355
         ]
     },
     "case_00093": {
         "status": "Shapes match",
         "image_shape": [
-            192,
-            350,
-            259
+            384,
+            384,
+            285
         ]
     },
     "case_00094": {
         "status": "Shapes match",
         "image_shape": [
-            215,
-            270,
-            253
+            43,
+            384,
+            360
         ]
     },
     "case_00095": {
         "status": "Shapes match",
         "image_shape": [
-            471,
-            358,
-            256
+            314,
+            384,
+            274
         ]
     },
     "case_00096": {
         "status": "Shapes match",
         "image_shape": [
-            192,
-            284,
-            216
+            384,
+            384,
+            292
         ]
     },
     "case_00097": {
         "status": "Shapes match",
         "image_shape": [
-            425,
-            285,
-            210
+            85,
+            384,
+            284
         ]
     },
     "case_00098": {
         "status": "Shapes match",
         "image_shape": [
             234,
-            268,
-            206
+            384,
+            295
         ]
     },
     "case_00099": {
         "status": "Shapes match",
         "image_shape": [
-            525,
-            271,
-            228
+            105,
+            384,
+            323
         ]
     },
     "case_00100": {
         "status": "Shapes match",
         "image_shape": [
             384,
-            316,
-            199
+            384,
+            242
         ]
     },
     "case_00101": {
         "status": "Shapes match",
         "image_shape": [
-            192,
-            296,
-            211
+            384,
+            384,
+            273
         ]
     },
     "case_00102": {
         "status": "Shapes match",
         "image_shape": [
             316,
-            322,
-            260
+            384,
+            310
         ]
     },
     "case_00103": {
         "status": "Shapes match",
         "image_shape": [
-            192,
-            318,
-            219
+            384,
+            384,
+            264
         ]
     },
     "case_00104": {
         "status": "Shapes match",
         "image_shape": [
-            570,
-            300,
-            237
+            114,
+            384,
+            303
         ]
     },
     "case_00105": {
         "status": "Shapes match",
         "image_shape": [
-            459,
-            343,
-            190
+            153,
+            384,
+            213
         ]
     },
     "case_00106": {
         "status": "Shapes match",
         "image_shape": [
-            510,
-            310,
-            237
+            102,
+            384,
+            294
         ]
     },
     "case_00107": {
         "status": "Shapes match",
         "image_shape": [
-            420,
-            275,
-            232
+            84,
+            384,
+            324
         ]
     },
     "case_00108": {
         "status": "Shapes match",
         "image_shape": [
-            255,
-            332,
-            254
+            51,
+            384,
+            293
         ]
     },
     "case_00109": {
         "status": "Shapes match",
         "image_shape": [
-            190,
-            225,
-            217
+            76,
+            384,
+            370
         ]
     },
     "case_00110": {
         "status": "Shapes match",
         "image_shape": [
-            170,
-            319,
-            251
+            34,
+            384,
+            302
         ]
     },
     "case_00111": {
         "status": "Shapes match",
         "image_shape": [
-            465,
-            285,
-            213
+            186,
+            384,
+            287
         ]
     },
     "case_00112": {
         "status": "Shapes match",
         "image_shape": [
-            226,
-            285,
-            255
+            113,
+            384,
+            343
         ]
     },
     "case_00113": {
         "status": "Shapes match",
         "image_shape": [
-            215,
-            269,
-            245
+            43,
+            384,
+            349
         ]
     },
     "case_00114": {
         "status": "Shapes match",
         "image_shape": [
             304,
-            310,
-            299
+            384,
+            370
         ]
     },
     "case_00115": {
         "status": "Shapes match",
         "image_shape": [
-            162,
-            270,
-            181
+            325,
+            384,
+            258
         ]
     },
     "case_00116": {
         "status": "Shapes match",
         "image_shape": [
-            192,
-            258,
-            203
+            384,
+            384,
+            302
         ]
     },
     "case_00117": {
         "status": "Shapes match",
         "image_shape": [
-            172,
-            325,
-            256
+            69,
+            384,
+            303
         ]
     },
     "case_00118": {
         "status": "Shapes match",
         "image_shape": [
-            192,
-            328,
-            238
+            384,
+            384,
+            278
         ]
     },
     "case_00119": {
         "status": "Shapes match",
         "image_shape": [
-            455,
-            292,
-            264
+            91,
+            384,
+            347
         ]
     },
     "case_00120": {
         "status": "Shapes match",
         "image_shape": [
             285,
-            320,
-            216
+            384,
+            260
         ]
     },
     "case_00121": {
         "status": "Shapes match",
         "image_shape": [
-            395,
-            263,
-            202
+            79,
+            384,
+            295
         ]
     },
     "case_00122": {
         "status": "Shapes match",
         "image_shape": [
-            250,
-            278,
-            231
+            50,
+            384,
+            320
         ]
     },
     "case_00123": {
         "status": "Shapes match",
         "image_shape": [
-            480,
-            334,
-            232
+            384,
+            384,
+            267
         ]
     },
     "case_00124": {
         "status": "Shapes match",
         "image_shape": [
-            655,
-            270,
-            231
+            262,
+            384,
+            329
         ]
     },
     "case_00125": {
         "status": "Shapes match",
         "image_shape": [
-            513,
-            375,
-            232
+            171,
+            384,
+            238
         ]
     },
     "case_00126": {
         "status": "Shapes match",
         "image_shape": [
-            535,
-            362,
-            269
+            107,
+            384,
+            286
         ]
     },
     "case_00127": {
         "status": "Shapes match",
         "image_shape": [
-            315,
-            375,
-            231
+            105,
+            384,
+            237
         ]
     },
     "case_00128": {
         "status": "Shapes match",
         "image_shape": [
-            515,
-            337,
-            251
+            206,
+            384,
+            286
         ]
     },
     "case_00129": {
         "status": "Shapes match",
         "image_shape": [
-            240,
-            283,
-            211
+            48,
+            384,
+            287
         ]
     },
     "case_00130": {
         "status": "Shapes match",
         "image_shape": [
-            159,
-            210,
-            196
+            53,
+            384,
+            358
         ]
     },
     "case_00131": {
         "status": "Shapes match",
         "image_shape": [
-            477,
-            257,
-            212
+            159,
+            384,
+            318
         ]
     },
     "case_00132": {
         "status": "Shapes match",
         "image_shape": [
-            192,
-            274,
-            205
+            384,
+            384,
+            287
         ]
     },
     "case_00133": {
         "status": "Shapes match",
         "image_shape": [
-            465,
-            326,
-            217
+            186,
+            384,
+            255
         ]
     },
     "case_00134": {
         "status": "Shapes match",
         "image_shape": [
-            183,
-            364,
-            237
+            61,
+            384,
+            250
         ]
     },
     "case_00135": {
         "status": "Shapes match",
         "image_shape": [
-            192,
-            322,
-            238
+            384,
+            384,
+            284
         ]
     },
     "case_00136": {
         "status": "Shapes match",
         "image_shape": [
-            505,
-            262,
-            218
+            101,
+            384,
+            319
         ]
     },
     "case_00137": {
         "status": "Shapes match",
         "image_shape": [
-            272,
-            285,
-            192
+            109,
+            384,
+            259
         ]
     },
     "case_00138": {
         "status": "Shapes match",
         "image_shape": [
-            228,
-            262,
-            239
+            76,
+            384,
+            349
         ]
     },
     "case_00139": {
         "status": "Shapes match",
         "image_shape": [
-            515,
-            308,
-            271
+            103,
+            384,
+            339
         ]
     },
     "case_00140": {
         "status": "Shapes match",
         "image_shape": [
             279,
-            316,
-            221
+            384,
+            268
         ]
     },
     "case_00141": {
         "status": "Shapes match",
         "image_shape": [
-            192,
-            274,
-            245
+            384,
+            384,
+            343
         ]
     },
     "case_00142": {
         "status": "Shapes match",
         "image_shape": [
             274,
-            310,
-            254
+            384,
+            314
         ]
     },
     "case_00143": {
         "status": "Shapes match",
         "image_shape": [
-            460,
-            352,
-            231
+            92,
+            384,
+            252
         ]
     },
     "case_00144": {
         "status": "Shapes match",
         "image_shape": [
-            492,
-            304,
-            210
+            197,
+            384,
+            266
         ]
     },
     "case_00145": {
         "status": "Shapes match",
         "image_shape": [
-            258,
-            375,
-            259
+            86,
+            384,
+            265
         ]
     },
     "case_00146": {
         "status": "Shapes match",
         "image_shape": [
-            192,
-            270,
-            240
+            384,
+            384,
+            342
         ]
     },
     "case_00147": {
         "status": "Shapes match",
         "image_shape": [
-            350,
-            375,
-            264
+            70,
+            384,
+            270
         ]
     },
     "case_00148": {
         "status": "Shapes match",
         "image_shape": [
-            180,
-            348,
-            242
+            36,
+            384,
+            267
         ]
     },
     "case_00149": {
         "status": "Shapes match",
         "image_shape": [
-            291,
-            306,
-            249
+            97,
+            384,
+            312
         ]
     },
     "case_00150": {
         "status": "Shapes match",
         "image_shape": [
-            265,
-            285,
-            219
+            106,
+            384,
+            295
         ]
     },
     "case_00151": {
         "status": "Shapes match",
         "image_shape": [
-            192,
-            311,
-            229
+            384,
+            384,
+            282
         ]
     },
     "case_00152": {
         "status": "Shapes match",
         "image_shape": [
-            190,
-            278,
-            232
+            38,
+            384,
+            321
         ]
     },
     "case_00153": {
         "status": "Shapes match",
         "image_shape": [
-            207,
-            255,
-            214
+            69,
+            384,
+            323
         ]
     },
     "case_00154": {
         "status": "Shapes match",
         "image_shape": [
-            192,
-            360,
-            239
+            384,
+            384,
+            255
         ]
     },
     "case_00155": {
         "status": "Shapes match",
         "image_shape": [
-            192,
-            311,
-            205
+            384,
+            384,
+            253
         ]
     },
     "case_00156": {
         "status": "Shapes match",
         "image_shape": [
-            192,
-            375,
-            233
+            384,
+            384,
+            239
         ]
     },
     "case_00157": {
         "status": "Shapes match",
         "image_shape": [
-            192,
-            327,
-            251
+            384,
+            384,
+            295
         ]
     },
     "case_00158": {
         "status": "Shapes match",
         "image_shape": [
-            192,
-            270,
-            223
+            384,
+            384,
+            317
         ]
     },
     "case_00159": {
         "status": "Shapes match",
         "image_shape": [
-            192,
-            294,
-            215
+            384,
+            384,
+            281
         ]
     },
     "case_00160": {
         "status": "Shapes match",
         "image_shape": [
             252,
-            173,
-            211
+            384,
+            468
         ]
     },
     "case_00161": {
         "status": "Shapes match",
         "image_shape": [
-            295,
-            334,
-            247
+            59,
+            384,
+            283
         ]
     },
     "case_00162": {
         "status": "Shapes match",
         "image_shape": [
-            470,
-            212,
-            171
+            94,
+            384,
+            310
         ]
     },
     "case_00163": {
         "status": "Shapes match",
         "image_shape": [
-            495,
-            360,
-            280
+            99,
+            384,
+            299
         ]
     },
     "case_00164": {
         "status": "Shapes match",
         "image_shape": [
-            440,
-            266,
-            203
+            88,
+            384,
+            294
         ]
     },
     "case_00165": {
         "status": "Shapes match",
         "image_shape": [
             384,
-            373,
-            85
+            384,
+            88
         ]
     },
     "case_00166": {
         "status": "Shapes match",
         "image_shape": [
-            309,
-            274,
-            202
+            103,
+            384,
+            283
         ]
     },
     "case_00167": {
         "status": "Shapes match",
         "image_shape": [
-            515,
-            335,
-            224
+            103,
+            384,
+            257
         ]
     },
     "case_00168": {
         "status": "Shapes match",
         "image_shape": [
-            415,
-            298,
-            190
+            83,
+            384,
+            245
         ]
     },
     "case_00169": {
         "status": "Shapes match",
         "image_shape": [
-            505,
-            290,
-            248
+            101,
+            384,
+            328
         ]
     },
     "case_00170": {
         "status": "Shapes match",
         "image_shape": [
-            690,
-            375,
-            240
+            345,
+            384,
+            246
         ]
     },
     "case_00171": {
         "status": "Shapes match",
         "image_shape": [
-            655,
-            292,
-            239
+            131,
+            384,
+            315
         ]
     },
     "case_00172": {
         "status": "Shapes match",
         "image_shape": [
-            455,
-            294,
-            271
+            91,
+            384,
+            354
         ]
     },
     "case_00173": {
         "status": "Shapes match",
         "image_shape": [
-            485,
-            316,
-            215
+            97,
+            384,
+            261
         ]
     },
     "case_00174": {
         "status": "Shapes match",
         "image_shape": [
-            207,
-            283,
-            202
+            69,
+            384,
+            274
         ]
     },
     "case_00175": {
         "status": "Shapes match",
         "image_shape": [
-            535,
-            280,
-            232
+            107,
+            384,
+            318
         ]
     },
     "case_00176": {
         "status": "Shapes match",
         "image_shape": [
-            510,
-            375,
-            307
+            102,
+            384,
+            314
         ]
     },
     "case_00177": {
         "status": "Shapes match",
         "image_shape": [
-            440,
-            259,
-            219
+            88,
+            384,
+            325
         ]
     },
     "case_00178": {
         "status": "Shapes match",
         "image_shape": [
-            440,
-            332,
-            216
+            88,
+            384,
+            250
         ]
     },
     "case_00179": {
         "status": "Shapes match",
         "image_shape": [
-            495,
-            285,
-            240
+            99,
+            384,
+            323
         ]
     },
     "case_00180": {
         "status": "Shapes match",
         "image_shape": [
-            411,
-            285,
-            217
+            137,
+            384,
+            293
         ]
     },
     "case_00181": {
         "status": "Shapes match",
         "image_shape": [
-            495,
-            266,
-            214
+            99,
+            384,
+            309
         ]
     },
     "case_00182": {
         "status": "Shapes match",
         "image_shape": [
-            465,
-            360,
-            262
+            93,
+            384,
+            279
         ]
     },
     "case_00183": {
         "status": "Shapes match",
         "image_shape": [
-            292,
-            272,
-            209
+            195,
+            384,
+            296
         ]
     },
     "case_00184": {
         "status": "Shapes match",
         "image_shape": [
-            730,
-            322,
-            249
+            146,
+            384,
+            297
         ]
     },
     "case_00185": {
         "status": "Shapes match",
         "image_shape": [
-            588,
-            350,
-            299
+            235,
+            384,
+            328
         ]
     },
     "case_00186": {
         "status": "Shapes match",
         "image_shape": [
-            715,
-            282,
-            254
+            143,
+            384,
+            346
         ]
     },
     "case_00187": {
         "status": "Shapes match",
         "image_shape": [
-            410,
-            240,
-            209
+            82,
+            384,
+            334
         ]
     },
     "case_00188": {
         "status": "Shapes match",
         "image_shape": [
             365,
-            261,
-            186
+            384,
+            274
         ]
     },
     "case_00189": {
         "status": "Shapes match",
         "image_shape": [
-            730,
-            285,
-            236
+            146,
+            384,
+            318
         ]
     },
     "case_00190": {
         "status": "Shapes match",
         "image_shape": [
-            483,
-            278,
-            240
+            161,
+            384,
+            332
         ]
     },
     "case_00191": {
         "status": "Shapes match",
         "image_shape": [
-            436,
-            285,
-            230
+            349,
+            384,
+            310
         ]
     },
     "case_00192": {
         "status": "Shapes match",
         "image_shape": [
-            665,
-            300,
-            280
+            133,
+            384,
+            358
         ]
     },
     "case_00193": {
         "status": "Shapes match",
         "image_shape": [
-            291,
-            270,
-            192
+            233,
+            384,
+            273
         ]
     },
     "case_00194": {
         "status": "Shapes match",
         "image_shape": [
-            675,
-            288,
-            89
+            135,
+            384,
+            119
         ]
     },
     "case_00195": {
         "status": "Shapes match",
         "image_shape": [
-            490,
-            293,
-            251
+            98,
+            384,
+            329
         ]
     },
     "case_00196": {
         "status": "Shapes match",
         "image_shape": [
-            534,
-            314,
-            250
+            178,
+            384,
+            305
         ]
     },
     "case_00197": {
         "status": "Shapes match",
         "image_shape": [
-            486,
-            335,
-            259
+            162,
+            384,
+            297
         ]
     },
     "case_00198": {
         "status": "Shapes match",
         "image_shape": [
-            672,
-            281,
-            245
+            269,
+            384,
+            335
         ]
     },
     "case_00199": {
         "status": "Shapes match",
         "image_shape": [
-            302,
-            285,
-            246
+            121,
+            384,
+            331
         ]
     },
     "case_00200": {
         "status": "Shapes match",
         "image_shape": [
-            412,
-            285,
-            240
+            103,
+            384,
+            323
         ]
     },
     "case_00201": {
         "status": "Shapes match",
         "image_shape": [
-            240,
-            300,
-            265
+            96,
+            384,
+            339
         ]
     },
     "case_00202": {
         "status": "Shapes match",
         "image_shape": [
-            479,
-            345,
-            222
+            383,
+            384,
+            247
         ]
     },
     "case_00203": {
         "status": "Shapes match",
         "image_shape": [
             384,
-            244,
-            191
+            384,
+            300
         ]
     },
     "case_00204": {
         "status": "Shapes match",
         "image_shape": [
-            225,
-            336,
-            269
+            75,
+            384,
+            307
         ]
     },
     "case_00205": {
         "status": "Shapes match",
         "image_shape": [
-            465,
-            300,
-            196
+            93,
+            384,
+            251
         ]
     },
     "case_00206": {
         "status": "Shapes match",
         "image_shape": [
-            300,
-            373,
-            248
+            60,
+            384,
+            255
         ]
     },
     "case_00207": {
         "status": "Shapes match",
         "image_shape": [
-            700,
-            290,
-            235
+            140,
+            384,
+            312
         ]
     },
     "case_00208": {
         "status": "Shapes match",
         "image_shape": [
-            445,
-            340,
-            243
+            89,
+            384,
+            275
         ]
     },
     "case_00209": {
         "status": "Shapes match",
         "image_shape": [
-            510,
-            300,
-            236
+            102,
+            384,
+            302
         ]
     },
     "case_00210": {
         "status": "Shapes match",
         "image_shape": [
-            210,
-            333,
-            260
+            42,
+            384,
+            300
         ]
     },
     "case_00211": {
         "status": "Shapes match",
         "image_shape": [
-            285,
-            331,
-            260
+            95,
+            384,
+            302
         ]
     },
     "case_00212": {
         "status": "Shapes match",
         "image_shape": [
-            261,
-            285,
-            212
+            87,
+            384,
+            286
         ]
     },
     "case_00213": {
         "status": "Shapes match",
         "image_shape": [
             384,
-            297,
-            87
+            384,
+            113
         ]
     },
     "case_00214": {
         "status": "Shapes match",
         "image_shape": [
             384,
-            366,
-            257
+            384,
+            270
         ]
     },
     "case_00215": {
         "status": "Shapes match",
         "image_shape": [
-            308,
-            360,
-            243
+            82,
+            384,
+            259
         ]
     },
     "case_00216": {
         "status": "Shapes match",
         "image_shape": [
-            192,
-            316,
-            235
+            384,
+            384,
+            285
         ]
     },
     "case_00217": {
         "status": "Shapes match",
         "image_shape": [
-            417,
-            304,
-            239
+            139,
+            384,
+            301
         ]
     },
     "case_00218": {
         "status": "Shapes match",
         "image_shape": [
-            492,
-            330,
-            221
+            164,
+            384,
+            257
         ]
     },
     "case_00219": {
         "status": "Shapes match",
         "image_shape": [
-            501,
-            328,
-            263
+            167,
+            384,
+            307
         ]
     },
     "case_00220": {
         "status": "Shapes match",
         "image_shape": [
-            522,
-            300,
-            231
+            174,
+            384,
+            296
         ]
     },
     "case_00221": {
         "status": "Shapes match",
         "image_shape": [
-            705,
-            290,
-            260
+            141,
+            384,
+            344
         ]
     },
     "case_00222": {
         "status": "Shapes match",
         "image_shape": [
-            455,
-            285,
-            229
+            91,
+            384,
+            308
         ]
     },
     "case_00223": {
         "status": "Shapes match",
         "image_shape": [
-            1152,
-            364,
-            254
+            384,
+            384,
+            268
         ]
     },
     "case_00224": {
         "status": "Shapes match",
         "image_shape": [
-            485,
-            331,
-            244
+            97,
+            384,
+            283
         ]
     },
     "case_00225": {
         "status": "Shapes match",
         "image_shape": [
-            515,
-            308,
-            253
+            103,
+            384,
+            316
         ]
     },
     "case_00226": {
         "status": "Shapes match",
         "image_shape": [
-            480,
-            360,
-            232
+            160,
+            384,
+            247
         ]
     },
     "case_00227": {
         "status": "Shapes match",
         "image_shape": [
-            435,
-            334,
-            245
+            145,
+            384,
+            282
         ]
     },
     "case_00228": {
         "status": "Shapes match",
         "image_shape": [
-            510,
-            285,
-            252
+            102,
+            384,
+            340
         ]
     },
     "case_00229": {
         "status": "Shapes match",
         "image_shape": [
             266,
-            292,
-            192
+            384,
+            252
         ]
     },
     "case_00230": {
         "status": "Shapes match",
         "image_shape": [
-            465,
-            248,
-            202
+            93,
+            384,
+            314
         ]
     },
     "case_00231": {
         "status": "Shapes match",
         "image_shape": [
-            495,
-            354,
-            259
+            165,
+            384,
+            281
         ]
     },
     "case_00232": {
         "status": "Shapes match",
         "image_shape": [
-            505,
-            315,
-            204
+            101,
+            384,
+            249
         ]
     },
     "case_00233": {
         "status": "Shapes match",
         "image_shape": [
-            480,
-            285,
-            265
+            96,
+            384,
+            358
         ]
     },
     "case_00234": {
         "status": "Shapes match",
         "image_shape": [
-            420,
-            263,
-            219
+            140,
+            384,
+            319
         ]
     },
     "case_00235": {
         "status": "Shapes match",
         "image_shape": [
-            477,
-            300,
-            285
+            159,
+            384,
+            365
         ]
     },
     "case_00236": {
         "status": "Shapes match",
         "image_shape": [
-            320,
-            354,
-            254
+            64,
+            384,
+            275
         ]
     },
     "case_00237": {
         "status": "Shapes match",
         "image_shape": [
-            438,
-            299,
-            191
+            175,
+            384,
+            246
         ]
     },
     "case_00238": {
         "status": "Shapes match",
         "image_shape": [
-            480,
-            308,
-            243
+            96,
+            384,
+            304
         ]
     },
     "case_00239": {
         "status": "Shapes match",
         "image_shape": [
-            460,
-            315,
-            237
+            92,
+            384,
+            289
         ]
     },
     "case_00240": {
         "status": "Shapes match",
         "image_shape": [
-            482,
-            270,
-            195
+            193,
+            384,
+            277
         ]
     },
     "case_00241": {
         "status": "Shapes match",
         "image_shape": [
-            495,
-            317,
-            257
+            99,
+            384,
+            311
         ]
     },
     "case_00242": {
         "status": "Shapes match",
         "image_shape": [
-            410,
-            292,
-            230
+            82,
+            384,
+            302
         ]
     },
     "case_00243": {
         "status": "Shapes match",
         "image_shape": [
-            460,
-            335,
-            251
+            92,
+            384,
+            288
         ]
     },
     "case_00244": {
         "status": "Shapes match",
         "image_shape": [
-            176,
-            270,
-            240
+            88,
+            384,
+            342
         ]
     },
     "case_00245": {
         "status": "Shapes match",
         "image_shape": [
-            447,
-            375,
-            243
+            149,
+            384,
+            249
         ]
     },
     "case_00246": {
         "status": "Shapes match",
         "image_shape": [
             384,
-            273,
-            213
+            384,
+            299
         ]
     },
     "case_00247": {
         "status": "Shapes match",
         "image_shape": [
-            568,
-            364,
-            194
+            284,
+            384,
+            205
         ]
     },
     "case_00248": {
         "status": "Shapes match",
         "image_shape": [
-            330,
-            375,
-            290
+            66,
+            384,
+            297
         ]
     },
     "case_00249": {
         "status": "Shapes match",
         "image_shape": [
             258,
-            302,
-            261
+            384,
+            333
         ]
     },
     "case_00250": {
         "status": "Shapes match",
         "image_shape": [
-            630,
-            316,
-            262
+            210,
+            384,
+            318
         ]
     },
     "case_00251": {
         "status": "Shapes match",
         "image_shape": [
-            225,
-            261,
-            213
+            45,
+            384,
+            314
         ]
     },
     "case_00252": {
         "status": "Shapes match",
         "image_shape": [
-            255,
-            328,
-            259
+            51,
+            384,
+            304
         ]
     },
     "case_00253": {
         "status": "Shapes match",
         "image_shape": [
             384,
-            293,
-            199
+            384,
+            260
         ]
     },
     "case_00254": {
         "status": "Shapes match",
         "image_shape": [
             250,
-            290,
-            242
+            384,
+            321
         ]
     },
     "case_00255": {
         "status": "Shapes match",
         "image_shape": [
-            450,
-            315,
-            228
+            180,
+            384,
+            278
         ]
     },
     "case_00256": {
         "status": "Shapes match",
         "image_shape": [
-            281,
-            347,
-            238
+            75,
+            384,
+            263
         ]
     },
     "case_00257": {
         "status": "Shapes match",
         "image_shape": [
-            160,
-            248,
-            200
+            32,
+            384,
+            310
         ]
     },
     "case_00258": {
         "status": "Shapes match",
         "image_shape": [
-            321,
-            296,
-            236
+            107,
+            384,
+            306
         ]
     },
     "case_00259": {
         "status": "Shapes match",
         "image_shape": [
-            410,
-            298,
-            215
+            82,
+            384,
+            276
         ]
     },
     "case_00260": {
         "status": "Shapes match",
         "image_shape": [
-            270,
-            288,
-            201
+            54,
+            384,
+            268
         ]
     },
     "case_00261": {
         "status": "Shapes match",
         "image_shape": [
-            192,
-            324,
-            235
+            384,
+            384,
+            279
         ]
     },
     "case_00262": {
         "status": "Shapes match",
         "image_shape": [
-            315,
-            262,
-            224
+            63,
+            384,
+            328
         ]
     },
     "case_00263": {
         "status": "Shapes match",
         "image_shape": [
-            192,
-            303,
-            256
+            384,
+            384,
+            324
         ]
     },
     "case_00264": {
         "status": "Shapes match",
         "image_shape": [
             384,
-            279,
-            198
+            384,
+            272
         ]
     },
     "case_00265": {
         "status": "Shapes match",
         "image_shape": [
-            455,
-            270,
-            211
+            91,
+            384,
+            300
         ]
     },
     "case_00266": {
         "status": "Shapes match",
         "image_shape": [
-            440,
-            256,
-            187
+            88,
+            384,
+            281
         ]
     },
     "case_00267": {
         "status": "Shapes match",
         "image_shape": [
-            230,
-            278,
-            206
+            46,
+            384,
+            285
         ]
     },
     "case_00268": {
         "status": "Shapes match",
         "image_shape": [
-            142,
-            259,
-            232
+            177,
+            384,
+            345
         ]
     },
     "case_00269": {
         "status": "Shapes match",
         "image_shape": [
-            505,
-            344,
-            285
+            101,
+            384,
+            318
         ]
     },
     "case_00270": {
         "status": "Shapes match",
         "image_shape": [
-            465,
-            278,
-            237
+            93,
+            384,
+            328
         ]
     },
     "case_00271": {
         "status": "Shapes match",
         "image_shape": [
-            192,
-            232,
-            203
+            384,
+            384,
+            336
         ]
     },
     "case_00272": {
         "status": "Shapes match",
         "image_shape": [
-            192,
-            344,
-            221
+            384,
+            384,
+            247
         ]
     },
     "case_00273": {
         "status": "Shapes match",
         "image_shape": [
             238,
-            268,
-            191
+            384,
+            273
         ]
     },
     "case_00274": {
         "status": "Shapes match",
         "image_shape": [
-            625,
-            332,
-            241
+            125,
+            384,
+            279
         ]
     },
     "case_00275": {
         "status": "Shapes match",
         "image_shape": [
-            470,
-            368,
-            273
+            94,
+            384,
+            285
         ]
     },
     "case_00276": {
         "status": "Shapes match",
         "image_shape": [
-            192,
-            328,
-            247
+            384,
+            384,
+            289
         ]
     },
     "case_00277": {
         "status": "Shapes match",
         "image_shape": [
-            395,
-            240,
-            181
+            79,
+            384,
+            290
         ]
     },
     "case_00278": {
         "status": "Shapes match",
         "image_shape": [
-            412,
-            255,
-            239
+            165,
+            384,
+            360
         ]
     },
     "case_00279": {
         "status": "Shapes match",
         "image_shape": [
-            180,
-            206,
-            193
+            60,
+            384,
+            360
         ]
     },
     "case_00280": {
         "status": "Shapes match",
         "image_shape": [
-            395,
-            291,
-            242
+            79,
+            384,
+            320
         ]
     },
     "case_00281": {
         "status": "Shapes match",
         "image_shape": [
             266,
-            314,
-            249
+            384,
+            305
         ]
     },
     "case_00282": {
         "status": "Shapes match",
         "image_shape": [
-            430,
-            265,
-            223
+            86,
+            384,
+            323
         ]
     },
     "case_00283": {
         "status": "Shapes match",
         "image_shape": [
             337,
-            298,
-            257
+            384,
+            331
         ]
     },
     "case_00284": {
         "status": "Shapes match",
         "image_shape": [
-            610,
-            282,
-            219
+            244,
+            384,
+            298
         ]
     },
     "case_00285": {
         "status": "Shapes match",
         "image_shape": [
-            205,
-            250,
-            206
+            41,
+            384,
+            317
         ]
     },
     "case_00286": {
         "status": "Shapes match",
         "image_shape": [
-            530,
-            315,
-            256
+            106,
+            384,
+            312
         ]
     },
     "case_00287": {
         "status": "Shapes match",
         "image_shape": [
-            162,
-            283,
-            230
+            54,
+            384,
+            312
         ]
     },
     "case_00288": {
         "status": "Shapes match",
         "image_shape": [
             276,
-            322,
-            186
+            384,
+            221
         ]
     },
     "case_00289": {
         "status": "Shapes match",
         "image_shape": [
-            430,
-            298,
-            223
+            86,
+            384,
+            287
         ]
     },
     "case_00290": {
         "status": "Shapes match",
         "image_shape": [
-            192,
-            321,
-            240
+            384,
+            384,
+            287
         ]
     },
     "case_00291": {
         "status": "Shapes match",
         "image_shape": [
-            655,
-            315,
-            244
+            131,
+            384,
+            298
         ]
     },
     "case_00292": {
         "status": "Shapes match",
         "image_shape": [
-            475,
-            342,
-            281
+            95,
+            384,
+            316
         ]
     },
     "case_00293": {
         "status": "Shapes match",
         "image_shape": [
-            192,
-            270,
-            98
+            384,
+            384,
+            139
         ]
     },
     "case_00294": {
         "status": "Shapes match",
         "image_shape": [
-            192,
-            295,
-            85
+            384,
+            384,
+            111
         ]
     },
     "case_00295": {
         "status": "Shapes match",
         "image_shape": [
-            192,
-            353,
-            259
+            384,
+            384,
+            282
         ]
     },
     "case_00296": {
         "status": "Shapes match",
         "image_shape": [
-            415,
-            238,
-            173
+            83,
+            384,
+            278
         ]
     },
     "case_00297": {
         "status": "Shapes match",
         "image_shape": [
-            510,
-            284,
-            178
+            102,
+            384,
+            241
         ]
     },
     "case_00298": {
         "status": "Shapes match",
         "image_shape": [
-            192,
-            282,
-            221
+            384,
+            384,
+            301
         ]
     },
     "case_00299": {
         "status": "Shapes match",
         "image_shape": [
-            192,
-            289,
-            212
+            384,
+            384,
+            282
         ]
     },
     "case_00400": {
         "status": "Shapes match",
         "image_shape": [
-            595,
-            311,
-            183
+            119,
+            384,
+            226
         ]
     },
     "case_00401": {
         "status": "Shapes match",
         "image_shape": [
-            720,
-            375,
-            286
+            144,
+            384,
+            293
         ]
     },
     "case_00402": {
         "status": "Shapes match",
         "image_shape": [
-            245,
-            316,
-            209
+            49,
+            384,
+            254
         ]
     },
     "case_00403": {
         "status": "Shapes match",
         "image_shape": [
-            295,
-            375,
-            254
+            59,
+            384,
+            260
         ]
     },
     "case_00404": {
         "status": "Shapes match",
         "image_shape": [
-            685,
-            345,
-            283
+            137,
+            384,
+            315
         ]
     },
     "case_00405": {
         "status": "Shapes match",
         "image_shape": [
-            194,
-            298,
-            227
+            97,
+            384,
+            293
         ]
     },
     "case_00406": {
         "status": "Shapes match",
         "image_shape": [
-            455,
-            365,
-            199
+            91,
+            384,
+            209
         ]
     },
     "case_00407": {
         "status": "Shapes match",
         "image_shape": [
-            475,
-            296,
-            248
+            95,
+            384,
+            321
         ]
     },
     "case_00408": {
         "status": "Shapes match",
         "image_shape": [
-            465,
-            320,
-            275
+            93,
+            384,
+            330
         ]
     },
     "case_00409": {
         "status": "Shapes match",
         "image_shape": [
-            545,
-            368,
-            290
+            109,
+            384,
+            303
         ]
     },
     "case_00410": {
         "status": "Shapes match",
         "image_shape": [
-            445,
-            375,
-            252
+            89,
+            384,
+            258
         ]
     },
     "case_00411": {
         "status": "Shapes match",
         "image_shape": [
-            485,
-            282,
-            223
+            97,
+            384,
+            303
         ]
     },
     "case_00412": {
         "status": "Shapes match",
         "image_shape": [
-            1152,
-            322,
-            265
+            384,
+            384,
+            315
         ]
     },
     "case_00413": {
         "status": "Shapes match",
         "image_shape": [
-            485,
-            300,
-            292
+            97,
+            384,
+            374
         ]
     },
     "case_00414": {
         "status": "Shapes match",
         "image_shape": [
-            470,
-            300,
-            258
+            94,
+            384,
+            330
         ]
     },
     "case_00415": {
         "status": "Shapes match",
         "image_shape": [
-            300,
-            355,
-            228
+            150,
+            384,
+            247
         ]
     },
     "case_00416": {
         "status": "Shapes match",
         "image_shape": [
-            280,
-            285,
-            257
+            56,
+            384,
+            347
         ]
     },
     "case_00417": {
         "status": "Shapes match",
         "image_shape": [
-            426,
-            364,
-            245
+            142,
+            384,
+            259
         ]
     },
     "case_00418": {
         "status": "Shapes match",
         "image_shape": [
-            245,
-            338,
-            300
+            49,
+            384,
+            341
         ]
     },
     "case_00419": {
         "status": "Shapes match",
         "image_shape": [
-            243,
-            256,
-            230
+            81,
+            384,
+            345
         ]
     },
     "case_00420": {
         "status": "Shapes match",
         "image_shape": [
-            460,
-            285,
-            214
+            92,
+            384,
+            288
         ]
     },
     "case_00421": {
         "status": "Shapes match",
         "image_shape": [
-            590,
-            322,
-            262
+            118,
+            384,
+            312
         ]
     },
     "case_00422": {
         "status": "Shapes match",
         "image_shape": [
-            200,
-            257,
-            235
+            40,
+            384,
+            351
         ]
     },
     "case_00423": {
         "status": "Shapes match",
         "image_shape": [
-            235,
-            264,
-            201
+            47,
+            384,
+            293
         ]
     },
     "case_00424": {
         "status": "Shapes match",
         "image_shape": [
-            425,
-            232,
-            196
+            85,
+            384,
+            324
         ]
     },
     "case_00425": {
         "status": "Shapes match",
         "image_shape": [
-            200,
-            181,
-            185
+            40,
+            384,
+            393
         ]
     },
     "case_00426": {
         "status": "Shapes match",
         "image_shape": [
-            485,
-            341,
-            263
+            97,
+            384,
+            296
         ]
     },
     "case_00427": {
         "status": "Shapes match",
         "image_shape": [
-            235,
-            270,
-            238
+            47,
+            384,
+            338
         ]
     },
     "case_00428": {
         "status": "Shapes match",
         "image_shape": [
-            465,
-            268,
-            212
+            93,
+            384,
+            303
         ]
     },
     "case_00429": {
         "status": "Shapes match",
         "image_shape": [
-            480,
-            375,
-            225
+            96,
+            384,
+            230
         ]
     },
     "case_00430": {
         "status": "Shapes match",
         "image_shape": [
-            300,
-            316,
-            256
+            60,
+            384,
+            311
         ]
     },
     "case_00431": {
         "status": "Shapes match",
         "image_shape": [
-            635,
-            292,
-            252
+            127,
+            384,
+            331
         ]
     },
     "case_00432": {
         "status": "Shapes match",
         "image_shape": [
-            486,
-            294,
-            247
+            162,
+            384,
+            323
         ]
     },
     "case_00433": {
         "status": "Shapes match",
         "image_shape": [
-            265,
-            265,
-            239
+            106,
+            384,
+            347
         ]
     },
     "case_00434": {
         "status": "Shapes match",
         "image_shape": [
-            250,
-            286,
-            231
+            50,
+            384,
+            309
         ]
     },
     "case_00435": {
         "status": "Shapes match",
         "image_shape": [
-            245,
-            300,
-            238
+            49,
+            384,
+            304
         ]
     },
     "case_00436": {
         "status": "Shapes match",
         "image_shape": [
-            235,
-            298,
-            238
+            47,
+            384,
+            307
         ]
     },
     "case_00437": {
         "status": "Shapes match",
         "image_shape": [
-            453,
-            334,
-            220
+            151,
+            384,
+            253
         ]
     },
     "case_00438": {
         "status": "Shapes match",
         "image_shape": [
-            480,
-            290,
-            240
+            96,
+            384,
+            318
         ]
     },
     "case_00439": {
         "status": "Shapes match",
         "image_shape": [
-            350,
-            269,
-            231
+            70,
+            384,
+            330
         ]
     },
     "case_00440": {
         "status": "Shapes match",
         "image_shape": [
-            235,
-            297,
-            202
+            47,
+            384,
+            261
         ]
     },
     "case_00441": {
         "status": "Shapes match",
         "image_shape": [
-            260,
-            225,
-            197
+            52,
+            384,
+            336
         ]
     },
     "case_00442": {
         "status": "Shapes match",
         "image_shape": [
-            192,
-            370,
-            267
+            384,
+            384,
+            277
         ]
     },
     "case_00443": {
         "status": "Shapes match",
         "image_shape": [
-            315,
-            328,
-            253
+            63,
+            384,
+            296
         ]
     },
     "case_00444": {
         "status": "Shapes match",
         "image_shape": [
-            255,
-            286,
-            78
+            102,
+            384,
+            105
         ]
     },
     "case_00445": {
         "status": "Shapes match",
         "image_shape": [
-            258,
-            285,
-            238
+            103,
+            384,
+            321
         ]
     },
     "case_00446": {
         "status": "Shapes match",
         "image_shape": [
-            500,
-            345,
-            262
+            100,
+            384,
+            292
         ]
     },
     "case_00447": {
         "status": "Shapes match",
         "image_shape": [
-            495,
-            319,
-            212
+            198,
+            384,
+            255
         ]
     },
     "case_00448": {
         "status": "Shapes match",
         "image_shape": [
-            684,
-            306,
-            224
+            228,
+            384,
+            281
         ]
     },
     "case_00449": {
         "status": "Shapes match",
         "image_shape": [
-            625,
-            238,
-            198
+            125,
+            384,
+            319
         ]
     },
     "case_00450": {
         "status": "Shapes match",
         "image_shape": [
-            450,
-            271,
-            238
+            90,
+            384,
+            338
         ]
     },
     "case_00451": {
         "status": "Shapes match",
         "image_shape": [
-            248,
-            298,
-            243
+            124,
+            384,
+            313
         ]
     },
     "case_00452": {
         "status": "Shapes match",
         "image_shape": [
-            255,
-            316,
-            215
+            51,
+            384,
+            261
         ]
     },
     "case_00453": {
         "status": "Shapes match",
         "image_shape": [
-            625,
-            278,
-            265
+            125,
+            384,
+            367
         ]
     },
     "case_00454": {
         "status": "Shapes match",
         "image_shape": [
-            320,
-            294,
-            237
+            64,
+            384,
+            309
         ]
     },
     "case_00455": {
         "status": "Shapes match",
         "image_shape": [
-            636,
-            315,
-            221
+            159,
+            384,
+            270
         ]
     },
     "case_00456": {
         "status": "Shapes match",
         "image_shape": [
-            490,
-            270,
-            210
+            98,
+            384,
+            299
         ]
     },
     "case_00457": {
         "status": "Shapes match",
         "image_shape": [
-            264,
-            362,
-            232
+            132,
+            384,
+            246
         ]
     },
     "case_00458": {
         "status": "Shapes match",
         "image_shape": [
-            445,
-            354,
-            235
+            89,
+            384,
+            255
         ]
     },
     "case_00459": {
         "status": "Shapes match",
         "image_shape": [
-            260,
-            344,
-            187
+            52,
+            384,
+            209
         ]
     },
     "case_00460": {
         "status": "Shapes match",
         "image_shape": [
-            455,
-            270,
-            200
+            91,
+            384,
+            284
         ]
     },
     "case_00461": {
         "status": "Shapes match",
         "image_shape": [
-            715,
-            330,
-            120
+            143,
+            384,
+            140
         ]
     },
     "case_00462": {
         "status": "Shapes match",
         "image_shape": [
-            525,
-            271,
-            207
+            105,
+            384,
+            294
         ]
     },
     "case_00463": {
         "status": "Shapes match",
         "image_shape": [
-            290,
-            308,
-            206
+            58,
+            384,
+            257
         ]
     },
     "case_00464": {
         "status": "Shapes match",
         "image_shape": [
-            295,
-            374,
-            235
+            59,
+            384,
+            241
         ]
     },
     "case_00465": {
         "status": "Shapes match",
         "image_shape": [
-            475,
-            304,
-            295
+            95,
+            384,
+            372
         ]
     },
     "case_00466": {
         "status": "Shapes match",
         "image_shape": [
-            655,
-            346,
-            270
+            131,
+            384,
+            300
         ]
     },
     "case_00467": {
         "status": "Shapes match",
         "image_shape": [
-            214,
-            294,
-            249
+            100,
+            384,
+            325
         ]
     },
     "case_00468": {
         "status": "Shapes match",
         "image_shape": [
-            255,
-            255,
-            232
+            51,
+            384,
+            349
         ]
     },
     "case_00469": {
         "status": "Shapes match",
         "image_shape": [
-            435,
-            289,
-            226
+            87,
+            384,
+            301
         ]
     },
     "case_00470": {
         "status": "Shapes match",
         "image_shape": [
-            220,
-            270,
-            231
+            44,
+            384,
+            328
         ]
     },
     "case_00471": {
         "status": "Shapes match",
         "image_shape": [
-            305,
-            328,
-            250
+            61,
+            384,
+            292
         ]
     },
     "case_00472": {
         "status": "Shapes match",
         "image_shape": [
-            486,
-            364,
-            261
+            162,
+            384,
+            276
         ]
     },
     "case_00473": {
         "status": "Shapes match",
         "image_shape": [
-            225,
-            268,
-            208
+            45,
+            384,
+            297
         ]
     },
     "case_00474": {
         "status": "Shapes match",
         "image_shape": [
-            422,
-            372,
-            224
+            211,
+            384,
+            231
         ]
     },
     "case_00475": {
         "status": "Shapes match",
         "image_shape": [
-            291,
-            321,
-            255
+            97,
+            384,
+            305
         ]
     },
     "case_00476": {
         "status": "Shapes match",
         "image_shape": [
-            285,
-            315,
-            226
+            57,
+            384,
+            275
         ]
     },
     "case_00477": {
         "status": "Shapes match",
         "image_shape": [
-            192,
-            255,
-            209
+            77,
+            384,
+            314
         ]
     },
     "case_00478": {
         "status": "Shapes match",
         "image_shape": [
-            240,
-            200,
-            148
+            96,
+            384,
+            283
         ]
     },
     "case_00479": {
         "status": "Shapes match",
         "image_shape": [
             177,
-            340,
-            216
+            384,
+            244
         ]
     },
     "case_00480": {
         "status": "Shapes match",
         "image_shape": [
-            426,
-            326,
-            240
+            142,
+            384,
+            282
         ]
     },
     "case_00481": {
         "status": "Shapes match",
         "image_shape": [
-            290,
-            270,
-            248
+            116,
+            384,
+            353
         ]
     },
     "case_00482": {
         "status": "Shapes match",
         "image_shape": [
             266,
-            316,
-            238
+            384,
+            289
         ]
     },
     "case_00483": {
         "status": "Shapes match",
         "image_shape": [
-            235,
-            255,
-            294
+            47,
+            384,
+            442
         ]
     },
     "case_00484": {
         "status": "Shapes match",
         "image_shape": [
-            325,
-            375,
-            239
+            65,
+            384,
+            245
         ]
     },
     "case_00485": {
         "status": "Shapes match",
         "image_shape": [
-            415,
-            374,
-            282
+            83,
+            384,
+            289
         ]
     },
     "case_00486": {
         "status": "Shapes match",
         "image_shape": [
-            456,
-            296,
-            212
+            152,
+            384,
+            275
         ]
     },
     "case_00487": {
         "status": "Shapes match",
         "image_shape": [
-            418,
-            339,
-            203
+            209,
+            384,
+            230
         ]
     },
     "case_00488": {
         "status": "Shapes match",
         "image_shape": [
-            501,
-            331,
-            245
+            167,
+            384,
+            285
         ]
     },
     "case_00489": {
         "status": "Shapes match",
         "image_shape": [
-            483,
-            329,
-            250
+            161,
+            384,
+            292
         ]
     },
     "case_00490": {
         "status": "Shapes match",
         "image_shape": [
-            408,
-            350,
-            203
+            204,
+            384,
+            223
         ]
     },
     "case_00491": {
         "status": "Shapes match",
         "image_shape": [
-            236,
-            309,
-            242
+            59,
+            384,
+            301
         ]
     },
     "case_00492": {
         "status": "Shapes match",
         "image_shape": [
-            490,
-            313,
-            250
+            98,
+            384,
+            307
         ]
     },
     "case_00493": {
         "status": "Shapes match",
         "image_shape": [
-            258,
-            236,
-            209
+            129,
+            384,
+            341
         ]
     },
     "case_00494": {
         "status": "Shapes match",
         "image_shape": [
-            515,
-            375,
-            232
+            103,
+            384,
+            238
         ]
     },
     "case_00495": {
         "status": "Shapes match",
         "image_shape": [
-            305,
-            356,
-            250
+            61,
+            384,
+            270
         ]
     },
     "case_00496": {
         "status": "Shapes match",
         "image_shape": [
-            270,
-            288,
-            224
+            54,
+            384,
+            298
         ]
     },
     "case_00497": {
         "status": "Shapes match",
         "image_shape": [
-            180,
-            225,
-            214
+            36,
+            384,
+            366
         ]
     },
     "case_00498": {
         "status": "Shapes match",
         "image_shape": [
-            455,
-            322,
-            232
+            91,
+            384,
+            276
         ]
     },
     "case_00499": {
         "status": "Shapes match",
         "image_shape": [
-            315,
-            354,
-            293
+            63,
+            384,
+            318
         ]
     },
     "min_shape": {
         "height": {
-            "case": "case_00268",
-            "value": 142
+            "case": "case_00061",
+            "value": 29
         },
         "width": {
-            "case": "case_00088",
-            "value": 168
+            "case": "case_00000",
+            "value": 384
         },
         "depth": {
-            "case": "case_00444",
-            "value": 78
+            "case": "case_00165",
+            "value": 88
         }
     },
     "max_shape": {
         "height": {
-            "case": "case_00223",
-            "value": 1152
+            "case": "case_00000",
+            "value": 384
         },
         "width": {
-            "case": "case_00048",
-            "value": 400
+            "case": "case_00000",
+            "value": 384
         },
         "depth": {
-            "case": "case_00176",
-            "value": 307
+            "case": "case_00160",
+            "value": 468
         }
     }
 }

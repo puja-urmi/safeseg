@@ -1,51 +1,61 @@
 import os
 import nibabel as nib
 import numpy as np
-from monai.transforms import Resize
+import scipy.ndimage as ndimage
 
-# Define the target shape
-TARGET_SHAPE = (200, 250, 250)
+# Define input and output directories
+src_root = '/home/psaha03/scratch/resampled'
+dst_root = '/home/psaha03/scratch/resized'
+os.makedirs(dst_root, exist_ok=True)
 
-# Define MONAI resize transforms
-resize_image_transform = Resize(spatial_size=TARGET_SHAPE, mode='bilinear')
-resize_seg_transform = Resize(spatial_size=TARGET_SHAPE, mode='nearest')
+# Define target shape (modify as needed)
+target_shape = (150, 150, 150)
 
-def resize_image_monai(image, transform):
-    """Resize a NIfTI image using MONAI."""
-    resized_data = transform(image.get_fdata()[None, None, ...])  # Add batch & channel dims
-    return nib.Nifti1Image(resized_data[0, 0].numpy(), image.affine, image.header)
+# Process each case folder in src_root
+for case in os.listdir(src_root):
+    case_path = os.path.join(src_root, case)
+    if not os.path.isdir(case_path):
+        continue
 
-# Input and output directories
-input_folder = "/home/psaha03/scratch/dataset_kits23/dataset/training"
-output_folder = "/home/psaha03/scratch/training_k23_c+resized"
+    # Define file paths
+    imaging_path = os.path.join(case_path, 'imaging.nii.gz')
+    seg_path = os.path.join(case_path, 'segmentation.nii.gz')
 
-os.makedirs(output_folder, exist_ok=True)
+    if not os.path.exists(imaging_path) or not os.path.exists(seg_path):
+        print(f"Skipping {case}: required files are missing.")
+        continue
 
-for case in sorted(os.listdir(input_folder)):
-    case_path = os.path.join(input_folder, case)
-    image_path = os.path.join(case_path, "imaging.nii.gz")
-    seg_path = os.path.join(case_path, "segmentation.nii.gz")
-    
-    if os.path.exists(image_path) and os.path.exists(seg_path):
-        print(f"Processing {case}...")
+    # Load imaging and segmentation
+    imaging_nii = nib.load(imaging_path)
+    seg_nii = nib.load(seg_path)
+    imaging_data = imaging_nii.get_fdata()
+    seg_data = seg_nii.get_fdata()
 
-        # Load images
-        img_nifti = nib.load(image_path)
-        seg_nifti = nib.load(seg_path)
+    # Calculate zoom factors for each dimension
+    zoom_factors = [target_shape[i] / imaging_data.shape[i] for i in range(3)]
 
-        # Resize image (trilinear interpolation)
-        resized_img = resize_image_monai(img_nifti, resize_image_transform)
+    # Resize imaging with cubic interpolation (order=3)
+    imaging_resized = ndimage.zoom(imaging_data, zoom_factors, order=3)
+    # Resize segmentation with nearest-neighbor interpolation (order=0)
+    seg_resized = ndimage.zoom(seg_data, zoom_factors, order=0)
 
-        # Resize segmentation (nearest-neighbor interpolation)
-        resized_seg = resize_image_monai(seg_nifti, resize_seg_transform)
+    # Update the affine: new voxel size = original voxel size / zoom factor
+    new_affine = imaging_nii.affine.copy()
+    for i in range(3):
+        new_affine[i, i] = imaging_nii.affine[i, i] / zoom_factors[i]
 
-        # Save resized images
-        case_output_folder = os.path.join(output_folder, case)
-        os.makedirs(case_output_folder, exist_ok=True)
+    # Create new NIfTI images
+    imaging_resized_nii = nib.Nifti1Image(imaging_resized, new_affine, imaging_nii.header)
+    seg_resized_nii = nib.Nifti1Image(seg_resized, new_affine, seg_nii.header)
 
-        nib.save(resized_img, os.path.join(case_output_folder, "imaging.nii.gz"))
-        nib.save(resized_seg, os.path.join(case_output_folder, "segmentation.nii.gz"))
+    # Create destination folder for this case
+    dst_case_path = os.path.join(dst_root, case)
+    os.makedirs(dst_case_path, exist_ok=True)
 
-        print(f"Saved resized images for {case} in {case_output_folder}")
+    # Save the resized images
+    imaging_out_path = os.path.join(dst_case_path, 'imaging.nii.gz')
+    seg_out_path = os.path.join(dst_case_path, 'segmentation.nii.gz')
+    nib.save(imaging_resized_nii, imaging_out_path)
+    nib.save(seg_resized_nii, seg_out_path)
 
-print("Resizing complete.")
+    print(f"Resized and saved {case}")
