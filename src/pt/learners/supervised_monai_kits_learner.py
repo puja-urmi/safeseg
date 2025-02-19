@@ -232,7 +232,7 @@ class SupervisedMonaiKitsLearner(SupervisedLearner):
                 LoadImaged(keys=["image", "label"]),
                 EnsureChannelFirstd(keys="image"),
                 ConvertToMultiChannelBasedOnKitsClassesd(keys="label"),
-                DivisiblePadd(keys=["image", "label"], k=16),
+                DivisiblePadd(keys=["image", "label"], k=32),
                 Orientationd(keys=["image", "label"], axcodes="RAS"),
                 NormalizeIntensityd(keys="image", nonzero=True, channel_wise=True),
             ]
