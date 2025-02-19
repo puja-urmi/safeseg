@@ -10,7 +10,7 @@
         "id": "Executor",
         "path": "nvflare.app_common.executors.learner_executor.LearnerExecutor",
         "args": {
-          "learner_id": "brats-learner"
+          "learner_id": "kits-learner"
         }
       }
     }
