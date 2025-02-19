@@ -3,7 +3,7 @@ import json
 import math
 
 # Define the base directory where the images and labels are located
-BASE_DIR = "/home/psaha03/scratch/dataset_brats24/dataset/training"
+BASE_DIR = "training"
 
 # Output JSON file names
 OUTPUT_FILES = ["site-1.json", "site-2.json", "site-3.json", "site-4.json"]
@@ -44,7 +44,7 @@ subject_chunks = [subjects[i:i + chunk_size] for i in range(0, len(subjects), ch
 # Process each chunk and divide into training and testing
 for i, chunk in enumerate(subject_chunks):
     # Calculate split indices
-    training_size = math.ceil(len(chunk) * 0.65)
+    training_size = math.ceil(len(chunk) * 0.7)
     testing_size = len(chunk) - training_size
 
     # Split into training and testing

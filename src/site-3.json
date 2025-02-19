@@ -1,0 +1,3049 @@
+{
+    "testing": [],
+    "training": [
+        {
+            "image": [
+                "training/BraTS-GLI-02209-102/BraTS-GLI-02209-102-t1c.nii.gz",
+                "training/BraTS-GLI-02209-102/BraTS-GLI-02209-102-t1n.nii.gz",
+                "training/BraTS-GLI-02209-102/BraTS-GLI-02209-102-t2f.nii.gz",
+                "training/BraTS-GLI-02209-102/BraTS-GLI-02209-102-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02209-102/BraTS-GLI-02209-102-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02219-103/BraTS-GLI-02219-103-t1c.nii.gz",
+                "training/BraTS-GLI-02219-103/BraTS-GLI-02219-103-t1n.nii.gz",
+                "training/BraTS-GLI-02219-103/BraTS-GLI-02219-103-t2f.nii.gz",
+                "training/BraTS-GLI-02219-103/BraTS-GLI-02219-103-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02219-103/BraTS-GLI-02219-103-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02384-100/BraTS-GLI-02384-100-t1c.nii.gz",
+                "training/BraTS-GLI-02384-100/BraTS-GLI-02384-100-t1n.nii.gz",
+                "training/BraTS-GLI-02384-100/BraTS-GLI-02384-100-t2f.nii.gz",
+                "training/BraTS-GLI-02384-100/BraTS-GLI-02384-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02384-100/BraTS-GLI-02384-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02268-101/BraTS-GLI-02268-101-t1c.nii.gz",
+                "training/BraTS-GLI-02268-101/BraTS-GLI-02268-101-t1n.nii.gz",
+                "training/BraTS-GLI-02268-101/BraTS-GLI-02268-101-t2f.nii.gz",
+                "training/BraTS-GLI-02268-101/BraTS-GLI-02268-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02268-101/BraTS-GLI-02268-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02092-104/BraTS-GLI-02092-104-t1c.nii.gz",
+                "training/BraTS-GLI-02092-104/BraTS-GLI-02092-104-t1n.nii.gz",
+                "training/BraTS-GLI-02092-104/BraTS-GLI-02092-104-t2f.nii.gz",
+                "training/BraTS-GLI-02092-104/BraTS-GLI-02092-104-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02092-104/BraTS-GLI-02092-104-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02151-102/BraTS-GLI-02151-102-t1c.nii.gz",
+                "training/BraTS-GLI-02151-102/BraTS-GLI-02151-102-t1n.nii.gz",
+                "training/BraTS-GLI-02151-102/BraTS-GLI-02151-102-t2f.nii.gz",
+                "training/BraTS-GLI-02151-102/BraTS-GLI-02151-102-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02151-102/BraTS-GLI-02151-102-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02866-100/BraTS-GLI-02866-100-t1c.nii.gz",
+                "training/BraTS-GLI-02866-100/BraTS-GLI-02866-100-t1n.nii.gz",
+                "training/BraTS-GLI-02866-100/BraTS-GLI-02866-100-t2f.nii.gz",
+                "training/BraTS-GLI-02866-100/BraTS-GLI-02866-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02866-100/BraTS-GLI-02866-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02269-101/BraTS-GLI-02269-101-t1c.nii.gz",
+                "training/BraTS-GLI-02269-101/BraTS-GLI-02269-101-t1n.nii.gz",
+                "training/BraTS-GLI-02269-101/BraTS-GLI-02269-101-t2f.nii.gz",
+                "training/BraTS-GLI-02269-101/BraTS-GLI-02269-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02269-101/BraTS-GLI-02269-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02758-101/BraTS-GLI-02758-101-t1c.nii.gz",
+                "training/BraTS-GLI-02758-101/BraTS-GLI-02758-101-t1n.nii.gz",
+                "training/BraTS-GLI-02758-101/BraTS-GLI-02758-101-t2f.nii.gz",
+                "training/BraTS-GLI-02758-101/BraTS-GLI-02758-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02758-101/BraTS-GLI-02758-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-03049-100/BraTS-GLI-03049-100-t1c.nii.gz",
+                "training/BraTS-GLI-03049-100/BraTS-GLI-03049-100-t1n.nii.gz",
+                "training/BraTS-GLI-03049-100/BraTS-GLI-03049-100-t2f.nii.gz",
+                "training/BraTS-GLI-03049-100/BraTS-GLI-03049-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-03049-100/BraTS-GLI-03049-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-03018-101/BraTS-GLI-03018-101-t1c.nii.gz",
+                "training/BraTS-GLI-03018-101/BraTS-GLI-03018-101-t1n.nii.gz",
+                "training/BraTS-GLI-03018-101/BraTS-GLI-03018-101-t2f.nii.gz",
+                "training/BraTS-GLI-03018-101/BraTS-GLI-03018-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-03018-101/BraTS-GLI-03018-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02244-102/BraTS-GLI-02244-102-t1c.nii.gz",
+                "training/BraTS-GLI-02244-102/BraTS-GLI-02244-102-t1n.nii.gz",
+                "training/BraTS-GLI-02244-102/BraTS-GLI-02244-102-t2f.nii.gz",
+                "training/BraTS-GLI-02244-102/BraTS-GLI-02244-102-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02244-102/BraTS-GLI-02244-102-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02064-102/BraTS-GLI-02064-102-t1c.nii.gz",
+                "training/BraTS-GLI-02064-102/BraTS-GLI-02064-102-t1n.nii.gz",
+                "training/BraTS-GLI-02064-102/BraTS-GLI-02064-102-t2f.nii.gz",
+                "training/BraTS-GLI-02064-102/BraTS-GLI-02064-102-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02064-102/BraTS-GLI-02064-102-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02890-101/BraTS-GLI-02890-101-t1c.nii.gz",
+                "training/BraTS-GLI-02890-101/BraTS-GLI-02890-101-t1n.nii.gz",
+                "training/BraTS-GLI-02890-101/BraTS-GLI-02890-101-t2f.nii.gz",
+                "training/BraTS-GLI-02890-101/BraTS-GLI-02890-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02890-101/BraTS-GLI-02890-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02931-100/BraTS-GLI-02931-100-t1c.nii.gz",
+                "training/BraTS-GLI-02931-100/BraTS-GLI-02931-100-t1n.nii.gz",
+                "training/BraTS-GLI-02931-100/BraTS-GLI-02931-100-t2f.nii.gz",
+                "training/BraTS-GLI-02931-100/BraTS-GLI-02931-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02931-100/BraTS-GLI-02931-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02092-101/BraTS-GLI-02092-101-t1c.nii.gz",
+                "training/BraTS-GLI-02092-101/BraTS-GLI-02092-101-t1n.nii.gz",
+                "training/BraTS-GLI-02092-101/BraTS-GLI-02092-101-t2f.nii.gz",
+                "training/BraTS-GLI-02092-101/BraTS-GLI-02092-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02092-101/BraTS-GLI-02092-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02379-100/BraTS-GLI-02379-100-t1c.nii.gz",
+                "training/BraTS-GLI-02379-100/BraTS-GLI-02379-100-t1n.nii.gz",
+                "training/BraTS-GLI-02379-100/BraTS-GLI-02379-100-t2f.nii.gz",
+                "training/BraTS-GLI-02379-100/BraTS-GLI-02379-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02379-100/BraTS-GLI-02379-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02218-100/BraTS-GLI-02218-100-t1c.nii.gz",
+                "training/BraTS-GLI-02218-100/BraTS-GLI-02218-100-t1n.nii.gz",
+                "training/BraTS-GLI-02218-100/BraTS-GLI-02218-100-t2f.nii.gz",
+                "training/BraTS-GLI-02218-100/BraTS-GLI-02218-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02218-100/BraTS-GLI-02218-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-03050-100/BraTS-GLI-03050-100-t1c.nii.gz",
+                "training/BraTS-GLI-03050-100/BraTS-GLI-03050-100-t1n.nii.gz",
+                "training/BraTS-GLI-03050-100/BraTS-GLI-03050-100-t2f.nii.gz",
+                "training/BraTS-GLI-03050-100/BraTS-GLI-03050-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-03050-100/BraTS-GLI-03050-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02871-101/BraTS-GLI-02871-101-t1c.nii.gz",
+                "training/BraTS-GLI-02871-101/BraTS-GLI-02871-101-t1n.nii.gz",
+                "training/BraTS-GLI-02871-101/BraTS-GLI-02871-101-t2f.nii.gz",
+                "training/BraTS-GLI-02871-101/BraTS-GLI-02871-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02871-101/BraTS-GLI-02871-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-00485-101/BraTS-GLI-00485-101-t1c.nii.gz",
+                "training/BraTS-GLI-00485-101/BraTS-GLI-00485-101-t1n.nii.gz",
+                "training/BraTS-GLI-00485-101/BraTS-GLI-00485-101-t2f.nii.gz",
+                "training/BraTS-GLI-00485-101/BraTS-GLI-00485-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-00485-101/BraTS-GLI-00485-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02813-100/BraTS-GLI-02813-100-t1c.nii.gz",
+                "training/BraTS-GLI-02813-100/BraTS-GLI-02813-100-t1n.nii.gz",
+                "training/BraTS-GLI-02813-100/BraTS-GLI-02813-100-t2f.nii.gz",
+                "training/BraTS-GLI-02813-100/BraTS-GLI-02813-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02813-100/BraTS-GLI-02813-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02902-100/BraTS-GLI-02902-100-t1c.nii.gz",
+                "training/BraTS-GLI-02902-100/BraTS-GLI-02902-100-t1n.nii.gz",
+                "training/BraTS-GLI-02902-100/BraTS-GLI-02902-100-t2f.nii.gz",
+                "training/BraTS-GLI-02902-100/BraTS-GLI-02902-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02902-100/BraTS-GLI-02902-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02556-100/BraTS-GLI-02556-100-t1c.nii.gz",
+                "training/BraTS-GLI-02556-100/BraTS-GLI-02556-100-t1n.nii.gz",
+                "training/BraTS-GLI-02556-100/BraTS-GLI-02556-100-t2f.nii.gz",
+                "training/BraTS-GLI-02556-100/BraTS-GLI-02556-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02556-100/BraTS-GLI-02556-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02746-101/BraTS-GLI-02746-101-t1c.nii.gz",
+                "training/BraTS-GLI-02746-101/BraTS-GLI-02746-101-t1n.nii.gz",
+                "training/BraTS-GLI-02746-101/BraTS-GLI-02746-101-t2f.nii.gz",
+                "training/BraTS-GLI-02746-101/BraTS-GLI-02746-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02746-101/BraTS-GLI-02746-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02082-102/BraTS-GLI-02082-102-t1c.nii.gz",
+                "training/BraTS-GLI-02082-102/BraTS-GLI-02082-102-t1n.nii.gz",
+                "training/BraTS-GLI-02082-102/BraTS-GLI-02082-102-t2f.nii.gz",
+                "training/BraTS-GLI-02082-102/BraTS-GLI-02082-102-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02082-102/BraTS-GLI-02082-102-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02838-101/BraTS-GLI-02838-101-t1c.nii.gz",
+                "training/BraTS-GLI-02838-101/BraTS-GLI-02838-101-t1n.nii.gz",
+                "training/BraTS-GLI-02838-101/BraTS-GLI-02838-101-t2f.nii.gz",
+                "training/BraTS-GLI-02838-101/BraTS-GLI-02838-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02838-101/BraTS-GLI-02838-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02206-104/BraTS-GLI-02206-104-t1c.nii.gz",
+                "training/BraTS-GLI-02206-104/BraTS-GLI-02206-104-t1n.nii.gz",
+                "training/BraTS-GLI-02206-104/BraTS-GLI-02206-104-t2f.nii.gz",
+                "training/BraTS-GLI-02206-104/BraTS-GLI-02206-104-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02206-104/BraTS-GLI-02206-104-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02363-100/BraTS-GLI-02363-100-t1c.nii.gz",
+                "training/BraTS-GLI-02363-100/BraTS-GLI-02363-100-t1n.nii.gz",
+                "training/BraTS-GLI-02363-100/BraTS-GLI-02363-100-t2f.nii.gz",
+                "training/BraTS-GLI-02363-100/BraTS-GLI-02363-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02363-100/BraTS-GLI-02363-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02547-101/BraTS-GLI-02547-101-t1c.nii.gz",
+                "training/BraTS-GLI-02547-101/BraTS-GLI-02547-101-t1n.nii.gz",
+                "training/BraTS-GLI-02547-101/BraTS-GLI-02547-101-t2f.nii.gz",
+                "training/BraTS-GLI-02547-101/BraTS-GLI-02547-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02547-101/BraTS-GLI-02547-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02719-100/BraTS-GLI-02719-100-t1c.nii.gz",
+                "training/BraTS-GLI-02719-100/BraTS-GLI-02719-100-t1n.nii.gz",
+                "training/BraTS-GLI-02719-100/BraTS-GLI-02719-100-t2f.nii.gz",
+                "training/BraTS-GLI-02719-100/BraTS-GLI-02719-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02719-100/BraTS-GLI-02719-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02062-101/BraTS-GLI-02062-101-t1c.nii.gz",
+                "training/BraTS-GLI-02062-101/BraTS-GLI-02062-101-t1n.nii.gz",
+                "training/BraTS-GLI-02062-101/BraTS-GLI-02062-101-t2f.nii.gz",
+                "training/BraTS-GLI-02062-101/BraTS-GLI-02062-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02062-101/BraTS-GLI-02062-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02663-100/BraTS-GLI-02663-100-t1c.nii.gz",
+                "training/BraTS-GLI-02663-100/BraTS-GLI-02663-100-t1n.nii.gz",
+                "training/BraTS-GLI-02663-100/BraTS-GLI-02663-100-t2f.nii.gz",
+                "training/BraTS-GLI-02663-100/BraTS-GLI-02663-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02663-100/BraTS-GLI-02663-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02063-100/BraTS-GLI-02063-100-t1c.nii.gz",
+                "training/BraTS-GLI-02063-100/BraTS-GLI-02063-100-t1n.nii.gz",
+                "training/BraTS-GLI-02063-100/BraTS-GLI-02063-100-t2f.nii.gz",
+                "training/BraTS-GLI-02063-100/BraTS-GLI-02063-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02063-100/BraTS-GLI-02063-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02742-101/BraTS-GLI-02742-101-t1c.nii.gz",
+                "training/BraTS-GLI-02742-101/BraTS-GLI-02742-101-t1n.nii.gz",
+                "training/BraTS-GLI-02742-101/BraTS-GLI-02742-101-t2f.nii.gz",
+                "training/BraTS-GLI-02742-101/BraTS-GLI-02742-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02742-101/BraTS-GLI-02742-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-03025-101/BraTS-GLI-03025-101-t1c.nii.gz",
+                "training/BraTS-GLI-03025-101/BraTS-GLI-03025-101-t1n.nii.gz",
+                "training/BraTS-GLI-03025-101/BraTS-GLI-03025-101-t2f.nii.gz",
+                "training/BraTS-GLI-03025-101/BraTS-GLI-03025-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-03025-101/BraTS-GLI-03025-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02983-100/BraTS-GLI-02983-100-t1c.nii.gz",
+                "training/BraTS-GLI-02983-100/BraTS-GLI-02983-100-t1n.nii.gz",
+                "training/BraTS-GLI-02983-100/BraTS-GLI-02983-100-t2f.nii.gz",
+                "training/BraTS-GLI-02983-100/BraTS-GLI-02983-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02983-100/BraTS-GLI-02983-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02859-101/BraTS-GLI-02859-101-t1c.nii.gz",
+                "training/BraTS-GLI-02859-101/BraTS-GLI-02859-101-t1n.nii.gz",
+                "training/BraTS-GLI-02859-101/BraTS-GLI-02859-101-t2f.nii.gz",
+                "training/BraTS-GLI-02859-101/BraTS-GLI-02859-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02859-101/BraTS-GLI-02859-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02388-101/BraTS-GLI-02388-101-t1c.nii.gz",
+                "training/BraTS-GLI-02388-101/BraTS-GLI-02388-101-t1n.nii.gz",
+                "training/BraTS-GLI-02388-101/BraTS-GLI-02388-101-t2f.nii.gz",
+                "training/BraTS-GLI-02388-101/BraTS-GLI-02388-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02388-101/BraTS-GLI-02388-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-00483-101/BraTS-GLI-00483-101-t1c.nii.gz",
+                "training/BraTS-GLI-00483-101/BraTS-GLI-00483-101-t1n.nii.gz",
+                "training/BraTS-GLI-00483-101/BraTS-GLI-00483-101-t2f.nii.gz",
+                "training/BraTS-GLI-00483-101/BraTS-GLI-00483-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-00483-101/BraTS-GLI-00483-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02241-101/BraTS-GLI-02241-101-t1c.nii.gz",
+                "training/BraTS-GLI-02241-101/BraTS-GLI-02241-101-t1n.nii.gz",
+                "training/BraTS-GLI-02241-101/BraTS-GLI-02241-101-t2f.nii.gz",
+                "training/BraTS-GLI-02241-101/BraTS-GLI-02241-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02241-101/BraTS-GLI-02241-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02817-100/BraTS-GLI-02817-100-t1c.nii.gz",
+                "training/BraTS-GLI-02817-100/BraTS-GLI-02817-100-t1n.nii.gz",
+                "training/BraTS-GLI-02817-100/BraTS-GLI-02817-100-t2f.nii.gz",
+                "training/BraTS-GLI-02817-100/BraTS-GLI-02817-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02817-100/BraTS-GLI-02817-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02078-101/BraTS-GLI-02078-101-t1c.nii.gz",
+                "training/BraTS-GLI-02078-101/BraTS-GLI-02078-101-t1n.nii.gz",
+                "training/BraTS-GLI-02078-101/BraTS-GLI-02078-101-t2f.nii.gz",
+                "training/BraTS-GLI-02078-101/BraTS-GLI-02078-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02078-101/BraTS-GLI-02078-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02087-102/BraTS-GLI-02087-102-t1c.nii.gz",
+                "training/BraTS-GLI-02087-102/BraTS-GLI-02087-102-t1n.nii.gz",
+                "training/BraTS-GLI-02087-102/BraTS-GLI-02087-102-t2f.nii.gz",
+                "training/BraTS-GLI-02087-102/BraTS-GLI-02087-102-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02087-102/BraTS-GLI-02087-102-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02167-100/BraTS-GLI-02167-100-t1c.nii.gz",
+                "training/BraTS-GLI-02167-100/BraTS-GLI-02167-100-t1n.nii.gz",
+                "training/BraTS-GLI-02167-100/BraTS-GLI-02167-100-t2f.nii.gz",
+                "training/BraTS-GLI-02167-100/BraTS-GLI-02167-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02167-100/BraTS-GLI-02167-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02064-101/BraTS-GLI-02064-101-t1c.nii.gz",
+                "training/BraTS-GLI-02064-101/BraTS-GLI-02064-101-t1n.nii.gz",
+                "training/BraTS-GLI-02064-101/BraTS-GLI-02064-101-t2f.nii.gz",
+                "training/BraTS-GLI-02064-101/BraTS-GLI-02064-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02064-101/BraTS-GLI-02064-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02829-101/BraTS-GLI-02829-101-t1c.nii.gz",
+                "training/BraTS-GLI-02829-101/BraTS-GLI-02829-101-t1n.nii.gz",
+                "training/BraTS-GLI-02829-101/BraTS-GLI-02829-101-t2f.nii.gz",
+                "training/BraTS-GLI-02829-101/BraTS-GLI-02829-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02829-101/BraTS-GLI-02829-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02069-103/BraTS-GLI-02069-103-t1c.nii.gz",
+                "training/BraTS-GLI-02069-103/BraTS-GLI-02069-103-t1n.nii.gz",
+                "training/BraTS-GLI-02069-103/BraTS-GLI-02069-103-t2f.nii.gz",
+                "training/BraTS-GLI-02069-103/BraTS-GLI-02069-103-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02069-103/BraTS-GLI-02069-103-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02087-101/BraTS-GLI-02087-101-t1c.nii.gz",
+                "training/BraTS-GLI-02087-101/BraTS-GLI-02087-101-t1n.nii.gz",
+                "training/BraTS-GLI-02087-101/BraTS-GLI-02087-101-t2f.nii.gz",
+                "training/BraTS-GLI-02087-101/BraTS-GLI-02087-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02087-101/BraTS-GLI-02087-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02285-102/BraTS-GLI-02285-102-t1c.nii.gz",
+                "training/BraTS-GLI-02285-102/BraTS-GLI-02285-102-t1n.nii.gz",
+                "training/BraTS-GLI-02285-102/BraTS-GLI-02285-102-t2f.nii.gz",
+                "training/BraTS-GLI-02285-102/BraTS-GLI-02285-102-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02285-102/BraTS-GLI-02285-102-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02870-100/BraTS-GLI-02870-100-t1c.nii.gz",
+                "training/BraTS-GLI-02870-100/BraTS-GLI-02870-100-t1n.nii.gz",
+                "training/BraTS-GLI-02870-100/BraTS-GLI-02870-100-t2f.nii.gz",
+                "training/BraTS-GLI-02870-100/BraTS-GLI-02870-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02870-100/BraTS-GLI-02870-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02929-100/BraTS-GLI-02929-100-t1c.nii.gz",
+                "training/BraTS-GLI-02929-100/BraTS-GLI-02929-100-t1n.nii.gz",
+                "training/BraTS-GLI-02929-100/BraTS-GLI-02929-100-t2f.nii.gz",
+                "training/BraTS-GLI-02929-100/BraTS-GLI-02929-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02929-100/BraTS-GLI-02929-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02091-101/BraTS-GLI-02091-101-t1c.nii.gz",
+                "training/BraTS-GLI-02091-101/BraTS-GLI-02091-101-t1n.nii.gz",
+                "training/BraTS-GLI-02091-101/BraTS-GLI-02091-101-t2f.nii.gz",
+                "training/BraTS-GLI-02091-101/BraTS-GLI-02091-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02091-101/BraTS-GLI-02091-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02653-100/BraTS-GLI-02653-100-t1c.nii.gz",
+                "training/BraTS-GLI-02653-100/BraTS-GLI-02653-100-t1n.nii.gz",
+                "training/BraTS-GLI-02653-100/BraTS-GLI-02653-100-t2f.nii.gz",
+                "training/BraTS-GLI-02653-100/BraTS-GLI-02653-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02653-100/BraTS-GLI-02653-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02119-100/BraTS-GLI-02119-100-t1c.nii.gz",
+                "training/BraTS-GLI-02119-100/BraTS-GLI-02119-100-t1n.nii.gz",
+                "training/BraTS-GLI-02119-100/BraTS-GLI-02119-100-t2f.nii.gz",
+                "training/BraTS-GLI-02119-100/BraTS-GLI-02119-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02119-100/BraTS-GLI-02119-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02093-105/BraTS-GLI-02093-105-t1c.nii.gz",
+                "training/BraTS-GLI-02093-105/BraTS-GLI-02093-105-t1n.nii.gz",
+                "training/BraTS-GLI-02093-105/BraTS-GLI-02093-105-t2f.nii.gz",
+                "training/BraTS-GLI-02093-105/BraTS-GLI-02093-105-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02093-105/BraTS-GLI-02093-105-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02842-101/BraTS-GLI-02842-101-t1c.nii.gz",
+                "training/BraTS-GLI-02842-101/BraTS-GLI-02842-101-t1n.nii.gz",
+                "training/BraTS-GLI-02842-101/BraTS-GLI-02842-101-t2f.nii.gz",
+                "training/BraTS-GLI-02842-101/BraTS-GLI-02842-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02842-101/BraTS-GLI-02842-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02887-101/BraTS-GLI-02887-101-t1c.nii.gz",
+                "training/BraTS-GLI-02887-101/BraTS-GLI-02887-101-t1n.nii.gz",
+                "training/BraTS-GLI-02887-101/BraTS-GLI-02887-101-t2f.nii.gz",
+                "training/BraTS-GLI-02887-101/BraTS-GLI-02887-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02887-101/BraTS-GLI-02887-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02063-105/BraTS-GLI-02063-105-t1c.nii.gz",
+                "training/BraTS-GLI-02063-105/BraTS-GLI-02063-105-t1n.nii.gz",
+                "training/BraTS-GLI-02063-105/BraTS-GLI-02063-105-t2f.nii.gz",
+                "training/BraTS-GLI-02063-105/BraTS-GLI-02063-105-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02063-105/BraTS-GLI-02063-105-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02105-104/BraTS-GLI-02105-104-t1c.nii.gz",
+                "training/BraTS-GLI-02105-104/BraTS-GLI-02105-104-t1n.nii.gz",
+                "training/BraTS-GLI-02105-104/BraTS-GLI-02105-104-t2f.nii.gz",
+                "training/BraTS-GLI-02105-104/BraTS-GLI-02105-104-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02105-104/BraTS-GLI-02105-104-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02638-100/BraTS-GLI-02638-100-t1c.nii.gz",
+                "training/BraTS-GLI-02638-100/BraTS-GLI-02638-100-t1n.nii.gz",
+                "training/BraTS-GLI-02638-100/BraTS-GLI-02638-100-t2f.nii.gz",
+                "training/BraTS-GLI-02638-100/BraTS-GLI-02638-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02638-100/BraTS-GLI-02638-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02229-100/BraTS-GLI-02229-100-t1c.nii.gz",
+                "training/BraTS-GLI-02229-100/BraTS-GLI-02229-100-t1n.nii.gz",
+                "training/BraTS-GLI-02229-100/BraTS-GLI-02229-100-t2f.nii.gz",
+                "training/BraTS-GLI-02229-100/BraTS-GLI-02229-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02229-100/BraTS-GLI-02229-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02961-101/BraTS-GLI-02961-101-t1c.nii.gz",
+                "training/BraTS-GLI-02961-101/BraTS-GLI-02961-101-t1n.nii.gz",
+                "training/BraTS-GLI-02961-101/BraTS-GLI-02961-101-t2f.nii.gz",
+                "training/BraTS-GLI-02961-101/BraTS-GLI-02961-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02961-101/BraTS-GLI-02961-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02518-103/BraTS-GLI-02518-103-t1c.nii.gz",
+                "training/BraTS-GLI-02518-103/BraTS-GLI-02518-103-t1n.nii.gz",
+                "training/BraTS-GLI-02518-103/BraTS-GLI-02518-103-t2f.nii.gz",
+                "training/BraTS-GLI-02518-103/BraTS-GLI-02518-103-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02518-103/BraTS-GLI-02518-103-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02865-101/BraTS-GLI-02865-101-t1c.nii.gz",
+                "training/BraTS-GLI-02865-101/BraTS-GLI-02865-101-t1n.nii.gz",
+                "training/BraTS-GLI-02865-101/BraTS-GLI-02865-101-t2f.nii.gz",
+                "training/BraTS-GLI-02865-101/BraTS-GLI-02865-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02865-101/BraTS-GLI-02865-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02839-101/BraTS-GLI-02839-101-t1c.nii.gz",
+                "training/BraTS-GLI-02839-101/BraTS-GLI-02839-101-t1n.nii.gz",
+                "training/BraTS-GLI-02839-101/BraTS-GLI-02839-101-t2f.nii.gz",
+                "training/BraTS-GLI-02839-101/BraTS-GLI-02839-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02839-101/BraTS-GLI-02839-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02242-101/BraTS-GLI-02242-101-t1c.nii.gz",
+                "training/BraTS-GLI-02242-101/BraTS-GLI-02242-101-t1n.nii.gz",
+                "training/BraTS-GLI-02242-101/BraTS-GLI-02242-101-t2f.nii.gz",
+                "training/BraTS-GLI-02242-101/BraTS-GLI-02242-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02242-101/BraTS-GLI-02242-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02625-100/BraTS-GLI-02625-100-t1c.nii.gz",
+                "training/BraTS-GLI-02625-100/BraTS-GLI-02625-100-t1n.nii.gz",
+                "training/BraTS-GLI-02625-100/BraTS-GLI-02625-100-t2f.nii.gz",
+                "training/BraTS-GLI-02625-100/BraTS-GLI-02625-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02625-100/BraTS-GLI-02625-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02916-100/BraTS-GLI-02916-100-t1c.nii.gz",
+                "training/BraTS-GLI-02916-100/BraTS-GLI-02916-100-t1n.nii.gz",
+                "training/BraTS-GLI-02916-100/BraTS-GLI-02916-100-t2f.nii.gz",
+                "training/BraTS-GLI-02916-100/BraTS-GLI-02916-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02916-100/BraTS-GLI-02916-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02799-100/BraTS-GLI-02799-100-t1c.nii.gz",
+                "training/BraTS-GLI-02799-100/BraTS-GLI-02799-100-t1n.nii.gz",
+                "training/BraTS-GLI-02799-100/BraTS-GLI-02799-100-t2f.nii.gz",
+                "training/BraTS-GLI-02799-100/BraTS-GLI-02799-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02799-100/BraTS-GLI-02799-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02766-101/BraTS-GLI-02766-101-t1c.nii.gz",
+                "training/BraTS-GLI-02766-101/BraTS-GLI-02766-101-t1n.nii.gz",
+                "training/BraTS-GLI-02766-101/BraTS-GLI-02766-101-t2f.nii.gz",
+                "training/BraTS-GLI-02766-101/BraTS-GLI-02766-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02766-101/BraTS-GLI-02766-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02877-100/BraTS-GLI-02877-100-t1c.nii.gz",
+                "training/BraTS-GLI-02877-100/BraTS-GLI-02877-100-t1n.nii.gz",
+                "training/BraTS-GLI-02877-100/BraTS-GLI-02877-100-t2f.nii.gz",
+                "training/BraTS-GLI-02877-100/BraTS-GLI-02877-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02877-100/BraTS-GLI-02877-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02524-105/BraTS-GLI-02524-105-t1c.nii.gz",
+                "training/BraTS-GLI-02524-105/BraTS-GLI-02524-105-t1n.nii.gz",
+                "training/BraTS-GLI-02524-105/BraTS-GLI-02524-105-t2f.nii.gz",
+                "training/BraTS-GLI-02524-105/BraTS-GLI-02524-105-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02524-105/BraTS-GLI-02524-105-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02207-101/BraTS-GLI-02207-101-t1c.nii.gz",
+                "training/BraTS-GLI-02207-101/BraTS-GLI-02207-101-t1n.nii.gz",
+                "training/BraTS-GLI-02207-101/BraTS-GLI-02207-101-t2f.nii.gz",
+                "training/BraTS-GLI-02207-101/BraTS-GLI-02207-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02207-101/BraTS-GLI-02207-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02099-101/BraTS-GLI-02099-101-t1c.nii.gz",
+                "training/BraTS-GLI-02099-101/BraTS-GLI-02099-101-t1n.nii.gz",
+                "training/BraTS-GLI-02099-101/BraTS-GLI-02099-101-t2f.nii.gz",
+                "training/BraTS-GLI-02099-101/BraTS-GLI-02099-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02099-101/BraTS-GLI-02099-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02244-104/BraTS-GLI-02244-104-t1c.nii.gz",
+                "training/BraTS-GLI-02244-104/BraTS-GLI-02244-104-t1n.nii.gz",
+                "training/BraTS-GLI-02244-104/BraTS-GLI-02244-104-t2f.nii.gz",
+                "training/BraTS-GLI-02244-104/BraTS-GLI-02244-104-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02244-104/BraTS-GLI-02244-104-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-03006-101/BraTS-GLI-03006-101-t1c.nii.gz",
+                "training/BraTS-GLI-03006-101/BraTS-GLI-03006-101-t1n.nii.gz",
+                "training/BraTS-GLI-03006-101/BraTS-GLI-03006-101-t2f.nii.gz",
+                "training/BraTS-GLI-03006-101/BraTS-GLI-03006-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-03006-101/BraTS-GLI-03006-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02608-105/BraTS-GLI-02608-105-t1c.nii.gz",
+                "training/BraTS-GLI-02608-105/BraTS-GLI-02608-105-t1n.nii.gz",
+                "training/BraTS-GLI-02608-105/BraTS-GLI-02608-105-t2f.nii.gz",
+                "training/BraTS-GLI-02608-105/BraTS-GLI-02608-105-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02608-105/BraTS-GLI-02608-105-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02066-102/BraTS-GLI-02066-102-t1c.nii.gz",
+                "training/BraTS-GLI-02066-102/BraTS-GLI-02066-102-t1n.nii.gz",
+                "training/BraTS-GLI-02066-102/BraTS-GLI-02066-102-t2f.nii.gz",
+                "training/BraTS-GLI-02066-102/BraTS-GLI-02066-102-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02066-102/BraTS-GLI-02066-102-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02752-101/BraTS-GLI-02752-101-t1c.nii.gz",
+                "training/BraTS-GLI-02752-101/BraTS-GLI-02752-101-t1n.nii.gz",
+                "training/BraTS-GLI-02752-101/BraTS-GLI-02752-101-t2f.nii.gz",
+                "training/BraTS-GLI-02752-101/BraTS-GLI-02752-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02752-101/BraTS-GLI-02752-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02827-100/BraTS-GLI-02827-100-t1c.nii.gz",
+                "training/BraTS-GLI-02827-100/BraTS-GLI-02827-100-t1n.nii.gz",
+                "training/BraTS-GLI-02827-100/BraTS-GLI-02827-100-t2f.nii.gz",
+                "training/BraTS-GLI-02827-100/BraTS-GLI-02827-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02827-100/BraTS-GLI-02827-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02193-101/BraTS-GLI-02193-101-t1c.nii.gz",
+                "training/BraTS-GLI-02193-101/BraTS-GLI-02193-101-t1n.nii.gz",
+                "training/BraTS-GLI-02193-101/BraTS-GLI-02193-101-t2f.nii.gz",
+                "training/BraTS-GLI-02193-101/BraTS-GLI-02193-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02193-101/BraTS-GLI-02193-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02093-108/BraTS-GLI-02093-108-t1c.nii.gz",
+                "training/BraTS-GLI-02093-108/BraTS-GLI-02093-108-t1n.nii.gz",
+                "training/BraTS-GLI-02093-108/BraTS-GLI-02093-108-t2f.nii.gz",
+                "training/BraTS-GLI-02093-108/BraTS-GLI-02093-108-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02093-108/BraTS-GLI-02093-108-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02952-100/BraTS-GLI-02952-100-t1c.nii.gz",
+                "training/BraTS-GLI-02952-100/BraTS-GLI-02952-100-t1n.nii.gz",
+                "training/BraTS-GLI-02952-100/BraTS-GLI-02952-100-t2f.nii.gz",
+                "training/BraTS-GLI-02952-100/BraTS-GLI-02952-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02952-100/BraTS-GLI-02952-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02598-100/BraTS-GLI-02598-100-t1c.nii.gz",
+                "training/BraTS-GLI-02598-100/BraTS-GLI-02598-100-t1n.nii.gz",
+                "training/BraTS-GLI-02598-100/BraTS-GLI-02598-100-t2f.nii.gz",
+                "training/BraTS-GLI-02598-100/BraTS-GLI-02598-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02598-100/BraTS-GLI-02598-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02141-100/BraTS-GLI-02141-100-t1c.nii.gz",
+                "training/BraTS-GLI-02141-100/BraTS-GLI-02141-100-t1n.nii.gz",
+                "training/BraTS-GLI-02141-100/BraTS-GLI-02141-100-t2f.nii.gz",
+                "training/BraTS-GLI-02141-100/BraTS-GLI-02141-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02141-100/BraTS-GLI-02141-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02934-100/BraTS-GLI-02934-100-t1c.nii.gz",
+                "training/BraTS-GLI-02934-100/BraTS-GLI-02934-100-t1n.nii.gz",
+                "training/BraTS-GLI-02934-100/BraTS-GLI-02934-100-t2f.nii.gz",
+                "training/BraTS-GLI-02934-100/BraTS-GLI-02934-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02934-100/BraTS-GLI-02934-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02978-100/BraTS-GLI-02978-100-t1c.nii.gz",
+                "training/BraTS-GLI-02978-100/BraTS-GLI-02978-100-t1n.nii.gz",
+                "training/BraTS-GLI-02978-100/BraTS-GLI-02978-100-t2f.nii.gz",
+                "training/BraTS-GLI-02978-100/BraTS-GLI-02978-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02978-100/BraTS-GLI-02978-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02919-101/BraTS-GLI-02919-101-t1c.nii.gz",
+                "training/BraTS-GLI-02919-101/BraTS-GLI-02919-101-t1n.nii.gz",
+                "training/BraTS-GLI-02919-101/BraTS-GLI-02919-101-t2f.nii.gz",
+                "training/BraTS-GLI-02919-101/BraTS-GLI-02919-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02919-101/BraTS-GLI-02919-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02105-106/BraTS-GLI-02105-106-t1c.nii.gz",
+                "training/BraTS-GLI-02105-106/BraTS-GLI-02105-106-t1n.nii.gz",
+                "training/BraTS-GLI-02105-106/BraTS-GLI-02105-106-t2f.nii.gz",
+                "training/BraTS-GLI-02105-106/BraTS-GLI-02105-106-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02105-106/BraTS-GLI-02105-106-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02123-101/BraTS-GLI-02123-101-t1c.nii.gz",
+                "training/BraTS-GLI-02123-101/BraTS-GLI-02123-101-t1n.nii.gz",
+                "training/BraTS-GLI-02123-101/BraTS-GLI-02123-101-t2f.nii.gz",
+                "training/BraTS-GLI-02123-101/BraTS-GLI-02123-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02123-101/BraTS-GLI-02123-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02787-100/BraTS-GLI-02787-100-t1c.nii.gz",
+                "training/BraTS-GLI-02787-100/BraTS-GLI-02787-100-t1n.nii.gz",
+                "training/BraTS-GLI-02787-100/BraTS-GLI-02787-100-t2f.nii.gz",
+                "training/BraTS-GLI-02787-100/BraTS-GLI-02787-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02787-100/BraTS-GLI-02787-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02708-100/BraTS-GLI-02708-100-t1c.nii.gz",
+                "training/BraTS-GLI-02708-100/BraTS-GLI-02708-100-t1n.nii.gz",
+                "training/BraTS-GLI-02708-100/BraTS-GLI-02708-100-t2f.nii.gz",
+                "training/BraTS-GLI-02708-100/BraTS-GLI-02708-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02708-100/BraTS-GLI-02708-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02821-100/BraTS-GLI-02821-100-t1c.nii.gz",
+                "training/BraTS-GLI-02821-100/BraTS-GLI-02821-100-t1n.nii.gz",
+                "training/BraTS-GLI-02821-100/BraTS-GLI-02821-100-t2f.nii.gz",
+                "training/BraTS-GLI-02821-100/BraTS-GLI-02821-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02821-100/BraTS-GLI-02821-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02987-101/BraTS-GLI-02987-101-t1c.nii.gz",
+                "training/BraTS-GLI-02987-101/BraTS-GLI-02987-101-t1n.nii.gz",
+                "training/BraTS-GLI-02987-101/BraTS-GLI-02987-101-t2f.nii.gz",
+                "training/BraTS-GLI-02987-101/BraTS-GLI-02987-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02987-101/BraTS-GLI-02987-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02248-102/BraTS-GLI-02248-102-t1c.nii.gz",
+                "training/BraTS-GLI-02248-102/BraTS-GLI-02248-102-t1n.nii.gz",
+                "training/BraTS-GLI-02248-102/BraTS-GLI-02248-102-t2f.nii.gz",
+                "training/BraTS-GLI-02248-102/BraTS-GLI-02248-102-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02248-102/BraTS-GLI-02248-102-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02699-100/BraTS-GLI-02699-100-t1c.nii.gz",
+                "training/BraTS-GLI-02699-100/BraTS-GLI-02699-100-t1n.nii.gz",
+                "training/BraTS-GLI-02699-100/BraTS-GLI-02699-100-t2f.nii.gz",
+                "training/BraTS-GLI-02699-100/BraTS-GLI-02699-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02699-100/BraTS-GLI-02699-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-03050-102/BraTS-GLI-03050-102-t1c.nii.gz",
+                "training/BraTS-GLI-03050-102/BraTS-GLI-03050-102-t1n.nii.gz",
+                "training/BraTS-GLI-03050-102/BraTS-GLI-03050-102-t2f.nii.gz",
+                "training/BraTS-GLI-03050-102/BraTS-GLI-03050-102-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-03050-102/BraTS-GLI-03050-102-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02602-100/BraTS-GLI-02602-100-t1c.nii.gz",
+                "training/BraTS-GLI-02602-100/BraTS-GLI-02602-100-t1n.nii.gz",
+                "training/BraTS-GLI-02602-100/BraTS-GLI-02602-100-t2f.nii.gz",
+                "training/BraTS-GLI-02602-100/BraTS-GLI-02602-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02602-100/BraTS-GLI-02602-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02854-100/BraTS-GLI-02854-100-t1c.nii.gz",
+                "training/BraTS-GLI-02854-100/BraTS-GLI-02854-100-t1n.nii.gz",
+                "training/BraTS-GLI-02854-100/BraTS-GLI-02854-100-t2f.nii.gz",
+                "training/BraTS-GLI-02854-100/BraTS-GLI-02854-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02854-100/BraTS-GLI-02854-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-00096-101/BraTS-GLI-00096-101-t1c.nii.gz",
+                "training/BraTS-GLI-00096-101/BraTS-GLI-00096-101-t1n.nii.gz",
+                "training/BraTS-GLI-00096-101/BraTS-GLI-00096-101-t2f.nii.gz",
+                "training/BraTS-GLI-00096-101/BraTS-GLI-00096-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-00096-101/BraTS-GLI-00096-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02227-100/BraTS-GLI-02227-100-t1c.nii.gz",
+                "training/BraTS-GLI-02227-100/BraTS-GLI-02227-100-t1n.nii.gz",
+                "training/BraTS-GLI-02227-100/BraTS-GLI-02227-100-t2f.nii.gz",
+                "training/BraTS-GLI-02227-100/BraTS-GLI-02227-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02227-100/BraTS-GLI-02227-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02747-100/BraTS-GLI-02747-100-t1c.nii.gz",
+                "training/BraTS-GLI-02747-100/BraTS-GLI-02747-100-t1n.nii.gz",
+                "training/BraTS-GLI-02747-100/BraTS-GLI-02747-100-t2f.nii.gz",
+                "training/BraTS-GLI-02747-100/BraTS-GLI-02747-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02747-100/BraTS-GLI-02747-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02767-101/BraTS-GLI-02767-101-t1c.nii.gz",
+                "training/BraTS-GLI-02767-101/BraTS-GLI-02767-101-t1n.nii.gz",
+                "training/BraTS-GLI-02767-101/BraTS-GLI-02767-101-t2f.nii.gz",
+                "training/BraTS-GLI-02767-101/BraTS-GLI-02767-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02767-101/BraTS-GLI-02767-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-03007-100/BraTS-GLI-03007-100-t1c.nii.gz",
+                "training/BraTS-GLI-03007-100/BraTS-GLI-03007-100-t1n.nii.gz",
+                "training/BraTS-GLI-03007-100/BraTS-GLI-03007-100-t2f.nii.gz",
+                "training/BraTS-GLI-03007-100/BraTS-GLI-03007-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-03007-100/BraTS-GLI-03007-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-00528-100/BraTS-GLI-00528-100-t1c.nii.gz",
+                "training/BraTS-GLI-00528-100/BraTS-GLI-00528-100-t1n.nii.gz",
+                "training/BraTS-GLI-00528-100/BraTS-GLI-00528-100-t2f.nii.gz",
+                "training/BraTS-GLI-00528-100/BraTS-GLI-00528-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-00528-100/BraTS-GLI-00528-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02119-101/BraTS-GLI-02119-101-t1c.nii.gz",
+                "training/BraTS-GLI-02119-101/BraTS-GLI-02119-101-t1n.nii.gz",
+                "training/BraTS-GLI-02119-101/BraTS-GLI-02119-101-t2f.nii.gz",
+                "training/BraTS-GLI-02119-101/BraTS-GLI-02119-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02119-101/BraTS-GLI-02119-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02289-101/BraTS-GLI-02289-101-t1c.nii.gz",
+                "training/BraTS-GLI-02289-101/BraTS-GLI-02289-101-t1n.nii.gz",
+                "training/BraTS-GLI-02289-101/BraTS-GLI-02289-101-t2f.nii.gz",
+                "training/BraTS-GLI-02289-101/BraTS-GLI-02289-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02289-101/BraTS-GLI-02289-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02307-100/BraTS-GLI-02307-100-t1c.nii.gz",
+                "training/BraTS-GLI-02307-100/BraTS-GLI-02307-100-t1n.nii.gz",
+                "training/BraTS-GLI-02307-100/BraTS-GLI-02307-100-t2f.nii.gz",
+                "training/BraTS-GLI-02307-100/BraTS-GLI-02307-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02307-100/BraTS-GLI-02307-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-03060-102/BraTS-GLI-03060-102-t1c.nii.gz",
+                "training/BraTS-GLI-03060-102/BraTS-GLI-03060-102-t1n.nii.gz",
+                "training/BraTS-GLI-03060-102/BraTS-GLI-03060-102-t2f.nii.gz",
+                "training/BraTS-GLI-03060-102/BraTS-GLI-03060-102-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-03060-102/BraTS-GLI-03060-102-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02770-101/BraTS-GLI-02770-101-t1c.nii.gz",
+                "training/BraTS-GLI-02770-101/BraTS-GLI-02770-101-t1n.nii.gz",
+                "training/BraTS-GLI-02770-101/BraTS-GLI-02770-101-t2f.nii.gz",
+                "training/BraTS-GLI-02770-101/BraTS-GLI-02770-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02770-101/BraTS-GLI-02770-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02103-102/BraTS-GLI-02103-102-t1c.nii.gz",
+                "training/BraTS-GLI-02103-102/BraTS-GLI-02103-102-t1n.nii.gz",
+                "training/BraTS-GLI-02103-102/BraTS-GLI-02103-102-t2f.nii.gz",
+                "training/BraTS-GLI-02103-102/BraTS-GLI-02103-102-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02103-102/BraTS-GLI-02103-102-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02658-100/BraTS-GLI-02658-100-t1c.nii.gz",
+                "training/BraTS-GLI-02658-100/BraTS-GLI-02658-100-t1n.nii.gz",
+                "training/BraTS-GLI-02658-100/BraTS-GLI-02658-100-t2f.nii.gz",
+                "training/BraTS-GLI-02658-100/BraTS-GLI-02658-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02658-100/BraTS-GLI-02658-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02271-100/BraTS-GLI-02271-100-t1c.nii.gz",
+                "training/BraTS-GLI-02271-100/BraTS-GLI-02271-100-t1n.nii.gz",
+                "training/BraTS-GLI-02271-100/BraTS-GLI-02271-100-t2f.nii.gz",
+                "training/BraTS-GLI-02271-100/BraTS-GLI-02271-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02271-100/BraTS-GLI-02271-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02779-100/BraTS-GLI-02779-100-t1c.nii.gz",
+                "training/BraTS-GLI-02779-100/BraTS-GLI-02779-100-t1n.nii.gz",
+                "training/BraTS-GLI-02779-100/BraTS-GLI-02779-100-t2f.nii.gz",
+                "training/BraTS-GLI-02779-100/BraTS-GLI-02779-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02779-100/BraTS-GLI-02779-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02556-101/BraTS-GLI-02556-101-t1c.nii.gz",
+                "training/BraTS-GLI-02556-101/BraTS-GLI-02556-101-t1n.nii.gz",
+                "training/BraTS-GLI-02556-101/BraTS-GLI-02556-101-t2f.nii.gz",
+                "training/BraTS-GLI-02556-101/BraTS-GLI-02556-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02556-101/BraTS-GLI-02556-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02171-100/BraTS-GLI-02171-100-t1c.nii.gz",
+                "training/BraTS-GLI-02171-100/BraTS-GLI-02171-100-t1n.nii.gz",
+                "training/BraTS-GLI-02171-100/BraTS-GLI-02171-100-t2f.nii.gz",
+                "training/BraTS-GLI-02171-100/BraTS-GLI-02171-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02171-100/BraTS-GLI-02171-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02650-100/BraTS-GLI-02650-100-t1c.nii.gz",
+                "training/BraTS-GLI-02650-100/BraTS-GLI-02650-100-t1n.nii.gz",
+                "training/BraTS-GLI-02650-100/BraTS-GLI-02650-100-t2f.nii.gz",
+                "training/BraTS-GLI-02650-100/BraTS-GLI-02650-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02650-100/BraTS-GLI-02650-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-00033-101/BraTS-GLI-00033-101-t1c.nii.gz",
+                "training/BraTS-GLI-00033-101/BraTS-GLI-00033-101-t1n.nii.gz",
+                "training/BraTS-GLI-00033-101/BraTS-GLI-00033-101-t2f.nii.gz",
+                "training/BraTS-GLI-00033-101/BraTS-GLI-00033-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-00033-101/BraTS-GLI-00033-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02389-100/BraTS-GLI-02389-100-t1c.nii.gz",
+                "training/BraTS-GLI-02389-100/BraTS-GLI-02389-100-t1n.nii.gz",
+                "training/BraTS-GLI-02389-100/BraTS-GLI-02389-100-t2f.nii.gz",
+                "training/BraTS-GLI-02389-100/BraTS-GLI-02389-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02389-100/BraTS-GLI-02389-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02103-100/BraTS-GLI-02103-100-t1c.nii.gz",
+                "training/BraTS-GLI-02103-100/BraTS-GLI-02103-100-t1n.nii.gz",
+                "training/BraTS-GLI-02103-100/BraTS-GLI-02103-100-t2f.nii.gz",
+                "training/BraTS-GLI-02103-100/BraTS-GLI-02103-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02103-100/BraTS-GLI-02103-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02859-100/BraTS-GLI-02859-100-t1c.nii.gz",
+                "training/BraTS-GLI-02859-100/BraTS-GLI-02859-100-t1n.nii.gz",
+                "training/BraTS-GLI-02859-100/BraTS-GLI-02859-100-t2f.nii.gz",
+                "training/BraTS-GLI-02859-100/BraTS-GLI-02859-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02859-100/BraTS-GLI-02859-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02608-104/BraTS-GLI-02608-104-t1c.nii.gz",
+                "training/BraTS-GLI-02608-104/BraTS-GLI-02608-104-t1n.nii.gz",
+                "training/BraTS-GLI-02608-104/BraTS-GLI-02608-104-t2f.nii.gz",
+                "training/BraTS-GLI-02608-104/BraTS-GLI-02608-104-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02608-104/BraTS-GLI-02608-104-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02949-100/BraTS-GLI-02949-100-t1c.nii.gz",
+                "training/BraTS-GLI-02949-100/BraTS-GLI-02949-100-t1n.nii.gz",
+                "training/BraTS-GLI-02949-100/BraTS-GLI-02949-100-t2f.nii.gz",
+                "training/BraTS-GLI-02949-100/BraTS-GLI-02949-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02949-100/BraTS-GLI-02949-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02319-100/BraTS-GLI-02319-100-t1c.nii.gz",
+                "training/BraTS-GLI-02319-100/BraTS-GLI-02319-100-t1n.nii.gz",
+                "training/BraTS-GLI-02319-100/BraTS-GLI-02319-100-t2f.nii.gz",
+                "training/BraTS-GLI-02319-100/BraTS-GLI-02319-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02319-100/BraTS-GLI-02319-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02794-100/BraTS-GLI-02794-100-t1c.nii.gz",
+                "training/BraTS-GLI-02794-100/BraTS-GLI-02794-100-t1n.nii.gz",
+                "training/BraTS-GLI-02794-100/BraTS-GLI-02794-100-t2f.nii.gz",
+                "training/BraTS-GLI-02794-100/BraTS-GLI-02794-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02794-100/BraTS-GLI-02794-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-03006-100/BraTS-GLI-03006-100-t1c.nii.gz",
+                "training/BraTS-GLI-03006-100/BraTS-GLI-03006-100-t1n.nii.gz",
+                "training/BraTS-GLI-03006-100/BraTS-GLI-03006-100-t2f.nii.gz",
+                "training/BraTS-GLI-03006-100/BraTS-GLI-03006-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-03006-100/BraTS-GLI-03006-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02303-102/BraTS-GLI-02303-102-t1c.nii.gz",
+                "training/BraTS-GLI-02303-102/BraTS-GLI-02303-102-t1n.nii.gz",
+                "training/BraTS-GLI-02303-102/BraTS-GLI-02303-102-t2f.nii.gz",
+                "training/BraTS-GLI-02303-102/BraTS-GLI-02303-102-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02303-102/BraTS-GLI-02303-102-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02833-100/BraTS-GLI-02833-100-t1c.nii.gz",
+                "training/BraTS-GLI-02833-100/BraTS-GLI-02833-100-t1n.nii.gz",
+                "training/BraTS-GLI-02833-100/BraTS-GLI-02833-100-t2f.nii.gz",
+                "training/BraTS-GLI-02833-100/BraTS-GLI-02833-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02833-100/BraTS-GLI-02833-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02764-100/BraTS-GLI-02764-100-t1c.nii.gz",
+                "training/BraTS-GLI-02764-100/BraTS-GLI-02764-100-t1n.nii.gz",
+                "training/BraTS-GLI-02764-100/BraTS-GLI-02764-100-t2f.nii.gz",
+                "training/BraTS-GLI-02764-100/BraTS-GLI-02764-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02764-100/BraTS-GLI-02764-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02610-101/BraTS-GLI-02610-101-t1c.nii.gz",
+                "training/BraTS-GLI-02610-101/BraTS-GLI-02610-101-t1n.nii.gz",
+                "training/BraTS-GLI-02610-101/BraTS-GLI-02610-101-t2f.nii.gz",
+                "training/BraTS-GLI-02610-101/BraTS-GLI-02610-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02610-101/BraTS-GLI-02610-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02136-100/BraTS-GLI-02136-100-t1c.nii.gz",
+                "training/BraTS-GLI-02136-100/BraTS-GLI-02136-100-t1n.nii.gz",
+                "training/BraTS-GLI-02136-100/BraTS-GLI-02136-100-t2f.nii.gz",
+                "training/BraTS-GLI-02136-100/BraTS-GLI-02136-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02136-100/BraTS-GLI-02136-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-03001-101/BraTS-GLI-03001-101-t1c.nii.gz",
+                "training/BraTS-GLI-03001-101/BraTS-GLI-03001-101-t1n.nii.gz",
+                "training/BraTS-GLI-03001-101/BraTS-GLI-03001-101-t2f.nii.gz",
+                "training/BraTS-GLI-03001-101/BraTS-GLI-03001-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-03001-101/BraTS-GLI-03001-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02303-101/BraTS-GLI-02303-101-t1c.nii.gz",
+                "training/BraTS-GLI-02303-101/BraTS-GLI-02303-101-t1n.nii.gz",
+                "training/BraTS-GLI-02303-101/BraTS-GLI-02303-101-t2f.nii.gz",
+                "training/BraTS-GLI-02303-101/BraTS-GLI-02303-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02303-101/BraTS-GLI-02303-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02331-100/BraTS-GLI-02331-100-t1c.nii.gz",
+                "training/BraTS-GLI-02331-100/BraTS-GLI-02331-100-t1n.nii.gz",
+                "training/BraTS-GLI-02331-100/BraTS-GLI-02331-100-t2f.nii.gz",
+                "training/BraTS-GLI-02331-100/BraTS-GLI-02331-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02331-100/BraTS-GLI-02331-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02131-103/BraTS-GLI-02131-103-t1c.nii.gz",
+                "training/BraTS-GLI-02131-103/BraTS-GLI-02131-103-t1n.nii.gz",
+                "training/BraTS-GLI-02131-103/BraTS-GLI-02131-103-t2f.nii.gz",
+                "training/BraTS-GLI-02131-103/BraTS-GLI-02131-103-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02131-103/BraTS-GLI-02131-103-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02800-101/BraTS-GLI-02800-101-t1c.nii.gz",
+                "training/BraTS-GLI-02800-101/BraTS-GLI-02800-101-t1n.nii.gz",
+                "training/BraTS-GLI-02800-101/BraTS-GLI-02800-101-t2f.nii.gz",
+                "training/BraTS-GLI-02800-101/BraTS-GLI-02800-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02800-101/BraTS-GLI-02800-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02747-101/BraTS-GLI-02747-101-t1c.nii.gz",
+                "training/BraTS-GLI-02747-101/BraTS-GLI-02747-101-t1n.nii.gz",
+                "training/BraTS-GLI-02747-101/BraTS-GLI-02747-101-t2f.nii.gz",
+                "training/BraTS-GLI-02747-101/BraTS-GLI-02747-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02747-101/BraTS-GLI-02747-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02823-100/BraTS-GLI-02823-100-t1c.nii.gz",
+                "training/BraTS-GLI-02823-100/BraTS-GLI-02823-100-t1n.nii.gz",
+                "training/BraTS-GLI-02823-100/BraTS-GLI-02823-100-t2f.nii.gz",
+                "training/BraTS-GLI-02823-100/BraTS-GLI-02823-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02823-100/BraTS-GLI-02823-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02891-100/BraTS-GLI-02891-100-t1c.nii.gz",
+                "training/BraTS-GLI-02891-100/BraTS-GLI-02891-100-t1n.nii.gz",
+                "training/BraTS-GLI-02891-100/BraTS-GLI-02891-100-t2f.nii.gz",
+                "training/BraTS-GLI-02891-100/BraTS-GLI-02891-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02891-100/BraTS-GLI-02891-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02110-100/BraTS-GLI-02110-100-t1c.nii.gz",
+                "training/BraTS-GLI-02110-100/BraTS-GLI-02110-100-t1n.nii.gz",
+                "training/BraTS-GLI-02110-100/BraTS-GLI-02110-100-t2f.nii.gz",
+                "training/BraTS-GLI-02110-100/BraTS-GLI-02110-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02110-100/BraTS-GLI-02110-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02206-103/BraTS-GLI-02206-103-t1c.nii.gz",
+                "training/BraTS-GLI-02206-103/BraTS-GLI-02206-103-t1n.nii.gz",
+                "training/BraTS-GLI-02206-103/BraTS-GLI-02206-103-t2f.nii.gz",
+                "training/BraTS-GLI-02206-103/BraTS-GLI-02206-103-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02206-103/BraTS-GLI-02206-103-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02074-100/BraTS-GLI-02074-100-t1c.nii.gz",
+                "training/BraTS-GLI-02074-100/BraTS-GLI-02074-100-t1n.nii.gz",
+                "training/BraTS-GLI-02074-100/BraTS-GLI-02074-100-t2f.nii.gz",
+                "training/BraTS-GLI-02074-100/BraTS-GLI-02074-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02074-100/BraTS-GLI-02074-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02655-100/BraTS-GLI-02655-100-t1c.nii.gz",
+                "training/BraTS-GLI-02655-100/BraTS-GLI-02655-100-t1n.nii.gz",
+                "training/BraTS-GLI-02655-100/BraTS-GLI-02655-100-t2f.nii.gz",
+                "training/BraTS-GLI-02655-100/BraTS-GLI-02655-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02655-100/BraTS-GLI-02655-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02199-101/BraTS-GLI-02199-101-t1c.nii.gz",
+                "training/BraTS-GLI-02199-101/BraTS-GLI-02199-101-t1n.nii.gz",
+                "training/BraTS-GLI-02199-101/BraTS-GLI-02199-101-t2f.nii.gz",
+                "training/BraTS-GLI-02199-101/BraTS-GLI-02199-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02199-101/BraTS-GLI-02199-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02318-100/BraTS-GLI-02318-100-t1c.nii.gz",
+                "training/BraTS-GLI-02318-100/BraTS-GLI-02318-100-t1n.nii.gz",
+                "training/BraTS-GLI-02318-100/BraTS-GLI-02318-100-t2f.nii.gz",
+                "training/BraTS-GLI-02318-100/BraTS-GLI-02318-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02318-100/BraTS-GLI-02318-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02793-101/BraTS-GLI-02793-101-t1c.nii.gz",
+                "training/BraTS-GLI-02793-101/BraTS-GLI-02793-101-t1n.nii.gz",
+                "training/BraTS-GLI-02793-101/BraTS-GLI-02793-101-t2f.nii.gz",
+                "training/BraTS-GLI-02793-101/BraTS-GLI-02793-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02793-101/BraTS-GLI-02793-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02072-103/BraTS-GLI-02072-103-t1c.nii.gz",
+                "training/BraTS-GLI-02072-103/BraTS-GLI-02072-103-t1n.nii.gz",
+                "training/BraTS-GLI-02072-103/BraTS-GLI-02072-103-t2f.nii.gz",
+                "training/BraTS-GLI-02072-103/BraTS-GLI-02072-103-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02072-103/BraTS-GLI-02072-103-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02155-100/BraTS-GLI-02155-100-t1c.nii.gz",
+                "training/BraTS-GLI-02155-100/BraTS-GLI-02155-100-t1n.nii.gz",
+                "training/BraTS-GLI-02155-100/BraTS-GLI-02155-100-t2f.nii.gz",
+                "training/BraTS-GLI-02155-100/BraTS-GLI-02155-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02155-100/BraTS-GLI-02155-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02754-101/BraTS-GLI-02754-101-t1c.nii.gz",
+                "training/BraTS-GLI-02754-101/BraTS-GLI-02754-101-t1n.nii.gz",
+                "training/BraTS-GLI-02754-101/BraTS-GLI-02754-101-t2f.nii.gz",
+                "training/BraTS-GLI-02754-101/BraTS-GLI-02754-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02754-101/BraTS-GLI-02754-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02817-101/BraTS-GLI-02817-101-t1c.nii.gz",
+                "training/BraTS-GLI-02817-101/BraTS-GLI-02817-101-t1n.nii.gz",
+                "training/BraTS-GLI-02817-101/BraTS-GLI-02817-101-t2f.nii.gz",
+                "training/BraTS-GLI-02817-101/BraTS-GLI-02817-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02817-101/BraTS-GLI-02817-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02688-100/BraTS-GLI-02688-100-t1c.nii.gz",
+                "training/BraTS-GLI-02688-100/BraTS-GLI-02688-100-t1n.nii.gz",
+                "training/BraTS-GLI-02688-100/BraTS-GLI-02688-100-t2f.nii.gz",
+                "training/BraTS-GLI-02688-100/BraTS-GLI-02688-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02688-100/BraTS-GLI-02688-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02256-100/BraTS-GLI-02256-100-t1c.nii.gz",
+                "training/BraTS-GLI-02256-100/BraTS-GLI-02256-100-t1n.nii.gz",
+                "training/BraTS-GLI-02256-100/BraTS-GLI-02256-100-t2f.nii.gz",
+                "training/BraTS-GLI-02256-100/BraTS-GLI-02256-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02256-100/BraTS-GLI-02256-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-03005-100/BraTS-GLI-03005-100-t1c.nii.gz",
+                "training/BraTS-GLI-03005-100/BraTS-GLI-03005-100-t1n.nii.gz",
+                "training/BraTS-GLI-03005-100/BraTS-GLI-03005-100-t2f.nii.gz",
+                "training/BraTS-GLI-03005-100/BraTS-GLI-03005-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-03005-100/BraTS-GLI-03005-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02228-100/BraTS-GLI-02228-100-t1c.nii.gz",
+                "training/BraTS-GLI-02228-100/BraTS-GLI-02228-100-t1n.nii.gz",
+                "training/BraTS-GLI-02228-100/BraTS-GLI-02228-100-t2f.nii.gz",
+                "training/BraTS-GLI-02228-100/BraTS-GLI-02228-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02228-100/BraTS-GLI-02228-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02820-100/BraTS-GLI-02820-100-t1c.nii.gz",
+                "training/BraTS-GLI-02820-100/BraTS-GLI-02820-100-t1n.nii.gz",
+                "training/BraTS-GLI-02820-100/BraTS-GLI-02820-100-t2f.nii.gz",
+                "training/BraTS-GLI-02820-100/BraTS-GLI-02820-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02820-100/BraTS-GLI-02820-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02215-103/BraTS-GLI-02215-103-t1c.nii.gz",
+                "training/BraTS-GLI-02215-103/BraTS-GLI-02215-103-t1n.nii.gz",
+                "training/BraTS-GLI-02215-103/BraTS-GLI-02215-103-t2f.nii.gz",
+                "training/BraTS-GLI-02215-103/BraTS-GLI-02215-103-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02215-103/BraTS-GLI-02215-103-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-00469-100/BraTS-GLI-00469-100-t1c.nii.gz",
+                "training/BraTS-GLI-00469-100/BraTS-GLI-00469-100-t1n.nii.gz",
+                "training/BraTS-GLI-00469-100/BraTS-GLI-00469-100-t2f.nii.gz",
+                "training/BraTS-GLI-00469-100/BraTS-GLI-00469-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-00469-100/BraTS-GLI-00469-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02759-100/BraTS-GLI-02759-100-t1c.nii.gz",
+                "training/BraTS-GLI-02759-100/BraTS-GLI-02759-100-t1n.nii.gz",
+                "training/BraTS-GLI-02759-100/BraTS-GLI-02759-100-t2f.nii.gz",
+                "training/BraTS-GLI-02759-100/BraTS-GLI-02759-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02759-100/BraTS-GLI-02759-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02209-104/BraTS-GLI-02209-104-t1c.nii.gz",
+                "training/BraTS-GLI-02209-104/BraTS-GLI-02209-104-t1n.nii.gz",
+                "training/BraTS-GLI-02209-104/BraTS-GLI-02209-104-t2f.nii.gz",
+                "training/BraTS-GLI-02209-104/BraTS-GLI-02209-104-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02209-104/BraTS-GLI-02209-104-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02793-100/BraTS-GLI-02793-100-t1c.nii.gz",
+                "training/BraTS-GLI-02793-100/BraTS-GLI-02793-100-t1n.nii.gz",
+                "training/BraTS-GLI-02793-100/BraTS-GLI-02793-100-t2f.nii.gz",
+                "training/BraTS-GLI-02793-100/BraTS-GLI-02793-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02793-100/BraTS-GLI-02793-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-03064-100/BraTS-GLI-03064-100-t1c.nii.gz",
+                "training/BraTS-GLI-03064-100/BraTS-GLI-03064-100-t1n.nii.gz",
+                "training/BraTS-GLI-03064-100/BraTS-GLI-03064-100-t2f.nii.gz",
+                "training/BraTS-GLI-03064-100/BraTS-GLI-03064-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-03064-100/BraTS-GLI-03064-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02300-102/BraTS-GLI-02300-102-t1c.nii.gz",
+                "training/BraTS-GLI-02300-102/BraTS-GLI-02300-102-t1n.nii.gz",
+                "training/BraTS-GLI-02300-102/BraTS-GLI-02300-102-t2f.nii.gz",
+                "training/BraTS-GLI-02300-102/BraTS-GLI-02300-102-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02300-102/BraTS-GLI-02300-102-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02157-101/BraTS-GLI-02157-101-t1c.nii.gz",
+                "training/BraTS-GLI-02157-101/BraTS-GLI-02157-101-t1n.nii.gz",
+                "training/BraTS-GLI-02157-101/BraTS-GLI-02157-101-t2f.nii.gz",
+                "training/BraTS-GLI-02157-101/BraTS-GLI-02157-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02157-101/BraTS-GLI-02157-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-00005-101/BraTS-GLI-00005-101-t1c.nii.gz",
+                "training/BraTS-GLI-00005-101/BraTS-GLI-00005-101-t1n.nii.gz",
+                "training/BraTS-GLI-00005-101/BraTS-GLI-00005-101-t2f.nii.gz",
+                "training/BraTS-GLI-00005-101/BraTS-GLI-00005-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-00005-101/BraTS-GLI-00005-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-00008-100/BraTS-GLI-00008-100-t1c.nii.gz",
+                "training/BraTS-GLI-00008-100/BraTS-GLI-00008-100-t1n.nii.gz",
+                "training/BraTS-GLI-00008-100/BraTS-GLI-00008-100-t2f.nii.gz",
+                "training/BraTS-GLI-00008-100/BraTS-GLI-00008-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-00008-100/BraTS-GLI-00008-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02217-101/BraTS-GLI-02217-101-t1c.nii.gz",
+                "training/BraTS-GLI-02217-101/BraTS-GLI-02217-101-t1n.nii.gz",
+                "training/BraTS-GLI-02217-101/BraTS-GLI-02217-101-t2f.nii.gz",
+                "training/BraTS-GLI-02217-101/BraTS-GLI-02217-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02217-101/BraTS-GLI-02217-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02721-100/BraTS-GLI-02721-100-t1c.nii.gz",
+                "training/BraTS-GLI-02721-100/BraTS-GLI-02721-100-t1n.nii.gz",
+                "training/BraTS-GLI-02721-100/BraTS-GLI-02721-100-t2f.nii.gz",
+                "training/BraTS-GLI-02721-100/BraTS-GLI-02721-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02721-100/BraTS-GLI-02721-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02994-101/BraTS-GLI-02994-101-t1c.nii.gz",
+                "training/BraTS-GLI-02994-101/BraTS-GLI-02994-101-t1n.nii.gz",
+                "training/BraTS-GLI-02994-101/BraTS-GLI-02994-101-t2f.nii.gz",
+                "training/BraTS-GLI-02994-101/BraTS-GLI-02994-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02994-101/BraTS-GLI-02994-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02743-101/BraTS-GLI-02743-101-t1c.nii.gz",
+                "training/BraTS-GLI-02743-101/BraTS-GLI-02743-101-t1n.nii.gz",
+                "training/BraTS-GLI-02743-101/BraTS-GLI-02743-101-t2f.nii.gz",
+                "training/BraTS-GLI-02743-101/BraTS-GLI-02743-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02743-101/BraTS-GLI-02743-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02836-101/BraTS-GLI-02836-101-t1c.nii.gz",
+                "training/BraTS-GLI-02836-101/BraTS-GLI-02836-101-t1n.nii.gz",
+                "training/BraTS-GLI-02836-101/BraTS-GLI-02836-101-t2f.nii.gz",
+                "training/BraTS-GLI-02836-101/BraTS-GLI-02836-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02836-101/BraTS-GLI-02836-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02330-100/BraTS-GLI-02330-100-t1c.nii.gz",
+                "training/BraTS-GLI-02330-100/BraTS-GLI-02330-100-t1n.nii.gz",
+                "training/BraTS-GLI-02330-100/BraTS-GLI-02330-100-t2f.nii.gz",
+                "training/BraTS-GLI-02330-100/BraTS-GLI-02330-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02330-100/BraTS-GLI-02330-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02289-100/BraTS-GLI-02289-100-t1c.nii.gz",
+                "training/BraTS-GLI-02289-100/BraTS-GLI-02289-100-t1n.nii.gz",
+                "training/BraTS-GLI-02289-100/BraTS-GLI-02289-100-t2f.nii.gz",
+                "training/BraTS-GLI-02289-100/BraTS-GLI-02289-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02289-100/BraTS-GLI-02289-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02694-100/BraTS-GLI-02694-100-t1c.nii.gz",
+                "training/BraTS-GLI-02694-100/BraTS-GLI-02694-100-t1n.nii.gz",
+                "training/BraTS-GLI-02694-100/BraTS-GLI-02694-100-t2f.nii.gz",
+                "training/BraTS-GLI-02694-100/BraTS-GLI-02694-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02694-100/BraTS-GLI-02694-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02637-100/BraTS-GLI-02637-100-t1c.nii.gz",
+                "training/BraTS-GLI-02637-100/BraTS-GLI-02637-100-t1n.nii.gz",
+                "training/BraTS-GLI-02637-100/BraTS-GLI-02637-100-t2f.nii.gz",
+                "training/BraTS-GLI-02637-100/BraTS-GLI-02637-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02637-100/BraTS-GLI-02637-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02960-100/BraTS-GLI-02960-100-t1c.nii.gz",
+                "training/BraTS-GLI-02960-100/BraTS-GLI-02960-100-t1n.nii.gz",
+                "training/BraTS-GLI-02960-100/BraTS-GLI-02960-100-t2f.nii.gz",
+                "training/BraTS-GLI-02960-100/BraTS-GLI-02960-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02960-100/BraTS-GLI-02960-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02520-100/BraTS-GLI-02520-100-t1c.nii.gz",
+                "training/BraTS-GLI-02520-100/BraTS-GLI-02520-100-t1n.nii.gz",
+                "training/BraTS-GLI-02520-100/BraTS-GLI-02520-100-t2f.nii.gz",
+                "training/BraTS-GLI-02520-100/BraTS-GLI-02520-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02520-100/BraTS-GLI-02520-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02922-100/BraTS-GLI-02922-100-t1c.nii.gz",
+                "training/BraTS-GLI-02922-100/BraTS-GLI-02922-100-t1n.nii.gz",
+                "training/BraTS-GLI-02922-100/BraTS-GLI-02922-100-t2f.nii.gz",
+                "training/BraTS-GLI-02922-100/BraTS-GLI-02922-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02922-100/BraTS-GLI-02922-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02091-102/BraTS-GLI-02091-102-t1c.nii.gz",
+                "training/BraTS-GLI-02091-102/BraTS-GLI-02091-102-t1n.nii.gz",
+                "training/BraTS-GLI-02091-102/BraTS-GLI-02091-102-t2f.nii.gz",
+                "training/BraTS-GLI-02091-102/BraTS-GLI-02091-102-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02091-102/BraTS-GLI-02091-102-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02246-100/BraTS-GLI-02246-100-t1c.nii.gz",
+                "training/BraTS-GLI-02246-100/BraTS-GLI-02246-100-t1n.nii.gz",
+                "training/BraTS-GLI-02246-100/BraTS-GLI-02246-100-t2f.nii.gz",
+                "training/BraTS-GLI-02246-100/BraTS-GLI-02246-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02246-100/BraTS-GLI-02246-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02101-100/BraTS-GLI-02101-100-t1c.nii.gz",
+                "training/BraTS-GLI-02101-100/BraTS-GLI-02101-100-t1n.nii.gz",
+                "training/BraTS-GLI-02101-100/BraTS-GLI-02101-100-t2f.nii.gz",
+                "training/BraTS-GLI-02101-100/BraTS-GLI-02101-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02101-100/BraTS-GLI-02101-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02185-100/BraTS-GLI-02185-100-t1c.nii.gz",
+                "training/BraTS-GLI-02185-100/BraTS-GLI-02185-100-t1n.nii.gz",
+                "training/BraTS-GLI-02185-100/BraTS-GLI-02185-100-t2f.nii.gz",
+                "training/BraTS-GLI-02185-100/BraTS-GLI-02185-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02185-100/BraTS-GLI-02185-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02078-102/BraTS-GLI-02078-102-t1c.nii.gz",
+                "training/BraTS-GLI-02078-102/BraTS-GLI-02078-102-t1n.nii.gz",
+                "training/BraTS-GLI-02078-102/BraTS-GLI-02078-102-t2f.nii.gz",
+                "training/BraTS-GLI-02078-102/BraTS-GLI-02078-102-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02078-102/BraTS-GLI-02078-102-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02946-100/BraTS-GLI-02946-100-t1c.nii.gz",
+                "training/BraTS-GLI-02946-100/BraTS-GLI-02946-100-t1n.nii.gz",
+                "training/BraTS-GLI-02946-100/BraTS-GLI-02946-100-t2f.nii.gz",
+                "training/BraTS-GLI-02946-100/BraTS-GLI-02946-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02946-100/BraTS-GLI-02946-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02105-107/BraTS-GLI-02105-107-t1c.nii.gz",
+                "training/BraTS-GLI-02105-107/BraTS-GLI-02105-107-t1n.nii.gz",
+                "training/BraTS-GLI-02105-107/BraTS-GLI-02105-107-t2f.nii.gz",
+                "training/BraTS-GLI-02105-107/BraTS-GLI-02105-107-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02105-107/BraTS-GLI-02105-107-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02093-102/BraTS-GLI-02093-102-t1c.nii.gz",
+                "training/BraTS-GLI-02093-102/BraTS-GLI-02093-102-t1n.nii.gz",
+                "training/BraTS-GLI-02093-102/BraTS-GLI-02093-102-t2f.nii.gz",
+                "training/BraTS-GLI-02093-102/BraTS-GLI-02093-102-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02093-102/BraTS-GLI-02093-102-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-00556-100/BraTS-GLI-00556-100-t1c.nii.gz",
+                "training/BraTS-GLI-00556-100/BraTS-GLI-00556-100-t1n.nii.gz",
+                "training/BraTS-GLI-00556-100/BraTS-GLI-00556-100-t2f.nii.gz",
+                "training/BraTS-GLI-00556-100/BraTS-GLI-00556-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-00556-100/BraTS-GLI-00556-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02886-100/BraTS-GLI-02886-100-t1c.nii.gz",
+                "training/BraTS-GLI-02886-100/BraTS-GLI-02886-100-t1n.nii.gz",
+                "training/BraTS-GLI-02886-100/BraTS-GLI-02886-100-t2f.nii.gz",
+                "training/BraTS-GLI-02886-100/BraTS-GLI-02886-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02886-100/BraTS-GLI-02886-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02152-102/BraTS-GLI-02152-102-t1c.nii.gz",
+                "training/BraTS-GLI-02152-102/BraTS-GLI-02152-102-t1n.nii.gz",
+                "training/BraTS-GLI-02152-102/BraTS-GLI-02152-102-t2f.nii.gz",
+                "training/BraTS-GLI-02152-102/BraTS-GLI-02152-102-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02152-102/BraTS-GLI-02152-102-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02077-101/BraTS-GLI-02077-101-t1c.nii.gz",
+                "training/BraTS-GLI-02077-101/BraTS-GLI-02077-101-t1n.nii.gz",
+                "training/BraTS-GLI-02077-101/BraTS-GLI-02077-101-t2f.nii.gz",
+                "training/BraTS-GLI-02077-101/BraTS-GLI-02077-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02077-101/BraTS-GLI-02077-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02919-100/BraTS-GLI-02919-100-t1c.nii.gz",
+                "training/BraTS-GLI-02919-100/BraTS-GLI-02919-100-t1n.nii.gz",
+                "training/BraTS-GLI-02919-100/BraTS-GLI-02919-100-t2f.nii.gz",
+                "training/BraTS-GLI-02919-100/BraTS-GLI-02919-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02919-100/BraTS-GLI-02919-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02290-101/BraTS-GLI-02290-101-t1c.nii.gz",
+                "training/BraTS-GLI-02290-101/BraTS-GLI-02290-101-t1n.nii.gz",
+                "training/BraTS-GLI-02290-101/BraTS-GLI-02290-101-t2f.nii.gz",
+                "training/BraTS-GLI-02290-101/BraTS-GLI-02290-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02290-101/BraTS-GLI-02290-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02274-100/BraTS-GLI-02274-100-t1c.nii.gz",
+                "training/BraTS-GLI-02274-100/BraTS-GLI-02274-100-t1n.nii.gz",
+                "training/BraTS-GLI-02274-100/BraTS-GLI-02274-100-t2f.nii.gz",
+                "training/BraTS-GLI-02274-100/BraTS-GLI-02274-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02274-100/BraTS-GLI-02274-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02868-101/BraTS-GLI-02868-101-t1c.nii.gz",
+                "training/BraTS-GLI-02868-101/BraTS-GLI-02868-101-t1n.nii.gz",
+                "training/BraTS-GLI-02868-101/BraTS-GLI-02868-101-t2f.nii.gz",
+                "training/BraTS-GLI-02868-101/BraTS-GLI-02868-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02868-101/BraTS-GLI-02868-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02278-100/BraTS-GLI-02278-100-t1c.nii.gz",
+                "training/BraTS-GLI-02278-100/BraTS-GLI-02278-100-t1n.nii.gz",
+                "training/BraTS-GLI-02278-100/BraTS-GLI-02278-100-t2f.nii.gz",
+                "training/BraTS-GLI-02278-100/BraTS-GLI-02278-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02278-100/BraTS-GLI-02278-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02216-101/BraTS-GLI-02216-101-t1c.nii.gz",
+                "training/BraTS-GLI-02216-101/BraTS-GLI-02216-101-t1n.nii.gz",
+                "training/BraTS-GLI-02216-101/BraTS-GLI-02216-101-t2f.nii.gz",
+                "training/BraTS-GLI-02216-101/BraTS-GLI-02216-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02216-101/BraTS-GLI-02216-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02999-100/BraTS-GLI-02999-100-t1c.nii.gz",
+                "training/BraTS-GLI-02999-100/BraTS-GLI-02999-100-t1n.nii.gz",
+                "training/BraTS-GLI-02999-100/BraTS-GLI-02999-100-t2f.nii.gz",
+                "training/BraTS-GLI-02999-100/BraTS-GLI-02999-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02999-100/BraTS-GLI-02999-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02157-100/BraTS-GLI-02157-100-t1c.nii.gz",
+                "training/BraTS-GLI-02157-100/BraTS-GLI-02157-100-t1n.nii.gz",
+                "training/BraTS-GLI-02157-100/BraTS-GLI-02157-100-t2f.nii.gz",
+                "training/BraTS-GLI-02157-100/BraTS-GLI-02157-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02157-100/BraTS-GLI-02157-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02147-101/BraTS-GLI-02147-101-t1c.nii.gz",
+                "training/BraTS-GLI-02147-101/BraTS-GLI-02147-101-t1n.nii.gz",
+                "training/BraTS-GLI-02147-101/BraTS-GLI-02147-101-t2f.nii.gz",
+                "training/BraTS-GLI-02147-101/BraTS-GLI-02147-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02147-101/BraTS-GLI-02147-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02267-100/BraTS-GLI-02267-100-t1c.nii.gz",
+                "training/BraTS-GLI-02267-100/BraTS-GLI-02267-100-t1n.nii.gz",
+                "training/BraTS-GLI-02267-100/BraTS-GLI-02267-100-t2f.nii.gz",
+                "training/BraTS-GLI-02267-100/BraTS-GLI-02267-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02267-100/BraTS-GLI-02267-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02804-101/BraTS-GLI-02804-101-t1c.nii.gz",
+                "training/BraTS-GLI-02804-101/BraTS-GLI-02804-101-t1n.nii.gz",
+                "training/BraTS-GLI-02804-101/BraTS-GLI-02804-101-t2f.nii.gz",
+                "training/BraTS-GLI-02804-101/BraTS-GLI-02804-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02804-101/BraTS-GLI-02804-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-03017-101/BraTS-GLI-03017-101-t1c.nii.gz",
+                "training/BraTS-GLI-03017-101/BraTS-GLI-03017-101-t1n.nii.gz",
+                "training/BraTS-GLI-03017-101/BraTS-GLI-03017-101-t2f.nii.gz",
+                "training/BraTS-GLI-03017-101/BraTS-GLI-03017-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-03017-101/BraTS-GLI-03017-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02085-100/BraTS-GLI-02085-100-t1c.nii.gz",
+                "training/BraTS-GLI-02085-100/BraTS-GLI-02085-100-t1n.nii.gz",
+                "training/BraTS-GLI-02085-100/BraTS-GLI-02085-100-t2f.nii.gz",
+                "training/BraTS-GLI-02085-100/BraTS-GLI-02085-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02085-100/BraTS-GLI-02085-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-03051-100/BraTS-GLI-03051-100-t1c.nii.gz",
+                "training/BraTS-GLI-03051-100/BraTS-GLI-03051-100-t1n.nii.gz",
+                "training/BraTS-GLI-03051-100/BraTS-GLI-03051-100-t2f.nii.gz",
+                "training/BraTS-GLI-03051-100/BraTS-GLI-03051-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-03051-100/BraTS-GLI-03051-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02110-101/BraTS-GLI-02110-101-t1c.nii.gz",
+                "training/BraTS-GLI-02110-101/BraTS-GLI-02110-101-t1n.nii.gz",
+                "training/BraTS-GLI-02110-101/BraTS-GLI-02110-101-t2f.nii.gz",
+                "training/BraTS-GLI-02110-101/BraTS-GLI-02110-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02110-101/BraTS-GLI-02110-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02977-101/BraTS-GLI-02977-101-t1c.nii.gz",
+                "training/BraTS-GLI-02977-101/BraTS-GLI-02977-101-t1n.nii.gz",
+                "training/BraTS-GLI-02977-101/BraTS-GLI-02977-101-t2f.nii.gz",
+                "training/BraTS-GLI-02977-101/BraTS-GLI-02977-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02977-101/BraTS-GLI-02977-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02685-100/BraTS-GLI-02685-100-t1c.nii.gz",
+                "training/BraTS-GLI-02685-100/BraTS-GLI-02685-100-t1n.nii.gz",
+                "training/BraTS-GLI-02685-100/BraTS-GLI-02685-100-t2f.nii.gz",
+                "training/BraTS-GLI-02685-100/BraTS-GLI-02685-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02685-100/BraTS-GLI-02685-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-00506-100/BraTS-GLI-00506-100-t1c.nii.gz",
+                "training/BraTS-GLI-00506-100/BraTS-GLI-00506-100-t1n.nii.gz",
+                "training/BraTS-GLI-00506-100/BraTS-GLI-00506-100-t2f.nii.gz",
+                "training/BraTS-GLI-00506-100/BraTS-GLI-00506-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-00506-100/BraTS-GLI-00506-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02390-100/BraTS-GLI-02390-100-t1c.nii.gz",
+                "training/BraTS-GLI-02390-100/BraTS-GLI-02390-100-t1n.nii.gz",
+                "training/BraTS-GLI-02390-100/BraTS-GLI-02390-100-t2f.nii.gz",
+                "training/BraTS-GLI-02390-100/BraTS-GLI-02390-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02390-100/BraTS-GLI-02390-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02648-100/BraTS-GLI-02648-100-t1c.nii.gz",
+                "training/BraTS-GLI-02648-100/BraTS-GLI-02648-100-t1n.nii.gz",
+                "training/BraTS-GLI-02648-100/BraTS-GLI-02648-100-t2f.nii.gz",
+                "training/BraTS-GLI-02648-100/BraTS-GLI-02648-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02648-100/BraTS-GLI-02648-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02834-100/BraTS-GLI-02834-100-t1c.nii.gz",
+                "training/BraTS-GLI-02834-100/BraTS-GLI-02834-100-t1n.nii.gz",
+                "training/BraTS-GLI-02834-100/BraTS-GLI-02834-100-t2f.nii.gz",
+                "training/BraTS-GLI-02834-100/BraTS-GLI-02834-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02834-100/BraTS-GLI-02834-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02898-100/BraTS-GLI-02898-100-t1c.nii.gz",
+                "training/BraTS-GLI-02898-100/BraTS-GLI-02898-100-t1n.nii.gz",
+                "training/BraTS-GLI-02898-100/BraTS-GLI-02898-100-t2f.nii.gz",
+                "training/BraTS-GLI-02898-100/BraTS-GLI-02898-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02898-100/BraTS-GLI-02898-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-00507-101/BraTS-GLI-00507-101-t1c.nii.gz",
+                "training/BraTS-GLI-00507-101/BraTS-GLI-00507-101-t1n.nii.gz",
+                "training/BraTS-GLI-00507-101/BraTS-GLI-00507-101-t2f.nii.gz",
+                "training/BraTS-GLI-00507-101/BraTS-GLI-00507-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-00507-101/BraTS-GLI-00507-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02162-101/BraTS-GLI-02162-101-t1c.nii.gz",
+                "training/BraTS-GLI-02162-101/BraTS-GLI-02162-101-t1n.nii.gz",
+                "training/BraTS-GLI-02162-101/BraTS-GLI-02162-101-t2f.nii.gz",
+                "training/BraTS-GLI-02162-101/BraTS-GLI-02162-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02162-101/BraTS-GLI-02162-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02082-100/BraTS-GLI-02082-100-t1c.nii.gz",
+                "training/BraTS-GLI-02082-100/BraTS-GLI-02082-100-t1n.nii.gz",
+                "training/BraTS-GLI-02082-100/BraTS-GLI-02082-100-t2f.nii.gz",
+                "training/BraTS-GLI-02082-100/BraTS-GLI-02082-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02082-100/BraTS-GLI-02082-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02337-100/BraTS-GLI-02337-100-t1c.nii.gz",
+                "training/BraTS-GLI-02337-100/BraTS-GLI-02337-100-t1n.nii.gz",
+                "training/BraTS-GLI-02337-100/BraTS-GLI-02337-100-t2f.nii.gz",
+                "training/BraTS-GLI-02337-100/BraTS-GLI-02337-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02337-100/BraTS-GLI-02337-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02922-101/BraTS-GLI-02922-101-t1c.nii.gz",
+                "training/BraTS-GLI-02922-101/BraTS-GLI-02922-101-t1n.nii.gz",
+                "training/BraTS-GLI-02922-101/BraTS-GLI-02922-101-t2f.nii.gz",
+                "training/BraTS-GLI-02922-101/BraTS-GLI-02922-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02922-101/BraTS-GLI-02922-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02060-100/BraTS-GLI-02060-100-t1c.nii.gz",
+                "training/BraTS-GLI-02060-100/BraTS-GLI-02060-100-t1n.nii.gz",
+                "training/BraTS-GLI-02060-100/BraTS-GLI-02060-100-t2f.nii.gz",
+                "training/BraTS-GLI-02060-100/BraTS-GLI-02060-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02060-100/BraTS-GLI-02060-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02549-102/BraTS-GLI-02549-102-t1c.nii.gz",
+                "training/BraTS-GLI-02549-102/BraTS-GLI-02549-102-t1n.nii.gz",
+                "training/BraTS-GLI-02549-102/BraTS-GLI-02549-102-t2f.nii.gz",
+                "training/BraTS-GLI-02549-102/BraTS-GLI-02549-102-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02549-102/BraTS-GLI-02549-102-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-00549-101/BraTS-GLI-00549-101-t1c.nii.gz",
+                "training/BraTS-GLI-00549-101/BraTS-GLI-00549-101-t1n.nii.gz",
+                "training/BraTS-GLI-00549-101/BraTS-GLI-00549-101-t2f.nii.gz",
+                "training/BraTS-GLI-00549-101/BraTS-GLI-00549-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-00549-101/BraTS-GLI-00549-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02774-101/BraTS-GLI-02774-101-t1c.nii.gz",
+                "training/BraTS-GLI-02774-101/BraTS-GLI-02774-101-t1n.nii.gz",
+                "training/BraTS-GLI-02774-101/BraTS-GLI-02774-101-t2f.nii.gz",
+                "training/BraTS-GLI-02774-101/BraTS-GLI-02774-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02774-101/BraTS-GLI-02774-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02116-100/BraTS-GLI-02116-100-t1c.nii.gz",
+                "training/BraTS-GLI-02116-100/BraTS-GLI-02116-100-t1n.nii.gz",
+                "training/BraTS-GLI-02116-100/BraTS-GLI-02116-100-t2f.nii.gz",
+                "training/BraTS-GLI-02116-100/BraTS-GLI-02116-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02116-100/BraTS-GLI-02116-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-00553-101/BraTS-GLI-00553-101-t1c.nii.gz",
+                "training/BraTS-GLI-00553-101/BraTS-GLI-00553-101-t1n.nii.gz",
+                "training/BraTS-GLI-00553-101/BraTS-GLI-00553-101-t2f.nii.gz",
+                "training/BraTS-GLI-00553-101/BraTS-GLI-00553-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-00553-101/BraTS-GLI-00553-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02552-100/BraTS-GLI-02552-100-t1c.nii.gz",
+                "training/BraTS-GLI-02552-100/BraTS-GLI-02552-100-t1n.nii.gz",
+                "training/BraTS-GLI-02552-100/BraTS-GLI-02552-100-t2f.nii.gz",
+                "training/BraTS-GLI-02552-100/BraTS-GLI-02552-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02552-100/BraTS-GLI-02552-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02238-102/BraTS-GLI-02238-102-t1c.nii.gz",
+                "training/BraTS-GLI-02238-102/BraTS-GLI-02238-102-t1n.nii.gz",
+                "training/BraTS-GLI-02238-102/BraTS-GLI-02238-102-t2f.nii.gz",
+                "training/BraTS-GLI-02238-102/BraTS-GLI-02238-102-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02238-102/BraTS-GLI-02238-102-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02766-100/BraTS-GLI-02766-100-t1c.nii.gz",
+                "training/BraTS-GLI-02766-100/BraTS-GLI-02766-100-t1n.nii.gz",
+                "training/BraTS-GLI-02766-100/BraTS-GLI-02766-100-t2f.nii.gz",
+                "training/BraTS-GLI-02766-100/BraTS-GLI-02766-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02766-100/BraTS-GLI-02766-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02174-100/BraTS-GLI-02174-100-t1c.nii.gz",
+                "training/BraTS-GLI-02174-100/BraTS-GLI-02174-100-t1n.nii.gz",
+                "training/BraTS-GLI-02174-100/BraTS-GLI-02174-100-t2f.nii.gz",
+                "training/BraTS-GLI-02174-100/BraTS-GLI-02174-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02174-100/BraTS-GLI-02174-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02155-101/BraTS-GLI-02155-101-t1c.nii.gz",
+                "training/BraTS-GLI-02155-101/BraTS-GLI-02155-101-t1n.nii.gz",
+                "training/BraTS-GLI-02155-101/BraTS-GLI-02155-101-t2f.nii.gz",
+                "training/BraTS-GLI-02155-101/BraTS-GLI-02155-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02155-101/BraTS-GLI-02155-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02245-101/BraTS-GLI-02245-101-t1c.nii.gz",
+                "training/BraTS-GLI-02245-101/BraTS-GLI-02245-101-t1n.nii.gz",
+                "training/BraTS-GLI-02245-101/BraTS-GLI-02245-101-t2f.nii.gz",
+                "training/BraTS-GLI-02245-101/BraTS-GLI-02245-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02245-101/BraTS-GLI-02245-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02995-100/BraTS-GLI-02995-100-t1c.nii.gz",
+                "training/BraTS-GLI-02995-100/BraTS-GLI-02995-100-t1n.nii.gz",
+                "training/BraTS-GLI-02995-100/BraTS-GLI-02995-100-t2f.nii.gz",
+                "training/BraTS-GLI-02995-100/BraTS-GLI-02995-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02995-100/BraTS-GLI-02995-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02248-104/BraTS-GLI-02248-104-t1c.nii.gz",
+                "training/BraTS-GLI-02248-104/BraTS-GLI-02248-104-t1n.nii.gz",
+                "training/BraTS-GLI-02248-104/BraTS-GLI-02248-104-t2f.nii.gz",
+                "training/BraTS-GLI-02248-104/BraTS-GLI-02248-104-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02248-104/BraTS-GLI-02248-104-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02085-105/BraTS-GLI-02085-105-t1c.nii.gz",
+                "training/BraTS-GLI-02085-105/BraTS-GLI-02085-105-t1n.nii.gz",
+                "training/BraTS-GLI-02085-105/BraTS-GLI-02085-105-t2f.nii.gz",
+                "training/BraTS-GLI-02085-105/BraTS-GLI-02085-105-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02085-105/BraTS-GLI-02085-105-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-03019-101/BraTS-GLI-03019-101-t1c.nii.gz",
+                "training/BraTS-GLI-03019-101/BraTS-GLI-03019-101-t1n.nii.gz",
+                "training/BraTS-GLI-03019-101/BraTS-GLI-03019-101-t2f.nii.gz",
+                "training/BraTS-GLI-03019-101/BraTS-GLI-03019-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-03019-101/BraTS-GLI-03019-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02776-100/BraTS-GLI-02776-100-t1c.nii.gz",
+                "training/BraTS-GLI-02776-100/BraTS-GLI-02776-100-t1n.nii.gz",
+                "training/BraTS-GLI-02776-100/BraTS-GLI-02776-100-t2f.nii.gz",
+                "training/BraTS-GLI-02776-100/BraTS-GLI-02776-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02776-100/BraTS-GLI-02776-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02752-100/BraTS-GLI-02752-100-t1c.nii.gz",
+                "training/BraTS-GLI-02752-100/BraTS-GLI-02752-100-t1n.nii.gz",
+                "training/BraTS-GLI-02752-100/BraTS-GLI-02752-100-t2f.nii.gz",
+                "training/BraTS-GLI-02752-100/BraTS-GLI-02752-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02752-100/BraTS-GLI-02752-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02254-100/BraTS-GLI-02254-100-t1c.nii.gz",
+                "training/BraTS-GLI-02254-100/BraTS-GLI-02254-100-t1n.nii.gz",
+                "training/BraTS-GLI-02254-100/BraTS-GLI-02254-100-t2f.nii.gz",
+                "training/BraTS-GLI-02254-100/BraTS-GLI-02254-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02254-100/BraTS-GLI-02254-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02609-101/BraTS-GLI-02609-101-t1c.nii.gz",
+                "training/BraTS-GLI-02609-101/BraTS-GLI-02609-101-t1n.nii.gz",
+                "training/BraTS-GLI-02609-101/BraTS-GLI-02609-101-t2f.nii.gz",
+                "training/BraTS-GLI-02609-101/BraTS-GLI-02609-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02609-101/BraTS-GLI-02609-101-seg.nii.gz"
+        }
+    ],
+    "validation": [
+        {
+            "image": [
+                "training/BraTS-GLI-02061-101/BraTS-GLI-02061-101-t1c.nii.gz",
+                "training/BraTS-GLI-02061-101/BraTS-GLI-02061-101-t1n.nii.gz",
+                "training/BraTS-GLI-02061-101/BraTS-GLI-02061-101-t2f.nii.gz",
+                "training/BraTS-GLI-02061-101/BraTS-GLI-02061-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02061-101/BraTS-GLI-02061-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02247-100/BraTS-GLI-02247-100-t1c.nii.gz",
+                "training/BraTS-GLI-02247-100/BraTS-GLI-02247-100-t1n.nii.gz",
+                "training/BraTS-GLI-02247-100/BraTS-GLI-02247-100-t2f.nii.gz",
+                "training/BraTS-GLI-02247-100/BraTS-GLI-02247-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02247-100/BraTS-GLI-02247-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02346-100/BraTS-GLI-02346-100-t1c.nii.gz",
+                "training/BraTS-GLI-02346-100/BraTS-GLI-02346-100-t1n.nii.gz",
+                "training/BraTS-GLI-02346-100/BraTS-GLI-02346-100-t2f.nii.gz",
+                "training/BraTS-GLI-02346-100/BraTS-GLI-02346-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02346-100/BraTS-GLI-02346-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02938-100/BraTS-GLI-02938-100-t1c.nii.gz",
+                "training/BraTS-GLI-02938-100/BraTS-GLI-02938-100-t1n.nii.gz",
+                "training/BraTS-GLI-02938-100/BraTS-GLI-02938-100-t2f.nii.gz",
+                "training/BraTS-GLI-02938-100/BraTS-GLI-02938-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02938-100/BraTS-GLI-02938-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02181-101/BraTS-GLI-02181-101-t1c.nii.gz",
+                "training/BraTS-GLI-02181-101/BraTS-GLI-02181-101-t1n.nii.gz",
+                "training/BraTS-GLI-02181-101/BraTS-GLI-02181-101-t2f.nii.gz",
+                "training/BraTS-GLI-02181-101/BraTS-GLI-02181-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02181-101/BraTS-GLI-02181-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02928-101/BraTS-GLI-02928-101-t1c.nii.gz",
+                "training/BraTS-GLI-02928-101/BraTS-GLI-02928-101-t1n.nii.gz",
+                "training/BraTS-GLI-02928-101/BraTS-GLI-02928-101-t2f.nii.gz",
+                "training/BraTS-GLI-02928-101/BraTS-GLI-02928-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02928-101/BraTS-GLI-02928-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02623-101/BraTS-GLI-02623-101-t1c.nii.gz",
+                "training/BraTS-GLI-02623-101/BraTS-GLI-02623-101-t1n.nii.gz",
+                "training/BraTS-GLI-02623-101/BraTS-GLI-02623-101-t2f.nii.gz",
+                "training/BraTS-GLI-02623-101/BraTS-GLI-02623-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02623-101/BraTS-GLI-02623-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02781-101/BraTS-GLI-02781-101-t1c.nii.gz",
+                "training/BraTS-GLI-02781-101/BraTS-GLI-02781-101-t1n.nii.gz",
+                "training/BraTS-GLI-02781-101/BraTS-GLI-02781-101-t2f.nii.gz",
+                "training/BraTS-GLI-02781-101/BraTS-GLI-02781-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02781-101/BraTS-GLI-02781-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02745-101/BraTS-GLI-02745-101-t1c.nii.gz",
+                "training/BraTS-GLI-02745-101/BraTS-GLI-02745-101-t1n.nii.gz",
+                "training/BraTS-GLI-02745-101/BraTS-GLI-02745-101-t2f.nii.gz",
+                "training/BraTS-GLI-02745-101/BraTS-GLI-02745-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02745-101/BraTS-GLI-02745-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02834-101/BraTS-GLI-02834-101-t1c.nii.gz",
+                "training/BraTS-GLI-02834-101/BraTS-GLI-02834-101-t1n.nii.gz",
+                "training/BraTS-GLI-02834-101/BraTS-GLI-02834-101-t2f.nii.gz",
+                "training/BraTS-GLI-02834-101/BraTS-GLI-02834-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02834-101/BraTS-GLI-02834-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02192-102/BraTS-GLI-02192-102-t1c.nii.gz",
+                "training/BraTS-GLI-02192-102/BraTS-GLI-02192-102-t1n.nii.gz",
+                "training/BraTS-GLI-02192-102/BraTS-GLI-02192-102-t2f.nii.gz",
+                "training/BraTS-GLI-02192-102/BraTS-GLI-02192-102-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02192-102/BraTS-GLI-02192-102-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02103-106/BraTS-GLI-02103-106-t1c.nii.gz",
+                "training/BraTS-GLI-02103-106/BraTS-GLI-02103-106-t1n.nii.gz",
+                "training/BraTS-GLI-02103-106/BraTS-GLI-02103-106-t2f.nii.gz",
+                "training/BraTS-GLI-02103-106/BraTS-GLI-02103-106-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02103-106/BraTS-GLI-02103-106-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02103-104/BraTS-GLI-02103-104-t1c.nii.gz",
+                "training/BraTS-GLI-02103-104/BraTS-GLI-02103-104-t1n.nii.gz",
+                "training/BraTS-GLI-02103-104/BraTS-GLI-02103-104-t2f.nii.gz",
+                "training/BraTS-GLI-02103-104/BraTS-GLI-02103-104-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02103-104/BraTS-GLI-02103-104-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02723-100/BraTS-GLI-02723-100-t1c.nii.gz",
+                "training/BraTS-GLI-02723-100/BraTS-GLI-02723-100-t1n.nii.gz",
+                "training/BraTS-GLI-02723-100/BraTS-GLI-02723-100-t2f.nii.gz",
+                "training/BraTS-GLI-02723-100/BraTS-GLI-02723-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02723-100/BraTS-GLI-02723-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02969-100/BraTS-GLI-02969-100-t1c.nii.gz",
+                "training/BraTS-GLI-02969-100/BraTS-GLI-02969-100-t1n.nii.gz",
+                "training/BraTS-GLI-02969-100/BraTS-GLI-02969-100-t2f.nii.gz",
+                "training/BraTS-GLI-02969-100/BraTS-GLI-02969-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02969-100/BraTS-GLI-02969-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02342-100/BraTS-GLI-02342-100-t1c.nii.gz",
+                "training/BraTS-GLI-02342-100/BraTS-GLI-02342-100-t1n.nii.gz",
+                "training/BraTS-GLI-02342-100/BraTS-GLI-02342-100-t2f.nii.gz",
+                "training/BraTS-GLI-02342-100/BraTS-GLI-02342-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02342-100/BraTS-GLI-02342-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02968-101/BraTS-GLI-02968-101-t1c.nii.gz",
+                "training/BraTS-GLI-02968-101/BraTS-GLI-02968-101-t1n.nii.gz",
+                "training/BraTS-GLI-02968-101/BraTS-GLI-02968-101-t2f.nii.gz",
+                "training/BraTS-GLI-02968-101/BraTS-GLI-02968-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02968-101/BraTS-GLI-02968-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02136-101/BraTS-GLI-02136-101-t1c.nii.gz",
+                "training/BraTS-GLI-02136-101/BraTS-GLI-02136-101-t1n.nii.gz",
+                "training/BraTS-GLI-02136-101/BraTS-GLI-02136-101-t2f.nii.gz",
+                "training/BraTS-GLI-02136-101/BraTS-GLI-02136-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02136-101/BraTS-GLI-02136-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-00512-100/BraTS-GLI-00512-100-t1c.nii.gz",
+                "training/BraTS-GLI-00512-100/BraTS-GLI-00512-100-t1n.nii.gz",
+                "training/BraTS-GLI-00512-100/BraTS-GLI-00512-100-t2f.nii.gz",
+                "training/BraTS-GLI-00512-100/BraTS-GLI-00512-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-00512-100/BraTS-GLI-00512-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-03009-101/BraTS-GLI-03009-101-t1c.nii.gz",
+                "training/BraTS-GLI-03009-101/BraTS-GLI-03009-101-t1n.nii.gz",
+                "training/BraTS-GLI-03009-101/BraTS-GLI-03009-101-t2f.nii.gz",
+                "training/BraTS-GLI-03009-101/BraTS-GLI-03009-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-03009-101/BraTS-GLI-03009-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02884-100/BraTS-GLI-02884-100-t1c.nii.gz",
+                "training/BraTS-GLI-02884-100/BraTS-GLI-02884-100-t1n.nii.gz",
+                "training/BraTS-GLI-02884-100/BraTS-GLI-02884-100-t2f.nii.gz",
+                "training/BraTS-GLI-02884-100/BraTS-GLI-02884-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02884-100/BraTS-GLI-02884-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-00505-100/BraTS-GLI-00505-100-t1c.nii.gz",
+                "training/BraTS-GLI-00505-100/BraTS-GLI-00505-100-t1n.nii.gz",
+                "training/BraTS-GLI-00505-100/BraTS-GLI-00505-100-t2f.nii.gz",
+                "training/BraTS-GLI-00505-100/BraTS-GLI-00505-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-00505-100/BraTS-GLI-00505-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02905-100/BraTS-GLI-02905-100-t1c.nii.gz",
+                "training/BraTS-GLI-02905-100/BraTS-GLI-02905-100-t1n.nii.gz",
+                "training/BraTS-GLI-02905-100/BraTS-GLI-02905-100-t2f.nii.gz",
+                "training/BraTS-GLI-02905-100/BraTS-GLI-02905-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02905-100/BraTS-GLI-02905-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02160-102/BraTS-GLI-02160-102-t1c.nii.gz",
+                "training/BraTS-GLI-02160-102/BraTS-GLI-02160-102-t1n.nii.gz",
+                "training/BraTS-GLI-02160-102/BraTS-GLI-02160-102-t2f.nii.gz",
+                "training/BraTS-GLI-02160-102/BraTS-GLI-02160-102-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02160-102/BraTS-GLI-02160-102-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02086-100/BraTS-GLI-02086-100-t1c.nii.gz",
+                "training/BraTS-GLI-02086-100/BraTS-GLI-02086-100-t1n.nii.gz",
+                "training/BraTS-GLI-02086-100/BraTS-GLI-02086-100-t2f.nii.gz",
+                "training/BraTS-GLI-02086-100/BraTS-GLI-02086-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02086-100/BraTS-GLI-02086-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02245-104/BraTS-GLI-02245-104-t1c.nii.gz",
+                "training/BraTS-GLI-02245-104/BraTS-GLI-02245-104-t1n.nii.gz",
+                "training/BraTS-GLI-02245-104/BraTS-GLI-02245-104-t2f.nii.gz",
+                "training/BraTS-GLI-02245-104/BraTS-GLI-02245-104-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02245-104/BraTS-GLI-02245-104-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02776-101/BraTS-GLI-02776-101-t1c.nii.gz",
+                "training/BraTS-GLI-02776-101/BraTS-GLI-02776-101-t1n.nii.gz",
+                "training/BraTS-GLI-02776-101/BraTS-GLI-02776-101-t2f.nii.gz",
+                "training/BraTS-GLI-02776-101/BraTS-GLI-02776-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02776-101/BraTS-GLI-02776-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02835-101/BraTS-GLI-02835-101-t1c.nii.gz",
+                "training/BraTS-GLI-02835-101/BraTS-GLI-02835-101-t1n.nii.gz",
+                "training/BraTS-GLI-02835-101/BraTS-GLI-02835-101-t2f.nii.gz",
+                "training/BraTS-GLI-02835-101/BraTS-GLI-02835-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02835-101/BraTS-GLI-02835-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02116-101/BraTS-GLI-02116-101-t1c.nii.gz",
+                "training/BraTS-GLI-02116-101/BraTS-GLI-02116-101-t1n.nii.gz",
+                "training/BraTS-GLI-02116-101/BraTS-GLI-02116-101-t2f.nii.gz",
+                "training/BraTS-GLI-02116-101/BraTS-GLI-02116-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02116-101/BraTS-GLI-02116-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02268-100/BraTS-GLI-02268-100-t1c.nii.gz",
+                "training/BraTS-GLI-02268-100/BraTS-GLI-02268-100-t1n.nii.gz",
+                "training/BraTS-GLI-02268-100/BraTS-GLI-02268-100-t2f.nii.gz",
+                "training/BraTS-GLI-02268-100/BraTS-GLI-02268-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02268-100/BraTS-GLI-02268-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02961-100/BraTS-GLI-02961-100-t1c.nii.gz",
+                "training/BraTS-GLI-02961-100/BraTS-GLI-02961-100-t1n.nii.gz",
+                "training/BraTS-GLI-02961-100/BraTS-GLI-02961-100-t2f.nii.gz",
+                "training/BraTS-GLI-02961-100/BraTS-GLI-02961-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02961-100/BraTS-GLI-02961-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02992-101/BraTS-GLI-02992-101-t1c.nii.gz",
+                "training/BraTS-GLI-02992-101/BraTS-GLI-02992-101-t1n.nii.gz",
+                "training/BraTS-GLI-02992-101/BraTS-GLI-02992-101-t2f.nii.gz",
+                "training/BraTS-GLI-02992-101/BraTS-GLI-02992-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02992-101/BraTS-GLI-02992-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02247-102/BraTS-GLI-02247-102-t1c.nii.gz",
+                "training/BraTS-GLI-02247-102/BraTS-GLI-02247-102-t1n.nii.gz",
+                "training/BraTS-GLI-02247-102/BraTS-GLI-02247-102-t2f.nii.gz",
+                "training/BraTS-GLI-02247-102/BraTS-GLI-02247-102-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02247-102/BraTS-GLI-02247-102-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02221-100/BraTS-GLI-02221-100-t1c.nii.gz",
+                "training/BraTS-GLI-02221-100/BraTS-GLI-02221-100-t1n.nii.gz",
+                "training/BraTS-GLI-02221-100/BraTS-GLI-02221-100-t2f.nii.gz",
+                "training/BraTS-GLI-02221-100/BraTS-GLI-02221-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02221-100/BraTS-GLI-02221-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02169-100/BraTS-GLI-02169-100-t1c.nii.gz",
+                "training/BraTS-GLI-02169-100/BraTS-GLI-02169-100-t1n.nii.gz",
+                "training/BraTS-GLI-02169-100/BraTS-GLI-02169-100-t2f.nii.gz",
+                "training/BraTS-GLI-02169-100/BraTS-GLI-02169-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02169-100/BraTS-GLI-02169-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02390-102/BraTS-GLI-02390-102-t1c.nii.gz",
+                "training/BraTS-GLI-02390-102/BraTS-GLI-02390-102-t1n.nii.gz",
+                "training/BraTS-GLI-02390-102/BraTS-GLI-02390-102-t2f.nii.gz",
+                "training/BraTS-GLI-02390-102/BraTS-GLI-02390-102-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02390-102/BraTS-GLI-02390-102-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02103-105/BraTS-GLI-02103-105-t1c.nii.gz",
+                "training/BraTS-GLI-02103-105/BraTS-GLI-02103-105-t1n.nii.gz",
+                "training/BraTS-GLI-02103-105/BraTS-GLI-02103-105-t2f.nii.gz",
+                "training/BraTS-GLI-02103-105/BraTS-GLI-02103-105-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02103-105/BraTS-GLI-02103-105-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02897-100/BraTS-GLI-02897-100-t1c.nii.gz",
+                "training/BraTS-GLI-02897-100/BraTS-GLI-02897-100-t1n.nii.gz",
+                "training/BraTS-GLI-02897-100/BraTS-GLI-02897-100-t2f.nii.gz",
+                "training/BraTS-GLI-02897-100/BraTS-GLI-02897-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02897-100/BraTS-GLI-02897-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-03007-101/BraTS-GLI-03007-101-t1c.nii.gz",
+                "training/BraTS-GLI-03007-101/BraTS-GLI-03007-101-t1n.nii.gz",
+                "training/BraTS-GLI-03007-101/BraTS-GLI-03007-101-t2f.nii.gz",
+                "training/BraTS-GLI-03007-101/BraTS-GLI-03007-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-03007-101/BraTS-GLI-03007-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02887-100/BraTS-GLI-02887-100-t1c.nii.gz",
+                "training/BraTS-GLI-02887-100/BraTS-GLI-02887-100-t1n.nii.gz",
+                "training/BraTS-GLI-02887-100/BraTS-GLI-02887-100-t2f.nii.gz",
+                "training/BraTS-GLI-02887-100/BraTS-GLI-02887-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02887-100/BraTS-GLI-02887-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02836-100/BraTS-GLI-02836-100-t1c.nii.gz",
+                "training/BraTS-GLI-02836-100/BraTS-GLI-02836-100-t1n.nii.gz",
+                "training/BraTS-GLI-02836-100/BraTS-GLI-02836-100-t2f.nii.gz",
+                "training/BraTS-GLI-02836-100/BraTS-GLI-02836-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02836-100/BraTS-GLI-02836-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02561-101/BraTS-GLI-02561-101-t1c.nii.gz",
+                "training/BraTS-GLI-02561-101/BraTS-GLI-02561-101-t1n.nii.gz",
+                "training/BraTS-GLI-02561-101/BraTS-GLI-02561-101-t2f.nii.gz",
+                "training/BraTS-GLI-02561-101/BraTS-GLI-02561-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02561-101/BraTS-GLI-02561-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02806-101/BraTS-GLI-02806-101-t1c.nii.gz",
+                "training/BraTS-GLI-02806-101/BraTS-GLI-02806-101-t1n.nii.gz",
+                "training/BraTS-GLI-02806-101/BraTS-GLI-02806-101-t2f.nii.gz",
+                "training/BraTS-GLI-02806-101/BraTS-GLI-02806-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02806-101/BraTS-GLI-02806-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02145-100/BraTS-GLI-02145-100-t1c.nii.gz",
+                "training/BraTS-GLI-02145-100/BraTS-GLI-02145-100-t1n.nii.gz",
+                "training/BraTS-GLI-02145-100/BraTS-GLI-02145-100-t2f.nii.gz",
+                "training/BraTS-GLI-02145-100/BraTS-GLI-02145-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02145-100/BraTS-GLI-02145-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-03052-101/BraTS-GLI-03052-101-t1c.nii.gz",
+                "training/BraTS-GLI-03052-101/BraTS-GLI-03052-101-t1n.nii.gz",
+                "training/BraTS-GLI-03052-101/BraTS-GLI-03052-101-t2f.nii.gz",
+                "training/BraTS-GLI-03052-101/BraTS-GLI-03052-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-03052-101/BraTS-GLI-03052-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02326-100/BraTS-GLI-02326-100-t1c.nii.gz",
+                "training/BraTS-GLI-02326-100/BraTS-GLI-02326-100-t1n.nii.gz",
+                "training/BraTS-GLI-02326-100/BraTS-GLI-02326-100-t2f.nii.gz",
+                "training/BraTS-GLI-02326-100/BraTS-GLI-02326-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02326-100/BraTS-GLI-02326-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02767-100/BraTS-GLI-02767-100-t1c.nii.gz",
+                "training/BraTS-GLI-02767-100/BraTS-GLI-02767-100-t1n.nii.gz",
+                "training/BraTS-GLI-02767-100/BraTS-GLI-02767-100-t2f.nii.gz",
+                "training/BraTS-GLI-02767-100/BraTS-GLI-02767-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02767-100/BraTS-GLI-02767-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02129-103/BraTS-GLI-02129-103-t1c.nii.gz",
+                "training/BraTS-GLI-02129-103/BraTS-GLI-02129-103-t1n.nii.gz",
+                "training/BraTS-GLI-02129-103/BraTS-GLI-02129-103-t2f.nii.gz",
+                "training/BraTS-GLI-02129-103/BraTS-GLI-02129-103-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02129-103/BraTS-GLI-02129-103-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-00463-101/BraTS-GLI-00463-101-t1c.nii.gz",
+                "training/BraTS-GLI-00463-101/BraTS-GLI-00463-101-t1n.nii.gz",
+                "training/BraTS-GLI-00463-101/BraTS-GLI-00463-101-t2f.nii.gz",
+                "training/BraTS-GLI-00463-101/BraTS-GLI-00463-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-00463-101/BraTS-GLI-00463-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02838-100/BraTS-GLI-02838-100-t1c.nii.gz",
+                "training/BraTS-GLI-02838-100/BraTS-GLI-02838-100-t1n.nii.gz",
+                "training/BraTS-GLI-02838-100/BraTS-GLI-02838-100-t2f.nii.gz",
+                "training/BraTS-GLI-02838-100/BraTS-GLI-02838-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02838-100/BraTS-GLI-02838-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02143-103/BraTS-GLI-02143-103-t1c.nii.gz",
+                "training/BraTS-GLI-02143-103/BraTS-GLI-02143-103-t1n.nii.gz",
+                "training/BraTS-GLI-02143-103/BraTS-GLI-02143-103-t2f.nii.gz",
+                "training/BraTS-GLI-02143-103/BraTS-GLI-02143-103-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02143-103/BraTS-GLI-02143-103-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02932-101/BraTS-GLI-02932-101-t1c.nii.gz",
+                "training/BraTS-GLI-02932-101/BraTS-GLI-02932-101-t1n.nii.gz",
+                "training/BraTS-GLI-02932-101/BraTS-GLI-02932-101-t2f.nii.gz",
+                "training/BraTS-GLI-02932-101/BraTS-GLI-02932-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02932-101/BraTS-GLI-02932-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02111-104/BraTS-GLI-02111-104-t1c.nii.gz",
+                "training/BraTS-GLI-02111-104/BraTS-GLI-02111-104-t1n.nii.gz",
+                "training/BraTS-GLI-02111-104/BraTS-GLI-02111-104-t2f.nii.gz",
+                "training/BraTS-GLI-02111-104/BraTS-GLI-02111-104-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02111-104/BraTS-GLI-02111-104-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02188-100/BraTS-GLI-02188-100-t1c.nii.gz",
+                "training/BraTS-GLI-02188-100/BraTS-GLI-02188-100-t1n.nii.gz",
+                "training/BraTS-GLI-02188-100/BraTS-GLI-02188-100-t2f.nii.gz",
+                "training/BraTS-GLI-02188-100/BraTS-GLI-02188-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02188-100/BraTS-GLI-02188-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02871-100/BraTS-GLI-02871-100-t1c.nii.gz",
+                "training/BraTS-GLI-02871-100/BraTS-GLI-02871-100-t1n.nii.gz",
+                "training/BraTS-GLI-02871-100/BraTS-GLI-02871-100-t2f.nii.gz",
+                "training/BraTS-GLI-02871-100/BraTS-GLI-02871-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02871-100/BraTS-GLI-02871-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02558-101/BraTS-GLI-02558-101-t1c.nii.gz",
+                "training/BraTS-GLI-02558-101/BraTS-GLI-02558-101-t1n.nii.gz",
+                "training/BraTS-GLI-02558-101/BraTS-GLI-02558-101-t2f.nii.gz",
+                "training/BraTS-GLI-02558-101/BraTS-GLI-02558-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02558-101/BraTS-GLI-02558-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02903-101/BraTS-GLI-02903-101-t1c.nii.gz",
+                "training/BraTS-GLI-02903-101/BraTS-GLI-02903-101-t1n.nii.gz",
+                "training/BraTS-GLI-02903-101/BraTS-GLI-02903-101-t2f.nii.gz",
+                "training/BraTS-GLI-02903-101/BraTS-GLI-02903-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02903-101/BraTS-GLI-02903-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02892-101/BraTS-GLI-02892-101-t1c.nii.gz",
+                "training/BraTS-GLI-02892-101/BraTS-GLI-02892-101-t1n.nii.gz",
+                "training/BraTS-GLI-02892-101/BraTS-GLI-02892-101-t2f.nii.gz",
+                "training/BraTS-GLI-02892-101/BraTS-GLI-02892-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02892-101/BraTS-GLI-02892-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02943-101/BraTS-GLI-02943-101-t1c.nii.gz",
+                "training/BraTS-GLI-02943-101/BraTS-GLI-02943-101-t1n.nii.gz",
+                "training/BraTS-GLI-02943-101/BraTS-GLI-02943-101-t2f.nii.gz",
+                "training/BraTS-GLI-02943-101/BraTS-GLI-02943-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02943-101/BraTS-GLI-02943-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02830-100/BraTS-GLI-02830-100-t1c.nii.gz",
+                "training/BraTS-GLI-02830-100/BraTS-GLI-02830-100-t1n.nii.gz",
+                "training/BraTS-GLI-02830-100/BraTS-GLI-02830-100-t2f.nii.gz",
+                "training/BraTS-GLI-02830-100/BraTS-GLI-02830-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02830-100/BraTS-GLI-02830-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02198-103/BraTS-GLI-02198-103-t1c.nii.gz",
+                "training/BraTS-GLI-02198-103/BraTS-GLI-02198-103-t1n.nii.gz",
+                "training/BraTS-GLI-02198-103/BraTS-GLI-02198-103-t2f.nii.gz",
+                "training/BraTS-GLI-02198-103/BraTS-GLI-02198-103-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02198-103/BraTS-GLI-02198-103-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-03011-100/BraTS-GLI-03011-100-t1c.nii.gz",
+                "training/BraTS-GLI-03011-100/BraTS-GLI-03011-100-t1n.nii.gz",
+                "training/BraTS-GLI-03011-100/BraTS-GLI-03011-100-t2f.nii.gz",
+                "training/BraTS-GLI-03011-100/BraTS-GLI-03011-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-03011-100/BraTS-GLI-03011-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02069-101/BraTS-GLI-02069-101-t1c.nii.gz",
+                "training/BraTS-GLI-02069-101/BraTS-GLI-02069-101-t1n.nii.gz",
+                "training/BraTS-GLI-02069-101/BraTS-GLI-02069-101-t2f.nii.gz",
+                "training/BraTS-GLI-02069-101/BraTS-GLI-02069-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02069-101/BraTS-GLI-02069-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02844-100/BraTS-GLI-02844-100-t1c.nii.gz",
+                "training/BraTS-GLI-02844-100/BraTS-GLI-02844-100-t1n.nii.gz",
+                "training/BraTS-GLI-02844-100/BraTS-GLI-02844-100-t2f.nii.gz",
+                "training/BraTS-GLI-02844-100/BraTS-GLI-02844-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02844-100/BraTS-GLI-02844-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02207-100/BraTS-GLI-02207-100-t1c.nii.gz",
+                "training/BraTS-GLI-02207-100/BraTS-GLI-02207-100-t1n.nii.gz",
+                "training/BraTS-GLI-02207-100/BraTS-GLI-02207-100-t2f.nii.gz",
+                "training/BraTS-GLI-02207-100/BraTS-GLI-02207-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02207-100/BraTS-GLI-02207-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02954-101/BraTS-GLI-02954-101-t1c.nii.gz",
+                "training/BraTS-GLI-02954-101/BraTS-GLI-02954-101-t1n.nii.gz",
+                "training/BraTS-GLI-02954-101/BraTS-GLI-02954-101-t2f.nii.gz",
+                "training/BraTS-GLI-02954-101/BraTS-GLI-02954-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02954-101/BraTS-GLI-02954-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02842-100/BraTS-GLI-02842-100-t1c.nii.gz",
+                "training/BraTS-GLI-02842-100/BraTS-GLI-02842-100-t1n.nii.gz",
+                "training/BraTS-GLI-02842-100/BraTS-GLI-02842-100-t2f.nii.gz",
+                "training/BraTS-GLI-02842-100/BraTS-GLI-02842-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02842-100/BraTS-GLI-02842-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02387-100/BraTS-GLI-02387-100-t1c.nii.gz",
+                "training/BraTS-GLI-02387-100/BraTS-GLI-02387-100-t1n.nii.gz",
+                "training/BraTS-GLI-02387-100/BraTS-GLI-02387-100-t2f.nii.gz",
+                "training/BraTS-GLI-02387-100/BraTS-GLI-02387-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02387-100/BraTS-GLI-02387-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02196-103/BraTS-GLI-02196-103-t1c.nii.gz",
+                "training/BraTS-GLI-02196-103/BraTS-GLI-02196-103-t1n.nii.gz",
+                "training/BraTS-GLI-02196-103/BraTS-GLI-02196-103-t2f.nii.gz",
+                "training/BraTS-GLI-02196-103/BraTS-GLI-02196-103-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02196-103/BraTS-GLI-02196-103-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02798-101/BraTS-GLI-02798-101-t1c.nii.gz",
+                "training/BraTS-GLI-02798-101/BraTS-GLI-02798-101-t1n.nii.gz",
+                "training/BraTS-GLI-02798-101/BraTS-GLI-02798-101-t2f.nii.gz",
+                "training/BraTS-GLI-02798-101/BraTS-GLI-02798-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02798-101/BraTS-GLI-02798-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02236-101/BraTS-GLI-02236-101-t1c.nii.gz",
+                "training/BraTS-GLI-02236-101/BraTS-GLI-02236-101-t1n.nii.gz",
+                "training/BraTS-GLI-02236-101/BraTS-GLI-02236-101-t2f.nii.gz",
+                "training/BraTS-GLI-02236-101/BraTS-GLI-02236-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02236-101/BraTS-GLI-02236-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02520-102/BraTS-GLI-02520-102-t1c.nii.gz",
+                "training/BraTS-GLI-02520-102/BraTS-GLI-02520-102-t1n.nii.gz",
+                "training/BraTS-GLI-02520-102/BraTS-GLI-02520-102-t2f.nii.gz",
+                "training/BraTS-GLI-02520-102/BraTS-GLI-02520-102-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02520-102/BraTS-GLI-02520-102-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02725-100/BraTS-GLI-02725-100-t1c.nii.gz",
+                "training/BraTS-GLI-02725-100/BraTS-GLI-02725-100-t1n.nii.gz",
+                "training/BraTS-GLI-02725-100/BraTS-GLI-02725-100-t2f.nii.gz",
+                "training/BraTS-GLI-02725-100/BraTS-GLI-02725-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02725-100/BraTS-GLI-02725-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02096-103/BraTS-GLI-02096-103-t1c.nii.gz",
+                "training/BraTS-GLI-02096-103/BraTS-GLI-02096-103-t1n.nii.gz",
+                "training/BraTS-GLI-02096-103/BraTS-GLI-02096-103-t2f.nii.gz",
+                "training/BraTS-GLI-02096-103/BraTS-GLI-02096-103-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02096-103/BraTS-GLI-02096-103-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02848-101/BraTS-GLI-02848-101-t1c.nii.gz",
+                "training/BraTS-GLI-02848-101/BraTS-GLI-02848-101-t1n.nii.gz",
+                "training/BraTS-GLI-02848-101/BraTS-GLI-02848-101-t2f.nii.gz",
+                "training/BraTS-GLI-02848-101/BraTS-GLI-02848-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02848-101/BraTS-GLI-02848-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02949-101/BraTS-GLI-02949-101-t1c.nii.gz",
+                "training/BraTS-GLI-02949-101/BraTS-GLI-02949-101-t1n.nii.gz",
+                "training/BraTS-GLI-02949-101/BraTS-GLI-02949-101-t2f.nii.gz",
+                "training/BraTS-GLI-02949-101/BraTS-GLI-02949-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02949-101/BraTS-GLI-02949-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02515-101/BraTS-GLI-02515-101-t1c.nii.gz",
+                "training/BraTS-GLI-02515-101/BraTS-GLI-02515-101-t1n.nii.gz",
+                "training/BraTS-GLI-02515-101/BraTS-GLI-02515-101-t2f.nii.gz",
+                "training/BraTS-GLI-02515-101/BraTS-GLI-02515-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02515-101/BraTS-GLI-02515-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02909-100/BraTS-GLI-02909-100-t1c.nii.gz",
+                "training/BraTS-GLI-02909-100/BraTS-GLI-02909-100-t1n.nii.gz",
+                "training/BraTS-GLI-02909-100/BraTS-GLI-02909-100-t2f.nii.gz",
+                "training/BraTS-GLI-02909-100/BraTS-GLI-02909-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02909-100/BraTS-GLI-02909-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02851-100/BraTS-GLI-02851-100-t1c.nii.gz",
+                "training/BraTS-GLI-02851-100/BraTS-GLI-02851-100-t1n.nii.gz",
+                "training/BraTS-GLI-02851-100/BraTS-GLI-02851-100-t2f.nii.gz",
+                "training/BraTS-GLI-02851-100/BraTS-GLI-02851-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02851-100/BraTS-GLI-02851-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02063-103/BraTS-GLI-02063-103-t1c.nii.gz",
+                "training/BraTS-GLI-02063-103/BraTS-GLI-02063-103-t1n.nii.gz",
+                "training/BraTS-GLI-02063-103/BraTS-GLI-02063-103-t2f.nii.gz",
+                "training/BraTS-GLI-02063-103/BraTS-GLI-02063-103-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02063-103/BraTS-GLI-02063-103-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02778-100/BraTS-GLI-02778-100-t1c.nii.gz",
+                "training/BraTS-GLI-02778-100/BraTS-GLI-02778-100-t1n.nii.gz",
+                "training/BraTS-GLI-02778-100/BraTS-GLI-02778-100-t2f.nii.gz",
+                "training/BraTS-GLI-02778-100/BraTS-GLI-02778-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02778-100/BraTS-GLI-02778-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02547-100/BraTS-GLI-02547-100-t1c.nii.gz",
+                "training/BraTS-GLI-02547-100/BraTS-GLI-02547-100-t1n.nii.gz",
+                "training/BraTS-GLI-02547-100/BraTS-GLI-02547-100-t2f.nii.gz",
+                "training/BraTS-GLI-02547-100/BraTS-GLI-02547-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02547-100/BraTS-GLI-02547-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-03029-100/BraTS-GLI-03029-100-t1c.nii.gz",
+                "training/BraTS-GLI-03029-100/BraTS-GLI-03029-100-t1n.nii.gz",
+                "training/BraTS-GLI-03029-100/BraTS-GLI-03029-100-t2f.nii.gz",
+                "training/BraTS-GLI-03029-100/BraTS-GLI-03029-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-03029-100/BraTS-GLI-03029-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-03056-101/BraTS-GLI-03056-101-t1c.nii.gz",
+                "training/BraTS-GLI-03056-101/BraTS-GLI-03056-101-t1n.nii.gz",
+                "training/BraTS-GLI-03056-101/BraTS-GLI-03056-101-t2f.nii.gz",
+                "training/BraTS-GLI-03056-101/BraTS-GLI-03056-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-03056-101/BraTS-GLI-03056-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02368-100/BraTS-GLI-02368-100-t1c.nii.gz",
+                "training/BraTS-GLI-02368-100/BraTS-GLI-02368-100-t1n.nii.gz",
+                "training/BraTS-GLI-02368-100/BraTS-GLI-02368-100-t2f.nii.gz",
+                "training/BraTS-GLI-02368-100/BraTS-GLI-02368-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02368-100/BraTS-GLI-02368-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02138-100/BraTS-GLI-02138-100-t1c.nii.gz",
+                "training/BraTS-GLI-02138-100/BraTS-GLI-02138-100-t1n.nii.gz",
+                "training/BraTS-GLI-02138-100/BraTS-GLI-02138-100-t2f.nii.gz",
+                "training/BraTS-GLI-02138-100/BraTS-GLI-02138-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02138-100/BraTS-GLI-02138-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02816-101/BraTS-GLI-02816-101-t1c.nii.gz",
+                "training/BraTS-GLI-02816-101/BraTS-GLI-02816-101-t1n.nii.gz",
+                "training/BraTS-GLI-02816-101/BraTS-GLI-02816-101-t2f.nii.gz",
+                "training/BraTS-GLI-02816-101/BraTS-GLI-02816-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02816-101/BraTS-GLI-02816-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-03054-102/BraTS-GLI-03054-102-t1c.nii.gz",
+                "training/BraTS-GLI-03054-102/BraTS-GLI-03054-102-t1n.nii.gz",
+                "training/BraTS-GLI-03054-102/BraTS-GLI-03054-102-t2f.nii.gz",
+                "training/BraTS-GLI-03054-102/BraTS-GLI-03054-102-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-03054-102/BraTS-GLI-03054-102-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02609-104/BraTS-GLI-02609-104-t1c.nii.gz",
+                "training/BraTS-GLI-02609-104/BraTS-GLI-02609-104-t1n.nii.gz",
+                "training/BraTS-GLI-02609-104/BraTS-GLI-02609-104-t2f.nii.gz",
+                "training/BraTS-GLI-02609-104/BraTS-GLI-02609-104-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02609-104/BraTS-GLI-02609-104-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02084-101/BraTS-GLI-02084-101-t1c.nii.gz",
+                "training/BraTS-GLI-02084-101/BraTS-GLI-02084-101-t1n.nii.gz",
+                "training/BraTS-GLI-02084-101/BraTS-GLI-02084-101-t2f.nii.gz",
+                "training/BraTS-GLI-02084-101/BraTS-GLI-02084-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02084-101/BraTS-GLI-02084-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02093-109/BraTS-GLI-02093-109-t1c.nii.gz",
+                "training/BraTS-GLI-02093-109/BraTS-GLI-02093-109-t1n.nii.gz",
+                "training/BraTS-GLI-02093-109/BraTS-GLI-02093-109-t2f.nii.gz",
+                "training/BraTS-GLI-02093-109/BraTS-GLI-02093-109-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02093-109/BraTS-GLI-02093-109-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02178-102/BraTS-GLI-02178-102-t1c.nii.gz",
+                "training/BraTS-GLI-02178-102/BraTS-GLI-02178-102-t1n.nii.gz",
+                "training/BraTS-GLI-02178-102/BraTS-GLI-02178-102-t2f.nii.gz",
+                "training/BraTS-GLI-02178-102/BraTS-GLI-02178-102-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02178-102/BraTS-GLI-02178-102-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02205-101/BraTS-GLI-02205-101-t1c.nii.gz",
+                "training/BraTS-GLI-02205-101/BraTS-GLI-02205-101-t1n.nii.gz",
+                "training/BraTS-GLI-02205-101/BraTS-GLI-02205-101-t2f.nii.gz",
+                "training/BraTS-GLI-02205-101/BraTS-GLI-02205-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02205-101/BraTS-GLI-02205-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02063-104/BraTS-GLI-02063-104-t1c.nii.gz",
+                "training/BraTS-GLI-02063-104/BraTS-GLI-02063-104-t1n.nii.gz",
+                "training/BraTS-GLI-02063-104/BraTS-GLI-02063-104-t2f.nii.gz",
+                "training/BraTS-GLI-02063-104/BraTS-GLI-02063-104-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02063-104/BraTS-GLI-02063-104-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02085-104/BraTS-GLI-02085-104-t1c.nii.gz",
+                "training/BraTS-GLI-02085-104/BraTS-GLI-02085-104-t1n.nii.gz",
+                "training/BraTS-GLI-02085-104/BraTS-GLI-02085-104-t2f.nii.gz",
+                "training/BraTS-GLI-02085-104/BraTS-GLI-02085-104-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02085-104/BraTS-GLI-02085-104-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02225-100/BraTS-GLI-02225-100-t1c.nii.gz",
+                "training/BraTS-GLI-02225-100/BraTS-GLI-02225-100-t1n.nii.gz",
+                "training/BraTS-GLI-02225-100/BraTS-GLI-02225-100-t2f.nii.gz",
+                "training/BraTS-GLI-02225-100/BraTS-GLI-02225-100-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02225-100/BraTS-GLI-02225-100-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02188-101/BraTS-GLI-02188-101-t1c.nii.gz",
+                "training/BraTS-GLI-02188-101/BraTS-GLI-02188-101-t1n.nii.gz",
+                "training/BraTS-GLI-02188-101/BraTS-GLI-02188-101-t2f.nii.gz",
+                "training/BraTS-GLI-02188-101/BraTS-GLI-02188-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02188-101/BraTS-GLI-02188-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-03061-102/BraTS-GLI-03061-102-t1c.nii.gz",
+                "training/BraTS-GLI-03061-102/BraTS-GLI-03061-102-t1n.nii.gz",
+                "training/BraTS-GLI-03061-102/BraTS-GLI-03061-102-t2f.nii.gz",
+                "training/BraTS-GLI-03061-102/BraTS-GLI-03061-102-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-03061-102/BraTS-GLI-03061-102-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02103-101/BraTS-GLI-02103-101-t1c.nii.gz",
+                "training/BraTS-GLI-02103-101/BraTS-GLI-02103-101-t1n.nii.gz",
+                "training/BraTS-GLI-02103-101/BraTS-GLI-02103-101-t2f.nii.gz",
+                "training/BraTS-GLI-02103-101/BraTS-GLI-02103-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02103-101/BraTS-GLI-02103-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02169-101/BraTS-GLI-02169-101-t1c.nii.gz",
+                "training/BraTS-GLI-02169-101/BraTS-GLI-02169-101-t1n.nii.gz",
+                "training/BraTS-GLI-02169-101/BraTS-GLI-02169-101-t2f.nii.gz",
+                "training/BraTS-GLI-02169-101/BraTS-GLI-02169-101-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02169-101/BraTS-GLI-02169-101-seg.nii.gz"
+        },
+        {
+            "image": [
+                "training/BraTS-GLI-02111-105/BraTS-GLI-02111-105-t1c.nii.gz",
+                "training/BraTS-GLI-02111-105/BraTS-GLI-02111-105-t1n.nii.gz",
+                "training/BraTS-GLI-02111-105/BraTS-GLI-02111-105-t2f.nii.gz",
+                "training/BraTS-GLI-02111-105/BraTS-GLI-02111-105-t2w.nii.gz"
+            ],
+            "label": "training/BraTS-GLI-02111-105/BraTS-GLI-02111-105-seg.nii.gz"
+        }
+    ]
+}
