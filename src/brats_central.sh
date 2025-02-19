@@ -4,7 +4,7 @@
 #SBATCH --cpus-per-task=16
 #SBATCH --ntasks-per-node=1
 #SBATCH --mem=32000M
-#SBATCH --time=15-00:00:00
+#SBATCH --time=5-00:00:00
 #SBATCH --output=brats_central_%J.log   
 
 # Load the required modules
