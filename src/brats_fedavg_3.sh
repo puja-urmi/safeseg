@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --nodes=1
-#SBATCH --gpus-per-node=v100l:2
+#SBATCH --gpus-per-node=v100l:1
 #SBATCH --cpus-per-task=16
 #SBATCH --ntasks-per-node=1
 #SBATCH --mem=32000M
@@ -18,4 +18,4 @@ nvidia-smi
 # Execute the Python script
 pip install -r requirements.txt
 mkdir /home/psaha03/scratch/workspace_brats_fedavg_3
-nvflare simulator './configs' -w '/home/psaha03/scratch/workspace_brats_fedavg_3' -n 3 -t 3 -gpu 0,1,0
+nvflare simulator './configs' -w '/home/psaha03/scratch/workspace_brats_fedavg_3' -n 3 -t 3 -gpu 0,0,0
