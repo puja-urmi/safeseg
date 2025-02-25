@@ -1,10 +1,10 @@
 #!/bin/bash
 #SBATCH --nodes=1
-#SBATCH --gpus-per-node=p100:1
+#SBATCH --gpus-per-node=v100l:1
 #SBATCH --cpus-per-task=16
 #SBATCH --ntasks-per-node=1
 #SBATCH --mem=32000M
-#SBATCH --time=2-02:00:00
+#SBATCH --time=1-00:00:00
 #SBATCH --output=kits_central_%J.log   
 
 # Load the required modules

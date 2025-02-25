@@ -111,7 +111,7 @@ def main():
     dataset_base_dir = args.dataset_base_dir
     datalist_json_path = args.datalist_json_path
     model_path = args.model_path
-    infer_roi_size = (208, 128, 168)
+    infer_roi_size = (144, 144, 144)
 
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
@@ -128,7 +128,7 @@ def main():
     model = SegResNet(
         blocks_down=[1, 2, 2, 4],
         blocks_up=[1, 1, 1],
-        init_filters=16,
+        init_filters=32,
         in_channels=1,
         out_channels=3,
         dropout_prob=0.2,
@@ -146,11 +146,6 @@ def main():
             LoadImaged(keys=["image", "label"]),
             EnsureChannelFirstd(keys="image"),
             ConvertToMultiChannelBasedOnKitsClassesd(keys="label"),
-            Spacingd(
-                keys=["image", "label"],
-                pixdim=(0.5, 0.5, 0.5),
-                mode=("bilinear", "nearest"),
-            ),
             DivisiblePadd(keys=["image", "label"], k=32),
             Orientationd(keys=["image", "label"], axcodes="RAS"),
             NormalizeIntensityd(keys="image", nonzero=True, channel_wise=True),
@@ -171,13 +166,13 @@ def main():
     model.eval()
     with torch.no_grad():
         metric = 0
+        metric_ktc = 0
         metric_tc = 0
-        metric_wt = 0
-        metric_et = 0
+        metric_t = 0
         ct = 0
+        ct_ktc = 0
         ct_tc = 0
-        ct_wt = 0
-        ct_et = 0
+        ct_t = 0
         for i, batch_data in enumerate(test_loader):
             images = batch_data["image"].to(device)
             labels = batch_data["label"].to(device)
@@ -189,27 +184,27 @@ def main():
             if not np.isnan(metric_score[0][0].item()):
                 metric += metric_score[0][0].item()
                 ct += 1
-                metric_tc += metric_score[0][0].item()
-                ct_tc += 1
+                metric_ktc += metric_score[0][0].item()
+                ct_ktc += 1
             if not np.isnan(metric_score[0][1].item()):
                 metric += metric_score[0][1].item()
                 ct += 1
-                metric_wt += metric_score[0][1].item()
-                ct_wt += 1
+                metric_tc += metric_score[0][1].item()
+                ct_tc += 1
             if not np.isnan(metric_score[0][2].item()):
                 metric += metric_score[0][2].item()
                 ct += 1
-                metric_et += metric_score[0][2].item()
-                ct_et += 1
+                metric_t += metric_score[0][2].item()
+                ct_t += 1
         # compute mean dice over whole validation set
+        metric_ktc /= ct_ktc
         metric_tc /= ct_tc
-        metric_wt /= ct_wt
-        metric_et /= ct_et
+        metric_tc /= ct_tc
         metric /= ct
         print(f"Test Dice: {metric:.4f}, Valid count: {ct}")
-        print(f"Test Dice KTC: {metric_tc:.4f}, Valid count: {ct_tc}")
-        print(f"Test Dice TC: {metric_wt:.4f}, Valid count: {ct_wt}")
-        print(f"Test Dice T: {metric_et:.4f}, Valid count: {ct_et}")
+        print(f"Test Dice KTC: {metric_ktc:.4f}, Valid count: {ct_ktc}")
+        print(f"Test Dice TC: {metric_tc:.4f}, Valid count: {ct_tc}")
+        print(f"Test Dice T: {metric_t:.4f}, Valid count: {ct_t}")
 
 
 if __name__ == "__main__":

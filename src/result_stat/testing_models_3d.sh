@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --nodes=1
-#SBATCH --gpus-per-node=p100:1
+#SBATCH --gpus-per-node=v100l:1
 #SBATCH --cpus-per-task=16
 #SBATCH --ntasks-per-node=1
 #SBATCH --mem=32000M
@@ -13,7 +13,7 @@ python3 -m venv /home/psaha03/scratch/safeseg/env
 source /home/psaha03/scratch/safeseg/env/bin/activate
 
 
-workspace_path="/home/psaha03/scratch/outputs/kits/central/0-235"
+workspace_path="/home/psaha03/scratch/workspace_kits_central"
 dataset_path="/home/psaha03/scratch/dataset_kits23/dataset"
 datalist_path="/home/psaha03/scratch/dataset_kits23/datalist"
 
