@@ -2,7 +2,7 @@ import os
 import json
 
 # Define dataset path
-dataset_path = "/home/psaha03/scratch/validation_data_k23"
+dataset_path = "/home/psaha03/scratch/dataset_kits23/dataset/validation"
 
 # Get list of all cases
 all_cases = sorted(os.listdir(dataset_path))  

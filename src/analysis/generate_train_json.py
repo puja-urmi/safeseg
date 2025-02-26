@@ -10,14 +10,14 @@ all_cases = sorted(os.listdir(dataset_path))  # Ensure sorted for reproducibilit
 random.shuffle(all_cases)  # Shuffle to randomize split
 
 # Split dataset into 4 non-overlapping parts
-num_sites = 4
+num_sites = 3
 cases_per_site = len(all_cases) // num_sites
 sites = [all_cases[i * cases_per_site: (i + 1) * cases_per_site] for i in range(num_sites)]
 
 # Generate JSON files for each site
 for site_idx, site_cases in enumerate(sites, start=1):
     random.shuffle(site_cases)  # Shuffle cases within the site
-    split_idx = int(len(site_cases) * 0.7)  # 70% for training
+    split_idx = int(len(site_cases) * 0.75)  # 75% for training
     
     training_cases = site_cases[:split_idx]
     validation_cases = site_cases[split_idx:]

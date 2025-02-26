@@ -34,8 +34,7 @@ from monai.transforms import (
     EnsureChannelFirstd,
     LoadImaged,
     NormalizeIntensityd,
-    Orientationd,
-    Spacingd,
+    Orientationd
 )
 
 
@@ -199,7 +198,7 @@ def main():
         # compute mean dice over whole validation set
         metric_ktc /= ct_ktc
         metric_tc /= ct_tc
-        metric_tc /= ct_tc
+        metric_t /= ct_t
         metric /= ct
         print(f"Test Dice: {metric:.4f}, Valid count: {ct}")
         print(f"Test Dice KTC: {metric_ktc:.4f}, Valid count: {ct_ktc}")
