@@ -24,7 +24,6 @@ from monai.transforms import (
     Activations,
     AsDiscrete,
     Compose,
-    ConvertToMultiChannelBasedOnBratsClassesd,
     DivisiblePadd,
     EnsureChannelFirstd,
     LoadImaged,
@@ -33,6 +32,64 @@ from monai.transforms import (
     Spacingd,
 )
 
+
+class ConvertToMultiChannelBasedOnKits23Classes(Transform):
+    """
+    Convert labels to multi channels based on KiTS23 segmentation classes:
+    - Label 1: Kidney
+    - Label 2: Tumor
+    - Label 3: Cyst
+
+    Output channels:
+    - C1: Kidney + Tumor + Cyst -> (label == 1) OR (label == 2) OR (label == 3)
+    - C2: Tumor + Cyst -> (label == 2) OR (label == 3)
+    - C3: Tumor -> (label == 2)
+    """
+
+    backend = [TransformBackends.TORCH, TransformBackends.NUMPY]
+
+    def __call__(self, img: NdarrayOrTensor) -> NdarrayOrTensor:
+        """
+        Convert input segmentation labels into multi-channel format based on kits23 classes.
+
+        Args:
+            img (NdarrayOrTensor): Input segmentation map. Expected shape:
+                - 3D: (H, W, D)
+                - 4D with channel: (C, H, W, D), where C=1 (will be squeezed).
+
+        Returns:
+            NdarrayOrTensor: Multi-channel segmentation map with shape (3, H, W, D).
+        """
+        # If the input has a channel dimension (C=1), remove it
+        if img.ndim == 4 and img.shape[0] == 1:
+            img = img.squeeze(0)
+
+        # Define the channels based on label values (BraTS24 logic)
+        result = [
+            (img == 1) | (img == 2) | (img == 3),  # C1: Kidney + Tumor + Cyst
+            (img == 2) | (img == 3),               # C2: Tumor + Cyst
+            (img == 2)                             # C3: Tumor
+        ]
+
+        return torch.stack(result, dim=0) if isinstance(img, torch.Tensor) else np.stack(result, axis=0)
+
+
+class ConvertToMultiChannelBasedOnKitsClassesd(MapTransform):
+    """
+    Dictionary-based wrapper of :py:class:`monai.transforms.ConvertToMultiChannelBasedOnKits23Classes`.
+    """
+
+    backend = ConvertToMultiChannelBasedOnKits23Classes.backend
+
+    def __init__(self, keys: KeysCollection, allow_missing_keys: bool = False):
+        super().__init__(keys, allow_missing_keys)
+        self.converter = ConvertToMultiChannelBasedOnKits23Classes()
+
+    def __call__(self, data: Mapping[Hashable, NdarrayOrTensor]) -> dict[Hashable, NdarrayOrTensor]:
+        d = dict(data)
+        for key in self.key_iterator(d):
+            d[key] = self.converter(d[key])
+        return d
 
 def main():
     parser = argparse.ArgumentParser(description="Model Testing")
@@ -79,12 +136,7 @@ def main():
         [
             LoadImaged(keys=["image", "label"]),
             EnsureChannelFirstd(keys="image"),
-            ConvertToMultiChannelBasedOnBratsClassesd(keys="label"),
-            Spacingd(
-                keys=["image", "label"],
-                pixdim=(1.0, 1.0, 1.0),
-                mode=("bilinear", "nearest"),
-            ),
+            ConvertToMultiChannelBasedOnKitsClassesd(keys="label"),
             DivisiblePadd(keys=["image", "label"], k=32),
             Orientationd(keys=["image", "label"], axcodes="RAS"),
             NormalizeIntensityd(keys="image", nonzero=True, channel_wise=True),
@@ -105,13 +157,13 @@ def main():
     model.eval()
     with torch.no_grad():
         metric = 0
+        metric_ktc = 0
         metric_tc = 0
-        metric_wt = 0
-        metric_et = 0
+        metric_t = 0
         ct = 0
+        ct_ktc = 0
         ct_tc = 0
-        ct_wt = 0
-        ct_et = 0
+        ct_t = 0
         for i, batch_data in enumerate(test_loader):
             images = batch_data["image"].to(device)
             labels = batch_data["label"].to(device)
@@ -123,27 +175,27 @@ def main():
             if not np.isnan(metric_score[0][0].item()):
                 metric += metric_score[0][0].item()
                 ct += 1
-                metric_tc += metric_score[0][0].item()
-                ct_tc += 1
+                metric_ktc += metric_score[0][0].item()
+                ct_ktc += 1
             if not np.isnan(metric_score[0][1].item()):
                 metric += metric_score[0][1].item()
                 ct += 1
-                metric_wt += metric_score[0][1].item()
-                ct_wt += 1
+                metric_tc += metric_score[0][1].item()
+                ct_tc += 1
             if not np.isnan(metric_score[0][2].item()):
                 metric += metric_score[0][2].item()
                 ct += 1
-                metric_et += metric_score[0][2].item()
-                ct_et += 1
+                metric_t += metric_score[0][2].item()
+                ct_t += 1
         # compute mean dice over whole validation set
+        metric_ktc /= ct_ktc
         metric_tc /= ct_tc
-        metric_wt /= ct_wt
-        metric_et /= ct_et
+        metric_t /= ct_t
         metric /= ct
         print(f"Test Dice: {metric:.4f}, Valid count: {ct}")
-        print(f"Test Dice TC: {metric_tc:.4f}, Valid count: {ct_tc}")
-        print(f"Test Dice WT: {metric_wt:.4f}, Valid count: {ct_wt}")
-        print(f"Test Dice ET: {metric_et:.4f}, Valid count: {ct_et}")
+        print(f"Test Dice TC: {metric_ktc:.4f}, Valid count: {ct_ktc}")
+        print(f"Test Dice KTC: {metric_tc:.4f}, Valid count: {ct_tc}")
+        print(f"Test Dice T: {metric_t:.4f}, Valid count: {ct_t}")
 
 
 if __name__ == "__main__":
