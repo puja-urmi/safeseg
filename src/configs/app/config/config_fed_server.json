@@ -59,7 +59,7 @@
       "args": {
         "min_clients": "{min_clients}",
         "num_rounds": "{num_rounds}",
-        "start_round": 0,
+        "start_round": 1,
         "wait_time_after_min_received": 10,
         "aggregator_id": "aggregator",
         "persistor_id": "persistor",
