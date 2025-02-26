@@ -69,8 +69,8 @@ class ConvertToMultiChannelBasedOnBrats24Classes(Transform):
     - C2: NETC (Necrotic and Non-Enhancing Tumor Core) -> (label == 1)
     - C3: SNFH (Surrounding Non-Enhancing FLAIR Hyperintensity) -> (label == 2)
     - C4: RC (Resection Cavity) -> (label == 4)
-    - C5: Combined ET + NETC -> (label == 3) OR (label == 1)
-    - C6: Combined ET + SNFH + NETC -> (label == 3) OR (label == 2) OR (label == 1)
+    - C5: Tumor Core (Combined ET + NETC) -> (label == 3) OR (label == 1)
+    - C6: Whole Tumor (Combined ET + SNFH + NETC) -> (label == 3) OR (label == 2) OR (label == 1)
     """
 
     backend = [TransformBackends.TORCH, TransformBackends.NUMPY]
@@ -200,7 +200,7 @@ class SupervisedMonaiBratsLearner(SupervisedLearner):
         self.model = SegResNet(
             blocks_down=[1, 2, 2, 4],
             blocks_up=[1, 1, 1],
-            init_filters=16,
+            init_filters=32,
             in_channels=4,
             out_channels=6,
             dropout_prob=0.2,
