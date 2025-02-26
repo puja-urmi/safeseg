@@ -65,12 +65,12 @@ class ConvertToMultiChannelBasedOnBrats24Classes(Transform):
     - Label 4: Resection cavity (RC)
 
     Output channels:
-    - C1: ET (Enhancing Tissue) -> (label == 3)
-    - C2: NETC (Necrotic and Non-Enhancing Tumor Core) -> (label == 1)
-    - C3: SNFH (Surrounding Non-Enhancing FLAIR Hyperintensity) -> (label == 2)
+    - C1: ET (Enhancing Tumor) -> (label == 3)
+    - C2: NETC (Non-Enhancing Tumor Core) -> (label == 1)
+    - C3: SNFH (Surrounding Non-enhancing FLAIR Hyperintensity) -> (label == 2)
     - C4: RC (Resection Cavity) -> (label == 4)
-    - C5: Combined ET + NETC -> (label == 3) OR (label == 1)
-    - C6: Combined ET + SNFH + NETC -> (label == 3) OR (label == 2) OR (label == 1)
+    - C5: Tumor Core (Combined ET + NETC) -> (label == 3) OR (label == 1)
+    - C6: Whole Tumor (Combined ET + SNFH + NETC) -> (label == 3) OR (label == 2) OR (label == 1)
     """
 
     backend = [TransformBackends.TORCH, TransformBackends.NUMPY]
@@ -171,8 +171,8 @@ class SupervisedMonaiBratsLearner(SupervisedLearner):
         cache_rate = self.config_info["cache_dataset"]
         dataset_base_dir = self.config_info["dataset_base_dir"]
         datalist_json_path = self.config_info["datalist_json_path"]
-        self.roi_size = self.config_info.get("roi_size", (168, 208, 168))
-        self.infer_roi_size = self.config_info.get("infer_roi_size", (168, 208, 168))
+        self.roi_size = self.config_info.get("roi_size", (176, 208, 176))
+        self.infer_roi_size = self.config_info.get("infer_roi_size", (176, 208, 176))
 
         # Get datalist json
         datalist_json_path = custom_client_datalist_json_path(datalist_json_path, self.client_id)
@@ -200,7 +200,7 @@ class SupervisedMonaiBratsLearner(SupervisedLearner):
         self.model = SegResNet(
             blocks_down=[1, 2, 2, 4],
             blocks_up=[1, 1, 1],
-            init_filters=16,
+            init_filters=32,
             in_channels=4,
             out_channels=6,
             dropout_prob=0.2,

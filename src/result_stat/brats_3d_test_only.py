@@ -50,12 +50,12 @@ class ConvertToMultiChannelBasedOnBrats24Classes(Transform):
     - Label 4: Resection cavity (RC)
 
     Output channels:
-    - C1: ET (Enhancing Tissue) -> (label == 3)
-    - C2: NETC (Necrotic and Non-Enhancing Tumor Core) -> (label == 1)
-    - C3: SNFH (Surrounding Non-Enhancing FLAIR Hyperintensity) -> (label == 2)
+    - C1: ET (Enhancing Tumor) -> (label == 3)
+    - C2: NETC (Non-Enhancing Tumor Core) -> (label == 1)
+    - C3: SNFH (Surrounding Non-enhancing FLAIR Hyperintensity) -> (label == 2)
     - C4: RC (Resection Cavity) -> (label == 4)
-    - C5: Combined ET + NETC -> (label == 3) OR (label == 1)
-    - C6: Combined ET + SNFH + NETC -> (label == 3) OR (label == 2) OR (label == 1)
+    - C5: Tumor Core (Combined ET + NETC) -> (label == 3) OR (label == 1)
+    - C6: Whole Tumor (Combined ET + SNFH + NETC) -> (label == 3) OR (label == 2) OR (label == 1)
     """
 
     backend = [TransformBackends.TORCH, TransformBackends.NUMPY]
@@ -118,7 +118,7 @@ def main():
     dataset_base_dir = args.dataset_base_dir
     datalist_json_path = args.datalist_json_path
     model_path = args.model_path
-    infer_roi_size = (168, 208, 168)
+    infer_roi_size = (176, 208, 176)
 
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
@@ -135,7 +135,7 @@ def main():
     model = SegResNet(
         blocks_down=[1, 2, 2, 4],
         blocks_up=[1, 1, 1],
-        init_filters=16,
+        init_filters=32,
         in_channels=4,
         out_channels=6,
         dropout_prob=0.2,
@@ -238,12 +238,12 @@ def main():
         metric_wt /= ct_wt
         metric /= ct
         print(f"Test Dice: {metric:.4f}, Valid count: {ct}")
-        print(f"Test Dice TC: {metric_et:.4f}, Valid count: {ct_et}")
-        print(f"Test Dice WT: {metric_netc:.4f}, Valid count: {ct_netc}")
-        print(f"Test Dice ET: {metric_snfh:.4f}, Valid count: {ct_snfh}")
-        print(f"Test Dice TC: {metric_rc:.4f}, Valid count: {ct_rc}")
-        print(f"Test Dice WT: {metric_tc:.4f}, Valid count: {ct_tc}")
-        print(f"Test Dice ET: {metric_wt:.4f}, Valid count: {ct_wt}")
+        print(f"Test Dice ET: {metric_et:.4f}, Valid count: {ct_et}")
+        print(f"Test Dice NETC: {metric_netc:.4f}, Valid count: {ct_netc}")
+        print(f"Test Dice SNFH: {metric_snfh:.4f}, Valid count: {ct_snfh}")
+        print(f"Test Dice RC: {metric_rc:.4f}, Valid count: {ct_rc}")
+        print(f"Test Dice TC: {metric_tc:.4f}, Valid count: {ct_tc}")
+        print(f"Test Dice WT: {metric_wt:.4f}, Valid count: {ct_wt}")
 
 
 if __name__ == "__main__":

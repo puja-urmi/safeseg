@@ -7,7 +7,10 @@
 #SBATCH --time=0-02:00:00
 #SBATCH --output=brats_central_test_%J.log   
 
-
+# Load the required modules
+module load python/3.11
+python3 -m venv /home/psaha03/scratch/safeseg/env
+source /home/psaha03/scratch/safeseg/env/bin/activate
 
 workspace_path="/home/psaha03/scratch/workspace_brats_central"
 dataset_path="/home/psaha03/scratch/dataset_brats24/dataset"
